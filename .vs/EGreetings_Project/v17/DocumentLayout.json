@@ -1,0 +1,275 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|c:\\users\\dell\\source\\repos\\egreetings_project\\egreetings_project\\wwwroot\\css\\homepage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|solutionrelative:egreetings_project\\wwwroot\\css\\homepage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|c:\\users\\dell\\source\\repos\\egreetings_project\\egreetings_project\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|solutionrelative:egreetings_project\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|c:\\users\\dell\\source\\repos\\egreetings_project\\egreetings_project\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|solutionrelative:egreetings_project\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|c:\\users\\dell\\source\\repos\\egreetings_project\\egreetings_project\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|solutionrelative:egreetings_project\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|c:\\users\\dell\\source\\repos\\egreetings_project\\egreetings_project\\data\\seeder\\userseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|solutionrelative:egreetings_project\\data\\seeder\\userseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|c:\\users\\dell\\source\\repos\\egreetings_project\\egreetings_project\\views\\account\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|solutionrelative:egreetings_project\\views\\account\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|c:\\users\\dell\\source\\repos\\egreetings_project\\egreetings_project\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|solutionrelative:egreetings_project\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|c:\\users\\dell\\source\\repos\\egreetings_project\\egreetings_project\\views\\account\\notifications.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|solutionrelative:egreetings_project\\views\\account\\notifications.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|c:\\users\\dell\\source\\repos\\egreetings_project\\egreetings_project\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|solutionrelative:egreetings_project\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|c:\\users\\dell\\source\\repos\\egreetings_project\\egreetings_project\\views\\account\\checkemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|solutionrelative:egreetings_project\\views\\account\\checkemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|c:\\users\\dell\\source\\repos\\egreetings_project\\egreetings_project\\views\\account\\confirmemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|solutionrelative:egreetings_project\\views\\account\\confirmemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|c:\\users\\dell\\source\\repos\\egreetings_project\\egreetings_project\\views\\account\\registrationconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|solutionrelative:egreetings_project\\views\\account\\registrationconfirmation.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|c:\\users\\dell\\source\\repos\\egreetings_project\\egreetings_project\\views\\account\\resendmailconfirm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|solutionrelative:egreetings_project\\views\\account\\resendmailconfirm.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|c:\\users\\dell\\source\\repos\\egreetings_project\\egreetings_project\\views\\account\\verifyemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|solutionrelative:egreetings_project\\views\\account\\verifyemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|c:\\users\\dell\\source\\repos\\egreetings_project\\egreetings_project\\wwwroot\\css\\sliders.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|solutionrelative:egreetings_project\\wwwroot\\css\\sliders.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 364,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "EGreetings_Project\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "EGreetings_Project\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAI0AAAAAAAAAAAAAAJkAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-05T11:19:19.039Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "homepage.css",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\css\\homepage.css",
+              "RelativeDocumentMoniker": "EGreetings_Project\\wwwroot\\css\\homepage.css",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\css\\homepage.css",
+              "RelativeToolTip": "EGreetings_Project\\wwwroot\\css\\homepage.css",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAAAQAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-05T11:05:06.353Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserSeeder.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Data\\Seeder\\UserSeeder.cs",
+              "RelativeDocumentMoniker": "EGreetings_Project\\Data\\Seeder\\UserSeeder.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Data\\Seeder\\UserSeeder.cs",
+              "RelativeToolTip": "EGreetings_Project\\Data\\Seeder\\UserSeeder.cs",
+              "ViewState": "AgIAAIwAAAAAAAAAAAAAAJ4AAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T10:56:16.754Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "EGreetings_Project\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "EGreetings_Project\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA4AAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-05T08:44:41.168Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "ResendMailConfirm.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Views\\Account\\ResendMailConfirm.cshtml",
+              "RelativeDocumentMoniker": "EGreetings_Project\\Views\\Account\\ResendMailConfirm.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Views\\Account\\ResendMailConfirm.cshtml",
+              "RelativeToolTip": "EGreetings_Project\\Views\\Account\\ResendMailConfirm.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-05T08:26:55.964Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Notifications.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Views\\Account\\Notifications.cshtml",
+              "RelativeDocumentMoniker": "EGreetings_Project\\Views\\Account\\Notifications.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Views\\Account\\Notifications.cshtml",
+              "RelativeToolTip": "EGreetings_Project\\Views\\Account\\Notifications.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-05T08:20:09.482Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "RegistrationConfirmation.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Views\\Account\\RegistrationConfirmation.cshtml",
+              "RelativeDocumentMoniker": "EGreetings_Project\\Views\\Account\\RegistrationConfirmation.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Views\\Account\\RegistrationConfirmation.cshtml",
+              "RelativeToolTip": "EGreetings_Project\\Views\\Account\\RegistrationConfirmation.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-05T08:19:59.592Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "ConfirmEmail.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Views\\Account\\ConfirmEmail.cshtml",
+              "RelativeDocumentMoniker": "EGreetings_Project\\Views\\Account\\ConfirmEmail.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Views\\Account\\ConfirmEmail.cshtml",
+              "RelativeToolTip": "EGreetings_Project\\Views\\Account\\ConfirmEmail.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-05T08:19:21.309Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ChangePassword.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Views\\Account\\ChangePassword.cshtml",
+              "RelativeDocumentMoniker": "EGreetings_Project\\Views\\Account\\ChangePassword.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Views\\Account\\ChangePassword.cshtml",
+              "RelativeToolTip": "EGreetings_Project\\Views\\Account\\ChangePassword.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-05T08:19:09.174Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "sliders.css",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\css\\sliders.css",
+              "RelativeDocumentMoniker": "EGreetings_Project\\wwwroot\\css\\sliders.css",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\css\\sliders.css",
+              "RelativeToolTip": "EGreetings_Project\\wwwroot\\css\\sliders.css",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-05T08:15:42.538Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "EGreetings_Project\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "EGreetings_Project\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABsAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-05T08:15:31.975Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "EGreetings_Project\\Views\\Account\\Login.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "EGreetings_Project\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-05T08:14:45.624Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "CheckEmail.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Views\\Account\\CheckEmail.cshtml",
+              "RelativeDocumentMoniker": "EGreetings_Project\\Views\\Account\\CheckEmail.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Views\\Account\\CheckEmail.cshtml",
+              "RelativeToolTip": "EGreetings_Project\\Views\\Account\\CheckEmail.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-05T08:14:40.052Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "VerifyEmail.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Views\\Account\\VerifyEmail.cshtml",
+              "RelativeDocumentMoniker": "EGreetings_Project\\Views\\Account\\VerifyEmail.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Views\\Account\\VerifyEmail.cshtml",
+              "RelativeToolTip": "EGreetings_Project\\Views\\Account\\VerifyEmail.cshtml",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAB0AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-05T08:14:13.853Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "EGreetings_Project\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "EGreetings_Project\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAE8BAAAAAAAAAAArwGsBAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T07:56:08.575Z"
+            }
+          ]
+        },
+        {
+          "DockedHeight": 194,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

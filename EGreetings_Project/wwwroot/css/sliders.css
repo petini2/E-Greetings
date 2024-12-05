@@ -1,0 +1,48 @@
+﻿/* CSS Code */
+.swiper-wrapper {
+    width: 100%;
+    height: max-content !important;
+    padding-bottom: 64px !important;
+    -webkit-transition-timing-function: linear !important;
+    transition-timing-function: linear !important;
+    position: relative;
+}
+
+.swiper-pagination-bullet {
+    background: #4f46e5;
+}
+
+.slide-height{
+    height: 380px;
+}
+.img-slider {
+    height: 380px;
+}
+.title-slider {
+    font-family: 'Inria Serif';
+    font-size: 80px;
+}
+
+.font {
+    font-family: 'Inria Serif';
+}
+
+
+    #slider-button-left:hover, #slider-button-right:hover {
+        color: #fff7ad; /* Add hover effect with reverse gradient */
+    }
+        #slider-button-left:hover svg path,
+        #slider-button-right:hover svg path {
+            stroke: white; /* Optional: set the stroke color on hover */
+        }
+
+.swiper-container {
+    height: 500px; /* or any desired height */
+    position: relative;
+}
+.swiper-container {
+    z-index: 1; /* Ensure it doesn't overlap other content */
+}
+.w-slider{
+    width: 65%;
+}
