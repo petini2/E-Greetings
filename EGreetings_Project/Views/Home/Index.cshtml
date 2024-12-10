@@ -1,4 +1,4 @@
-﻿@{ 
+﻿@{
     ViewData["Title"] = "Home Page";
 
 }
@@ -12,12 +12,12 @@
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
 
                 <div class="absolute flex justify-content-center align-items-center block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
-                    <div class="flex  w-slider justify-content-between align-items-center">
-                        <img src="~/image_design/Christmasimg.jpg" alt="..." class="img-slider">
-                        <div class="flex flex-col justify-content-center align-items-center">
-                            <p class="text-center title-slider pb-2">It's Time</p>
-                            <p></p>
-                            <div class="btn btn-outline-dark text-center  px-5 py-2">View More</div>
+                    <div class="flex  w-slider justify-content-center align-items-center">
+                        <img src="~/image_design/bg_christ1.png" alt="..." class="img-slider position-relative">
+                        <div class="flex flex-col justify-content-center align-items-center all-content-slider ms-4 position-absolute">
+                            <p class="text-center title-slider pb-2 text-white">It's Time</p>
+                            <p class="w-100 flex justify-center items-center text-white text-center mb-4 mt-2 content-slider">Welcome the holiday season with wonderful gifts! Explore our unique Christmas collection today</p>
+                            <div class="btn btn-outline-light text-center  px-5 py-2">View More</div>
                         </div>
                     </div>
                 </div>
@@ -25,9 +25,9 @@
             <!-- Item 2 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
 
-                <div class="absolute flex justify-content-center align-items-center block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                <div class="absolute flex justify-content-center align-items-center block w-[80%] -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
                     <div class="flex  w-slider justify-content-between align-items-center">
-                        <img src="~/image_design/Christmasimg.jpg" alt="..." class="img-slider">
+                        <img src="~/image_design/slider_christmas1.jpg" alt="..." class="img-slider">
                         <div class="flex flex-col justify-content-center align-items-center">
                             <p class="text-center title-slider pb-2">It's Time</p>
                             <p></p>
@@ -81,98 +81,203 @@
     </div>
 
 
+    @* Main Benefits *@
+    <div class="w-full flex flex-col justify-center items-center mt-mb-3">
+        <div class="main-benefits">
+            <div class="flex be1 justify-center items-center mb-5">
+                <img src="~/image_design/Data Quality.png" class="img_benefits" />
+                <div class="flex flex-col justify-center items-start ml-3 pl-3">
+                    <p class="title_benefits">Convenient and Fast</p>
+                    <p class="content_benefits">Without any delay or setting time</p>
+                </div>
+            </div>
+            <div class="flex be2 justify-center items-center mb-5">
+                <img src="~/image_design/Paint Brush.png" class="img_benefits" />
+                <div class="flex flex-col justify-center items-start ml-3 pl-3">
+                    <p class="title_benefits">Highly Customizable</p>
+                    <p class="content_benefits">Variety of beautiful designs that are easy to personalize</p>
+                </div>
+            </div>
+            <div class="flex be3 justify-center items-center mb-5">
+                <img src="~/image_design/Tree Planting.png" class="img_benefits" />
+                <div class="flex flex-col justify-center items-start ml-3 pl-3">
+                    <p class="title_benefits">Environmentally Friendly</p>
+                    <p class="content_benefits">Reduce the demand for paper and other natural resources</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
     @* Flash Sale *@
     <div class="w-full px-14 mb-5 mt-3">
-        <div class="flex-col justify-start items-start">
-            <div class="title-sales text-lg font-bold">FLASH SALES</div>
+        <div class="flex-col justify-center items-center">
+            <div class="text-center ttitle flex justify-center items-center">Flash Sales <img src="~/image_design/Campfire.png" width="40px;" height="40px;"  class="me-3"/></div>
+            <div class="text-end flex justify-end items-center pe-3">View all <img src="~/image_design/Right.png" width="15px" class="ms-2"/></div>
             <div class="flex justify-center items-center flex-wrap">
                 <!-- Wrapper for the slider -->
                 <div class="slider-wrapper">
+                    <button class="slider-btn left" id="prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
                     <ul id="autoplay" class="cs-hidden">
                         <!-- 1st Set of Products -->
                         <li class="item-a">
                             <div class="mt-5 me-3">
-                                <div class="flex flex-col justify-center items-center item-product">
-                                    <img src="~/image_design/Christmasimg.jpg" alt="sp1" class="img-template" />
-                                    <div class="overplay">
-                                        <a href="#" class="btn-buy">Buy Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="item-a">
-                            <div class="mt-5 me-3">
-                                <div class="flex flex-col justify-center items-center item-product">
+                                <div class="flex flex-col justify-center items-center item-product w-full">
                                     <img src="~/image_design/Christmasimg.jpg" alt="sp2" class="img-template" />
+                                    <div class="flex flex-col justify-center py-3 w-75">
+                                        <div class="text-xl text-black font-bold text-center">Template Name 1</div>
+                                        <div class="flex justify-content-between py-2">
+                                            <s class="text-black text-lg text-start">$4.99</s>
+                                            <div class="font-bold text-xl text-end text-price">$4.59</div>
+                                        </div>
+
+                                    </div>
                                     <div class="overplay">
-                                        <a href="#" class="btn-buy">Buy Now</a>
+                                        <a href="#" class="btn-buy">Use this template</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="item-a">
+                            <div class="mt-5 me-3">
+                                <div class="flex flex-col justify-center items-center item-product w-full">
+                                    <img src="~/image_design/Christmasimg.jpg" alt="sp2" class="img-template" />
+                                    <div class="flex flex-col justify-center py-3 w-75">
+                                        <div class="text-xl text-black font-bold text-center">Template Name 1</div>
+                                        <div class="flex justify-content-between py-2">
+                                            <s class="text-black text-lg text-start">$4.99</s>
+                                            <div class="font-bold text-xl text-end text-price">$4.59</div>
+                                        </div>
+
+                                    </div>
+                                    <div class="overplay">
+                                        <a href="#" class="btn-buy">Use this template</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="item-a">
+                            <div class="mt-5 me-3">
+                                <div class="flex flex-col justify-center items-center item-product w-full">
+                                    <img src="~/image_design/Christmasimg.jpg" alt="sp2" class="img-template" />
+                                    <div class="flex flex-col justify-center py-3 w-75">
+                                        <div class="text-xl text-black font-bold text-center">Template Name 1</div>
+                                        <div class="flex justify-content-between py-2">
+                                            <s class="text-black text-lg text-start">$4.99</s>
+                                            <div class="font-bold text-xl text-end text-price">$4.59</div>
+                                        </div>
+
+                                    </div>
+                                    <div class="overplay">
+                                        <a href="#" class="btn-buy">Use this template</a>
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <li class="item-a">
                             <div class="mt-5 me-3">
-                                <div class="flex flex-col justify-center items-center item-product">
-                                    <img src="~/image_design/Christmasimg.jpg" alt="sp3" class="img-template" />
-                                    <div class="overplay">
-                                        <a href="#" class="btn-buy">Buy Now</a>
+                                <div class="flex flex-col justify-center items-center item-product w-full">
+                                    <img src="~/image_design/Christmasimg.jpg" alt="sp2" class="img-template" />
+                                    <div class="flex flex-col justify-center py-3 w-75">
+                                        <div class="text-xl text-black font-bold text-center">Template Name 1</div>
+                                        <div class="flex justify-content-between py-2">
+                                            <s class="text-black text-lg text-start">$4.99</s>
+                                            <div class="font-bold text-xl text-end text-price">$4.59</div>
+                                        </div>
+
                                     </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="item-a">
-                            <div class="mt-5 me-3">
-                                <div class="flex flex-col justify-center items-center item-product">
-                                    <img src="~/image_design/Christmasimg.jpg" alt="sp4" class="img-template" />
                                     <div class="overplay">
-                                        <a href="#" class="btn-buy">Buy Now</a>
+                                        <a href="#" class="btn-buy">Use this template</a>
                                     </div>
                                 </div>
                             </div>
                         </li>
 
                         <!-- 2nd Set of Products -->
+
+
                         <li class="item-a">
                             <div class="mt-5 me-3">
-                                <div class="flex flex-col justify-center items-center item-product">
-                                    <img src="~/image_design/Christmasimg.jpg" alt="sp5" class="img-template" />
+                                <div class="flex flex-col justify-center items-center item-product w-full">
+                                    <img src="~/image_design/Christmasimg.jpg" alt="sp2" class="img-template" />
+                                    <div class="flex flex-col justify-center py-3 w-75">
+                                        <div class="text-xl text-black font-bold text-center">Template Name 1</div>
+                                        <div class="flex justify-content-between py-2">
+                                            <s class="text-black text-lg text-start">$4.99</s>
+                                            <div class="font-bold text-xl text-end text-price">$4.59</div>
+                                        </div>
+
+                                    </div>
                                     <div class="overplay">
-                                        <a href="#" class="btn-buy">Buy Now</a>
+                                        <a href="#" class="btn-buy">Use this template</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="item-a">
+                            <div class="mt-5 me-3">
+                                <div class="flex flex-col justify-center items-center item-product w-full">
+                                    <img src="~/image_design/Christmasimg.jpg" alt="sp2" class="img-template" />
+                                    <div class="flex flex-col justify-center py-3 w-75">
+                                        <div class="text-xl text-black font-bold text-center">Template Name 1</div>
+                                        <div class="flex justify-content-between py-2">
+                                            <s class="text-black text-lg text-start">$4.99</s>
+                                            <div class="font-bold text-xl text-end text-price">$4.59</div>
+                                        </div>
+
+                                    </div>
+                                    <div class="overplay">
+                                        <a href="#" class="btn-buy">Use this template</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <li class="item-a">
+                            <div class="mt-5 me-3">
+                                <div class="flex flex-col justify-center items-center item-product w-full">
+                                    <img src="~/image_design/Christmasimg.jpg" alt="sp2" class="img-template" />
+                                    <div class="flex flex-col justify-center py-3 w-75">
+                                        <div class="text-xl text-black font-bold text-center">Template Name 1</div>
+                                        <div class="flex justify-content-between py-2">
+                                            <s class="text-black text-lg text-start">$4.99</s>
+                                            <div class="font-bold text-xl text-end text-price">$4.59</div>
+                                        </div>
+
+                                    </div>
+                                    <div class="overplay">
+                                        <a href="#" class="btn-buy">Use this template</a>
                                     </div>
                                 </div>
                             </div>
                         </li>
                         <li class="item-a">
                             <div class="mt-5 me-3">
-                                <div class="flex flex-col justify-center items-center item-product">
-                                    <img src="~/image_design/Christmasimg.jpg" alt="sp6" class="img-template" />
+                                <div class="flex flex-col justify-center items-center item-product w-full">
+                                    <img src="~/image_design/Christmasimg.jpg" alt="sp2" class="img-template" />
+                                    <div class="flex flex-col justify-center py-3 w-75">
+                                        <div class="text-xl text-black font-bold text-center">Template Name 1</div>
+                                        <div class="flex justify-content-between py-2">
+                                            <s class="text-black text-lg text-start">$4.99</s>
+                                            <div class="font-bold text-xl text-end text-price">$4.59</div>
+                                        </div>
+
+                                    </div>
                                     <div class="overplay">
-                                        <a href="#" class="btn-buy">Buy Now</a>
+                                        <a href="#" class="btn-buy">Use this template</a>
                                     </div>
                                 </div>
                             </div>
                         </li>
-                        <li class="item-a">
-                            <div class="mt-5 me-3">
-                                <div class="flex flex-col justify-center items-center item-product">
-                                    <img src="~/image_design/Christmasimg.jpg" alt="sp7" class="img-template" />
-                                    <div class="overplay">
-                                        <a href="#" class="btn-buy">Buy Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="item-a">
-                            <div class="mt-5 me-3">
-                                <div class="flex flex-col justify-center items-center item-product">
-                                    <img src="~/image_design/Christmasimg.jpg" alt="sp8" class="img-template" />
-                                    <div class="overplay">
-                                        <a href="#" class="btn-buy">Buy Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+
                     </ul>
+                    <button class="slider-btn right" id="next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
             </div>
         </div>
@@ -180,9 +285,10 @@
 
     @* Featured Teamplates Filter By Cate *@
 
-    <div class="w-full flex flex-col justify-content-center align-items-center mt-5 mb-3">
+    <div class="w-full flex flex-col mt-5 mb-3">
+        <div class="flex flex-col justify-center items-center">
         <div class="ttitle">Our Featured Templates</div>
-        <hr class="text-black-50 w-25 mt-4 mb-3"/>
+        <hr class="text-black-50 w-25 mt-4 mb-3" />
         <div class="filter_cate_home">
             <a href="#" class="filter_item">All Categories</a>
             <a href="#" class="filter_item">Birthday</a>
@@ -190,9 +296,11 @@
             <a href="#" class="filter_item">Wedding</a>
             <a href="#" class="filter_item">Love</a>
         </div>
-        <div class="w-full px-14 mb-5 mt-3">
+        </div>
+        <div class="text-end flex justify-content-end align-items-center pe-5">View all <img src="~/image_design/Right.png" width="15px" class="ms-2" /></div>
+        <div class="w-full px-14 mb-5 mt-1">
             <div class="flex-col justify-start items-start">
-       
+
                 <div class="flex justify-center items-center flex-wrap">
                     <!-- Wrapper for the slider -->
                     <div class="slider-wrapper">
@@ -200,86 +308,46 @@
                             <!-- 1st Set of Products -->
                             <li class="item-a">
                                 <div class="mt-5 me-3">
-                                    <div class="flex flex-col justify-center items-center item-product">
+                                    <div class="flex flex-col justify-center items-center item-product1">
                                         <img src="~/image_design/Christmasimg.jpg" alt="sp1" class="img-template" />
-                                        <div class="overplay">
-                                            <a href="#" class="btn-buy">Buy Now</a>
+                                        <div class="overplay3">
+                                            <a href="#" class="btn-buy3">Use this template</a>
                                         </div>
                                     </div>
                                 </div>
                             </li>
                             <li class="item-a">
                                 <div class="mt-5 me-3">
-                                    <div class="flex flex-col justify-center items-center item-product">
+                                    <div class="flex flex-col justify-center items-center item-product1">
                                         <img src="~/image_design/Christmasimg.jpg" alt="sp2" class="img-template" />
-                                        <div class="overplay">
-                                            <a href="#" class="btn-buy">Buy Now</a>
+                                        <div class="overplay3">
+                                            <a href="#" class="btn-buy3">Use this template</a>
                                         </div>
                                     </div>
                                 </div>
                             </li>
                             <li class="item-a">
                                 <div class="mt-5 me-3">
-                                    <div class="flex flex-col justify-center items-center item-product">
+                                    <div class="flex flex-col justify-center items-center item-product1">
                                         <img src="~/image_design/Christmasimg.jpg" alt="sp3" class="img-template" />
-                                        <div class="overplay">
-                                            <a href="#" class="btn-buy">Buy Now</a>
+                                        <div class="overplay3">
+                                            <a href="#" class="btn-buy3">Use this template</a>
                                         </div>
                                     </div>
                                 </div>
                             </li>
                             <li class="item-a">
                                 <div class="mt-5 me-3">
-                                    <div class="flex flex-col justify-center items-center item-product">
+                                    <div class="flex flex-col justify-center items-center item-product1">
                                         <img src="~/image_design/Christmasimg.jpg" alt="sp4" class="img-template" />
-                                        <div class="overplay">
-                                            <a href="#" class="btn-buy">Buy Now</a>
+                                        <div class="overplay3">
+                                            <a href="#" class="btn-buy3">Use this template</a>
                                         </div>
                                     </div>
                                 </div>
                             </li>
 
-                            <!-- 2nd Set of Products -->
-                            <li class="item-a">
-                                <div class="mt-5 me-3">
-                                    <div class="flex flex-col justify-center items-center item-product">
-                                        <img src="~/image_design/Christmasimg.jpg" alt="sp5" class="img-template" />
-                                        <div class="overplay">
-                                            <a href="#" class="btn-buy">Buy Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item-a">
-                                <div class="mt-5 me-3">
-                                    <div class="flex flex-col justify-center items-center item-product">
-                                        <img src="~/image_design/Christmasimg.jpg" alt="sp6" class="img-template" />
-                                        <div class="overplay">
-                                            <a href="#" class="btn-buy">Buy Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item-a">
-                                <div class="mt-5 me-3">
-                                    <div class="flex flex-col justify-center items-center item-product">
-                                        <img src="~/image_design/Christmasimg.jpg" alt="sp7" class="img-template" />
-                                        <div class="overplay">
-                                            <a href="#" class="btn-buy">Buy Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item-a">
-                                <div class="mt-5 me-3">
-                                    <div class="flex flex-col justify-center items-center item-product">
-                                        <img src="~/image_design/Christmasimg.jpg" alt="sp8" class="img-template" />
-                                        <div class="overplay">
-                                            <a href="#" class="btn-buy">Buy Now</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
+                           
                         </ul>
                     </div>
                 </div>
@@ -325,8 +393,8 @@
                 showSlide(currentIndex);
             }
 
-            // Auto play carousel every 3 seconds
-            const autoplayInterval = setInterval(moveToNext, 3000); // 3000ms = 3 seconds
+            // Auto play carousel every 7 seconds (7000ms)
+            let autoplayInterval = setInterval(moveToNext, 7000); // 7000ms = 7 seconds
 
             nextButton.addEventListener('click', () => {
                 moveToNext();
@@ -349,33 +417,61 @@
             // Function to reset autoplay after user interaction
             function resetAutoplay() {
                 clearInterval(autoplayInterval); // Clear existing autoplay interval
-                setInterval(moveToNext, 3000);  // Start new autoplay interval
+                autoplayInterval = setInterval(moveToNext, 7000);  // Start new autoplay interval with 7 seconds
             }
 
             showSlide(currentIndex);  // Initialize the carousel
         });
     </script>
+
     <script>
-                document.addEventListener("DOMContentLoaded", function () {
+                   document.addEventListener("DOMContentLoaded", function () {
             let autoplayIndex = 0;
             const items = document.querySelectorAll("#autoplay .item-a");
-            const itemsPerRow = 4;  // Số lượng items mỗi dòng
-            const totalItems = Math.ceil(items.length / itemsPerRow);  // Làm tròn lên nếu không chia hết cho 4
-            const delay = 5000; // Thời gian trễ mỗi slide (3 giây)
+            const totalItems = items.length; // Total number of items
+            const itemsPerRow = 4; // Number of items per row
+            const itemWidth = items[0].offsetWidth; // Width of each item
+            const delay = 3000; // Delay for each slide (3 seconds)
+            let autoplayInterval; // Variable to store interval
+
+            // Ensure the #autoplay container has enough width to accommodate all items
+            document.querySelector("#autoplay").style.width = `${itemWidth * totalItems}px`;
 
             // Function to handle the autoplay
             function autoplay() {
-                // Di chuyển các item qua trái với offset cho mỗi nhóm 4 items
-                const offset = -(autoplayIndex * 100);
-                document.querySelector("#autoplay").style.transform = `translateX(${offset}%)`;
-
-                // Cập nhật index cho nhóm item tiếp theo (mỗi nhóm 4 item)
-                autoplayIndex = (autoplayIndex + 1) % totalItems; // Quay lại đầu sau nhóm cuối
+                const totalRows = Math.ceil(totalItems / itemsPerRow);
+                const offset = -(autoplayIndex * itemWidth);
+                document.querySelector("#autoplay").style.transform = `translateX(${offset}px)`; // Move the slider
             }
 
-            autoplay(); // Gọi autoplay ban đầu
-            setInterval(autoplay, delay); // Chạy autoplay mỗi 3 giây
-        });
+            autoplay(); // Initial autoplay call
+            autoplayInterval = setInterval(() => {
+                autoplayIndex = (autoplayIndex + 1) % Math.ceil(totalItems / itemsPerRow); // Loop back to the first row
+                autoplay(); // Update the slide
+            }, delay); // Start autoplay every 3 seconds
 
+            // Previous button (prev)
+            document.getElementById("prev-btn").addEventListener("click", function () {
+                clearInterval(autoplayInterval); // Stop autoplay when the user clicks
+                autoplayIndex = (autoplayIndex - 1 + Math.ceil(totalItems / itemsPerRow)) % Math.ceil(totalItems / itemsPerRow); // Decrease index
+                autoplay(); // Update the slide
+                autoplayInterval = setInterval(() => { // Restart autoplay with 3 seconds
+                    autoplayIndex = (autoplayIndex + 1) % Math.ceil(totalItems / itemsPerRow); // Loop back to the first row
+                    autoplay(); // Update the slide
+                }, delay);
+            });
+
+            // Next button (next)
+            document.getElementById("next-btn").addEventListener("click", function () {
+                clearInterval(autoplayInterval); // Stop autoplay when the user clicks
+                autoplayIndex = (autoplayIndex + 1) % Math.ceil(totalItems / itemsPerRow); // Increase index
+                autoplay(); // Update the slide
+                autoplayInterval = setInterval(() => { // Restart autoplay with 3 seconds
+                    autoplayIndex = (autoplayIndex + 1) % Math.ceil(totalItems / itemsPerRow); // Loop back to the first row
+                    autoplay(); // Update the slide
+                }, delay);
+            });
+        });
     </script>
+
 }

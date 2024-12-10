@@ -16,7 +16,7 @@
     height: 380px;
 }
 .img-slider {
-    height: 380px;
+    height: 480px;
 }
 .title-slider {
     font-family: 'Inria Serif';
@@ -44,5 +44,11 @@
     z-index: 1; /* Ensure it doesn't overlap other content */
 }
 .w-slider{
-    width: 65%;
+    width: 100%;
+   
 }
+
+.all-content-slider{
+    width:40%;
+}
+

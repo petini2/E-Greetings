@@ -1,22 +1,39 @@
 ﻿@using Microsoft.AspNetCore.Identity;
+@using Microsoft.AspNetCore.Http;
 @inject UserManager<User> UserManager
 @inject SignInManager<User> signInManager;
 
 <div class="navbar-nav">
     @if (signInManager.IsSignedIn(User))
     {
-        <div class="nav-item flex justify-content-start align-items-end">
-            <a class="nav-link text-dark font-bold text-lg" asp-controller="Account" asp-action="Logout">Logout</a>
+     
+        <div class="flex justify-content-start align-items-end">
+            <div class="nav-item flex flex-col justify-content-center align-items-center">
+                @if (!string.IsNullOrEmpty(User.Claims.FirstOrDefault(c => c.Type == "Image")?.Value))
+                {
+                    var imageUrl = User.Claims.FirstOrDefault(c => c.Type == "Image")?.Value;
+                    <img src="@Url.Content(imageUrl)" alt="User Image" class="rounded-circle" width="40" height="40" />
+                }
+                else
+                {
+                    <img src="@Url.Content("~/images/user/default-image.jpg")" alt="Default User Image" class="rounded-circle" width="40" height="40" />
+                }
+                <span class="nav-link text-dark font-bold text-lg">@User.Identity.Name</span>
+            </div>
+            <div class="nav-item ms-3">
+                <a class="nav-link text-dark font-bold text-lg" asp-controller="Account" asp-action="Logout">Logout</a>
+
+            </div>
         </div>
     }
     else
     {
         <div class="flex justify-content-start align-items-end">
         <div class="nav-item">
-            <a class="nav-link text-dark font-bold text-lg" asp-controller="Account" asp-action="Login">Login</a>
+                <a class="nav-link title-header font-bold " asp-controller="Account" asp-action="Login">Login</a>
         </div>
         <div class="nav-item">
-                <a class="nav-link text-dark font-bold text-lg ms-4" asp-controller="Account" asp-action="Register">Join Now</a>
+                <a class="nav-link title-header font-bold  ms-4" asp-controller="Account" asp-action="Register">Join Now</a>
 
         </div>
         </div>

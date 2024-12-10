@@ -23,9 +23,9 @@ body {
     background-color: #FFFEF8;
 }
 .container-footer {
-    height: 450px;
+    height: 380px;
     width: 100%;
-    background-color: #e6e6e6;
+    background-color: #fffef2;
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -130,4 +130,133 @@ body {
 .filter_cate_home a:active {
     color: orange;
     border-bottom: 1px solid orange;
+}
+/* Điều khiển sự hiển thị của dropdown khi hover */
+.dropdown-content {
+    display: none; /* Ẩn dropdown theo mặc định */
+    background-color:white;
+    color:black;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Hiển thị dropdown khi hover vào phần tử cha */
+}
+
+/* Tạo hiệu ứng khi dropdown hiển thị */
+.dropdown-content {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content {
+    opacity: 1;
+    z-index:10;
+}
+
+.dropdown-item{
+    color:black;
+    font-weight:500;
+   
+
+}
+
+.dropdown-item:hover {
+    border-radius:5px;
+}
+
+/*. dropdown-content-card {
+    display: none;*/ /* Ẩn dropdown theo mặc định */
+    /*background-color: white;
+    color: black;
+    width: 500px;
+    border-radius: 10px;
+}
+
+.dropdown:hover .dropdown-content-card {
+    display: block;*/ /* Hiển thị dropdown khi hover vào phần tử cha */
+/*}
+.dropdown-content-card {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}*/
+/* Ẩn dropdown theo mặc định */
+.dropdown-content-card {
+    display: none; /* Ẩn dropdown khi chưa hover */
+    
+    background-color: white;
+    color: black;
+    width: 600px;
+    border-radius: 10px;
+    padding: 10px 20px;
+}
+
+/* Hiển thị dropdown khi hover vào nút hoặc menu */
+    .dropdown:hover .dropdown-content-card {
+    display: block; /* Hiển thị menu khi hover vào phần tử .dropdown */
+    z-index:10;
+}
+
+/* Thiết lập một hiệu ứng khi hiển thị menu */
+.dropdown-content-card {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.dropdown:hover .dropdown-content-card {
+    opacity: 1; /* Hiển thị dropdown với hiệu ứng mờ dần */
+}
+
+.title-header {
+    color: #8f0000;
+/*    font-family: 'Inria-Serial';*/
+    font-size: 20px;
+    margin-left: 8px;
+}
+
+
+.title_mid {
+    color: #094a25 !important;
+}
+
+.title_small {
+    color: #2b251d !important;
+}
+
+.img-dis{
+    height:100px;
+}
+
+/* Ẩn button và sidebar mặc định */
+#open-dialog-button {
+/*    display: none;*/
+    z-index: 20;
+}
+#close-dialog-button{
+    z-index:20;
+}
+/* Ẩn nav-header và nút "Open Dialog" khi màn hình lớn hơn 1300px */
+@media (min-width: 1290px) {
+    /*.all-content {*/
+        /*display: block !important;*/ /* Hiển thị header */
+    /*}*/
+
+    .mobile-bar {
+        display: none !important; /* Ẩn nút "Open Dialog" */
+    }
+}
+
+.sibar-content{
+    z-index: 15;
+}
+/* Ẩn nav-header và hiển thị nút "Open Dialog" khi màn hình nhỏ hơn 1300px */
+@media (max-width: 1290px) {
+    .all-content {
+        display: none !important; /* Hiển thị header */
+    }
+
+    .mobile-bar {
+        display: block !important; /* Ẩn nút "Open Dialog" */
+    }
 }

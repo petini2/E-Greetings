@@ -1,9 +1,12 @@
 ﻿.header-home {
     width: 100%;
     height: 120px;
-        background-image: linear-gradient(90deg, #fff7ad, #ffa9b9);
-/*    background-image: linear-gradient(139deg, #fff7ad, #ffa9b9);*/
-    margin: 0;
+    background-image: linear-gradient(90deg, #fff7ad, #ffddf7);
+    /*    background-image: linear-gradient(90deg, #fff7ad, #ffa4f0);*/
+    /*    background-image: linear-gradient(139deg, #fff7ad, #ffa9b9);*/
+    /*    background-color: #fff7ad;*/
+/*    #ffddf7*/
+        margin: 0;
 }
 
 
@@ -19,8 +22,14 @@
     z-index:10;
 }
 
-.index-cau{
-    z-index:1
+.img-icon-header{
+    width: 30px;
+    height:30px;
+    margin-right: 10px;
+}
+
+.index-cau {
+    z-index: 1
 }
 
 .all-content {
@@ -57,6 +66,10 @@
 .slider-wrapper {
     width: 100%;
     overflow: hidden; /* Ẩn các phần tử bị tràn */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cs-hidden {
@@ -78,13 +91,18 @@
 
 .overplay {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 53px;
+    left: 15px;
+    right: 30px;
+    bottom: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+/*    transform: translate(-50%, -50%);*/
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
-    padding: 10px;
-    text-align: center;
+    /*    padding: 55% 32%;*/
+
     visibility: hidden;
 }
 
@@ -93,13 +111,19 @@
 }
 
 .btn-buy {
-    padding: 8px 16px;
-    background-color: #ff6347;
+
+    background-color: black;
     color: white;
     text-align: center;
-    border-radius: 5px;
+
     text-decoration: none;
     visibility: hidden; /* Nút chỉ hiển thị khi hover */
+   
+    padding: 10px 30px;
+  
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 20px;
 }
 .btn-buy:hover {
     
@@ -140,9 +164,10 @@
     width:20px;
 }
 .top-footer {
-    width: 80%;
+    width: 90%;
     height: 85%;
-    padding-top: 80px;
+    padding-top: 40px;
+
 }
 .bottom-footer{
     height: 15%;
@@ -152,13 +177,186 @@
 }
 
 .img-logo-footer{
-    height:150px;
-
+    height:auto;
+    width:auto;
+    object-fit: fill;
 }
 
-.img-icon-footer{
-    width:30px;
+
+.img-icon-footer {
+    width: 30px;
     height: 30px;
-    padding:0px;
-    margin-right:10px;
+    padding: 0px;
+    margin-right: 10px;
 }
+.main-benefits{
+    width: 85%;
+    display:flex;
+    justify-content: space-between;
+    height: 150px;
+    position:relative;
+    margin-top:30px;
+}
+
+.img_beinefits{
+  height: 45px;
+  width: 45px;
+  object-fit:fill;
+
+}
+
+.title_benefits{
+    font-size:24px;
+    font-family: 'Inrial-Serial';
+   font-weight:500;
+
+}
+
+.content_benefits{
+    font-size:14px;
+    color: gray;
+    font-weight: 300;
+}
+
+.be1{
+    width: 33%;
+}
+
+.be2 {
+    width: 25%;
+}
+
+.be3 {
+    width: 33%;
+}
+.text-price {
+    color: #E10600;
+}
+
+/* Các nút điều hướng */
+.slider-btn {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    color: white;
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+    /* Nút trái */
+    .slider-btn.left {
+        left: 10px;
+    }
+
+    /* Nút phải */
+    .slider-btn.right {
+        right: 10px;
+    }
+/*#autoplay {
+    display: flex;*/ /* Để các item nằm ngang */
+    /*overflow: hidden;*/ /* Ẩn các item ngoài vùng cuộn */
+    /*transition: transform 0.3s ease-in-out;*/ /* Thêm hiệu ứng di chuyển */
+/*}*/
+
+.item-a {
+    flex: 0 0 auto; /* Các item không co giãn */
+    width: 25%; /* Chiếm hết chiều rộng của slider */
+}
+
+/* Positioning the overlay */
+.item-product1 {
+    position: relative; /* To ensure absolute positioning of child elements */
+}
+
+.overplay3 {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    right: 5px;
+    bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: #fff;
+    visibility: hidden; /* Initially hidden */
+    z-index: 1; /* Ensure it's above the image */
+}
+
+/* Make the overlay visible when hovering over the product */
+.item-product1:hover .overplay3 {
+    visibility: visible; /* Show overlay on hover */
+}
+
+/* Styling for the Buy Now button */
+.btn-buy3 {
+    background-color: black;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 20px;
+    visibility: hidden; /* Initially hidden */
+    z-index: 2; /* Ensure button appears above the overlay */
+}
+
+/* Make the button visible when hovering over the product */
+.item-product1:hover .btn-buy3 {
+    visibility: visible; /* Show button on hover */
+}
+
+
+.content-slider {
+    font-family: 'Inria-Serial';
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Overlay styling */
+.overplay4 {
+    position: absolute;
+    top: 50px;
+    left: 15px;
+    right: 30px;
+    bottom: 110px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    color: #fff;
+    visibility: hidden; /* Initially hidden */
+    z-index: 1; /* Ensure it's above the image */
+}
+
+/* Make the overlay visible when hovering over the product */
+.item-product2:hover .overplay4 {
+    visibility: visible; /* Show overlay on hover */
+}
+
+/* Styling for the 'Use this template' button */
+.btn-buy4 {
+    background-color: black;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px 30px;
+    font-size: 16px;
+    font-weight: 500;
+    border-radius: 20px;
+    visibility: hidden; /* Initially hidden */
+    z-index: 2; /* Ensure button appears above the overlay */
+}
+
+/* Make the button visible when hovering over the product */
+.item-product2:hover .btn-buy4 {
+    visibility: visible; /* Show button on hover */
+}
+
+
+

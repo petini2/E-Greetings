@@ -4,6 +4,7 @@ C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\wwwroot\lib\boo
 C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map
 C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\wwwroot\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map
 C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\wwwroot\css\tailwind.css
+C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\wwwroot\css\subs.css
 C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.min.css
 C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\wwwroot\lib\bootstrap\dist\js\bootstrap.js.map
 C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\wwwroot\lib\jquery-validation\LICENSE.md
@@ -21,6 +22,7 @@ C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\wwwroot\css\hom
 C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\wwwroot\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css
 C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\wwwroot\lib\jquery\LICENSE.txt
 C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.min.css
+C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\wwwroot\css\e_cardpage.css
 C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\wwwroot\lib\jquery-validation\dist\additional-methods.js
 C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\wwwroot\lib\bootstrap\dist\js\bootstrap.bundle.js
 C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\wwwroot\lib\bootstrap\dist\css\bootstrap-grid.rtl.css
@@ -60,21 +62,50 @@ C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\wwwroot\js\site
 C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\wwwroot\lib\bootstrap\dist\js\bootstrap.esm.min.js
 C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\wwwroot\lib\jquery-validation\dist\jquery.validate.min.js
 C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\wwwroot\lib\jquery\dist\jquery.js
+wwwroot\css\e_cardpage.css
 wwwroot\css\homepage.css
 wwwroot\css\site.css
 wwwroot\css\sliders.css
+wwwroot\css\subs.css
 wwwroot\css\tailwind.css
 wwwroot\favicon.ico
+wwwroot\image_design\bg_christ.png
+wwwroot\image_design\bg_christ1.png
+wwwroot\image_design\Birthday1.png
+wwwroot\image_design\Campfire.png
+wwwroot\image_design\christmas.jpg
 wwwroot\image_design\Christmasimg.jpg
+wwwroot\image_design\Data Quality.png
 wwwroot\image_design\E-cardicon.png
-wwwroot\image_design\Homeicon.png
+wwwroot\image_design\Ecosystem.png
+wwwroot\image_design\Email.png
+wwwroot\image_design\Festival1.png
+wwwroot\image_design\Homeicon1.png
+wwwroot\image_design\Hot Price.png
 wwwroot\image_design\IconSpecial.png
-wwwroot\image_design\Letter.png
+wwwroot\image_design\Letter1.png
 wwwroot\image_design\Logo E-G Full HD-NoBG - Cut.png
 wwwroot\image_design\Logo E-G Full HD-NoBG.png
-wwwroot\image_design\PackingICon.png
+wwwroot\image_design\LoveDay.png
+wwwroot\image_design\newy.png
+wwwroot\image_design\Paint Brush.png
+wwwroot\image_design\Parcel.png
 wwwroot\image_design\Phone.png
-wwwroot\image_design\TransactionICon.png
+wwwroot\image_design\Right Arrow.png
+wwwroot\image_design\Right.png
+wwwroot\image_design\Ringing Phone.png
+wwwroot\image_design\Sale.png
+wwwroot\image_design\slide_christmas.jpg
+wwwroot\image_design\slide_christmas_ver.jpg
+wwwroot\image_design\slider_christmas1.jpg
+wwwroot\image_design\Star.png
+wwwroot\image_design\Tree Planting.png
+wwwroot\image_design\VIP.png
+wwwroot\image_design\Wedding1.png
+wwwroot\image_design\WindowOther.png
+wwwroot\images\user\default-admin.jpg
+wwwroot\images\user\default-image.jpg
+wwwroot\images\user\default-user.jpg
 wwwroot\js\site.js
 wwwroot\lib\bootstrap\dist\css\bootstrap.css
 wwwroot\lib\bootstrap\dist\css\bootstrap.css.map

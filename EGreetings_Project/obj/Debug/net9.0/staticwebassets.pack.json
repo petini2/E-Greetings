@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\EGreetings_Project.d4ud2fcbma.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\css\\e_cardpage.css",
+      "PackagePath": "staticwebassets\\css\\e_cardpage.css"
+    },
+    {
       "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\css\\homepage.css",
       "PackagePath": "staticwebassets\\css\\homepage.css"
     },
@@ -17,6 +21,10 @@
       "PackagePath": "staticwebassets\\css\\sliders.css"
     },
     {
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\css\\subs.css",
+      "PackagePath": "staticwebassets\\css\\subs.css"
+    },
+    {
       "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\css\\tailwind.css",
       "PackagePath": "staticwebassets\\css\\tailwind.css"
     },
@@ -25,24 +33,52 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\Birthday1.png",
+      "PackagePath": "staticwebassets\\image_design\\Birthday1.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\Campfire.png",
+      "PackagePath": "staticwebassets\\image_design\\Campfire.png"
+    },
+    {
       "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\Christmasimg.jpg",
       "PackagePath": "staticwebassets\\image_design\\Christmasimg.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\Data Quality.png",
+      "PackagePath": "staticwebassets\\image_design\\Data Quality.png"
     },
     {
       "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\E-cardicon.png",
       "PackagePath": "staticwebassets\\image_design\\E-cardicon.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\Homeicon.png",
-      "PackagePath": "staticwebassets\\image_design\\Homeicon.png"
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\Ecosystem.png",
+      "PackagePath": "staticwebassets\\image_design\\Ecosystem.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\Email.png",
+      "PackagePath": "staticwebassets\\image_design\\Email.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\Festival1.png",
+      "PackagePath": "staticwebassets\\image_design\\Festival1.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\Homeicon1.png",
+      "PackagePath": "staticwebassets\\image_design\\Homeicon1.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\Hot Price.png",
+      "PackagePath": "staticwebassets\\image_design\\Hot Price.png"
     },
     {
       "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\IconSpecial.png",
       "PackagePath": "staticwebassets\\image_design\\IconSpecial.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\Letter.png",
-      "PackagePath": "staticwebassets\\image_design\\Letter.png"
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\Letter1.png",
+      "PackagePath": "staticwebassets\\image_design\\Letter1.png"
     },
     {
       "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\Logo E-G Full HD-NoBG - Cut.png",
@@ -53,16 +89,96 @@
       "PackagePath": "staticwebassets\\image_design\\Logo E-G Full HD-NoBG.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\PackingICon.png",
-      "PackagePath": "staticwebassets\\image_design\\PackingICon.png"
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\LoveDay.png",
+      "PackagePath": "staticwebassets\\image_design\\LoveDay.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\Paint Brush.png",
+      "PackagePath": "staticwebassets\\image_design\\Paint Brush.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\Parcel.png",
+      "PackagePath": "staticwebassets\\image_design\\Parcel.png"
     },
     {
       "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\Phone.png",
       "PackagePath": "staticwebassets\\image_design\\Phone.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\TransactionICon.png",
-      "PackagePath": "staticwebassets\\image_design\\TransactionICon.png"
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\Right Arrow.png",
+      "PackagePath": "staticwebassets\\image_design\\Right Arrow.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\Right.png",
+      "PackagePath": "staticwebassets\\image_design\\Right.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\Ringing Phone.png",
+      "PackagePath": "staticwebassets\\image_design\\Ringing Phone.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\Sale.png",
+      "PackagePath": "staticwebassets\\image_design\\Sale.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\Star.png",
+      "PackagePath": "staticwebassets\\image_design\\Star.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\Tree Planting.png",
+      "PackagePath": "staticwebassets\\image_design\\Tree Planting.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\VIP.png",
+      "PackagePath": "staticwebassets\\image_design\\VIP.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\Wedding1.png",
+      "PackagePath": "staticwebassets\\image_design\\Wedding1.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\WindowOther.png",
+      "PackagePath": "staticwebassets\\image_design\\WindowOther.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\bg_christ.png",
+      "PackagePath": "staticwebassets\\image_design\\bg_christ.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\bg_christ1.png",
+      "PackagePath": "staticwebassets\\image_design\\bg_christ1.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\christmas.jpg",
+      "PackagePath": "staticwebassets\\image_design\\christmas.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\newy.png",
+      "PackagePath": "staticwebassets\\image_design\\newy.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\slide_christmas.jpg",
+      "PackagePath": "staticwebassets\\image_design\\slide_christmas.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\slide_christmas_ver.jpg",
+      "PackagePath": "staticwebassets\\image_design\\slide_christmas_ver.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\slider_christmas1.jpg",
+      "PackagePath": "staticwebassets\\image_design\\slider_christmas1.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\images\\user\\default-admin.jpg",
+      "PackagePath": "staticwebassets\\images\\user\\default-admin.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\images\\user\\default-image.jpg",
+      "PackagePath": "staticwebassets\\images\\user\\default-image.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\images\\user\\default-user.jpg",
+      "PackagePath": "staticwebassets\\images\\user\\default-user.jpg"
     },
     {
       "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\js\\site.js",

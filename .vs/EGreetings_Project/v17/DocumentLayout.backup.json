@@ -1,0 +1,194 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|c:\\users\\dell\\source\\repos\\egreetings_project\\egreetings_project\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|solutionrelative:egreetings_project\\wwwroot\\css\\site.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|c:\\users\\dell\\source\\repos\\egreetings_project\\egreetings_project\\wwwroot\\css\\homepage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|solutionrelative:egreetings_project\\wwwroot\\css\\homepage.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|c:\\users\\dell\\source\\repos\\egreetings_project\\egreetings_project\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|solutionrelative:egreetings_project\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|c:\\users\\dell\\source\\repos\\egreetings_project\\egreetings_project\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|solutionrelative:egreetings_project\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|c:\\users\\dell\\source\\repos\\egreetings_project\\egreetings_project\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|solutionrelative:egreetings_project\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|c:\\users\\dell\\source\\repos\\egreetings_project\\egreetings_project\\wwwroot\\css\\sliders.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}",
+      "RelativeMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|solutionrelative:egreetings_project\\wwwroot\\css\\sliders.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|c:\\users\\dell\\source\\repos\\egreetings_project\\egreetings_project\\tailwind.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|solutionrelative:egreetings_project\\tailwind.config.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|c:\\users\\dell\\source\\repos\\egreetings_project\\egreetings_project\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|solutionrelative:egreetings_project\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|c:\\users\\dell\\source\\repos\\egreetings_project\\egreetings_project\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|solutionrelative:egreetings_project\\views\\shared\\_loginpartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|c:\\users\\dell\\source\\repos\\egreetings_project\\egreetings_project\\data\\seeder\\userseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1629F32F-452F-418B-8825-B52527EFA391}|EGreetings_Project\\EGreetings_Project.csproj|solutionrelative:egreetings_project\\data\\seeder\\userseeder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 717,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "site.css",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\css\\site.css",
+              "RelativeDocumentMoniker": "EGreetings_Project\\wwwroot\\css\\site.css",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\css\\site.css",
+              "RelativeToolTip": "EGreetings_Project\\wwwroot\\css\\site.css",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABsAAAAdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-10T07:57:35.794Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "sliders.css",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\css\\sliders.css",
+              "RelativeDocumentMoniker": "EGreetings_Project\\wwwroot\\css\\sliders.css",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\css\\sliders.css",
+              "RelativeToolTip": "EGreetings_Project\\wwwroot\\css\\sliders.css",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAACIAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-10T08:45:42.164Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "EGreetings_Project\\Views\\Home\\Index.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "EGreetings_Project\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAACQAAAAAAAAAAAAAABgAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-10T08:45:21.384Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "EGreetings_Project\\Controllers\\HomeController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "EGreetings_Project\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T08:45:16.534Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "homepage.css",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\css\\homepage.css",
+              "RelativeDocumentMoniker": "EGreetings_Project\\wwwroot\\css\\homepage.css",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\css\\homepage.css*",
+              "RelativeToolTip": "EGreetings_Project\\wwwroot\\css\\homepage.css*",
+              "ViewState": "AgIAAGQAAAAAAAAAAAAawKQAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
+              "WhenOpened": "2024-12-10T07:57:33.194Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "EGreetings_Project\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "EGreetings_Project\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAMAAAAAAAAAAAAAAANMAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-10T07:52:55.055Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "EGreetings_Project\\Controllers\\AccountController.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "EGreetings_Project\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAIAzwGEAAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T07:18:01.209Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "tailwind.config.js",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\tailwind.config.js",
+              "RelativeDocumentMoniker": "EGreetings_Project\\tailwind.config.js",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\tailwind.config.js",
+              "RelativeToolTip": "EGreetings_Project\\tailwind.config.js",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-12-10T09:12:51.643Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserSeeder.cs",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Data\\Seeder\\UserSeeder.cs",
+              "RelativeDocumentMoniker": "EGreetings_Project\\Data\\Seeder\\UserSeeder.cs",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Data\\Seeder\\UserSeeder.cs",
+              "RelativeToolTip": "EGreetings_Project\\Data\\Seeder\\UserSeeder.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAywEIAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-10T07:36:55.058Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "_LoginPartial.cshtml",
+              "DocumentMoniker": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeDocumentMoniker": "EGreetings_Project\\Views\\Shared\\_LoginPartial.cshtml",
+              "ToolTip": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\Views\\Shared\\_LoginPartial.cshtml",
+              "RelativeToolTip": "EGreetings_Project\\Views\\Shared\\_LoginPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAABdAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-12-10T07:20:29.246Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

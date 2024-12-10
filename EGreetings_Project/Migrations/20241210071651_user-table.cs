@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace EGreetings_Project.Migrations
 {
     /// <inheritdoc />
-    public partial class tableusers : Migration
+    public partial class usertable : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -37,6 +37,7 @@ namespace EGreetings_Project.Migrations
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     EmailConfirmationSentDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     TokenResetPasswordCreatedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    Image = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),

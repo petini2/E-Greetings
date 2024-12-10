@@ -393,6 +393,9 @@ C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\bin\Debug\net9.
 C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\bin\Debug\net9.0\zh-Hant\Microsoft.CodeAnalysis.Scripting.resources.dll
 C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\obj\Debug\net9.0\compressed\1e0hiae63d-l3jct085bo.gz
 C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\obj\Debug\net9.0\compressed\yffppv48hl-xtxxf3hu2r.gz
-C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\obj\Debug\net9.0\compressed\deojq58y8r-lo9h07tps7.gz
-C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\obj\Debug\net9.0\compressed\b36au8xgrb-zmz1gr4ioy.gz
-C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\obj\Debug\net9.0\compressed\vt7lr4od9l-xli6deeitp.gz
+C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\obj\Debug\net9.0\EGreetings_Project.sourcelink.json
+C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\obj\Debug\net9.0\compressed\bnrf7vrn9w-xkcvpkuk5d.gz
+C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\obj\Debug\net9.0\compressed\1gyihqtqn4-3wkl95yr4i.gz
+C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\obj\Debug\net9.0\compressed\deojq58y8r-2wp8kgpon7.gz
+C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\obj\Debug\net9.0\compressed\b36au8xgrb-tl7fxjkss4.gz
+C:\Users\DELL\source\repos\EGreetings_Project\EGreetings_Project\obj\Debug\net9.0\compressed\vt7lr4od9l-ch4wrogtd4.gz

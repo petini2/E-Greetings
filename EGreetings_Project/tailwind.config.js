@@ -3,7 +3,10 @@ module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+      extend: {
+          screens: {
+              'lg': '1400px',  // This is where we define the 1300px breakpoint
+          }      },
   },
   variants: {
     extend: {},

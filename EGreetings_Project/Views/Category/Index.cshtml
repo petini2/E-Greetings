@@ -1,0 +1,296 @@
+﻿@{
+    ViewData["Title"] = "E-Cards Page";
+}
+<div class="w-full flex e-card-container">
+    <div class="side-bar ms-5">
+        <!-- Side bar content here -->
+
+        <div class="side-title">Filter By Price</div>
+        <form method="post" action="#" id="radioForm" class="mt-4">
+            <div class="mb-2">
+                <input type="radio" id="option1" name="myRadio" value="1"  class="input-radio"/>
+                <label for="lowToHigh" class="label-radio">Lowest to Highest</label>
+               
+            </div>
+            <div class="mb-2">
+                <input type="radio" id="option2" name="myRadio" value="2" class="input-radio" />
+                <label for="highToLow" class="label-radio">Highest to Lowest</label>
+                
+            </div>
+          </form>
+
+        <div class="side-title mt-5">Category Options</div>
+        <form id="checkboxForm" class="mt-4">
+            <div>
+                <input type="checkbox" name="myCheckbox" value="1" id="checkbox1" class="check_input" />
+                <label for="checkbox1" class="label_check_main">All</label>
+            </div>
+            <div>
+                <input type="checkbox" name="myCheckbox" value="1" id="checkbox1"  class="check_input"/>
+                <label for="checkbox1" class="label_check_main">Birthday</label>
+            </div>
+            <div>
+                <input type="checkbox" name="myCheckbox" value="1" id="checkbox1" class="check_input" />
+                <label for="checkbox1" class="label-check">General</label>
+            </div>
+            <div>
+                <input type="checkbox" name="myCheckbox" value="2" id="checkbox2" class="check_input" />
+                <label for="checkbox2" class="label-check">Teenagers</label>
+            </div>
+            <div>
+                <input type="checkbox" name="myCheckbox" value="3" id="checkbox3" class="check_input" />
+                <label for="checkbox3" class="label-check">Adult</label>
+            </div>
+            <div>
+                <input type="checkbox" name="myCheckbox" value="3" id="checkbox3" class="check_input" />
+                <label for="checkbox3" class="label-check">Mordern</label>
+            </div>
+            <div>
+                <input type="checkbox" name="myCheckbox" value="1" id="checkbox1" class="check_input" />
+                <label for="checkbox1" class="label_check_main">New Year</label>
+            </div>
+            <div>
+                <input type="checkbox" name="myCheckbox" value="1" id="checkbox1" class="check_input" />
+                <label for="checkbox1" class="label-check">General</label>
+            </div>
+            <div>
+                <input type="checkbox" name="myCheckbox" value="2" id="checkbox2" class="check_input" />
+                <label for="checkbox2" class="label-check">Teenagers</label>
+            </div>
+            <div>
+                <input type="checkbox" name="myCheckbox" value="3" id="checkbox3" class="check_input" />
+                <label for="checkbox3" class="label-check">Adult</label>
+            </div>
+            <div>
+                <input type="checkbox" name="myCheckbox" value="3" id="checkbox3" class="check_input" />
+                <label for="checkbox3" class="label-check">Mordern</label>
+            </div>
+            <div>
+                <input type="checkbox" name="myCheckbox" value="1" id="checkbox1" class="check_input" />
+                <label for="checkbox1" class="label_check_main">Wedding</label>
+            </div>
+            <div>
+                <input type="checkbox" name="myCheckbox" value="1" id="checkbox1" class="check_input" />
+                <label for="checkbox1" class="label-check">General</label>
+            </div>
+            <div>
+                <input type="checkbox" name="myCheckbox" value="2" id="checkbox2" class="check_input" />
+                <label for="checkbox2" class="label-check">Teenagers</label>
+            </div>
+            <div>
+                <input type="checkbox" name="myCheckbox" value="3" id="checkbox3" class="check_input" />
+                <label for="checkbox3" class="label-check">Adult</label>
+            </div>
+            <div>
+                <input type="checkbox" name="myCheckbox" value="3" id="checkbox3" class="check_input" />
+                <label for="checkbox3" class="label-check">Mordern</label>
+            </div>
+            <div>
+                <input type="checkbox" name="myCheckbox" value="1" id="checkbox1" class="check_input" />
+                <label for="checkbox1" class="label_check_main">Festivals</label>
+            </div>
+            <div>
+                <input type="checkbox" name="myCheckbox" value="1" id="checkbox1" class="check_input" />
+                <label for="checkbox1" class="label-check">General</label>
+            </div>
+            <div>
+                <input type="checkbox" name="myCheckbox" value="2" id="checkbox2" class="check_input" />
+                <label for="checkbox2" class="label-check">Teenagers</label>
+            </div>
+            <div>
+                <input type="checkbox" name="myCheckbox" value="3" id="checkbox3" class="check_input" />
+                <label for="checkbox3" class="label-check">Adult</label>
+            </div>
+        
+            <div>
+                <input type="checkbox" name="myCheckbox" value="1" id="checkbox1" class="check_input" />
+                <label for="checkbox1" class="label_check_main">Others</label>
+            </div>
+            <div>
+                <input type="checkbox" name="myCheckbox" value="1" id="checkbox1" class="check_input" />
+                <label for="checkbox1" class="label-check">General</label>
+            </div>
+            <div>
+                <input type="checkbox" name="myCheckbox" value="2" id="checkbox2" class="check_input" />
+                <label for="checkbox2" class="label-check">Teenagers</label>
+            </div>
+            <div>
+                <input type="checkbox" name="myCheckbox" value="3" id="checkbox3" class="check_input" />
+                <label for="checkbox3" class="label-check">Adult</label>
+            </div>
+            <div>
+                <input type="checkbox" name="myCheckbox" value="3" id="checkbox3" class="check_input" />
+                <label for="checkbox3" class="label-check">Mordern</label>
+            </div>
+        
+        </form>
+    </div>
+
+    <div class="content-bar" id="result">
+        <div class="main-cards">
+            <!-- Example item -->
+            <div class="item-a1">
+                <div class="mt-5 me-3">
+                    <div class="flex flex-col justify-center items-center item-product w-full">
+                        <img src="~/image_design/Christmasimg.jpg" alt="sp2" class="img-template1" />
+                        <div class="flex flex-col justify-center py-3 w-75">
+                            <div class="text-xl text-black font-medium text-center">Template Name 1</div>
+                            <div class="flex justify-content-between py-2">
+                                <s class="text-black text-lg text-start">$4.99</s>
+                                <div class="font-bold text-xl text-end text-price">$4.59</div>
+                            </div>
+                        </div>
+                        <div class="overplay2">
+                            <a href="#" class="btn-buy1">Use this template</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Repeat similar items for other products -->
+            <div class="item-a1">
+                <div class="mt-5 me-3">
+                    <div class="flex flex-col justify-center items-center item-product w-full">
+                        <img src="~/image_design/Christmasimg.jpg" alt="sp2" class="img-template1" />
+                        <div class="flex flex-col justify-center py-3 w-75">
+                            <div class="text-xl text-black font-medium text-center">Template Name 2</div>
+                            <div class="flex justify-content-between py-2">
+                                <s class="text-black text-lg text-start">$4.99</s>
+                                <div class="font-bold text-xl text-end text-price">$4.59</div>
+                            </div>
+                        </div>
+                        <div class="overplay2">
+                            <a href="#" class="btn-buy1">Use this template</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More items... -->
+            <div class="item-a1">
+                <div class="mt-5 me-3">
+                    <div class="flex flex-col justify-center items-center item-product w-full">
+                        <img src="~/image_design/Christmasimg.jpg" alt="sp2" class="img-template1" />
+                        <div class="flex flex-col justify-center py-3 w-75">
+                            <div class="text-xl text-black font-medium text-center">Template Name 2</div>
+                            <div class="flex justify-content-between py-2">
+                                <s class="text-black text-lg text-start">$4.99</s>
+                                <div class="font-bold text-xl text-end text-price">$4.59</div>
+                            </div>
+                        </div>
+                        <div class="overplay2">
+                            <a href="#" class="btn-buy1">Use this template</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-a1">
+                <div class="mt-5 me-3">
+                    <div class="flex flex-col justify-center items-center item-product w-full">
+                        <img src="~/image_design/Christmasimg.jpg" alt="sp2" class="img-template1" />
+                        <div class="flex flex-col justify-center py-3 w-75">
+                            <div class="text-xl text-black font-medium text-center">Template Name 2</div>
+                            <div class="flex justify-content-between py-2">
+                                <s class="text-black text-lg text-start">$4.99</s>
+                                <div class="font-bold text-xl text-end text-price">$4.59</div>
+                            </div>
+                        </div>
+                        <div class="overplay2">
+                            <a href="#" class="btn-buy1">Use this template</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item-a1">
+                <div class="mt-5 me-3">
+                    <div class="flex flex-col justify-center items-center item-product w-full">
+                        <img src="~/image_design/Christmasimg.jpg" alt="sp2" class="img-template1" />
+                        <div class="flex flex-col justify-center py-3 w-75">
+                            <div class="text-xl text-black font-medium text-center">Template Name 2</div>
+                            <div class="flex justify-content-between py-2">
+                                <s class="text-black text-lg text-start">$4.99</s>
+                                <div class="font-bold text-xl text-end text-price">$4.59</div>
+                            </div>
+                        </div>
+                        <div class="overplay2">
+                            <a href="#" class="btn-buy1">Use this template</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-a1">
+                <div class="mt-5 me-3">
+                    <div class="flex flex-col justify-center items-center item-product w-full">
+                        <img src="~/image_design/Christmasimg.jpg" alt="sp2" class="img-template1" />
+                        <div class="flex flex-col justify-center py-3 w-75">
+                            <div class="text-xl text-black font-medium text-center">Template Name 2</div>
+                            <div class="flex justify-content-between py-2">
+                                <s class="text-black text-lg text-start">$4.99</s>
+                                <div class="font-bold text-xl text-end text-price">$4.59</div>
+                            </div>
+                        </div>
+                        <div class="overplay2">
+                            <a href="#" class="btn-buy1">Use this template</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script>
+    // Lắng nghe sự kiện thay đổi (change event) trên radio buttons
+    const radios = document.querySelectorAll('input[type="radio"][name="myRadio"]');
+    radios.forEach(radio => {
+        radio.addEventListener('change', function() {
+            const selectedValue = document.querySelector('input[name="myRadio"]:checked').value;
+            // Hiển thị giá trị được chọn trong một div
+            document.getElementById('result').innerText = "You selected: " + selectedValue;
+
+            // Gửi dữ liệu đến Controller bằng AJAX
+            $.ajax({
+                url: '#', // Địa chỉ URL của action trên controller
+                type: 'POST',
+                data: { selectedOption: selectedValue },
+                success: function(response) {
+                    console.log("Server Response:", response);
+                },
+                error: function() {
+                    alert("An error occurred while sending the data.");
+                }
+            });
+        });
+    });
+</script>
+<script>
+    // Lắng nghe sự kiện thay đổi (change event) trên checkbox
+    const checkboxes = document.querySelectorAll('input[type="checkbox"][name="myCheckbox"]');
+    checkboxes.forEach(checkbox => {
+        checkbox.addEventListener('change', function() {
+            // Lấy tất cả giá trị của checkbox đã chọn
+            const selectedValues = Array.from(document.querySelectorAll('input[name="myCheckbox"]:checked'))
+                                         .map(checkbox => checkbox.value);
+
+            // Hiển thị các giá trị đã chọn
+            document.getElementById('result').innerText = "You selected: " + selectedValues.join(', ');
+
+            // Gửi dữ liệu đến Controller bằng AJAX
+            $.ajax({
+                url: '/YourController/YourAction', // Địa chỉ URL của action trên controller
+                type: 'POST',
+                data: { selectedOptions: selectedValues }, // Gửi danh sách giá trị của các checkbox đã chọn
+                success: function(response) {
+                    console.log("Server Response:", response);
+                },
+                error: function() {
+                    alert("An error occurred while sending the data.");
+                }
+            });
+        });
+    });
+</script>
