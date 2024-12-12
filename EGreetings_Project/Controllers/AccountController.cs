@@ -1,9 +1,13 @@
 ﻿using EGreetings_Project.Models;
 using EGreetings_Project.Models.ViewModelAccount;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
+using System.Security.Claims;
+using Microsoft.AspNetCore.DataProtection;
 
 namespace EGreetings_Project.Controllers
 {
@@ -12,6 +16,7 @@ namespace EGreetings_Project.Controllers
         private readonly SignInManager<User> signInManager;
         private readonly UserManager<User> userManager;
         private readonly IEmailSender emailSender;
+        //private readonly IDataProtector _dataProtector;
 
         public AccountController(SignInManager<User> signInManager, UserManager<User> userManager, IEmailSender emailSender)
         {
@@ -25,7 +30,7 @@ namespace EGreetings_Project.Controllers
             return View();
         }
 
-      
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Login(LoginViewModel model)
@@ -46,11 +51,9 @@ namespace EGreetings_Project.Controllers
                     // Kiểm tra xem người dùng đã xác nhận email chưa
                     if (!user.EmailConfirmed)
                     {
-                        // Kiểm tra nếu token đã hết hạn (bạn có thể kiểm tra thời gian gửi email xác nhận)
                         if (user.EmailConfirmationSentDate.HasValue &&
-                            (DateTime.Now - user.EmailConfirmationSentDate.Value).TotalHours > 24)  //token hết hạn sau 24 giờ
+                            (DateTime.Now - user.EmailConfirmationSentDate.Value).TotalHours > 24)  // token hết hạn sau 24 giờ
                         {
-                            // Gửi lại email xác nhận
                             var code = await userManager.GenerateEmailConfirmationTokenAsync(user);
                             var callbackUrl = Url.Action(
                                 "ConfirmEmail",
@@ -59,14 +62,12 @@ namespace EGreetings_Project.Controllers
                                 protocol: Request.Scheme
                             );
 
-                            // Gửi lại email xác nhận
                             var emailSent = await SendConfirmationEmail(user.Email, callbackUrl);
                             if (emailSent)
                             {
-                                // Lưu lại thời gian gửi email xác nhận mới
                                 user.EmailConfirmationSentDate = DateTime.Now;
-                                await userManager.UpdateAsync(user);  // Cập nhật vào cơ sở dữ liệu
-                                return RedirectToAction("ResendMailConfirm", "Account"); // Trang thông báo đã gửi lại email
+                                await userManager.UpdateAsync(user);
+                                return RedirectToAction("ResendMailConfirm", "Account");
                             }
                             else
                             {
@@ -76,9 +77,6 @@ namespace EGreetings_Project.Controllers
                         }
                         else
                         {
-                            // Nếu chưa hết hạn, yêu cầu người dùng kiểm tra email
-                            //ModelState.AddModelError("", "Please check your email to confirm your account.");
-                            //return View(model);
                             return RedirectToAction("Notifications", "Account");
                         }
                     }
@@ -88,22 +86,36 @@ namespace EGreetings_Project.Controllers
 
                     if (result.Succeeded)
                     {
+                        // Kiểm tra avatar và thêm vào claims
+                        var avatarUrl = string.IsNullOrEmpty(user.imgAvatar) ? "/images/useravarta/default-avatar.png" : user.imgAvatar;
+
+                        // Tạo danh sách claims
+                        var claims = new List<Claim>
+                {
+                    new Claim(ClaimTypes.Name, user.UserName),
+                    new Claim("Avatar", avatarUrl) // Thêm Avatar vào Claims
+                };
+
+                        var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                        var principal = new ClaimsPrincipal(identity);
+
+                        // Đăng nhập người dùng với custom claims
+                        await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+
+
                         // Kiểm tra vai trò của người dùng
                         var isAdmin = await userManager.IsInRoleAsync(user, "Admin");
                         if (isAdmin)
                         {
-                            // Nếu người dùng là admin, chuyển hướng đến trang Privacy
                             return RedirectToAction("Privacy", "Home");
                         }
                         else
                         {
-                            // Nếu người dùng là user, chuyển hướng đến trang Index
                             return RedirectToAction("Index", "Home");
                         }
                     }
                     else
                     {
-                        // Kiểm tra chi tiết lỗi để cung cấp thông báo chính xác hơn cho người dùng
                         if (result.IsLockedOut)
                         {
                             ModelState.AddModelError("", "Your account is locked. Please try again later.");
@@ -130,7 +142,13 @@ namespace EGreetings_Project.Controllers
         }
 
 
+
         public IActionResult Register()
+        {
+            return View();
+        }
+
+        public IActionResult Notifications()
         {
             return View();
         }
@@ -144,9 +162,37 @@ namespace EGreetings_Project.Controllers
                 var existingUser = await userManager.FindByEmailAsync(model.Email);
                 if (existingUser != null)
                 {
-                    ModelState.AddModelError("", "Account with this email is existed!");
+                    ModelState.AddModelError("", "Account with this email already exists!");
                     return View(model);
                 }
+
+                // Xử lý hình ảnh đại diện (avatar)
+                string avatarFileName = "";
+                if (model.imgAvatar != null)
+                {
+                    // Tạo tên file duy nhất cho avatar (bằng cách sử dụng Guid)
+                    avatarFileName = Guid.NewGuid().ToString() + Path.GetExtension(model.imgAvatar.FileName);
+
+                    // Đường dẫn thư mục lưu trữ avatar (thư mục "wwwroot/images/avatars")
+                    var uploadsFolder = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "images", "useravarta");
+
+                    // Đảm bảo thư mục tồn tại
+                    if (!Directory.Exists(uploadsFolder))
+                    {
+                        Directory.CreateDirectory(uploadsFolder);
+                    }
+
+                    // Tạo đường dẫn file avatar
+                    var filePath = Path.Combine(uploadsFolder, avatarFileName);
+
+                    // Lưu ảnh vào thư mục
+                    using (var stream = new FileStream(filePath, FileMode.Create))
+                    {
+                        await model.imgAvatar.CopyToAsync(stream);
+                    }
+                }
+
+                // Tạo người dùng mới
                 var user = new User
                 {
                     UserName = model.UserName,
@@ -155,6 +201,7 @@ namespace EGreetings_Project.Controllers
                     PhoneNumber = model.Phone,
                     Dob = model.Dob,
                     CreatedDate = DateTime.Now,
+                    imgAvatar = avatarFileName // Lưu đường dẫn ảnh vào database (hoặc chỉ lưu tên file)
                 };
 
                 var result = await userManager.CreateAsync(user, model.Password);
@@ -177,30 +224,25 @@ namespace EGreetings_Project.Controllers
                     var code = await userManager.GenerateEmailConfirmationTokenAsync(user);
 
                     var callbackUrl = Url.Action(
-                        "ConfirmEmail", 
+                        "ConfirmEmail",
                         "Account",
-                        new { userId = user.Id, code = code }, 
-                        protocol: Request.Scheme 
+                        new { userId = user.Id, code = code },
+                        protocol: Request.Scheme
                     );
 
-                  
                     var emailSent = await SendConfirmationEmail(model.Email, callbackUrl);
                     if (emailSent)
                     {
-                       
                         return RedirectToAction("RegistrationConfirmation", "Account");
                     }
                     else
                     {
-                      
                         ModelState.AddModelError("", "There was an error sending the confirmation email.");
                         return View(model);
                     }
                 }
                 else
                 {
-
-                    //Errors if add new user not work
                     foreach (var error in result.Errors)
                     {
                         ModelState.AddModelError("", error.Description);
@@ -210,6 +252,7 @@ namespace EGreetings_Project.Controllers
 
             return View(model);
         }
+
 
         // Method to Send Confirmation Form to Email
         private async Task<bool> SendConfirmationEmail(string email, string callbackUrl)

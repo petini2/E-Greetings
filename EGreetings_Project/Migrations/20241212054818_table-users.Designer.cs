@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EGreetings_Project.Migrations
 {
     [DbContext(typeof(EGreetingsDbContext))]
-    [Migration("20241203083950_table-users")]
+    [Migration("20241212054818_table-users")]
     partial class tableusers
     {
         /// <inheritdoc />
@@ -94,6 +94,9 @@ namespace EGreetings_Project.Migrations
                     b.Property<string>("UserName")
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
+
+                    b.Property<string>("imgAvatar")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<bool>("isSubscribed")
                         .HasColumnType("bit");

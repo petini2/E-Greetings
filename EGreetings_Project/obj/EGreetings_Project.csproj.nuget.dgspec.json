@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\EGreetings_Project.csproj": {}
+    "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\EGreetings_Project.csproj": {}
   },
   "projects": {
-    "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\EGreetings_Project.csproj": {
+    "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\EGreetings_Project.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\EGreetings_Project.csproj",
+        "projectUniqueName": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\EGreetings_Project.csproj",
         "projectName": "EGreetings_Project",
-        "projectPath": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\EGreetings_Project.csproj",
+        "projectPath": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\EGreetings_Project.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\obj\\",
+        "outputPath": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -55,6 +55,10 @@
               "version": "[4.8.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.AspNetCore.DataProtection": {
               "target": "Package",
               "version": "[9.0.0, )"
             },

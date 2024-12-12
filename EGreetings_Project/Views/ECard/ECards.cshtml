@@ -1,0 +1,141 @@
+﻿
+@{
+    ViewData["Title"] = "ECards";
+}
+
+
+<div class="w-full w-all-ecard flex">
+
+    <div class="w-sidecard flex flex-col">
+        <div class="w-full flex flex-col px-5 py-5">
+            <div class="p-3">
+                Filter By Price
+            </div>
+            <form method="post" action="@Url.Action("FilterByPrice", "YourController")" id="filterForm" class="p3">
+                <div>
+                    <label>
+                        <input type="radio" name="priceFilter" value="lowestToHighest" onchange="this.form.submit()" /> Lowest To Highest
+                    </label>
+                </div>
+                <div>
+                    <label>
+                        <input type="radio" name="priceFilter" value="highestToLowest" onchange="this.form.submit()" /> Highest To Lowest
+                    </label>
+                </div>
+            </form>
+        </div>
+        <div class="w-full flex flex-col px-5 ">
+            <div class="p-3">
+                Filter By Categories
+            </div>
+            <div class="p-3">
+                <label>
+                    <input type="checkbox" class="categoryFilter" value="Category1" onchange="applyFilters()" /> Category 1
+                </label>
+            </div>
+            <div class="p-3">
+                <label>
+                    <input type="checkbox" class="categoryFilter" value="Category2" onchange="applyFilters()" /> Category 2
+                </label>
+            </div>
+            <div class="p-3">
+                <label>
+                    <input type="checkbox" class="categoryFilter" value="Category3" onchange="applyFilters()" /> Category 3
+                </label>
+            </div>
+        </div>
+       
+
+       
+    </div>
+     <div class="w-maincard">
+         <div class="e-cards">
+             
+                <div class="item-a1">
+                    <div class="mt-5 me-3">
+                        <div class="flex flex-col justify-center items-center item-product">
+                            <img src="~/image_design/Christmasimg.jpg" alt="sp1" class="img-card" />
+                            <div class="w-content-card flex flex-col ">
+                                <div class="text-center px-3 py-4">Template Name</div>
+                                <div class="flex justify-content-between align-items-center p-2"><s>$3.00</s><span class="exactly-price">$2.99</span></div>
+                            </div>
+                            <div class="overplay1">
+                                <a href="#" class="btn-buy">Use this card</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="item-a1">
+                <div class="mt-5 me-3">
+                    <div class="flex flex-col justify-center items-center item-product">
+                        <img src="~/image_design/Christmasimg.jpg" alt="sp1" class="img-card" />
+                        <div class="w-content-card flex flex-col ">
+                            <div class="text-center px-3 py-4">Template Name</div>
+                            <div class="flex justify-content-between align-items-center p-2"><s>$3.00</s><span class="exactly-price">$2.99</span></div>
+                        </div>
+                        <div class="overplay1">
+                            <a href="#" class="btn-buy">Use this card</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+              <div class="item-a1">
+                    <div class="mt-5 me-3">
+                        <div class="flex flex-col justify-center items-center item-product">
+                        <img src="~/image_design/Christmasimg.jpg" alt="sp1" class="img-card" />
+                            <div class="w-content-card flex flex-col ">
+                                <div class="text-center px-3 py-4">Template Name</div>
+                                <div class="flex justify-content-between align-items-center p-2"><s>$3.00</s><span class="exactly-price">$2.99</span></div>
+                            </div>
+                            <div class="overplay1">
+                                <a href="#" class="btn-buy">Use this card</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            <div class="item-a1">
+                <div class="mt-5 me-3">
+                    <div class="flex flex-col justify-center items-center item-product">
+                        <img src="~/image_design/Christmasimg.jpg" alt="sp1" class="img-card" />
+                        <div class="w-content-card flex flex-col ">
+                            <div class="text-center px-3 py-4">Template Name</div>
+                            <div class="flex justify-content-between align-items-center p-2"><s>$3.00</s><span class="exactly-price">$2.99</span></div>
+                        </div>
+                        <div class="overplay1">
+                            <a href="#" class="btn-buy">Use this card</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="item-a1">
+                <div class="mt-5 me-3">
+                    <div class="flex flex-col justify-center items-center item-product">
+                        <img src="~/image_design/Christmasimg.jpg" alt="sp1" class="img-card" />
+                        <div class="w-content-card flex flex-col ">
+                            <div class="text-center px-3 py-4">Template Name</div>
+                            <div class="flex justify-content-between align-items-center p-2"><s>$3.00</s><span class="exactly-price">$2.99</span></div>
+                        </div>
+                        <div class="overplay1">
+                            <a href="#" class="btn-buy">Use this card</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <div class="item-a1">
+                <div class="mt-5 me-3">
+                    <div class="flex flex-col justify-center items-center item-product">
+                        <img src="~/image_design/Christmasimg.jpg" alt="sp1" class="img-card" />
+                        <div class="w-content-card flex flex-col ">
+                            <div class="text-center px-3 py-4">Template Name</div>
+                            <div class="flex justify-content-between align-items-center p-2"><s>$3.00</s><span class="exactly-price">$2.99</span></div>
+                        </div>
+                        <div class="overplay1">
+                            <a href="#" class="btn-buy">Use this card</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+         </div>
+    </div>
+</div>
+

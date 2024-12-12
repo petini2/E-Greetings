@@ -1,299 +1,427 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\EGreetings_Project.bundle.scp.css",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\obj\\Debug\\net9.0\\scopedcss\\projectbundle\\EGreetings_Project.bundle.scp.css",
       "PackagePath": "staticwebassets\\EGreetings_Project.d4ud2fcbma.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\css\\homepage.css",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\css\\ecards.css",
+      "PackagePath": "staticwebassets\\css\\ecards.css"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\css\\homepage.css",
       "PackagePath": "staticwebassets\\css\\homepage.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\css\\site.css",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\css\\site.css",
       "PackagePath": "staticwebassets\\css\\site.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\css\\sliders.css",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\css\\sliders.css",
       "PackagePath": "staticwebassets\\css\\sliders.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\css\\tailwind.css",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\css\\subs.css",
+      "PackagePath": "staticwebassets\\css\\subs.css"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\css\\tailwind.css",
       "PackagePath": "staticwebassets\\css\\tailwind.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\favicon.ico",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\favicon.ico",
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\Christmasimg.jpg",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\Birthday1.png",
+      "PackagePath": "staticwebassets\\image_design\\Birthday1.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\Campfire.png",
+      "PackagePath": "staticwebassets\\image_design\\Campfire.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\CharityBox.png",
+      "PackagePath": "staticwebassets\\image_design\\CharityBox.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\Christmasimg.jpg",
       "PackagePath": "staticwebassets\\image_design\\Christmasimg.jpg"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\E-cardicon.png",
-      "PackagePath": "staticwebassets\\image_design\\E-cardicon.png"
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\Design.png",
+      "PackagePath": "staticwebassets\\image_design\\Design.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\Homeicon.png",
-      "PackagePath": "staticwebassets\\image_design\\Homeicon.png"
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\Eco Driving Indicator.png",
+      "PackagePath": "staticwebassets\\image_design\\Eco Driving Indicator.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\IconSpecial.png",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\Festival1.png",
+      "PackagePath": "staticwebassets\\image_design\\Festival1.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\Home1.png",
+      "PackagePath": "staticwebassets\\image_design\\Home1.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\Hot Price1.png",
+      "PackagePath": "staticwebassets\\image_design\\Hot Price1.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\IconSpecial.png",
       "PackagePath": "staticwebassets\\image_design\\IconSpecial.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\Letter.png",
-      "PackagePath": "staticwebassets\\image_design\\Letter.png"
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\It’s Christmas Time.png",
+      "PackagePath": "staticwebassets\\image_design\\It’s Christmas Time.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\Logo E-G Full HD-NoBG - Cut.png",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\Letter1.png",
+      "PackagePath": "staticwebassets\\image_design\\Letter1.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\Letter_footer.png",
+      "PackagePath": "staticwebassets\\image_design\\Letter_footer.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\Logo E-G Full HD-NoBG - Cut.png",
       "PackagePath": "staticwebassets\\image_design\\Logo E-G Full HD-NoBG - Cut.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\Logo E-G Full HD-NoBG.png",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\Logo E-G Full HD-NoBG.png",
       "PackagePath": "staticwebassets\\image_design\\Logo E-G Full HD-NoBG.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\PackingICon.png",
-      "PackagePath": "staticwebassets\\image_design\\PackingICon.png"
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\LoveDay.png",
+      "PackagePath": "staticwebassets\\image_design\\LoveDay.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\Phone.png",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\Name.png",
+      "PackagePath": "staticwebassets\\image_design\\Name.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\Parcel1.png",
+      "PackagePath": "staticwebassets\\image_design\\Parcel1.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\Phone.png",
       "PackagePath": "staticwebassets\\image_design\\Phone.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\image_design\\TransactionICon.png",
-      "PackagePath": "staticwebassets\\image_design\\TransactionICon.png"
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\Right Arrow.png",
+      "PackagePath": "staticwebassets\\image_design\\Right Arrow.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\js\\site.js",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\Right.png",
+      "PackagePath": "staticwebassets\\image_design\\Right.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\Star.png",
+      "PackagePath": "staticwebassets\\image_design\\Star.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\VIP1.png",
+      "PackagePath": "staticwebassets\\image_design\\VIP1.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\Wedding1.png",
+      "PackagePath": "staticwebassets\\image_design\\Wedding1.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\WindowOther.png",
+      "PackagePath": "staticwebassets\\image_design\\WindowOther.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\bg_christ1.png",
+      "PackagePath": "staticwebassets\\image_design\\bg_christ1.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\newy.png",
+      "PackagePath": "staticwebassets\\image_design\\newy.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\useravarta\\0ddda796-39e9-4c58-ac46-a4c0f94ce1eb.png",
+      "PackagePath": "staticwebassets\\images\\useravarta\\0ddda796-39e9-4c58-ac46-a4c0f94ce1eb.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\useravarta\\159ec032-3fc5-4668-8317-aacb73f1dbcf.png",
+      "PackagePath": "staticwebassets\\images\\useravarta\\159ec032-3fc5-4668-8317-aacb73f1dbcf.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\useravarta\\24a97aa1-597b-452e-b87c-993dd58a4dc3.png",
+      "PackagePath": "staticwebassets\\images\\useravarta\\24a97aa1-597b-452e-b87c-993dd58a4dc3.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\useravarta\\6b54af0a-f5d7-4071-b3be-6f76990c78a4.png",
+      "PackagePath": "staticwebassets\\images\\useravarta\\6b54af0a-f5d7-4071-b3be-6f76990c78a4.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\useravarta\\7222c2a5-79a6-47d1-8431-710afd21f9d2.png",
+      "PackagePath": "staticwebassets\\images\\useravarta\\7222c2a5-79a6-47d1-8431-710afd21f9d2.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\useravarta\\72ac3e1a-1946-4a0d-be85-e0207b270c79.png",
+      "PackagePath": "staticwebassets\\images\\useravarta\\72ac3e1a-1946-4a0d-be85-e0207b270c79.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\useravarta\\7fe38e0a-1dd4-4da1-bdb4-b92c50067e15.png",
+      "PackagePath": "staticwebassets\\images\\useravarta\\7fe38e0a-1dd4-4da1-bdb4-b92c50067e15.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\useravarta\\c4a60307-642e-455e-9fd1-34ca1ba6284a.png",
+      "PackagePath": "staticwebassets\\images\\useravarta\\c4a60307-642e-455e-9fd1-34ca1ba6284a.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\useravarta\\default-admin.jpg",
+      "PackagePath": "staticwebassets\\images\\useravarta\\default-admin.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\useravarta\\default-image.jpg",
+      "PackagePath": "staticwebassets\\images\\useravarta\\default-image.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\useravarta\\default-user.jpg",
+      "PackagePath": "staticwebassets\\images\\useravarta\\default-user.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\useravarta\\f82abdb5-3631-40fe-88cb-50891f42064b.jpg",
+      "PackagePath": "staticwebassets\\images\\useravarta\\f82abdb5-3631-40fe-88cb-50891f42064b.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\useravarta\\fcdf1ea4-9595-453c-b4a7-7e5dac879a77.jpg",
+      "PackagePath": "staticwebassets\\images\\useravarta\\fcdf1ea4-9595-453c-b4a7-7e5dac879a77.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\LICENSE",
       "PackagePath": "staticwebassets\\lib\\bootstrap"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
       "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\jquery\\LICENSE.txt",
       "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\jquery\\dist\\jquery.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\EGreetings_Project\\EGreetings_Project\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
       "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
     },
     {

@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+//using Microsoft.AspNetCore.Http;
 
 namespace EGreetings_Project.Models.ViewModelAccount
 {
@@ -38,5 +39,9 @@ namespace EGreetings_Project.Models.ViewModelAccount
         [DataType(DataType.Password)]
         [Display(Name = "Confirm Password")]
         public string? ConfirmPassword { get; set; }
+
+        // Use IFormFile to handle file uploads for the Avatar image
+        [Display(Name = "Avatar Image")]
+        public IFormFile? imgAvatar { get; set; }
     }
 }

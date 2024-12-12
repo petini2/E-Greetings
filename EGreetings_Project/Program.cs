@@ -1,6 +1,9 @@
 ﻿using EGreetings_Project.Data;
 using EGreetings_Project.Data.Seeder;
 using EGreetings_Project.Models;
+using EGreetings_Project.Services;
+using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.EntityFrameworkCore;
@@ -47,14 +50,20 @@ builder.Services.Configure<IdentityOptions>(options =>
     options.SignIn.RequireConfirmedPhoneNumber = false;
 });
 
-//Setting cookie
-builder.Services.ConfigureApplicationCookie(options =>
-{
-    options.ExpireTimeSpan = TimeSpan.FromMinutes(30);
+//Encryption Settings
+//builder.Services.AddDataProtection()
+//    .PersistKeysToFileSystem(new DirectoryInfo(@"C:\keys"))
+//    .SetApplicationName("EGreetings_Project");
+//builder.Services.AddSingleton<DataProtection>();
 
-    options.LoginPath = "/Account/Login";
-    options.AccessDeniedPath = "/Account/AccessDenied";
-});
+//Setting cookie
+builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
+    .AddCookie(options =>
+    {
+        options.ExpireTimeSpan = TimeSpan.FromMinutes(30); // Set the cookie expiration time
+        options.LoginPath = "/Account/Login"; // Redirect to login if the user is not authenticated
+        options.AccessDeniedPath = "/Account/AccessDenied"; // Redirect to access denied if the user does not have permission
+    });
 //Setting time to update informations
 builder.Services.Configure<SecurityStampValidatorOptions>(o =>
 {

@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="~/css/homepage.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/sliders.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/sliders.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/ecards.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/subs.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/EGreetings_Project.styles.css" asp-append-version="true" />
     <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -17,116 +19,159 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Lexend:wght@100..900&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
 </head>
 <body class="w-full flex flex-col">
     <header>
         @* <a class="nav-link text-dark nav-link-header" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/image_design/IconSpecial.png" class="img-icon" />Specials</a> *@
         <nav class="header-home">
-            <div class="all-content flex justify-content-between align-items-end ">
+            <div class="all-content flex justify-content-between align-items-end row ">
                 <div class="col-2 flex justify-content-end align-items-center">
                     <a class=" flex justify-content-end align-items-center" asp-area="" asp-controller="Home" asp-action="Index">
                         <img src="~/image_design/Logo E-G Full HD-NoBG - Cut.png" class="ps-5 img-logo" />
                     </a>
                 </div>
-                <div class="col-6 flex justify-content-between align-content-end pb-2">
+                <div class="col-6 h-100 flex justify-content-between align-content-end pb-1">
                     <div class="flex justify-content-center align-items-end">
+                 
                         <!-- Dropdown Home -->
-                        <div class="relative inline-block text-left">
-                            <div>
-                                <button type="button" class="flex w-full justify-center gap-x-1.5 rounded-md" id="home-menu-button" aria-expanded="false" aria-haspopup="true">
-                                    <img src="~/image_design/Homeicon.png" class="img-icon" />
-                                    <span class="font-bold text-lg ms-2">Home</span>
-                                    <svg class="-mr-1 size-5 text-gray-400" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon">
-                                        <path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" />
-                                    </svg>
-                                </button>
-                            </div>
-                            <div class="absolute right-0 z-10 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none hidden" role="menu" aria-orientation="vertical" aria-labelledby="home-menu-button" tabindex="-1" id="home-dropdown-menu">
-                                <div class="py-1" role="none">
-                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-home-0">Edit</a>
-                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-home-1">Duplicate</a>
-                                </div>
-                                <div class="py-1" role="none">
-                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-home-2">Archive</a>
-                                    <a href="#" class="block px-4 py-2 text-sm text-gray-700" role="menuitem" tabindex="-1" id="menu-item-home-3">Move</a>
-                                </div>
-                            </div>
+                        <div class="relative group">
+                            <div class=" justify-content-center align-items-end" id="dropdownButton">
+                                <a class=" flex justify-center items-center" asp-controller="Home" asp-action="Index">
+                                    <img src="~/image_design/Home1.png" class="img-icon" /> <span class="font-bold  ms-2 text-header">Home</span>
+                                    </a></div>
+                            <ul id="dropdownMenu" class="absolute dropdown-home hidden w-52 p-4 bg-white rounded-lg shadow-lg">
+                                <li class="item-dropdown"><a href="#" class="text-dropdown text-decoration-none text-black">My Account</a></li>
+                                <li class="item-dropdown"><a href="#" class="text-dropdown text-decoration-none text-black">About Us</a></li>
+                                <li class="item-dropdown"><a href="#" class="text-dropdown text-decoration-none text-black">Contact Us</a></li>
+                            </ul>
                         </div>
 
 
+
                     </div>
-                    <div class="flex justify-content-center align-items-end">
-                        <!-- Dropdown E-Cards -->
-                        <div class="relative inline-block text-left">
-                            <div>
-                                <button type="button" class="flex w-full justify-center gap-x-1.5 rounded-md" id="ecards-menu-button" aria-expanded="false" aria-haspopup="true">
-                                    <img src="~/image_design/E-cardicon.png" class="img-icon" /> <span class="font-bold text-lg ms-2">E-Cards</span>
-                                </button>
+                    <div class="flex justify-center items-end">
+                        <div class="relative group">
+                            <div class=" justify-center items-end" id="dropdownButton1">
+                                <a class="flex justify-center items-center" asp-controller="ECard" asp-action="Index">
+                                    <img src="~/image_design/Letter1.png" class="img-icon" />
+                                    <span class="font-bold  ms-2 text-header">E-Cards</span>
+                                </a>
                             </div>
 
-                            <!-- Dropdown Menu, mặc định ẩn bằng class hidden -->
-                            <div class="absolute right-0 z-10 mt-1 w-96 p-5 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black/5 focus:outline-none hidden" role="menu" aria-orientation="vertical" aria-labelledby="ecards-menu-button" tabindex="-1" id="ecards-dropdown-menu">
-                                <div class="w-full flex-col justify-content-start align-items-center">
-                                    <div class="w-full flex  justify-content-between align-items-center">
-                                        <div class="block px-3 py-2 text-sm flex flex-col justify-content-start align-items-center" role="menuitem" tabindex="-1" id="menu-item-ecards-bd">
-                                            <a href="#" class="block text-sm text-black-700 text-decoration-none" role="menuitem" tabindex="-1" id="menu-item-ecards-birthday">Birthday</a>
-                                            <a href="#" class="block text-sm text-black-700 text-decoration-none" role="menuitem" tabindex="-1" id="menu-item-ecards-gen">General</a>
-                                            <a href="#" class="block text-sm text-black-700 text-decoration-none" role="menuitem" tabindex="-1" id="menu-item-ecards-teen">Teenagers</a>
-                                            <a href="#" class="block text-sm text-black-700 text-decoration-none" role="menuitem" tabindex="-1" id="menu-item-ecards-au">Adult</a>
-                                            <a href="#" class="block text-sm text-black-700 text-decoration-none" role="menuitem" tabindex="-1" id="menu-item-ecards-mor">Mordern</a>
+                            <!-- Dropdown Menu -->
+                            <div id="ecards-dropdown-menu" class="absolute dropdown-ecard  px-5 py-3 rounded-lg bg-white shadow-lg  hidden">
+                                <div class="w-full flex-col justify-start items-center px-3">
+                                    <!-- Dropdown content -->
+                                    <div class="w-full flex justify-between items-center">
+                                        <div class="px-3 py-2 text-sm flex flex-col items-start">
+                                           
+                                           <img src="~/image_design/Birthday1.png" class="img-cate" />
+                                       
+                                                <a href="#" class="block item-dropdown text-dropdown py-1 px-3 text-decoration-none text-black">
+                                              Birthday
+                                                </a>
+                                          
+                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">General</a>
+                                            <a href="#" class="block item-dropdown text-dropdown   py-1 px-3 text-decoration-none text-black">Teenagers</a>
+                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">Adult</a>
+                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">Modern</a>
                                         </div>
-                                        <div class="block px-3 py-2 text-sm flex flex-col justify-content-start align-items-center" role="menuitem" tabindex="-1" id="menu-item-ecards-n">
-                                            <a href="#" class="block text-sm text-black-700 text-decoration-none" role="menuitem" tabindex="-1" id="menu-item-ecards-ny">New year</a>
-                                            <a href="#" class="block text-sm text-black-700 text-decoration-none" role="menuitem" tabindex="-1" id="menu-item-ecards-gen">General</a>
-                                            <a href="#" class="block text-sm text-black-700 text-decoration-none" role="menuitem" tabindex="-1" id="menu-item-ecards-teen">Teenagers</a>
-                                            <a href="#" class="block text-sm text-black-700 text-decoration-none" role="menuitem" tabindex="-1" id="menu-item-ecards-au">Adult</a>
-                                            <a href="#" class="block text-sm text-black-700 text-decoration-none" role="menuitem" tabindex="-1" id="menu-item-ecards-mor">Mordern</a>
-                                        </div>
-                                        <div class="block px-3 py-2 text-sm flex flex-col justify-content-start align-items-center" role="menuitem" tabindex="-1" id="menu-item-ecards-fe">
-                                            <a href="#" class="block text-sm text-black-700 text-decoration-none" role="menuitem" tabindex="-1" id="menu-item-ecards-f">Festival</a>
-                                            <a href="#" class="block text-sm text-black-700 text-decoration-none" role="menuitem" tabindex="-1" id="menu-item-ecards-gen">General</a>
-                                            <a href="#" class="block text-sm text-black-700 text-decoration-none" role="menuitem" tabindex="-1" id="menu-item-ecards-teen">Teenagers</a>
-                                            <a href="#" class="block text-sm text-black-700 text-decoration-none" role="menuitem" tabindex="-1" id="menu-item-ecards-au">Adult</a>
-                                            <a href="#" class="block text-sm text-black-700 text-decoration-none" role="menuitem" tabindex="-1" id="menu-item-ecards-mor">Mordern</a>
-                                        </div>
+                                        <div class="px-3 py-2 text-sm flex flex-col items-start">
 
+                                            <img src="~/image_design/newy.png" class="img-cate" />
 
+                                            <a href="#" class="block item-dropdown text-dropdown py-1 px-3 text-decoration-none text-black">
+                                                New Year
+                                            </a>
+
+                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">General</a>
+                                            <a href="#" class="block item-dropdown text-dropdown   py-1 px-3 text-decoration-none text-black">Teenagers</a>
+                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">Adult</a>
+                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">Modern</a>
+                                        </div>
+                                        <div class="px-3 py-2 text-sm flex flex-col items-start">
+
+                                            <img src="~/image_design/Festival1.png" class="img-cate" />
+
+                                            <a href="#" class="block item-dropdown text-dropdown py-1 px-3 text-decoration-none text-black">
+                                                Festival
+                                            </a>
+
+                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">General</a>
+                                            <a href="#" class="block item-dropdown text-dropdown   py-1 px-3 text-decoration-none text-black">Teenagers</a>
+                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">Adult</a>
+                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">Modern</a>
+                                        </div>
                                     </div>
-                                    <br />
-                                    <div class="w-full flex justify-content-between align-items-center">
-                                        <div class="block px-3 py-2 text-sm flex flex-col justify-content-start align-items-center" role="menuitem" tabindex="-1" id="menu-item-ecards-bd">
-                                            <a href="#" class="blocktext-sm text-gray-700 flex justify-content-center align-items-center" role="menuitem" tabindex="-1" id="menu-item-ecards-w">Wedding</a>
-                                            <a href="#" class="block text-sm text-black-700 text-decoration-none" role="menuitem" tabindex="-1" id="menu-item-ecards-gen">General</a>
-                                            <a href="#" class="block text-sm text-black-700 text-decoration-none" role="menuitem" tabindex="-1" id="menu-item-ecards-teen">Teenagers</a>
-                                            <a href="#" class="block text-sm text-black-700 text-decoration-none" role="menuitem" tabindex="-1" id="menu-item-ecards-au">Adult</a>
-                                            <a href="#" class="block text-sm text-black-700 text-decoration-none" role="menuitem" tabindex="-1" id="menu-item-ecards-mor">Mordern</a>
-                                        </div>
-                                        <div class="block px-3 py-2 text-sm flex flex-col justify-content-start align-items-center" role="menuitem" tabindex="-1" id="menu-item-ecards-n">
-                                            <a href="#" class="block text-sm text-black-700 flex justify-content-center align-items-center" role="menuitem" tabindex="-1" id="menu-item-ecards-l">Love</a>
-                                            <a href="#" class="block text-sm text-black-700 text-decoration-none" role="menuitem" tabindex="-1" id="menu-item-ecards-gen">General</a>
-                                            <a href="#" class="block text-sm text-black-700 text-decoration-none" role="menuitem" tabindex="-1" id="menu-item-ecards-teen">Teenagers</a>
-                                            <a href="#" class="block text-sm text-black-700 text-decoration-none" role="menuitem" tabindex="-1" id="menu-item-ecards-au">Adult</a>
-                                            <a href="#" class="block text-sm text-black-700 text-decoration-none" role="menuitem" tabindex="-1" id="menu-item-ecards-mor">Mordern</a>
-                                        </div>
-                                        <div class="block px-3 py-2 text-sm flex flex-col justify-content-start align-items-center" role="menuitem" tabindex="-1" id="menu-item-ecards-fe">
-                                            <a href="#" class="block text-sm text-black-700 flex justify-content-center align-items-center" role="menuitem" tabindex="-1" id="menu-item-ecards-o">Others</a>
-                                            <a href="#" class="block text-sm text-black-700 text-decoration-none" role="menuitem" tabindex="-1" id="menu-item-ecards-gen">General</a>
-                                            <a href="#" class="block text-sm text-black-700 text-decoration-none" role="menuitem" tabindex="-1" id="menu-item-ecards-teen">Teenagers</a>
-                                            <a href="#" class="block text-sm text-black-700 text-decoration-none" role="menuitem" tabindex="-1" id="menu-item-ecards-au">Adult</a>
-                                            <a href="#" class="block text-sm text-black-700 text-decoration-none" role="menuitem" tabindex="-1" id="menu-item-ecards-mor">Mordern</a>
-                                        </div>
+                                    <hr  class="mt-3"/>
+                                    <div class="w-full flex justify-between items-center mt-3">
+                                        <div class="px-3 py-2 text-sm flex flex-col items-start">
 
+                                            <img src="~/image_design/Wedding1.png" class="img-cate" />
 
+                                            <a href="#" class="block item-dropdown text-dropdown py-1 px-3 text-decoration-none text-black">
+                                                Wedding
+                                            </a>
+
+                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">General</a>
+                                            <a href="#" class="block item-dropdown text-dropdown   py-1 px-3 text-decoration-none text-black">Teenagers</a>
+                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">Adult</a>
+                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">Modern</a>
+                                        </div>
+                                        <div class="px-3 py-2 text-sm flex flex-col items-start">
+
+                                            <img src="~/image_design/LoveDay.png" class="img-cate" />
+
+                                            <a href="#" class="block item-dropdown text-dropdown py-1 px-3 text-decoration-none text-black">
+                                                Love
+                                            </a>
+
+                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">General</a>
+                                            <a href="#" class="block item-dropdown text-dropdown   py-1 px-3 text-decoration-none text-black">Teenagers</a>
+                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">Adult</a>
+                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">Modern</a>
+                                        </div>
+                                        <div class="px-3 py-2 text-sm flex flex-col items-start">
+
+                                            <img src="~/image_design/WindowOther.png" class="img-cate" />
+
+                                            <a href="#" class="block item-dropdown text-dropdown py-1 px-3 text-decoration-none text-black">
+                                                Others
+                                            </a>
+
+                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">General</a>
+                                            <a href="#" class="block item-dropdown text-dropdown   py-1 px-3 text-decoration-none text-black">Teenagers</a>
+                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">Adult</a>
+                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">Modern</a>
+                                        </div>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
-
                     </div>
-                    <div class="flex justify-content-center align-items-end "><img src="~/image_design/PackingICon.png" class="img-icon" /><span class="font-bold text-lg ms-2">Subscribe</span></a> </div>
-                    <div class="flex justify-content-center align-items-end "><img src="~/image_design/TransactionICon.png" class="img-icon1" /><span class="font-bold text-lg ms-2">Orders</span></a> </div>
-                    <div class="flex justify-content-center align-items-end"><img src="~/image_design/IconSpecial.png" class="img-icon1" /><span class="font-bold text-lg ms-2">Specials</span></a> </div>
+
+                    <!-- Other Links -->
+                    <div class="flex justify-center items-end">
+                        <a class="flex justify-center items-center" asp-controller="Subs" asp-action="Index">
+                            <img src="~/image_design/VIP1.png" class="img-icon" />
+                            <span class="font-bold ms-2 text-header">Subscribes</span>
+                        </a>
+                    </div>
+
+                    <div class="flex justify-center items-end">
+                        <a class="flex justify-center items-center" asp-controller="" asp-action="Index">
+                            <img src="~/image_design/Parcel1.png" class="img-icon" />
+                            <span class="font-bold ms-2 text-header">Orders</span>
+                        </a>
+                    </div>
+
+                    <div class="flex justify-center items-end">
+                        <a class="flex justify-center items-center" asp-controller="" asp-action="Index">
+                            <img src="~/image_design/Hot Price1.png" class="img-icon" />
+                            <span class="font-bold ms-2 text-header">Specials</span>
+                        </a>
+                    </div>
                 </div>
 
                 <div class="col-2 flex justify-content-start align-items-end"><partial name="_LoginPartial.cshtml" /></div>
@@ -144,27 +189,24 @@
     <footer class="border-top position-relative footer text-muted w-full">
         <div class="container-footer">
             <div class="top-footer flex justify-content-between align-items-start">
-                <div class="flex flex-column">
+                <div class="flex justify-center  items-center">
                     <img src="~/image_design/Logo E-G Full HD-NoBG - Cut.png" class="img-logo-footer" />
-                    <div class="text-decoration-none flex align-items-center">
-                        <img src="~/image_design/Letter.png" class="img-icon-footer"/> egreetings2024.corp@gmail.com
-                    </div>
-                    <div class="text-decoration-none flex align-items-center">
-                        <img src="~/image_design/Phone.png" class="img-icon-footer"  /> egreetings2024.corp@gmail.com
-                    </div>
+                    
                 </div>
                 <div class="flex flex-col justify-content-start">
-                    <div class="text-gray-600 font-semibold text-lg mb-2 ">Favourite Categories</div>
-                    <div class="text-gray-600 font-regular text-lg mb-2">Christmas</div>
-                    <div class="text-gray-600 font-regular text-lg mb-2">New Year</div>
-                    <div class="text-gray-600 font-regular text-lg mb-2">Wedding</div>
+                    <div class="text-gray-600 font-semibold text-lg mb-2">Contact Us</div>
+                    <div class="text-decoration-none flex align-items-center">
+                        <img src="~/image_design/Letter_footer.png" class="img-icon-footer" /> egreetings2024.corp@gmail.com
+                    </div>
+                    <div class="text-decoration-none flex align-items-center">
+                        <img src="~/image_design/Phone.png" class="img-icon-footer" /> (+84) 000 000 0000
+                    </div>
                 </div>
                 <div class="flex flex-col justify-content-start">
                     <div class="text-gray-600 font-semibold text-lg mb-2 ">Services</div>
                     <div class="text-gray-600 font-regular text-lg mb-2">My Account</div>
                     <div class="text-gray-600 font-regular text-lg mb-2">Subscriptions</div>
                     <div class="text-gray-600  font-regular text-lg mb-2">About Us</div>
-                    <div class="text-gray-600  font-regular text-lg mb-2">Contact Us</div>
                     <div class="text-gray-600  font-regular text-lg mb-2">FAQs</div>
                 </div>
                 <div class="flex flex-col justify-content-start">
@@ -217,3 +259,64 @@
 </script>
 
 
+<script>
+       const dropdownButton = document.getElementById('dropdownButton');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+
+    // Hiển thị dropdown khi hover vào button
+    dropdownButton.addEventListener('mouseenter', () => {
+      dropdownMenu.classList.remove('hidden');
+      dropdownMenu.classList.add('opacity-100');
+    });
+
+    // Ẩn dropdown khi chuột rời khỏi button hoặc menu
+    dropdownButton.addEventListener('mouseleave', () => {
+      // Kiểm tra nếu chuột đã ra khỏi button và dropdown, mới ẩn
+      if (!dropdownMenu.matches(':hover')) {
+        dropdownMenu.classList.remove('opacity-100');
+        dropdownMenu.classList.add('hidden');
+      }
+    });
+
+    // Đóng dropdown khi click ra ngoài
+    document.addEventListener('click', (event) => {
+      if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+        dropdownMenu.classList.add('hidden');
+        dropdownMenu.classList.remove('opacity-100');
+      }
+    });
+
+
+
+</script>
+<script>
+          document.addEventListener('DOMContentLoaded', () => {
+        const dropdownButton = document.getElementById('dropdownButton1');
+        const dropdownMenu = document.getElementById('ecards-dropdown-menu');
+
+        // Hiển thị dropdown khi hover vào button
+        dropdownButton.addEventListener('mouseenter', () => {
+            dropdownMenu.classList.remove('hidden');
+            dropdownMenu.classList.add('opacity-100');
+        });
+
+        // Ẩn dropdown khi chuột rời khỏi button
+        dropdownButton.addEventListener('mouseleave', () => {
+            // Kiểm tra nếu chuột đã ra khỏi button và dropdown, mới ẩn
+      if (!dropdownMenu.matches(':hover')) {
+        dropdownMenu.classList.remove('opacity-100');
+        dropdownMenu.classList.add('hidden');
+      }
+        });
+
+        // Đảm bảo dropdown ẩn khi click ra ngoài
+        document.addEventListener('click', (event) => {
+            if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.add('hidden');
+                dropdownMenu.classList.remove('opacity-100');
+            }
+        });
+    });
+
+
+</script>

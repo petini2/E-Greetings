@@ -92,6 +92,9 @@ namespace EGreetings_Project.Migrations
                         .HasMaxLength(256)
                         .HasColumnType("nvarchar(256)");
 
+                    b.Property<string>("imgAvatar")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<bool>("isSubscribed")
                         .HasColumnType("bit");
 

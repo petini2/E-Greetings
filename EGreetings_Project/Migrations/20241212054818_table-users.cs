@@ -37,6 +37,7 @@ namespace EGreetings_Project.Migrations
                     CreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
                     EmailConfirmationSentDate = table.Column<DateTime>(type: "datetime2", nullable: true),
                     TokenResetPasswordCreatedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    imgAvatar = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),

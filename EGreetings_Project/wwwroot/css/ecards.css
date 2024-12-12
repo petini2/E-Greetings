@@ -1,0 +1,52 @@
+﻿
+
+.w-sidecard {
+    width: 25%;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.w-maincard{
+    width: 75%;
+}
+
+.e-cards{
+    display: flex;
+    flex-flow:wrap;
+    justify-content: center;
+    padding: 20px;
+    margin: 10px;
+}
+
+.w-all-ecard{
+    height: auto;
+    position: relative;
+}
+
+.img-card{
+    width: 100%;
+}
+
+.item-a1{
+    width: 30%;
+    position: relative;
+}
+
+.overplay1 {
+    position: absolute;
+    top: 50px;
+    left: 5px;
+    right: 20px;
+    bottom: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu nền mờ */
+    visibility: hidden; /* Mặc định ẩn */
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Hiệu ứng chuyển dần */
+}
+
+.item-product:hover .overplay1 {
+    visibility: visible;
+    opacity: 1; /* Hiển thị khi hover */
+}
