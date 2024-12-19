@@ -35784,5 +35784,95 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\lib\uplot\uPlot.min.css'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\sliders\WD-Vintage-N1I_2206ca45-5704-492e-bbf0-91318a81643c.svg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>sliders/WD-Vintage-N1I_2206ca45-5704-492e-bbf0-91318a81643c.svg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>3bc0jlb84c</Fingerprint>
+      <Integrity>T1VCyygRRDBsL9Z8TnyvQMR6YSgqlUvmElmVlu+WvVc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\sliders\WD-Vintage-N1I_2206ca45-5704-492e-bbf0-91318a81643c.svg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\templates\WD-Vintage-D1I_39c9409d-4392-43cd-b2c0-3620ba28b8e0.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>templates/WD-Vintage-D1I_39c9409d-4392-43cd-b2c0-3620ba28b8e0.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>n1egt50nm8</Fingerprint>
+      <Integrity>5SO6Cacu18fa6RtmYk5oMi03dJWAIZs6zNo1stgDr38=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\templates\WD-Vintage-D1I_39c9409d-4392-43cd-b2c0-3620ba28b8e0.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\templates\WD-Vintage-D1I_f8909810-fb2c-404f-919b-159356cdcf98.svg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>templates/WD-Vintage-D1I_f8909810-fb2c-404f-919b-159356cdcf98.svg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>aefpx35ql4</Fingerprint>
+      <Integrity>zmgNzYIap0+cMaW6Kzk3NkYP4Ute31QuT5zgIZOsl7U=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\templates\WD-Vintage-D1I_f8909810-fb2c-404f-919b-159356cdcf98.svg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\templates\WD-Vintage-N1I_1ae67f22-5f84-470a-93d6-913b4d4907a0.svg'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>templates/WD-Vintage-N1I_1ae67f22-5f84-470a-93d6-913b4d4907a0.svg</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>3bc0jlb84c</Fingerprint>
+      <Integrity>T1VCyygRRDBsL9Z8TnyvQMR6YSgqlUvmElmVlu+WvVc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\templates\WD-Vintage-N1I_1ae67f22-5f84-470a-93d6-913b4d4907a0.svg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\templates\WD-Vintage-N1I_d0fab187-dcaf-4a41-a8e2-6916b06e6aaa.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>templates/WD-Vintage-N1I_d0fab187-dcaf-4a41-a8e2-6916b06e6aaa.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>6j3tiwqdgq</Fingerprint>
+      <Integrity>ImmPyzNCTzhS2Fp6PyRsz085SbdnlOVrCVK+H8NL4mA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\templates\WD-Vintage-N1I_d0fab187-dcaf-4a41-a8e2-6916b06e6aaa.png'))</OriginalItemSpec>
+    </StaticWebAsset>
   </ItemGroup>
 </Project>

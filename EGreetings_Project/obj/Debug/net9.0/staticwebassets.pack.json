@@ -7953,6 +7953,26 @@
       "PackagePath": "staticwebassets\\lib\\uplot\\uPlot.min.css"
     },
     {
+      "Id": "C:\\Users\\Heartcore\\Documents\\CraftSharp\\eProject\\1.0.3-dev\\E-Greetings\\EGreetings_Project\\wwwroot\\sliders\\WD-Vintage-N1I_2206ca45-5704-492e-bbf0-91318a81643c.svg",
+      "PackagePath": "staticwebassets\\sliders\\WD-Vintage-N1I_2206ca45-5704-492e-bbf0-91318a81643c.svg"
+    },
+    {
+      "Id": "C:\\Users\\Heartcore\\Documents\\CraftSharp\\eProject\\1.0.3-dev\\E-Greetings\\EGreetings_Project\\wwwroot\\templates\\WD-Vintage-D1I_39c9409d-4392-43cd-b2c0-3620ba28b8e0.png",
+      "PackagePath": "staticwebassets\\templates\\WD-Vintage-D1I_39c9409d-4392-43cd-b2c0-3620ba28b8e0.png"
+    },
+    {
+      "Id": "C:\\Users\\Heartcore\\Documents\\CraftSharp\\eProject\\1.0.3-dev\\E-Greetings\\EGreetings_Project\\wwwroot\\templates\\WD-Vintage-D1I_f8909810-fb2c-404f-919b-159356cdcf98.svg",
+      "PackagePath": "staticwebassets\\templates\\WD-Vintage-D1I_f8909810-fb2c-404f-919b-159356cdcf98.svg"
+    },
+    {
+      "Id": "C:\\Users\\Heartcore\\Documents\\CraftSharp\\eProject\\1.0.3-dev\\E-Greetings\\EGreetings_Project\\wwwroot\\templates\\WD-Vintage-N1I_1ae67f22-5f84-470a-93d6-913b4d4907a0.svg",
+      "PackagePath": "staticwebassets\\templates\\WD-Vintage-N1I_1ae67f22-5f84-470a-93d6-913b4d4907a0.svg"
+    },
+    {
+      "Id": "C:\\Users\\Heartcore\\Documents\\CraftSharp\\eProject\\1.0.3-dev\\E-Greetings\\EGreetings_Project\\wwwroot\\templates\\WD-Vintage-N1I_d0fab187-dcaf-4a41-a8e2-6916b06e6aaa.png",
+      "PackagePath": "staticwebassets\\templates\\WD-Vintage-N1I_d0fab187-dcaf-4a41-a8e2-6916b06e6aaa.png"
+    },
+    {
       "Id": "obj\\Debug\\net9.0\\staticwebassets\\msbuild.EGreetings_Project.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },

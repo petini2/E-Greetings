@@ -30,10 +30,10 @@
       </li>
 
       <!-- Breadcrumb -->
-      <li class="nav-item d-none d-sm-inline-block pr-2">
+      @*<li class="nav-item d-none d-sm-inline-block pr-2">
         <nav aria-label="breadcrumb">
           @if (ViewData["IsDashboard"] as bool? == true) {
-          @*<ol class="breadcrumb bg-transparent m-0 p-0">
+          <ol class="breadcrumb bg-transparent m-0 p-0">
             <li class="breadcrumb-item">
               <a asp-area="Admin" asp-controller="Dashboard" asp-action="Index">Home</a>
             </li>
@@ -43,7 +43,7 @@
             <li class="breadcrumb-item active" aria-current="page">
               Child Page
             </li>
-          </ol>*@
+          </ol>
           }
           @if (ViewData["IsCategory"] as bool? == true) {
           <ol class="breadcrumb bg-transparent m-0 p-0">
@@ -63,7 +63,7 @@
           </ol>
           }
         </nav>
-      </li>
+      </li>*@
     </ul>
   </nav>
 
@@ -93,12 +93,12 @@
               <p class="libre-franklin--title primary-color">Subscriptions</p>
             </a>
           </li>
-          @*<li class="nav-item">
+          <li class="nav-item">
             <a class="nav-link" asp-area="Admin" asp-controller="Slideshow" asp-action="Index">
               <i class="nav-icon fas fa-object-group sidebar-icon primary-color"></i>
               <p class="libre-franklin--title primary-color">Slideshows</p>
             </a>
-          </li>*@
+          </li>
           <li class="nav-item">
             <a class="nav-link" asp-area="Admin" asp-controller="User" asp-action="Index">
               <i class="nav-icon fas fa-user sidebar-icon primary-color"></i>

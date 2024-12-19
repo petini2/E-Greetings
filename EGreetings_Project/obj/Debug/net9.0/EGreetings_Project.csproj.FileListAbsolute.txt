@@ -3057,3 +3057,6 @@ C:\Users\Heartcore\Documents\CraftSharp\eProject\1.0.3-dev\E-Greetings\EGreeting
 C:\Users\Heartcore\Documents\CraftSharp\eProject\1.0.3-dev\E-Greetings\EGreetings_Project\obj\Debug\net9.0\compressed\u5ju710080-hohk1s2ml5.gz
 C:\Users\Heartcore\Documents\CraftSharp\eProject\1.0.3-dev\E-Greetings\EGreetings_Project\obj\Debug\net9.0\compressed\o2tqpbouut-jo62mk3w6z.gz
 C:\Users\Heartcore\Documents\CraftSharp\eProject\1.0.3-dev\E-Greetings\EGreetings_Project\obj\Debug\net9.0\compressed\yzfucvxu0b-d3505e3jkm.gz
+C:\Users\Heartcore\Documents\CraftSharp\eProject\1.0.3-dev\E-Greetings\EGreetings_Project\obj\Debug\net9.0\compressed\qmxpccadgu-aefpx35ql4.gz
+C:\Users\Heartcore\Documents\CraftSharp\eProject\1.0.3-dev\E-Greetings\EGreetings_Project\obj\Debug\net9.0\compressed\4pvhwzu6xa-3bc0jlb84c.gz
+C:\Users\Heartcore\Documents\CraftSharp\eProject\1.0.3-dev\E-Greetings\EGreetings_Project\obj\Debug\net9.0\compressed\kje3dn85s0-3bc0jlb84c.gz
