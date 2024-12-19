@@ -20,7 +20,14 @@ builder.Services.AddIdentity<User, IdentityRole>(o=>o.SignIn.RequireConfirmedEma
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
-
+builder.Services.AddControllersWithViews(options =>
+{
+    options.Filters.AddService<CategoryDataActionFilter>();  // Đảm bảo filter này được thêm vào
+});
+//// Đăng ký TokenCryptographyService vào DI container
+//builder.Services.AddSingleton<TokenCryptographyService>();
+//// Đăng ký CategoryDataActionFilter
+builder.Services.AddScoped<CategoryDataActionFilter>();
 
 //Setting Identity Options
 builder.Services.Configure<IdentityOptions>(options =>
@@ -63,6 +70,7 @@ builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationSc
         options.ExpireTimeSpan = TimeSpan.FromMinutes(30); // Set the cookie expiration time
         options.LoginPath = "/Account/Login"; // Redirect to login if the user is not authenticated
         options.AccessDeniedPath = "/Account/AccessDenied"; // Redirect to access denied if the user does not have permission
+        options.LogoutPath = "/Account/Logout";
     });
 //Setting time to update informations
 builder.Services.Configure<SecurityStampValidatorOptions>(o =>
@@ -78,6 +86,8 @@ builder.Services.Configure<DataProtectionTokenProviderOptions>(o =>
 {
     o.TokenLifespan = TimeSpan.FromHours(24);
 });
+// Đăng ký IHttpContextAccessor
+builder.Services.AddHttpContextAccessor();
 
 var app = builder.Build();
 
@@ -95,6 +105,26 @@ using (var scope = app.Services.CreateScope())
     var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
     await UserSeeder.SeedUserAsync(userManager, roleManager);
 }
+// Seed the database
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    var context = services.GetRequiredService<EGreetingsDbContext>();
+
+    // Seed categories
+    CategorySeeder.Seed(context);
+}
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<EGreetingsDbContext>();
+    SubsSeeder.Seed(context);
+}
+using (var scope = app.Services.CreateScope())
+{
+    var context = scope.ServiceProvider.GetRequiredService<EGreetingsDbContext>();
+    TemplateSeeder.SeedTemplate(context);
+}
+
 
 
 // Configure the HTTP request pipeline.

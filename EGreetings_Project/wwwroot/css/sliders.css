@@ -11,8 +11,29 @@
 .swiper-pagination-bullet {
     background: #4f46e5;
 }
+.height-slider {
+    max-height: 400px;
+    overflow: hidden; /* Đảm bảo rằng phần tử không tràn khi kích thước giảm */
+    transition: max-height 0.3s ease; /* Thêm hiệu ứng chuyển động mượt mà */
+    position: relative;
+}
 
-.slide-height{
+/* Media query cho các màn hình có chiều rộng tối đa 768px (ví dụ: tablet hoặc điện thoại) */
+@media (max-width: 768px) {
+    .height-slider {
+        max-height: 250px; /* Điều chỉnh max-height cho màn hình nhỏ hơn */
+        
+    }
+}
+
+/* Media query cho các màn hình nhỏ hơn 480px (ví dụ: điện thoại di động) */
+@media (max-width: 480px) {
+    .height-slider {
+        max-height: 200px; /* Điều chỉnh max-height cho màn hình rất nhỏ */
+    }
+}
+
+.slide-height {
     height: 380px;
 }
 .img-slider {

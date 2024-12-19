@@ -9,8 +9,9 @@
     <link rel="stylesheet" href="~/css/homepage.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/sliders.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/sliders.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/css/ecards.css" asp-append-version="true"/>
+    <link rel="stylesheet" href="~/css/ecards.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/subs.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/special.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/EGreetings_Project.styles.css" asp-append-version="true" />
     <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -19,209 +20,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Lexend:wght@100..900&display=swap" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
 <body class="w-full flex flex-col">
-    <header>
-        @* <a class="nav-link text-dark nav-link-header" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/image_design/IconSpecial.png" class="img-icon" />Specials</a> *@
-        <nav class="header-home">
-            <div class="all-content flex justify-content-between align-items-end row ">
-                <div class="col-2 flex justify-content-end align-items-center">
-                    <a class=" flex justify-content-end align-items-center" asp-area="" asp-controller="Home" asp-action="Index">
-                        <img src="~/image_design/Logo E-G Full HD-NoBG - Cut.png" class="ps-5 img-logo" />
-                    </a>
-                </div>
-                <div class="col-6 h-100 flex justify-content-between align-content-end pb-1">
-                    <div class="flex justify-content-center align-items-end">
-                 
-                        <!-- Dropdown Home -->
-                        <div class="relative group">
-                            <div class=" justify-content-center align-items-end" id="dropdownButton">
-                                <a class=" flex justify-center items-center" asp-controller="Home" asp-action="Index">
-                                    <img src="~/image_design/Home1.png" class="img-icon" /> <span class="font-bold  ms-2 text-header">Home</span>
-                                    </a></div>
-                            <ul id="dropdownMenu" class="absolute dropdown-home hidden w-52 p-4 bg-white rounded-lg shadow-lg">
-                                <li class="item-dropdown"><a href="#" class="text-dropdown text-decoration-none text-black">My Account</a></li>
-                                <li class="item-dropdown"><a href="#" class="text-dropdown text-decoration-none text-black">About Us</a></li>
-                                <li class="item-dropdown"><a href="#" class="text-dropdown text-decoration-none text-black">Contact Us</a></li>
-                            </ul>
-                        </div>
-
-
-
-                    </div>
-                    <div class="flex justify-center items-end">
-                        <div class="relative group">
-                            <div class=" justify-center items-end" id="dropdownButton1">
-                                <a class="flex justify-center items-center" asp-controller="ECard" asp-action="Index">
-                                    <img src="~/image_design/Letter1.png" class="img-icon" />
-                                    <span class="font-bold  ms-2 text-header">E-Cards</span>
-                                </a>
-                            </div>
-
-                            <!-- Dropdown Menu -->
-                            <div id="ecards-dropdown-menu" class="absolute dropdown-ecard  px-5 py-3 rounded-lg bg-white shadow-lg  hidden">
-                                <div class="w-full flex-col justify-start items-center px-3">
-                                    <!-- Dropdown content -->
-                                    <div class="w-full flex justify-between items-center">
-                                        <div class="px-3 py-2 text-sm flex flex-col items-start">
-                                           
-                                           <img src="~/image_design/Birthday1.png" class="img-cate" />
-                                       
-                                                <a href="#" class="block item-dropdown text-dropdown py-1 px-3 text-decoration-none text-black">
-                                              Birthday
-                                                </a>
-                                          
-                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">General</a>
-                                            <a href="#" class="block item-dropdown text-dropdown   py-1 px-3 text-decoration-none text-black">Teenagers</a>
-                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">Adult</a>
-                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">Modern</a>
-                                        </div>
-                                        <div class="px-3 py-2 text-sm flex flex-col items-start">
-
-                                            <img src="~/image_design/newy.png" class="img-cate" />
-
-                                            <a href="#" class="block item-dropdown text-dropdown py-1 px-3 text-decoration-none text-black">
-                                                New Year
-                                            </a>
-
-                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">General</a>
-                                            <a href="#" class="block item-dropdown text-dropdown   py-1 px-3 text-decoration-none text-black">Teenagers</a>
-                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">Adult</a>
-                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">Modern</a>
-                                        </div>
-                                        <div class="px-3 py-2 text-sm flex flex-col items-start">
-
-                                            <img src="~/image_design/Festival1.png" class="img-cate" />
-
-                                            <a href="#" class="block item-dropdown text-dropdown py-1 px-3 text-decoration-none text-black">
-                                                Festival
-                                            </a>
-
-                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">General</a>
-                                            <a href="#" class="block item-dropdown text-dropdown   py-1 px-3 text-decoration-none text-black">Teenagers</a>
-                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">Adult</a>
-                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">Modern</a>
-                                        </div>
-                                    </div>
-                                    <hr  class="mt-3"/>
-                                    <div class="w-full flex justify-between items-center mt-3">
-                                        <div class="px-3 py-2 text-sm flex flex-col items-start">
-
-                                            <img src="~/image_design/Wedding1.png" class="img-cate" />
-
-                                            <a href="#" class="block item-dropdown text-dropdown py-1 px-3 text-decoration-none text-black">
-                                                Wedding
-                                            </a>
-
-                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">General</a>
-                                            <a href="#" class="block item-dropdown text-dropdown   py-1 px-3 text-decoration-none text-black">Teenagers</a>
-                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">Adult</a>
-                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">Modern</a>
-                                        </div>
-                                        <div class="px-3 py-2 text-sm flex flex-col items-start">
-
-                                            <img src="~/image_design/LoveDay.png" class="img-cate" />
-
-                                            <a href="#" class="block item-dropdown text-dropdown py-1 px-3 text-decoration-none text-black">
-                                                Love
-                                            </a>
-
-                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">General</a>
-                                            <a href="#" class="block item-dropdown text-dropdown   py-1 px-3 text-decoration-none text-black">Teenagers</a>
-                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">Adult</a>
-                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">Modern</a>
-                                        </div>
-                                        <div class="px-3 py-2 text-sm flex flex-col items-start">
-
-                                            <img src="~/image_design/WindowOther.png" class="img-cate" />
-
-                                            <a href="#" class="block item-dropdown text-dropdown py-1 px-3 text-decoration-none text-black">
-                                                Others
-                                            </a>
-
-                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">General</a>
-                                            <a href="#" class="block item-dropdown text-dropdown   py-1 px-3 text-decoration-none text-black">Teenagers</a>
-                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">Adult</a>
-                                            <a href="#" class="block item-dropdown text-dropdown  py-1 px-3 text-decoration-none text-black">Modern</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Other Links -->
-                    <div class="flex justify-center items-end">
-                        <a class="flex justify-center items-center" asp-controller="Subs" asp-action="Index">
-                            <img src="~/image_design/VIP1.png" class="img-icon" />
-                            <span class="font-bold ms-2 text-header">Subscribes</span>
-                        </a>
-                    </div>
-
-                    <div class="flex justify-center items-end">
-                        <a class="flex justify-center items-center" asp-controller="" asp-action="Index">
-                            <img src="~/image_design/Parcel1.png" class="img-icon" />
-                            <span class="font-bold ms-2 text-header">Orders</span>
-                        </a>
-                    </div>
-
-                    <div class="flex justify-center items-end">
-                        <a class="flex justify-center items-center" asp-controller="" asp-action="Index">
-                            <img src="~/image_design/Hot Price1.png" class="img-icon" />
-                            <span class="font-bold ms-2 text-header">Specials</span>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="col-2 flex justify-content-start align-items-end"><partial name="_LoginPartial.cshtml" /></div>
-            </div>
-
-
-        </nav>
-    </header>
+    @await Html.PartialAsync("_Header")
 
     <main role="main" class="pb-3 main-content position-relative h-auto">
         @RenderBody()
     </main>
 
-
-    <footer class="border-top position-relative footer text-muted w-full">
-        <div class="container-footer">
-            <div class="top-footer flex justify-content-between align-items-start">
-                <div class="flex justify-center  items-center">
-                    <img src="~/image_design/Logo E-G Full HD-NoBG - Cut.png" class="img-logo-footer" />
-                    
-                </div>
-                <div class="flex flex-col justify-content-start">
-                    <div class="text-gray-600 font-semibold text-lg mb-2">Contact Us</div>
-                    <div class="text-decoration-none flex align-items-center">
-                        <img src="~/image_design/Letter_footer.png" class="img-icon-footer" /> egreetings2024.corp@gmail.com
-                    </div>
-                    <div class="text-decoration-none flex align-items-center">
-                        <img src="~/image_design/Phone.png" class="img-icon-footer" /> (+84) 000 000 0000
-                    </div>
-                </div>
-                <div class="flex flex-col justify-content-start">
-                    <div class="text-gray-600 font-semibold text-lg mb-2 ">Services</div>
-                    <div class="text-gray-600 font-regular text-lg mb-2">My Account</div>
-                    <div class="text-gray-600 font-regular text-lg mb-2">Subscriptions</div>
-                    <div class="text-gray-600  font-regular text-lg mb-2">About Us</div>
-                    <div class="text-gray-600  font-regular text-lg mb-2">FAQs</div>
-                </div>
-                <div class="flex flex-col justify-content-start">
-                    <div class="text-gray-600 font-semibold text-lg mb-2 ">Clause</div>
-                    <div class="text-gray-600 font-regular text-lg mb-2">Terms of Services</div>
-                    <div class="text-gray-600 font-regular text-lg mb-2">Privacy policy</div>
-                
-                </div>
-            </div>
-            <div class="bottom-footer">
-                &copy; 2024 - Live without waiting. All Rights Reserved
-            </div>
-
-        </div>
-    </footer>
+    @await Html.PartialAsync("_Footer")
+    
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
@@ -229,6 +38,7 @@
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>
+
 
 <script>
     const homeMenuButton = document.getElementById('home-menu-button');
@@ -259,8 +69,10 @@
 </script>
 
 
+
+
 <script>
-       const dropdownButton = document.getElementById('dropdownButton');
+        const dropdownButton = document.getElementById('dropdownButton');
     const dropdownMenu = document.getElementById('dropdownMenu');
 
     // Hiển thị dropdown khi hover vào button
@@ -276,6 +88,12 @@
         dropdownMenu.classList.remove('opacity-100');
         dropdownMenu.classList.add('hidden');
       }
+    });
+
+    // Thêm sự kiện để ẩn dropdown khi chuột rời khỏi menu
+    dropdownMenu.addEventListener('mouseleave', () => {
+      dropdownMenu.classList.remove('opacity-100');
+      dropdownMenu.classList.add('hidden');
     });
 
     // Đóng dropdown khi click ra ngoài
@@ -303,10 +121,16 @@
         // Ẩn dropdown khi chuột rời khỏi button
         dropdownButton.addEventListener('mouseleave', () => {
             // Kiểm tra nếu chuột đã ra khỏi button và dropdown, mới ẩn
-      if (!dropdownMenu.matches(':hover')) {
-        dropdownMenu.classList.remove('opacity-100');
-        dropdownMenu.classList.add('hidden');
-      }
+            if (!dropdownMenu.matches(':hover')) {
+                dropdownMenu.classList.remove('opacity-100');
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+
+        // Thêm sự kiện để ẩn dropdown khi chuột rời khỏi menu
+        dropdownMenu.addEventListener('mouseleave', () => {
+            dropdownMenu.classList.remove('opacity-100');
+            dropdownMenu.classList.add('hidden');
         });
 
         // Đảm bảo dropdown ẩn khi click ra ngoài
@@ -319,4 +143,42 @@
     });
 
 
+
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+        const navbar = document.getElementById('navbar_default');
+        const headerNav = document.getElementById('header-nav'); // Giả định bạn có phần tử này
+        const closeSidebarButton = document.getElementById('close-sidebar');
+
+        // Hàm kiểm tra kích thước cửa sổ
+        const checkWindowWidth = () => {
+            if (window.innerWidth <= 1300) {
+                sidebarToggle.classList.remove('hidden'); // Hiện nút toggle
+                headerNav.classList.add('hidden'); // Ẩn header-nav
+            } else {
+                sidebarToggle.classList.add('hidden'); // Ẩn nút toggle
+                headerNav.classList.remove('hidden'); // Hiện header-nav
+                navbar.classList.add('hidden'); // Đảm bảo sidebar ẩn khi ở màn hình lớn
+                navbar.classList.add('translate-x-full'); // Đưa sidebar ra ngoài
+            }
+        };
+
+        // Gọi checkWindowWidth khi trang tải và khi thay đổi kích thước cửa sổ
+        checkWindowWidth();
+        window.addEventListener('resize', checkWindowWidth);
+
+        // Toggle sidebar menu khi click vào nút sidebar
+        sidebarToggle.addEventListener('click', () => {
+            navbar.classList.toggle('hidden');
+            navbar.classList.toggle('translate-x-full'); // Thay đổi trạng thái chuyển động
+        });
+
+        // Đóng sidebar khi click vào nút "X"
+        closeSidebarButton.addEventListener('click', () => {
+            navbar.classList.add('hidden');
+            navbar.classList.add('translate-x-full'); // Đảm bảo sidebar không hiện
+        });
+    });
 </script>

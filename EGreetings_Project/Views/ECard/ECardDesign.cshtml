@@ -1,0 +1,15 @@
+﻿
+@{
+    ViewData["Title"] = "E-Card Design";
+}
+@model EGreetings_Project.Models.ViewModelAccount.ECardViewModel
+
+<h2>Design Your ECard</h2>
+
+<div>
+    <h3>Selected Template: @Model.TemplateID</h3>
+    <img src="@Url.Content("~/images/templates/img/" + Model.ImgVer)" alt="Vertical Image" />
+    <img src="@Url.Content("~/images/templates/img/" + Model.ImgHoz)" alt="Horizontal Image" />
+</div>
+
+<!-- Bạn có thể thêm các công cụ thiết kế tại đây -->

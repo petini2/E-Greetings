@@ -1,5 +1,6 @@
 ﻿using EGreetings_Project.Models;
 using Microsoft.AspNetCore.Identity;
+using System;
 using System.Threading.Tasks;
 
 namespace EGreetings_Project.Data.Seeder
@@ -24,12 +25,13 @@ namespace EGreetings_Project.Data.Seeder
                 {
                     UserName = "Admin",
                     Email = "admin@example.com",
-                    Gender = true,
+                    Gender = "Male", // Example change to string
                     Dob = new DateTime(1985, 5, 15),
                     isSubscribed = true,
                     SubscriptionDate = DateTime.Now,
                     CreatedDate = DateTime.Now,
-                    imgAvatar = defaultAdminAvatarPath // Assign default avatar to admin
+                    imgAvatar = defaultAdminAvatarPath, // Assign default avatar to admin
+                    EmailConfirmed = true // Set EmailConfirmed to true
                 };
 
                 var result = await userManager.CreateAsync(adminUser, "AdminPassword123");
@@ -65,12 +67,13 @@ namespace EGreetings_Project.Data.Seeder
                 {
                     UserName = username,
                     Email = email,
-                    Gender = false,
+                    Gender = "Female", // Example change to string
                     Dob = new DateTime(1990, 7, 20),
                     isSubscribed = false,
                     SubscriptionDate = DateTime.Now,
                     CreatedDate = DateTime.Now,
-                    imgAvatar = avatarPath // Assign default avatar to user
+                    imgAvatar = avatarPath, // Assign default avatar to user
+                    EmailConfirmed = true // Set EmailConfirmed to true
                 };
 
                 var result = await userManager.CreateAsync(user, password);

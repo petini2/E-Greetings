@@ -5,9 +5,7 @@ using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Infrastructure;
 using System.Security.Claims;
-using Microsoft.AspNetCore.DataProtection;
 
 namespace EGreetings_Project.Controllers
 {
@@ -52,8 +50,9 @@ namespace EGreetings_Project.Controllers
                     if (!user.EmailConfirmed)
                     {
                         if (user.EmailConfirmationSentDate.HasValue &&
-                            (DateTime.Now - user.EmailConfirmationSentDate.Value).TotalHours > 24)  // token hết hạn sau 24 giờ
+                            (DateTime.Now - user.EmailConfirmationSentDate.Value).TotalHours > 24) // token hết hạn sau 24 giờ
                         {
+                            // Tạo lại mã xác nhận email
                             var code = await userManager.GenerateEmailConfirmationTokenAsync(user);
                             var callbackUrl = Url.Action(
                                 "ConfirmEmail",
@@ -62,12 +61,13 @@ namespace EGreetings_Project.Controllers
                                 protocol: Request.Scheme
                             );
 
+                            // Gửi email xác nhận lại
                             var emailSent = await SendConfirmationEmail(user.Email, callbackUrl);
                             if (emailSent)
                             {
                                 user.EmailConfirmationSentDate = DateTime.Now;
                                 await userManager.UpdateAsync(user);
-                                return RedirectToAction("ResendMailConfirm", "Account");
+                                return RedirectToAction("ResendMailConfirm", "Account"); // Redirect đến trang gửi lại email xác nhận
                             }
                             else
                             {
@@ -77,6 +77,7 @@ namespace EGreetings_Project.Controllers
                         }
                         else
                         {
+                            // Chưa đến thời gian gửi lại, yêu cầu người dùng kiểm tra email
                             return RedirectToAction("Notifications", "Account");
                         }
                     }
@@ -86,24 +87,39 @@ namespace EGreetings_Project.Controllers
 
                     if (result.Succeeded)
                     {
-                        // Kiểm tra avatar và thêm vào claims
+                        // Lấy avatar của người dùng hoặc sử dụng avatar mặc định
                         var avatarUrl = string.IsNullOrEmpty(user.imgAvatar) ? "/images/useravarta/default-avatar.png" : user.imgAvatar;
 
-                        // Tạo danh sách claims
-                        var claims = new List<Claim>
-                {
-                    new Claim(ClaimTypes.Name, user.UserName),
-                    new Claim("Avatar", avatarUrl) // Thêm Avatar vào Claims
-                };
+                        //        // Tạo claims với thông tin người dùng
+                        //        var claims = new List<Claim>
+                        //{
+                        //    new Claim(ClaimTypes.Name, user.UserName),
+                        //    new Claim("Avatar", avatarUrl) // Thêm Avatar vào Claims
+                        //};
 
-                        var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
-                        var principal = new ClaimsPrincipal(identity);
+                        //        var identity = new ClaimsIdentity(claims, CookieAuthenticationDefaults.AuthenticationScheme);
+                        //        var principal = new ClaimsPrincipal(identity);
 
-                        // Đăng nhập người dùng với custom claims
-                        await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+                        //        // Đăng nhập người dùng với custom claims
+                        //        await HttpContext.SignInAsync(CookieAuthenticationDefaults.AuthenticationScheme, principal);
+                        // Thiết lập cookie
+                        Response.Cookies.Append("UserAvatar", avatarUrl, new CookieOptions
+                        {
+                            Expires = DateTimeOffset.Now.AddDays(7), // Đặt thời gian hết hạn cho cookie
+                            HttpOnly = false,  // Chỉ có thể truy cập từ phía server
+                            Secure = true,    // Chỉ gửi qua HTTPS
+                            SameSite = SameSiteMode.None  // Cài đặt SameSite cho cookie
+                        });
 
+                        Response.Cookies.Append("UserName", user.UserName, new CookieOptions
+                        {
+                            Expires = DateTimeOffset.Now.AddDays(7),
+                            HttpOnly = false,
+                            Secure = true,
+                            SameSite = SameSiteMode.None
+                        });
 
-                        // Kiểm tra vai trò của người dùng
+                        // Kiểm tra vai trò của người dùng và redirect
                         var isAdmin = await userManager.IsInRoleAsync(user, "Admin");
                         if (isAdmin)
                         {
@@ -116,6 +132,7 @@ namespace EGreetings_Project.Controllers
                     }
                     else
                     {
+                        // Xử lý các lỗi đăng nhập
                         if (result.IsLockedOut)
                         {
                             ModelState.AddModelError("", "Your account is locked. Please try again later.");
@@ -133,6 +150,7 @@ namespace EGreetings_Project.Controllers
                 }
                 catch (Exception ex)
                 {
+                    // Xử lý lỗi ngoại lệ
                     ModelState.AddModelError("", "An unexpected error occurred: " + ex.Message);
                     return View(model);
                 }
@@ -140,6 +158,7 @@ namespace EGreetings_Project.Controllers
 
             return View(model);
         }
+
 
 
 
@@ -199,7 +218,8 @@ namespace EGreetings_Project.Controllers
                     Email = model.Email,
                     Gender = model.Gender,
                     PhoneNumber = model.Phone,
-                    Dob = model.Dob,
+                    Dob = model.Dob ?? DateTime.MinValue,
+
                     CreatedDate = DateTime.Now,
                     imgAvatar = avatarFileName // Lưu đường dẫn ảnh vào database (hoặc chỉ lưu tên file)
                 };
@@ -383,17 +403,96 @@ namespace EGreetings_Project.Controllers
                 // Tạo URL để người dùng reset mật khẩu (chứa token)
                 var resetUrl = Url.Action("ChangePassword", "Account", new { token = token, email = model.Email }, Request.Scheme);
 
-                // Gửi email với liên kết reset mật khẩu
-                var subject = "Reset your password";
-                var body = $"Click here to reset your password: <a href='{resetUrl}'>Reset Password</a>";
+                // Gửi email với liên kết reset mật khẩu (gọi hàm gửi email riêng)
+                await SendResetPasswordEmail(model.Email, resetUrl);
 
-                // Giả sử bạn đã có phương thức gửi email:
-                await emailSender.SendEmailAsync(model.Email, subject, body);
+
+               
 
                 return RedirectToAction("CheckEmail");
             }
 
             return View(model);
+        }
+        // Phương thức gửi email riêng
+        private async Task SendResetPasswordEmail(string email, string resetUrl)
+        {
+            string subject = "Reset your password";
+            string body = $@"
+        <html>
+        <head>
+            <style>
+                /* CSS for email */
+                body {{
+                    font-family: Arial, sans-serif;
+                }}
+                .container {{
+                    max-width: 600px;
+                    margin: 0 auto;
+                    padding: 20px;
+                }}
+                .card {{
+                    border: 1px solid #ddd; /* Viền xám */
+                    border-radius: 8px;
+                    padding: 20px;
+                    background-color: #ffffff; /* Màu nền trắng */
+                }}
+                .card-header {{
+                    text-align: center;
+                    font-size: 24px;
+                    font-weight: bold;
+                    color: #333;
+                }}
+                .card-body {{
+                    padding: 20px;
+                }}
+                .btn {{
+                    display: inline-block;
+                    padding: 0px 30px;
+                    height: 55px;
+                    background-color: #070d0c;
+                    color: #f7f7f5;
+                    text-decoration: none;
+                    font-size: 16px;
+                    border-radius: 5px;
+                    text-align: center;
+                    text-decoration: none;
+                
+                }}
+                .btn:hover {{
+                    background-color: #070d0c;
+                }}
+                .footer {{
+                    text-align: center;
+                    font-size: 12px;
+                    color: #888;
+                    margin-top: 20px;
+                }}
+            </style>
+        </head>
+        <body>
+            <div class='container'>
+                <div class='card'>
+                    <div class='card-header'>
+                        Reset Password
+                    </div>
+                    <div class='card-body'>
+                        <p> Please confirm your reset password by clicking the link below:</p>
+                        <div style='text-align: center;'>
+                            <a href='{resetUrl}' class='btn'><p style='color:  #f7f7f5'>Click here</p></a>
+                        </div>
+                        <p>If you did not reset password, please ignore this email.</p>
+                    </div>
+                    <div class='footer'>
+                        <small>&copy; 2024 Your Company. All rights reserved.</small>
+                    </div>
+                </div>
+            </div>
+        </body>
+        </html>";
+
+            // Gửi email
+            await emailSender.SendEmailAsync(email, subject, body);
         }
         public IActionResult CheckEmail()
         {
@@ -470,6 +569,8 @@ namespace EGreetings_Project.Controllers
         public async Task<IActionResult> Logout()
         {
             await signInManager.SignOutAsync();
+            Response.Cookies.Delete("UserAvatar");
+            Response.Cookies.Delete("UserName");
             return RedirectToAction("Index", "Home");
         }
 

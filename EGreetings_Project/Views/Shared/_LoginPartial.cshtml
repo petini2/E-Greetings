@@ -1,27 +1,29 @@
-﻿@using Microsoft.AspNetCore.Identity
+﻿
+@using Microsoft.AspNetCore.Identity
 @inject UserManager<User> UserManager
 @inject SignInManager<User> signInManager
 @using Microsoft.AspNetCore.Authentication
 @using System.Security.Claims
+@using Microsoft.AspNetCore.Authentication.Cookies
 
 @{
-    var userName = User.Identity.IsAuthenticated ? User.Identity.Name : "Guest";
-    var avatarUrl = User.Claims.FirstOrDefault(c => c.Type == "Avatar")?.Value ?? "/images/useravarta/default-avatar.png";
+    // Lấy giá trị từ cookie
+    var avatarUrl = Context.Request.Cookies["UserAvatar"] ?? "/images/default-avatar.png"; // Avatar mặc định nếu không có cookie
+    var userName = Context.Request.Cookies["UserName"] ?? "Guest"; // Tên người dùng mặc định nếu không có cookie
 }
 
 <div class="navbar-nav">
-    @if (signInManager.IsSignedIn(User))
+    @if (User.Identity.IsAuthenticated)
     {
         <div class="w-full flex">
-        <div class="user-info d-flex align-items-center">
-            <!-- Avatar Image -->
-            @* <img src="@avatarUrl" alt="User Avatar" class="avatar" style="width: 40px; height: 40px; border-radius: 50%;" /> *@
-
-            <span class="ms-2">@userName</span>
-        </div>
-        <div class="nav-item ms-3">
-            <a class="nav-link text-dark font-bold text-lg text-header" asp-controller="Account" asp-action="Logout">Logout</a>
-        </div>
+            <div class="user-info d-flex align-items-center">
+                <!-- Avatar Image -->
+                <img src="@Url.Content("~/images/useravarta/ea068813-43d4-417d-9ed8-b029b40e0661.png")" alt="User Avatar" class="avatar" style="width: 40px; height: 40px; border-radius: 50%;" />
+                <span class="ms-2">@userName</span>
+            </div>
+            <div class="nav-item ms-3">
+                <a class="nav-link text-dark font-bold text-lg text-header" asp-controller="Account" asp-action="Logout">Logout</a>
+            </div>
         </div>
     }
     else

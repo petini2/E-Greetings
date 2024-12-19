@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets\\css\\sliders.css"
     },
     {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\css\\special.css",
+      "PackagePath": "staticwebassets\\css\\special.css"
+    },
+    {
       "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\css\\subs.css",
       "PackagePath": "staticwebassets\\css\\subs.css"
     },
@@ -117,6 +121,10 @@
       "PackagePath": "staticwebassets\\image_design\\Right.png"
     },
     {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\Search.png",
+      "PackagePath": "staticwebassets\\image_design\\Search.png"
+    },
+    {
       "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\Star.png",
       "PackagePath": "staticwebassets\\image_design\\Star.png"
     },
@@ -133,44 +141,188 @@
       "PackagePath": "staticwebassets\\image_design\\WindowOther.png"
     },
     {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\application.png",
+      "PackagePath": "staticwebassets\\image_design\\application.png"
+    },
+    {
       "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\bg_christ1.png",
       "PackagePath": "staticwebassets\\image_design\\bg_christ1.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\happy-new-year.png",
+      "PackagePath": "staticwebassets\\image_design\\happy-new-year.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\heart-balloon.png",
+      "PackagePath": "staticwebassets\\image_design\\heart-balloon.png"
     },
     {
       "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\newy.png",
       "PackagePath": "staticwebassets\\image_design\\newy.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\useravarta\\0ddda796-39e9-4c58-ac46-a4c0f94ce1eb.png",
-      "PackagePath": "staticwebassets\\images\\useravarta\\0ddda796-39e9-4c58-ac46-a4c0f94ce1eb.png"
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\rings.png",
+      "PackagePath": "staticwebassets\\image_design\\rings.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\useravarta\\159ec032-3fc5-4668-8317-aacb73f1dbcf.png",
-      "PackagePath": "staticwebassets\\images\\useravarta\\159ec032-3fc5-4668-8317-aacb73f1dbcf.png"
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\image_design\\surprise.png",
+      "PackagePath": "staticwebassets\\image_design\\surprise.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\useravarta\\24a97aa1-597b-452e-b87c-993dd58a4dc3.png",
-      "PackagePath": "staticwebassets\\images\\useravarta\\24a97aa1-597b-452e-b87c-993dd58a4dc3.png"
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\Fes_MidAut_PD1.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\Fes_MidAut_PD1.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\useravarta\\6b54af0a-f5d7-4071-b3be-6f76990c78a4.png",
-      "PackagePath": "staticwebassets\\images\\useravarta\\6b54af0a-f5d7-4071-b3be-6f76990c78a4.png"
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\Fes_MidAut_PD10.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\Fes_MidAut_PD10.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\useravarta\\7222c2a5-79a6-47d1-8431-710afd21f9d2.png",
-      "PackagePath": "staticwebassets\\images\\useravarta\\7222c2a5-79a6-47d1-8431-710afd21f9d2.png"
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\Fes_MidAut_PD11.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\Fes_MidAut_PD11.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\useravarta\\72ac3e1a-1946-4a0d-be85-e0207b270c79.png",
-      "PackagePath": "staticwebassets\\images\\useravarta\\72ac3e1a-1946-4a0d-be85-e0207b270c79.png"
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\Fes_MidAut_PD12.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\Fes_MidAut_PD12.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\useravarta\\7fe38e0a-1dd4-4da1-bdb4-b92c50067e15.png",
-      "PackagePath": "staticwebassets\\images\\useravarta\\7fe38e0a-1dd4-4da1-bdb4-b92c50067e15.png"
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\Fes_MidAut_PD13.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\Fes_MidAut_PD13.png"
     },
     {
-      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\useravarta\\c4a60307-642e-455e-9fd1-34ca1ba6284a.png",
-      "PackagePath": "staticwebassets\\images\\useravarta\\c4a60307-642e-455e-9fd1-34ca1ba6284a.png"
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\Fes_MidAut_PD14.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\Fes_MidAut_PD14.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\Fes_MidAut_PD15.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\Fes_MidAut_PD15.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\Fes_MidAut_PD2.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\Fes_MidAut_PD2.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\Fes_MidAut_PD3.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\Fes_MidAut_PD3.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\Fes_MidAut_PD4.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\Fes_MidAut_PD4.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\Fes_MidAut_PD5.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\Fes_MidAut_PD5.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\Fes_MidAut_PD6.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\Fes_MidAut_PD6.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\Fes_MidAut_PD7.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\Fes_MidAut_PD7.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\Fes_MidAut_PD8.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\Fes_MidAut_PD8.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\Fes_MidAut_PD9.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\Fes_MidAut_PD9.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\Fes_MidAut_PN1.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\Fes_MidAut_PN1.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\Fes_MidAut_PN10.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\Fes_MidAut_PN10.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\Fes_MidAut_PN11.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\Fes_MidAut_PN11.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\Fes_MidAut_PN12.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\Fes_MidAut_PN12.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\Fes_MidAut_PN13.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\Fes_MidAut_PN13.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\Fes_MidAut_PN14.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\Fes_MidAut_PN14.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\Fes_MidAut_PN15.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\Fes_MidAut_PN15.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\Fes_MidAut_PN2.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\Fes_MidAut_PN2.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\Fes_MidAut_PN3.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\Fes_MidAut_PN3.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\Fes_MidAut_PN4.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\Fes_MidAut_PN4.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\Fes_MidAut_PN5.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\Fes_MidAut_PN5.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\Fes_MidAut_PN7.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\Fes_MidAut_PN7.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\Fes_MidAut_PN8.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\Fes_MidAut_PN8.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\Fes_MidAut_PN9.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\Fes_MidAut_PN9.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\WD-Vintage-D1I.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\WD-Vintage-D1I.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\WD-Vintage-D2I.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\WD-Vintage-D2I.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\WD-Vintage-D3I.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\WD-Vintage-D3I.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\WD-Vintage-D4I.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\WD-Vintage-D4I.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\WD-Vintage-D5I.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\WD-Vintage-D5I.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\WD-Vintage-N1I.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\WD-Vintage-N1I.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\WD-Vintage-N2I.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\WD-Vintage-N2I.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\WD-Vintage-N3I.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\WD-Vintage-N3I.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\WD-Vintage-N4I.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\WD-Vintage-N4I.png"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\templates\\img\\WD-Vintage-N5I.png",
+      "PackagePath": "staticwebassets\\images\\templates\\img\\WD-Vintage-N5I.png"
     },
     {
       "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\useravarta\\default-admin.jpg",
@@ -183,6 +335,10 @@
     {
       "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\useravarta\\default-user.jpg",
       "PackagePath": "staticwebassets\\images\\useravarta\\default-user.jpg"
+    },
+    {
+      "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\useravarta\\ea068813-43d4-417d-9ed8-b029b40e0661.png",
+      "PackagePath": "staticwebassets\\images\\useravarta\\ea068813-43d4-417d-9ed8-b029b40e0661.png"
     },
     {
       "Id": "C:\\Users\\DELL\\source\\repos\\E-Greetings\\E-Greetings\\EGreetings_Project\\wwwroot\\images\\useravarta\\f82abdb5-3631-40fe-88cb-50891f42064b.jpg",

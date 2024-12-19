@@ -792,8 +792,9 @@ C:\Users\DELL\source\repos\E-Greetings\E-Greetings\EGreetings_Project\obj\Debug\
 C:\Users\DELL\source\repos\E-Greetings\E-Greetings\EGreetings_Project\obj\Debug\net9.0\EGreetings_Project.pdb
 C:\Users\DELL\source\repos\E-Greetings\E-Greetings\EGreetings_Project\obj\Debug\net9.0\EGreetings_Project.genruntimeconfig.cache
 C:\Users\DELL\source\repos\E-Greetings\E-Greetings\EGreetings_Project\obj\Debug\net9.0\ref\EGreetings_Project.dll
-C:\Users\DELL\source\repos\E-Greetings\E-Greetings\EGreetings_Project\obj\Debug\net9.0\compressed\deojq58y8r-ai1qpyll6u.gz
-C:\Users\DELL\source\repos\E-Greetings\E-Greetings\EGreetings_Project\obj\Debug\net9.0\compressed\b36au8xgrb-qf7je7m27c.gz
-C:\Users\DELL\source\repos\E-Greetings\E-Greetings\EGreetings_Project\obj\Debug\net9.0\compressed\vt7lr4od9l-wqj24bqru6.gz
-C:\Users\DELL\source\repos\E-Greetings\E-Greetings\EGreetings_Project\obj\Debug\net9.0\compressed\aw3ek3y5kv-hxful8g3v0.gz
-C:\Users\DELL\source\repos\E-Greetings\E-Greetings\EGreetings_Project\obj\Debug\net9.0\compressed\1gyihqtqn4-kwi4jrpzdz.gz
+C:\Users\DELL\source\repos\E-Greetings\E-Greetings\EGreetings_Project\obj\Debug\net9.0\compressed\vu8vamy3gd-gxsrhxygh9.gz
+C:\Users\DELL\source\repos\E-Greetings\E-Greetings\EGreetings_Project\obj\Debug\net9.0\compressed\deojq58y8r-a6jhc0h3u9.gz
+C:\Users\DELL\source\repos\E-Greetings\E-Greetings\EGreetings_Project\obj\Debug\net9.0\compressed\1gyihqtqn4-qiq3dub1p9.gz
+C:\Users\DELL\source\repos\E-Greetings\E-Greetings\EGreetings_Project\obj\Debug\net9.0\compressed\vt7lr4od9l-1g2kdtcgh7.gz
+C:\Users\DELL\source\repos\E-Greetings\E-Greetings\EGreetings_Project\obj\Debug\net9.0\compressed\b36au8xgrb-p0kdu3p9qs.gz
+C:\Users\DELL\source\repos\E-Greetings\E-Greetings\EGreetings_Project\obj\Debug\net9.0\compressed\aw3ek3y5kv-rwkbb2swq8.gz

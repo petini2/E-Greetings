@@ -1,0 +1,72 @@
+﻿@model List<Template>
+@{
+    ViewData["Title"] = "Special";
+    }
+<div class="w-full py-5 flex flex-col justify-content-center items-center">
+    <div class="spe-title">Today’s Best Offers And Coupons</div>
+    <div class="py-4 mt-3 flex justify-center items-center w-full">
+        <div class="filter-spe">
+
+            <div class="btn-spe @(Context.Request.Query["type"] == "discounts" || string.IsNullOrEmpty(Context.Request.Query["type"]) ? "selected" : "")" onclick="selectButton('discounts', this)">Discounts</div>
+                <!-- Nút New Arrival -->
+                <div class="btn-spe @(Context.Request.Query["type"] == "newarrival" ? "selected" : "")" onclick="selectButton('newarrival', this)">New arrival</div>
+
+        </div>
+    </div>
+    <div class="w-full px-14 mb-5 mt-3">
+        <div class="w-full flex flex-col justify-start items-start">
+            <div class=" w-full flex justify-center items-center flex-wrap">
+                <!-- Wrapper for the slider -->
+                <div class="w-[80%] flex flex-wrap justify-center items-center px-3">
+                    <ul id="slider-items" class="flex w-full flex-wrap justify-center items-center ">
+                        @foreach (var template in Model)
+                        {
+                            <!-- 1st Row of Products -->
+                            <li class="item-a">
+                                <div class="mt-5 me-3">
+                                    <div class="flex flex-col justify-center items-center item-product">
+                                        <img src="@Url.Content("~/images/templates/img/" + (template.ImgVer ?? "default-image.jpg"))" alt="@template.TemplateName" class="img-template" />
+
+                                        <div class="w-content-card flex flex-col ">
+                                            <div class="text-center px-3 py-4">@template.TemplateName</div>
+                                            @if (template.Discount > 0)
+                                            {
+                                                <div class="w-full  flex justify-content-between align-items-center">
+                                                <s>$@template.Price</s>
+                                                <span class="exactly-price text-center">$@((template.Price - (template.Discount ?? 0f)))</span>
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <span class="exactly-price">$@template.Price</span>
+                                            }
+                                        </div>
+                                        <div class="overplay">
+                                            <a href="#" class="btn-buy">Use this card</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        }
+                     
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    function selectButton(type, button) {
+     
+        window.location.href = '@Url.Action("SpecialOffers", "Special")?type=' + type;
+
+    
+         var buttons = document.querySelectorAll('.btn-spe');
+        buttons.forEach(function(btn) {
+            btn.classList.remove('selected');
+        });
+
+        // Thêm lớp 'selected' vào button đã được nhấn
+        button.classList.add('selected');
+    }
+</script>

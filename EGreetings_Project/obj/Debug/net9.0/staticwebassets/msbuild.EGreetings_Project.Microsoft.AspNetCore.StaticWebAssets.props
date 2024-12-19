@@ -12,8 +12,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>hxful8g3v0</Fingerprint>
-      <Integrity>JcHv5bj+gW8qQN3Gy3z5JyouAs/Hp9WP0cbgO29DYek=</Integrity>
+      <Fingerprint>rwkbb2swq8</Fingerprint>
+      <Integrity>mzHPs8dSp/ZInhIKDbX2C0YrRI70u8vZiUq6iC38kd8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\ecards.css'))</OriginalItemSpec>
@@ -30,8 +30,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>qf7je7m27c</Fingerprint>
-      <Integrity>mimClBMJ/VHHuSZNYAO+EUS8A7uVvRShu92ck2IXmSA=</Integrity>
+      <Fingerprint>p0kdu3p9qs</Fingerprint>
+      <Integrity>Z7/S/0T43FLkibAw5eSfk0ctNNpjPpxI/l1ACO+/vYY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\homepage.css'))</OriginalItemSpec>
@@ -48,8 +48,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>wqj24bqru6</Fingerprint>
-      <Integrity>eMDLd0Q/RZoZdYZ+hcno7C4Z8mQh0BmVDzBabD5+Ybg=</Integrity>
+      <Fingerprint>1g2kdtcgh7</Fingerprint>
+      <Integrity>nzWKW8mRrZP5Tqwc21hptCQ3S2uSWwzHURhW2wP2JDo=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\site.css'))</OriginalItemSpec>
@@ -66,11 +66,29 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ai1qpyll6u</Fingerprint>
-      <Integrity>IpsSJM49TL5TqFI+jznzlWaufZznlt8m9lJ0vxyRI9I=</Integrity>
+      <Fingerprint>a6jhc0h3u9</Fingerprint>
+      <Integrity>Utf8X8LqWHVonf8wnEiERHe2iFDzS1KDumYqea5epSs=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\sliders.css'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\special.css'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>css/special.css</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>gxsrhxygh9</Fingerprint>
+      <Integrity>zD/gWiDGKuqbzlMVyps/G48iGuL7VRHk/nE4BcSoTIc=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\special.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\subs.css'))">
       <SourceType>Package</SourceType>
@@ -84,8 +102,8 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>kwi4jrpzdz</Fingerprint>
-      <Integrity>tMetFMwBbAszs7N4+yKT0Vg+b7VoGkxuo+n2LcA8lxY=</Integrity>
+      <Fingerprint>qiq3dub1p9</Fingerprint>
+      <Integrity>Av7/K2CQQ/FqK+pJ8sadj7i7UG0quuQd9AW5zOQJ2MI=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\subs.css'))</OriginalItemSpec>
@@ -144,149 +162,707 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\favicon.ico'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\useravarta\0ddda796-39e9-4c58-ac46-a4c0f94ce1eb.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PD1.png'))">
       <SourceType>Package</SourceType>
       <SourceId>EGreetings_Project</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/EGreetings_Project</BasePath>
-      <RelativePath>images/useravarta/0ddda796-39e9-4c58-ac46-a4c0f94ce1eb.png</RelativePath>
+      <RelativePath>images/templates/img/Fes_MidAut_PD1.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>o0k8lo7t9f</Fingerprint>
-      <Integrity>qKPEOQcMaeKQM6okRzueuMGKi8xSq52PiKRVhKg7jaE=</Integrity>
+      <Fingerprint>scjqkt7tho</Fingerprint>
+      <Integrity>hEOQjK4CHeuOxeWUfk3a/DFQszrad6ie2xx7CC+tDNc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\useravarta\0ddda796-39e9-4c58-ac46-a4c0f94ce1eb.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PD1.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\useravarta\159ec032-3fc5-4668-8317-aacb73f1dbcf.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PD10.png'))">
       <SourceType>Package</SourceType>
       <SourceId>EGreetings_Project</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/EGreetings_Project</BasePath>
-      <RelativePath>images/useravarta/159ec032-3fc5-4668-8317-aacb73f1dbcf.png</RelativePath>
+      <RelativePath>images/templates/img/Fes_MidAut_PD10.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>o0k8lo7t9f</Fingerprint>
-      <Integrity>qKPEOQcMaeKQM6okRzueuMGKi8xSq52PiKRVhKg7jaE=</Integrity>
+      <Fingerprint>mne6l90hc2</Fingerprint>
+      <Integrity>TjdrvI8w1vOsXtx593A15UbnuB9qB36UaGu9Oe7xMoY=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\useravarta\159ec032-3fc5-4668-8317-aacb73f1dbcf.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PD10.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\useravarta\24a97aa1-597b-452e-b87c-993dd58a4dc3.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PD11.png'))">
       <SourceType>Package</SourceType>
       <SourceId>EGreetings_Project</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/EGreetings_Project</BasePath>
-      <RelativePath>images/useravarta/24a97aa1-597b-452e-b87c-993dd58a4dc3.png</RelativePath>
+      <RelativePath>images/templates/img/Fes_MidAut_PD11.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>o0k8lo7t9f</Fingerprint>
-      <Integrity>qKPEOQcMaeKQM6okRzueuMGKi8xSq52PiKRVhKg7jaE=</Integrity>
+      <Fingerprint>riwtrg2cws</Fingerprint>
+      <Integrity>HVuzWpK5Hgi2rPakq+KjKSOxi7Q12NBhlT8SckPkoOQ=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\useravarta\24a97aa1-597b-452e-b87c-993dd58a4dc3.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PD11.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\useravarta\6b54af0a-f5d7-4071-b3be-6f76990c78a4.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PD12.png'))">
       <SourceType>Package</SourceType>
       <SourceId>EGreetings_Project</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/EGreetings_Project</BasePath>
-      <RelativePath>images/useravarta/6b54af0a-f5d7-4071-b3be-6f76990c78a4.png</RelativePath>
+      <RelativePath>images/templates/img/Fes_MidAut_PD12.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>9cifk01enw</Fingerprint>
-      <Integrity>mS6ZsPME01ApFMY4y2OGDYNqICJrOINy9cqUXt6lEAc=</Integrity>
+      <Fingerprint>vli1c4j0zn</Fingerprint>
+      <Integrity>c2DMimPzoWYu8QuiyuqBlhC0XN2+o0vStuayKWiZ9C0=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\useravarta\6b54af0a-f5d7-4071-b3be-6f76990c78a4.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PD12.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\useravarta\7222c2a5-79a6-47d1-8431-710afd21f9d2.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PD13.png'))">
       <SourceType>Package</SourceType>
       <SourceId>EGreetings_Project</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/EGreetings_Project</BasePath>
-      <RelativePath>images/useravarta/7222c2a5-79a6-47d1-8431-710afd21f9d2.png</RelativePath>
+      <RelativePath>images/templates/img/Fes_MidAut_PD13.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>o0k8lo7t9f</Fingerprint>
-      <Integrity>qKPEOQcMaeKQM6okRzueuMGKi8xSq52PiKRVhKg7jaE=</Integrity>
+      <Fingerprint>9i8sq4yuzh</Fingerprint>
+      <Integrity>71t0/iUMnoL+x1EiRJS74Xn9ZLoTIXzCwqPK7tLLaa4=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\useravarta\7222c2a5-79a6-47d1-8431-710afd21f9d2.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PD13.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\useravarta\72ac3e1a-1946-4a0d-be85-e0207b270c79.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PD14.png'))">
       <SourceType>Package</SourceType>
       <SourceId>EGreetings_Project</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/EGreetings_Project</BasePath>
-      <RelativePath>images/useravarta/72ac3e1a-1946-4a0d-be85-e0207b270c79.png</RelativePath>
+      <RelativePath>images/templates/img/Fes_MidAut_PD14.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>o0k8lo7t9f</Fingerprint>
-      <Integrity>qKPEOQcMaeKQM6okRzueuMGKi8xSq52PiKRVhKg7jaE=</Integrity>
+      <Fingerprint>x4vd6uhecc</Fingerprint>
+      <Integrity>4WzG9XfgJQ4JkK5uuZhWMtk3jT0Y0qFIY+fDwSsxJEc=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\useravarta\72ac3e1a-1946-4a0d-be85-e0207b270c79.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PD14.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\useravarta\7fe38e0a-1dd4-4da1-bdb4-b92c50067e15.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PD15.png'))">
       <SourceType>Package</SourceType>
       <SourceId>EGreetings_Project</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/EGreetings_Project</BasePath>
-      <RelativePath>images/useravarta/7fe38e0a-1dd4-4da1-bdb4-b92c50067e15.png</RelativePath>
+      <RelativePath>images/templates/img/Fes_MidAut_PD15.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>o0k8lo7t9f</Fingerprint>
-      <Integrity>qKPEOQcMaeKQM6okRzueuMGKi8xSq52PiKRVhKg7jaE=</Integrity>
+      <Fingerprint>b3ot1pky8f</Fingerprint>
+      <Integrity>yXshlmbdzyCC2ZU3BbdomFJ3L2NwFiyx72gxDKxftD8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\useravarta\7fe38e0a-1dd4-4da1-bdb4-b92c50067e15.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PD15.png'))</OriginalItemSpec>
     </StaticWebAsset>
-    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\useravarta\c4a60307-642e-455e-9fd1-34ca1ba6284a.png'))">
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PD2.png'))">
       <SourceType>Package</SourceType>
       <SourceId>EGreetings_Project</SourceId>
       <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
       <BasePath>_content/EGreetings_Project</BasePath>
-      <RelativePath>images/useravarta/c4a60307-642e-455e-9fd1-34ca1ba6284a.png</RelativePath>
+      <RelativePath>images/templates/img/Fes_MidAut_PD2.png</RelativePath>
       <AssetKind>All</AssetKind>
       <AssetMode>All</AssetMode>
       <AssetRole>Primary</AssetRole>
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>o0k8lo7t9f</Fingerprint>
-      <Integrity>qKPEOQcMaeKQM6okRzueuMGKi8xSq52PiKRVhKg7jaE=</Integrity>
+      <Fingerprint>etgrm5xhgo</Fingerprint>
+      <Integrity>4ucPC0Hchn0HFuFF9dX641k9luz883XxUrL8NMdC5s8=</Integrity>
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\useravarta\c4a60307-642e-455e-9fd1-34ca1ba6284a.png'))</OriginalItemSpec>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PD2.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PD3.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/Fes_MidAut_PD3.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>tkl8wpan0s</Fingerprint>
+      <Integrity>PaOilz5V8xQzHxkMwEKkI/0qIp0WxmBS00EVaS+XQ/4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PD3.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PD4.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/Fes_MidAut_PD4.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>igoem18hqd</Fingerprint>
+      <Integrity>rlKeWU/6yzKqxFir/TiaL4A0/i7umjDhgDDuCXSN2mI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PD4.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PD5.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/Fes_MidAut_PD5.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>uzewq9xow9</Fingerprint>
+      <Integrity>6kFckldfhxEmC+6DJs9KT5RQgYgudxKfM35SyjPijIw=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PD5.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PD6.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/Fes_MidAut_PD6.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>le51iuvrir</Fingerprint>
+      <Integrity>Y/TwiP647lHTZ55YjfvO6UOJATK4kEKFZrLbbZ/gH4k=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PD6.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PD7.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/Fes_MidAut_PD7.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>jq46hnnja5</Fingerprint>
+      <Integrity>hQUshOz8RX/lS9O0MdumE6Ifflz6WfmoOZxRsqlUFTQ=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PD7.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PD8.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/Fes_MidAut_PD8.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>8ai5yitpq4</Fingerprint>
+      <Integrity>0OUNOxHyWsZKjchjWUUOUclu41V+THbmeF/lDkpiwPg=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PD8.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PD9.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/Fes_MidAut_PD9.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>pgo5qy2uqb</Fingerprint>
+      <Integrity>Gc1H6eukI2pt7r3ER9c3Mq2xH3ld1TxSqjUuVhUFAWU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PD9.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PN1.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/Fes_MidAut_PN1.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>eylq8o42ij</Fingerprint>
+      <Integrity>WuYZR3cxgxXlxCywKCrSjxBAQ+GuPWSVpwqcglfZfXE=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PN1.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PN10.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/Fes_MidAut_PN10.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>2kq51dd3ve</Fingerprint>
+      <Integrity>spodMuJqlBpRvqnJXelMeXGzGZdyKxDnqEnfEsaoADo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PN10.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PN11.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/Fes_MidAut_PN11.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>o9djlv9vb5</Fingerprint>
+      <Integrity>FNXdNznSL+LpRwjaF7ZJQ0eb3tvZl74t1O+UjLXspDs=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PN11.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PN12.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/Fes_MidAut_PN12.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>sc5d094pbt</Fingerprint>
+      <Integrity>XKDIBK5WyBcxCLDJUGfNH6WHHN1lxUM8/hBOT6d149U=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PN12.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PN13.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/Fes_MidAut_PN13.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>udgxg5gcu9</Fingerprint>
+      <Integrity>MhVVe7Tpesh+MUftBv3iYjFSu8vYKl2AiRJax8tceyM=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PN13.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PN14.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/Fes_MidAut_PN14.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>avph4on16u</Fingerprint>
+      <Integrity>NjEZKHComCY+rpPCkJss6F2TyrT66OZOLd52qI5ojiU=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PN14.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PN15.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/Fes_MidAut_PN15.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>7z9c0y24d2</Fingerprint>
+      <Integrity>g6UeILCtfq1UnQsRXb/2kFtCDc9wpPGenmaVa5+nvNY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PN15.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PN2.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/Fes_MidAut_PN2.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>akj1mdx3u8</Fingerprint>
+      <Integrity>ShMJIA6l7y0cUD34I83xD9qeEhBpbZfjeu+vgKVRSHY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PN2.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PN3.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/Fes_MidAut_PN3.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>8o1x8gpiap</Fingerprint>
+      <Integrity>uN61eDyMjGkyIeoxuZBE3+6dLzvNfijtwPxxb2Bv19E=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PN3.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PN4.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/Fes_MidAut_PN4.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>26m8jajzkv</Fingerprint>
+      <Integrity>xpKnbtrJVk34PB9ILq83+Uvzs/iTF5A4bGSNdgBSa2Q=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PN4.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PN5.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/Fes_MidAut_PN5.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>5j25qv0tgi</Fingerprint>
+      <Integrity>7+1C0wS+GzOxfHEgH446t8zWFXiyVhilTX7v4bmPA8Q=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PN5.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PN7.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/Fes_MidAut_PN7.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>5raptvyfd2</Fingerprint>
+      <Integrity>TwRCu9pAKNv6V1+6i3Tx1B/tLGJbZ0a0Upkl6MleYhY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PN7.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PN8.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/Fes_MidAut_PN8.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>x4ic752lfy</Fingerprint>
+      <Integrity>Lx7u3QarGDb4jwue88pbsl8pj7Y7JiwPAWLLp44oR/4=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PN8.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PN9.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/Fes_MidAut_PN9.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>bqz6x1dn8q</Fingerprint>
+      <Integrity>nRA3ANp/W+HZQwV1XyidyZThjzXWzAJTfjyvvsWvdmo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\Fes_MidAut_PN9.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\WD-Vintage-D1I.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/WD-Vintage-D1I.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>n1egt50nm8</Fingerprint>
+      <Integrity>5SO6Cacu18fa6RtmYk5oMi03dJWAIZs6zNo1stgDr38=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\WD-Vintage-D1I.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\WD-Vintage-D2I.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/WD-Vintage-D2I.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>yp4sz4r6pu</Fingerprint>
+      <Integrity>GjYDICxOoa2k+56Ky4BELcgcpZvXxjdpoIPQbrqOU6M=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\WD-Vintage-D2I.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\WD-Vintage-D3I.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/WD-Vintage-D3I.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>5w486phf14</Fingerprint>
+      <Integrity>O5sPwhHAoCKdQTGqPv/y762KvJ96tUwooyCUy8opKmE=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\WD-Vintage-D3I.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\WD-Vintage-D4I.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/WD-Vintage-D4I.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>2403cfr5i9</Fingerprint>
+      <Integrity>rsRGjjJsVGudB8PPR6yAUoFSxPzHcTLzXuLZkbxfG60=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\WD-Vintage-D4I.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\WD-Vintage-D5I.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/WD-Vintage-D5I.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>3g8wqboag3</Fingerprint>
+      <Integrity>PadV32fzrvXC1fEY8q9GIlhk4D9cd2xHHpONrLs1Bow=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\WD-Vintage-D5I.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\WD-Vintage-N1I.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/WD-Vintage-N1I.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>6j3tiwqdgq</Fingerprint>
+      <Integrity>ImmPyzNCTzhS2Fp6PyRsz085SbdnlOVrCVK+H8NL4mA=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\WD-Vintage-N1I.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\WD-Vintage-N2I.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/WD-Vintage-N2I.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>oxgqt1vmco</Fingerprint>
+      <Integrity>PCktqxo3rV8kPtFxxJYa2PIZ+UdSV5GCyr4+NX/lw4w=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\WD-Vintage-N2I.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\WD-Vintage-N3I.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/WD-Vintage-N3I.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>rgkqpi1bbf</Fingerprint>
+      <Integrity>G/tFawoeKwcsXANYQKJrSubYCYoVIoyZ3UIH8uqd75Y=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\WD-Vintage-N3I.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\WD-Vintage-N4I.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/WD-Vintage-N4I.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>1u23odwnai</Fingerprint>
+      <Integrity>56JwoWk+q9H+ltb4ej51PYoBKCYU7jfibbEcqVSYz5g=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\WD-Vintage-N4I.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\WD-Vintage-N5I.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/templates/img/WD-Vintage-N5I.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>6lb7ftacq8</Fingerprint>
+      <Integrity>atlVK4DoVMkLiNSYbLH2ZegHLbZ0WXT9qI7NIA/tgfY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\templates\img\WD-Vintage-N5I.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\useravarta\default-admin.jpg'))">
       <SourceType>Package</SourceType>
@@ -342,6 +918,24 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\useravarta\default-user.jpg'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\useravarta\ea068813-43d4-417d-9ed8-b029b40e0661.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>images/useravarta/ea068813-43d4-417d-9ed8-b029b40e0661.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>vxqueugegx</Fingerprint>
+      <Integrity>42l47MplDl0ukTotqsxZjVvjU47q+vih6oANBshWAN8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\useravarta\ea068813-43d4-417d-9ed8-b029b40e0661.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\useravarta\f82abdb5-3631-40fe-88cb-50891f42064b.jpg'))">
       <SourceType>Package</SourceType>
       <SourceId>EGreetings_Project</SourceId>
@@ -377,6 +971,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\useravarta\fcdf1ea4-9595-453c-b4a7-7e5dac879a77.jpg'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\image_design\application.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>image_design/application.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ephqcs84st</Fingerprint>
+      <Integrity>IthR7kWuUzZVTdffSGTQHwSHKnnD9yIKsY9QYP34sBI=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\image_design\application.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\image_design\bg_christ1.png'))">
       <SourceType>Package</SourceType>
@@ -521,6 +1133,42 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\image_design\Festival1.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\image_design\happy-new-year.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>image_design/happy-new-year.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>vxqueugegx</Fingerprint>
+      <Integrity>42l47MplDl0ukTotqsxZjVvjU47q+vih6oANBshWAN8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\image_design\happy-new-year.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\image_design\heart-balloon.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>image_design/heart-balloon.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ixcoq9n7bl</Fingerprint>
+      <Integrity>ilp33sTV+BCU3n2Hechumfw9M5q8q0IoZxXdjs20zNo=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\image_design\heart-balloon.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\image_design\Home1.png'))">
       <SourceType>Package</SourceType>
@@ -792,6 +1440,42 @@
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\image_design\Right.png'))</OriginalItemSpec>
     </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\image_design\rings.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>image_design/rings.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>xa6mlxqwqi</Fingerprint>
+      <Integrity>lz3lXX7ZVv+7IheLEBoMS6OsUzQSewiEXZjCOgq1QVY=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\image_design\rings.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\image_design\Search.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>image_design/Search.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>5fjz82jipb</Fingerprint>
+      <Integrity>EU0fVEWEkH1eD0PVP5AkWdkdgU9+1aAf5B2mtJfOk2I=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\image_design\Search.png'))</OriginalItemSpec>
+    </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\image_design\Star.png'))">
       <SourceType>Package</SourceType>
       <SourceId>EGreetings_Project</SourceId>
@@ -809,6 +1493,24 @@
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\image_design\Star.png'))</OriginalItemSpec>
+    </StaticWebAsset>
+    <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\image_design\surprise.png'))">
+      <SourceType>Package</SourceType>
+      <SourceId>EGreetings_Project</SourceId>
+      <ContentRoot>$(MSBuildThisFileDirectory)..\staticwebassets\</ContentRoot>
+      <BasePath>_content/EGreetings_Project</BasePath>
+      <RelativePath>image_design/surprise.png</RelativePath>
+      <AssetKind>All</AssetKind>
+      <AssetMode>All</AssetMode>
+      <AssetRole>Primary</AssetRole>
+      <RelatedAsset></RelatedAsset>
+      <AssetTraitName></AssetTraitName>
+      <AssetTraitValue></AssetTraitValue>
+      <Fingerprint>ftm93ro016</Fingerprint>
+      <Integrity>PXX6A3zt0RnKer+uldnfczn3Pd+qjpiqoB7scy0QXC8=</Integrity>
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+      <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
+      <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\image_design\surprise.png'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\image_design\VIP1.png'))">
       <SourceType>Package</SourceType>

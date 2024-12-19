@@ -17,21 +17,36 @@ html {
   min-height: 100%;
   width: 100%;
 }
-
+.title-no{
+    font-size: 22px;
+    padding: 20px;
+    font-family: "Lexend";
+   
+}
+.title-noq {
+    font-size: 22px;
+    padding: 20px;
+    font-family: "Lexend";
+    margin-top: 50px;
+    font-style: italic;
+}
 body {
     font-family: 'Inria-Serial';
     margin-bottom: 60px;
-    background-color: #FFFEF8;
+    /*    background-color: #FFFEF8;*/
     min-height: 100%;
+    margin: 0;
 }
 .container-footer {
-    height: 350px;
+    height: 370px;
     width: 100%;
-    background-color: #e6e6e6;
+    background-color: #eaf1f1;
+    
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
+    margin-bottom: 0;
 }
 
 .main-content {
@@ -43,15 +58,27 @@ body {
     
     
 }
+.btn-back {
+    border: 1px solid #123277;
+    color: #123277;
+    width: 100%;
+    padding: 6px;
+    margin-top: 15px;
+    border-radius:5px;
 
-.dropdown-home{
-    z-index:10;
+}
+
+.text-back {
+    color: #123277;
+}
+.dropdown-home {
+    z-index: 10;
 }
 /* Đảm bảo form có viền và căn giữa */
 .form {
     border: 1px solid #123277; /* Viền màu hồng nhạt */
-    padding: 20px 30px !important; /* Khoảng cách bên trong form */
-    border-radius: 8px; /* Bo góc */
+    padding: 30px 50px !important; /* Khoảng cách bên trong form */
+    border-radius: 20px; /* Bo góc */
     width: 60% !important; /* Chiều rộng 80% */
     margin: 0 auto !important; /* Căn giữa form */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important; /* Đổ bóng nhẹ */
@@ -79,9 +106,9 @@ body {
 }
 .item-dropdown {
     padding: 8px 20px;
-    font-size: 14px;
-    text-decoration: none;
-/*    color: #8F0000;*/
+    
+   
+    /*    color: #8F0000;*/
     width: 100%;
 }
 .text-header {
@@ -89,17 +116,30 @@ body {
     color: #0F2F76;
     font-size: 20px;
 }
-.text-dropdown {
-    font-family: "Inria-Serif";
-    text-decoration: none;
-    font-size:16px;
-}
 
-.img-cate{
-    height:30px;
-    width:30px;
-    margin: 10px 20px;
-    object-fit:fill;
+.text-dropdown-title {
+    /*    font-family: "Inria-Serif";*/
+    font-family: "Lexend";
+    font-size: 18px !important;
+    font-weight: 600 !important;
+}
+.text-dropdown {
+    font-family: "Lexend";
+    font-size: 15px !important;
+    font-weight: 500 !important;
+}
+.color-line {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.4); /* Màu xám nhẹ */
+    border: none; /* Xóa viền border */
+    margin: 0;
+}
+.img-cate {
+    height: 40px;
+    width: 40px;
+    margin: 10px;
+    object-fit: fill;
 }
 .item-dropdown:hover {
     background-color: #e6e6e6;
@@ -178,11 +218,15 @@ body {
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
 }
-
-.dropdown-ecard{
-    width: 550px;
-    z-index:10;
+.dropdown-ecard {
+    width: 1000px;
+    z-index: 10; 
+    position: absolute; 
+    top: 55%;
+    left: 20%;
+    transform: translate(-25%, 2%);   
 }
+
 
     .dropdown-ecard:hover {
     }

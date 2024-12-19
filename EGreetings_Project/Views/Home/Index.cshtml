@@ -1,4 +1,5 @@
-﻿@{ 
+﻿@model EGreetings_Project.Models.ViewModelAccount.HomeViewModel
+@{ 
     ViewData["Title"] = "Home Page";
 
 }
@@ -7,7 +8,7 @@
     @* Slideshow *@
     <div id="default-carousel" class="relative index-cau w-full" data-carousel="slide">
         <!-- Carousel wrapper -->
-        <div class="relative h-[400px] overflow-hidden rounded-lg md:h-96">
+        <div class="relative height-slider  rounded-lg md:h-96">
             <!-- Item 1 -->
             <div class="hidden duration-700 ease-in-out" data-carousel-item>
 
@@ -115,119 +116,34 @@
                 <!-- Wrapper for the slider -->
                 <div class="slider-wrapper">
                     <ul id="autoplay" class="cs-hidden">
-                        <li class="item-a">
-                            <div class="mt-5 me-3">
-                                <div class="flex flex-col justify-center items-center item-product">
-                                    <img src="~/image_design/Christmasimg.jpg" alt="sp1" class="img-template" />
-                                    <div class="w-content-card flex flex-col ">
-                                        <div class="text-center px-3 py-4">Template Name</div>
-                                        <div class="flex justify-content-between align-items-center p-2"><s>$3.00</s><span class="exactly-price">$2.99</span></div>
-                                    </div>
-                                    <div class="overplay">
-                                        <a href="#" class="btn-buy">Use this card</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="item-a">
-                            <div class="mt-5 me-3">
-                                <div class="flex flex-col justify-center items-center item-product">
-                                    <img src="~/image_design/Christmasimg.jpg" alt="sp1" class="img-template" />
-                                    <div class="w-content-card flex flex-col ">
-                                        <div class="text-center px-3 py-4">Template Name</div>
-                                        <div class="flex justify-content-between align-items-center p-2"><s>$3.00</s><span class="exactly-price">$2.99</span></div>
-                                    </div>
-                                    <div class="overplay">
-                                        <a href="#" class="btn-buy">Use this card</a>
+                        @foreach (var template in Model.DiscountedTemplates)
+                        {
+                            
+                            <li class="item-a">
+                                <div class="mt-5 me-3">
+                                    <div class="flex flex-col justify-center items-center item-product">
+                                        <img src="@Url.Content("~/images/templates/img/" + (template.ImgVer ?? "default-image.jpg"))" alt="@template.TemplateName" class="img-template" />
+
+                                        <div class="w-content-card flex flex-col ">
+                                            <div class="text-center px-3 py-4">@template.TemplateName</div>
+                                            <div class="flex w-full justify-content-between align-items-center p-2">
+
+                                                <s>$@template.Price</s>
+                                                <span class="exactly-price text-center">$@((template.Price - template.Discount).Value.ToString("F2"))</span>
+
+
+
+                                            </div>
+                                        </div>
+                                        <div class="overplay">
+                                            <a href="#" class="btn-buy">Use this card</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </li>
-                        <li class="item-a">
-                            <div class="mt-5 me-3">
-                                <div class="flex flex-col justify-center items-center item-product">
-                                    <img src="~/image_design/Christmasimg.jpg" alt="sp1" class="img-template" />
-                                    <div class="w-content-card flex flex-col ">
-                                        <div class="text-center px-3 py-4">Template Name</div>
-                                        <div class="flex justify-content-between align-items-center p-2"><s>$3.00</s><span class="exactly-price">$2.99</span></div>
-                                    </div>
-                                    <div class="overplay">
-                                        <a href="#" class="btn-buy">Use this card</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="item-a">
-                            <div class="mt-5 me-3">
-                                <div class="flex flex-col justify-center items-center item-product">
-                                    <img src="~/image_design/Christmasimg.jpg" alt="sp1" class="img-template" />
-                                    <div class="w-content-card flex flex-col ">
-                                        <div class="text-center px-3 py-4">Template Name</div>
-                                        <div class="flex justify-content-between align-items-center p-2"><s>$3.00</s><span class="exactly-price">$2.99</span></div>
-                                    </div>
-                                    <div class="overplay">
-                                        <a href="#" class="btn-buy">Use this card</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="item-a">
-                            <div class="mt-5 me-3">
-                                <div class="flex flex-col justify-center items-center item-product">
-                                    <img src="~/image_design/Christmasimg.jpg" alt="sp1" class="img-template" />
-                                    <div class="w-content-card flex flex-col ">
-                                        <div class="text-center px-3 py-4">Template Name</div>
-                                        <div class="flex justify-content-between align-items-center p-2"><s>$3.00</s><span class="exactly-price">$2.99</span></div>
-                                    </div>
-                                    <div class="overplay">
-                                        <a href="#" class="btn-buy">Use this card</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="item-a">
-                            <div class="mt-5 me-3">
-                                <div class="flex flex-col justify-center items-center item-product">
-                                    <img src="~/image_design/Christmasimg.jpg" alt="sp1" class="img-template" />
-                                    <div class="w-content-card flex flex-col ">
-                                        <div class="text-center px-3 py-4">Template Name</div>
-                                        <div class="flex justify-content-between align-items-center p-2"><s>$3.00</s><span class="exactly-price">$2.99</span></div>
-                                    </div>
-                                    <div class="overplay">
-                                        <a href="#" class="btn-buy">Use this card</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="item-a">
-                            <div class="mt-5 me-3">
-                                <div class="flex flex-col justify-center items-center item-product">
-                                    <img src="~/image_design/Christmasimg.jpg" alt="sp1" class="img-template" />
-                                    <div class="w-content-card flex flex-col ">
-                                        <div class="text-center px-3 py-4">Template Name</div>
-                                        <div class="flex justify-content-between align-items-center p-2"><s>$3.00</s><span class="exactly-price">$2.99</span></div>
-                                    </div>
-                                    <div class="overplay">
-                                        <a href="#" class="btn-buy">Use this card</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="item-a">
-                            <div class="mt-5 me-3">
-                                <div class="flex flex-col justify-center items-center item-product">
-                                    <img src="~/image_design/Christmasimg.jpg" alt="sp1" class="img-template" />
-                                    <div class="w-content-card flex flex-col ">
-                                        <div class="text-center px-3 py-4">Template Name</div>
-                                        <div class="flex justify-content-between align-items-center p-2"><s>$3.00</s><span class="exactly-price">$2.99</span></div>
-                                    </div>
-                                    <div class="overplay">
-                                        <a href="#" class="btn-buy">Use this card</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
+                            </li>
+                        }
                     </ul>
+
                     <div class="slider-navigation">
                         <button id="prevBtn" class="slider-btn">
                             <i class="fas fa-arrow-left"></i>
@@ -238,7 +154,7 @@
                     </div>
                 </div>
 
-              
+
             </div>
         </div>
     </div>
@@ -248,14 +164,16 @@
     <div class="w-full flex flex-col  mt-5 mb-3">
         <div class="ttitle text-center">Our Featured Templates</div>
         <div class="w-full flex flex-col justify-content-between align-items-center">
-        <hr class="text-black-50 w-25 mt-4 mb-3 text-center"/>
-        <div class="filter_cate_home flex justify-content-between align-items-center text-center">
-            <a href="#" class="filter_item">All Categories</a>
-            <a href="#" class="filter_item">Birthday</a>
-            <a href="#" class="filter_item">New Year</a>
-            <a href="#" class="filter_item">Wedding</a>
-            <a href="#" class="filter_item">Love</a>
-        </div>
+            <hr class="text-black-50 w-25 mt-4 mb-3 text-center"/>
+            <div class="filter_cate_home flex justify-content-between align-items-center text-center">
+                <a href="@Url.Action("Index", "Home", new { groupCate = "all" })" class="filter_item">All Categories</a>
+                <a href="@Url.Action("Index", "Home", new { groupCate = "BD" })" class="filter_item">Birthday</a>
+                <a href="@Url.Action("Index", "Home", new { groupCate = "NY" })" class="filter_item">New Year</a>
+                <a href="@Url.Action("Index", "Home", new { groupCate = "WD" })" class="filter_item">Wedding</a>
+                <a href="@Url.Action("Index", "Home", new { groupCate = "LV" })" class="filter_item">Love</a>
+
+
+            </div>
         </div>
         <div class="flex w-[95%] justify-content-end align-content-center pe-4">View all <img src="~/image_design/Right.png" class="img-right" /></div>
         <div class="w-full px-14 mb-5 mt-3">
@@ -265,118 +183,40 @@
                     <div class="w-[80%] flex flex-wrap justify-center items-center px-3">
                         <ul id="slider-items" class="flex w-full flex-wrap justify-center items-center ">
                             <!-- 1st Row of Products -->
-                            <li class="item-a">
-                                <div class="mt-5 me-3">
-                                    <div class="flex flex-col justify-center items-center item-product">
-                                        <img src="~/image_design/Christmasimg.jpg" alt="sp1" class="img-template" />
-                                        <div class="w-content-card flex flex-col ">
-                                            <div class="text-center px-3 py-4">Template Name</div>
-                                            <div class="flex justify-content-between align-items-center p-2"><s>$3.00</s><span class="exactly-price">$2.99</span></div>
-                                        </div>
-                                        <div class="overplay">
-                                            <a href="#" class="btn-buy">Use this card</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item-a">
-                            <div class="mt-5 me-3">
-                                <div class="flex flex-col justify-center items-center item-product">
-                                    <img src="~/image_design/Christmasimg.jpg" alt="sp1" class="img-template" />
-                                    <div class="w-content-card flex flex-col ">
-                                        <div class="text-center px-3 py-4">Template Name</div>
-                                            <div class="flex justify-content-between align-items-center p-2"><s>$3.00</s><span class="exactly-price">$2.99</span></div>
-                                    </div>
-                                    <div class="overplay">
-                                        <a href="#" class="btn-buy">Use this card</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="item-a">
-                            <div class="mt-5 me-3">
-                                <div class="flex flex-col justify-center items-center item-product">
-                                    <img src="~/image_design/Christmasimg.jpg" alt="sp1" class="img-template" />
-                                    <div class="w-content-card flex flex-col ">
-                                        <div class="text-center px-3 py-4">Template Name</div>
-                                            <div class="flex justify-content-between align-items-center p-2"><s>$3.00</s><span class="exactly-price">$2.99</span></div>
-                                    </div>
-                                    <div class="overplay">
-                                        <a href="#" class="btn-buy">Use this card</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                            <li class="item-a">
-                                <div class="mt-5 me-3">
-                                    <div class="flex flex-col justify-center items-center item-product">
-                                        <img src="~/image_design/Christmasimg.jpg" alt="sp1" class="img-template" />
-                                        <div class="w-content-card flex flex-col ">
-                                            <div class="text-center px-3 py-4">Template Name</div>
-                                            <div class="flex justify-content-between align-items-center p-2"><s>$3.00</s><span class="exactly-price">$2.99</span></div>
-                                        </div>
-                                        <div class="overplay">
-                                            <a href="#" class="btn-buy">Use this card</a>
+                            @foreach (var template in Model.NewArrivals)
+                            {
+
+
+                                <li class="item-a">
+                                    <div class="mt-5 me-3">
+                                        <div class="flex flex-col justify-center items-center item-product">
+                                            <img src="@Url.Content("~/images/templates/img/" + (template.ImgVer ?? "default-image.jpg"))" alt="@template.TemplateName" class="img-template" />
+                                            <div class="w-content-card flex flex-col ">
+                                                <div class="text-center px-3 py-4">@template.TemplateName</div>
+                                                @if (template.Discount > 0)
+                                                {
+                                                    <div class="w-full  flex justify-content-between align-items-center">
+                                                        <s>$@template.Price</s>
+                                                        <span class="exactly-price text-center">$@((template.Price - (template.Discount ?? 0f)))</span>
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="w-full  flex justify-content-between align-items-center">
+                                                        <s></s>
+                                                        <span class="exactly-price">$@template.Price</span>
+                                                    </div>
+                                                   
+                                                }
+                                               
+                                            </div>
+                                            <div class="overplay">
+                                                <a href="#" class="btn-buy">Use this card</a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </li>
-                            <li class="item-a">
-                                <div class="mt-5 me-3">
-                                    <div class="flex flex-col justify-center items-center item-product">
-                                        <img src="~/image_design/Christmasimg.jpg" alt="sp1" class="img-template" />
-                                        <div class="w-content-card flex flex-col ">
-                                            <div class="text-center px-3 py-4">Template Name</div>
-                                            <div class="flex justify-content-between align-items-center p-2"><s>$3.00</s><span class="exactly-price">$2.99</span></div>
-                                        </div>
-                                        <div class="overplay">
-                                            <a href="#" class="btn-buy">Use this card</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item-a">
-                                <div class="mt-5 me-3">
-                                    <div class="flex flex-col justify-center items-center item-product">
-                                        <img src="~/image_design/Christmasimg.jpg" alt="sp1" class="img-template" />
-                                        <div class="w-content-card flex flex-col ">
-                                            <div class="text-center px-3 py-4">Template Name</div>
-                                            <div class="flex justify-content-between align-items-center p-2"><s>$3.00</s><span class="exactly-price">$2.99</span></div>
-                                        </div>
-                                        <div class="overplay">
-                                            <a href="#" class="btn-buy">Use this card</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item-a">
-                                <div class="mt-5 me-3">
-                                    <div class="flex flex-col justify-center items-center item-product">
-                                        <img src="~/image_design/Christmasimg.jpg" alt="sp1" class="img-template" />
-                                        <div class="w-content-card flex flex-col ">
-                                            <div class="text-center px-3 py-4">Template Name</div>
-                                            <div class="flex justify-content-between align-items-center p-2"><s>$3.00</s><span class="exactly-price">$2.99</span></div>
-                                        </div>
-                                        <div class="overplay">
-                                            <a href="#" class="btn-buy">Use this card</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="item-a">
-                                <div class="mt-5 me-3">
-                                    <div class="flex flex-col justify-center items-center item-product">
-                                        <img src="~/image_design/Christmasimg.jpg" alt="sp1" class="img-template" />
-                                        <div class="w-content-card flex flex-col ">
-                                            <div class="text-center px-3 py-4">Template Name</div>
-                                            <div class="flex justify-content-between align-items-center p-2"><s>$3.00</s><span class="exactly-price">$2.99</span></div>
-                                        </div>
-                                        <div class="overplay">
-                                            <a href="#" class="btn-buy">Use this card</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
+                                </li>
+                            }
                         </ul>
                     </div>
                 </div>
@@ -508,4 +348,19 @@
         });
 
     </script>
+    <script>
+        // Lắng nghe sự kiện click trên các liên kết
+        document.querySelectorAll('.filter_cate_home a').forEach(function(link) {
+            link.addEventListener('click', function(event) {
+                // Loại bỏ lớp 'selected' khỏi tất cả các liên kết
+                document.querySelectorAll('.filter_cate_home a').forEach(function(item) {
+                    item.classList.remove('selected');
+                });
+
+                // Thêm lớp 'selected' vào liên kết được click
+                event.target.classList.add('selected');
+            });
+        });
+    </script>
+
 }
