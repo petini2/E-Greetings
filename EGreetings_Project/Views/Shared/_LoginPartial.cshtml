@@ -1,0 +1,38 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject UserManager<User> UserManager
+@inject SignInManager<User> signInManager
+@using Microsoft.AspNetCore.Authentication
+@using System.Security.Claims
+
+@{
+    var userName = User.Identity.IsAuthenticated ? User.Identity.Name : "Guest";
+    var avatarUrl = User.Claims.FirstOrDefault(c => c.Type == "Avatar")?.Value ?? "/images/useravarta/default-avatar.png";
+}
+
+<div class="navbar-nav">
+    @if (signInManager.IsSignedIn(User))
+    {
+        <div class="w-full flex">
+        <div class="user-info d-flex align-items-center">
+            <!-- Avatar Image -->
+            @* <img src="@avatarUrl" alt="User Avatar" class="avatar" style="width: 40px; height: 40px; border-radius: 50%;" /> *@
+
+            <span class="ms-2">@userName</span>
+        </div>
+        <div class="nav-item ms-3">
+            <a class="nav-link text-dark font-bold text-lg text-header" asp-controller="Account" asp-action="Logout">Logout</a>
+        </div>
+        </div>
+    }
+    else
+    {
+        <div class="flex justify-content-start align-items-end">
+            <div class="nav-item">
+                <a class="nav-link font-bold text-header" asp-controller="Account" asp-action="Login">Login</a>
+            </div>
+            <div class="nav-item">
+                <a class="nav-link font-bold ms-4 text-header" asp-controller="Account" asp-action="Register">Join Now</a>
+            </div>
+        </div>
+    }
+</div>

@@ -1,0 +1,58 @@
+@model Dictionary<string, string>
+
+@{
+  Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@section HeadScripts {
+}
+
+<h1 class="libre-franklin--title primary-color">Category List</h1>
+
+<hr />
+
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-body table-responsive p-0">
+            <table class="table table-hover text-nowrap">
+              <thead>
+                <tr>
+                  <th>Category Name</th>
+                  <th>Total</th>
+                  <th colspan="2">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+              @foreach (var item in Model) {
+                <tr>
+                  <td>@item.Value</td>
+                  <td>5 Subcategories</td>
+                  <td>
+                      <button type="button" class="btn btn-primary btn-sm mb-2"
+                              onclick="window.location.href='@Url.Action("CreateSubCategory", "Category", new { area = "Admin", groupCategory = item.Key })'">
+                      New subcategory
+                    </button>
+                  </td>
+                  <td>
+                    <button type="button" class="btn btn-secondary btn-sm"
+                            onclick="window.location.href='@Url.Action("SubCategoryList", "Category", new { area = "Admin", groupCategory = item.Key })'">
+                      View all
+                    </button>
+                  </td>
+                </tr>
+              } 
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+
+@section Scripts {
+ 
+}

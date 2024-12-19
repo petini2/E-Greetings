@@ -1,0 +1,124 @@
+﻿body {
+}
+.tsubs{
+    font-family: "Inria-Serif";
+    font-size: 32px;
+    font-weight: 600;
+    margin-top: 50px;
+}
+
+.btn-catesubs{
+    background-color: black;
+    padding: 3px 20px;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    margin-top: 20px;
+    border-radius: 20px;
+    height: 30px;
+}
+.subcate1 {
+    width: 80%;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    padding-top:20px;
+/*     border: 1px solid black;*/
+}
+
+.cate1 {
+    width: 30%;
+    border: 3px solid #102E70;
+    /*    border: 1px solid #8f0000;*/
+    border-radius: 20px;
+    /*    box-shadow: 5px 5px 10px 0px rgba(255, 255, 0, 0.7);*/
+    /*    background-color : rgba(0,0,0,0.5);*/
+    /*    box-shadow: 5px 5px 10px 0px #379fe4;*/
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    transition: box-shadow 0.2s ease-in-out;
+    margin-bottom: 20px;
+}
+/*.cate1:hover{box-shadow:none;}
+*/
+.cate-content{
+    display: flex;
+    flex-direction:column;
+    padding: 30px 50px;
+    width: 100%;
+    
+
+}
+
+.img-pays{
+    width: 20px;
+    height: auto;
+}
+.btn-pays {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /*    border: 2px solid #000000;*/
+    background-color: #102E70;
+    color: white;
+    font-weight: 600;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 200px;
+    height: 50px;
+    padding: 5px 20px;
+    margin-top: 20px;
+    transition: box-shadow 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.btn-pays:hover{
+    box-shadow:none;
+    background-color: #3773c4;
+}
+.cate1:hover {
+    border: 3px solid #3773c4;
+}
+
+.titlesub{
+    font-size: 32px;
+    font-weight: 500;
+    padding: 5px;
+    margin-top: 10px;
+  
+}
+
+.pricesub{
+    font-size: 34px;
+}
+
+.img-pri{
+    width: 10px;
+    height: 10px;
+    object-fit: fill;
+    margin-right: 10px;
+}
+
+.btn-catetemp {
+    background-color: black;
+    padding: 4px 8px;
+
+    color: white;
+    font-size: 12px;
+    font-weight: 500;
+    margin-top: 20px;
+    border-radius: 20px;
+    height: 20px;
+    width: 110px;
+/*    max-width: 120px;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+/*    margin-left: 20px;*/
+    text-align: end;
+}

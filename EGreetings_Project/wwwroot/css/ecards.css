@@ -1,0 +1,112 @@
+﻿
+
+.w-sidecard {
+    width: 30%;
+    box-shadow: 5px 0 10px rgba(0, 0, 0, 0.1);
+}
+.title-ecardd {
+    margin-top: 7%;
+    width: 100%;
+    font-size: 44px;
+    font-family: 'Inria-Serif';
+    text-align: center;
+    font-weight: 500;
+}
+.w-maincard {
+    width: 70%;
+    display: flex;
+    flex-flow: column;
+    /*    justify-content: center;*/
+    align-items: center;
+}
+.btn-inputsearch {
+    width: 88%;
+    border-radius: 30px;
+    border: none;
+    background: none; /* Tắt nền mặc định */
+}
+
+    /* Tắt mọi hiệu ứng khi focus */
+    .btn-inputsearch:focus {
+        outline: none !important;
+        border: none !important;
+        background: none !important;
+        box-shadow: none !important; /* Loại bỏ shadow */
+    }
+
+  
+.img-search {
+    width: 35px;
+    height: 35px;
+   
+}
+.e-cards {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+    padding: 20px;
+    margin: 10px;
+}
+.btn-search-card {
+    margin-top: 3%;
+    width: 50%;
+    height:45px;
+    border: 1px solid #0F2F76;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+}
+
+.w-all-ecard {
+    height: auto;
+    position: relative;
+}
+
+.img-card{
+    width: 100%;
+}
+
+.item-a1{
+    width: 30%;
+    position: relative;
+}
+
+.overplay1 {
+    position: absolute;
+    top: 50px;
+    left: 5px;
+    right: 20px;
+    bottom: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Màu nền mờ */
+    visibility: hidden; /* Mặc định ẩn */
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Hiệu ứng chuyển dần */
+}
+
+.item-product:hover .overplay1 {
+    visibility: visible;
+    opacity: 1; /* Hiển thị khi hover */
+}
+
+.categoryFilterbig{
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 7px;
+}
+
+.categoryFiltertext {
+    font-size: 16px;
+    margin-left: 7px;
+}
+
+.text-tilte-filter{
+    font-size: 22px;
+    font-weight: 600;
+    color: #173298;
+}
+

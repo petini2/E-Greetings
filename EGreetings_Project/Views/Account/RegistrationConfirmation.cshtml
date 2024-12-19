@@ -1,0 +1,21 @@
+﻿@{
+    ViewData["Title"] = "Registration Confirmation";
+}
+
+<div class="w-100 flex flex-col justify-content-center align-items-center">
+    <div class="w-form flex flex-col justify-center items-center">
+        <div class="col-md-8 mt-5">
+            <h2 class="text-center font-bold text-xl">@ViewData["Title"]</h2>
+            <div class="alert rounded-lg shadow-sm mt-3 p-3">
+                <p class="text-center px-2">Thank you for registering with us! A confirmation email has been sent to your inbox.</p>
+                <p class="text-center px-2">Please check your email and click the confirmation link to verify your account.</p>
+            </div>
+
+            <p class="mt-5 text-center text-danger text-sm">(*) If you don't see the email in your inbox, please check your spam or junk folder.</p>
+
+            <p class="text-center mt-3">
+                <a class="btn btn-outline-dark" href="@Url.Action("Login", "Account")">Go to Login</a>
+            </p>
+        </div>
+    </div>
+</div>

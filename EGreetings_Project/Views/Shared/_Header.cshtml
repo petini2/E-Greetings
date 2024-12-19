@@ -1,0 +1,414 @@
+﻿<header>
+    @* <a class="nav-link text-dark nav-link-header" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/image_design/IconSpecial.png" class="img-icon" />Specials</a> *@
+    <nav class="header-home">
+        <div class="all-content flex justify-content-between align-items-end row ">
+            <div class="col-2 flex justify-content-end align-items-center">
+                <a class=" flex justify-content-end align-items-center" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/image_design/Logo E-G Full HD-NoBG - Cut.png" class="ps-5 img-logo" />
+                </a>
+            </div>
+            <div class="col-6 h-100 flex justify-content-between align-content-end pb-1">
+                <div class="flex justify-content-center align-items-end">
+
+                    <!-- Dropdown Home -->
+                    <div class="relative group">
+                        <div class=" justify-content-center align-items-end" id="dropdownButton">
+                            <a class=" flex justify-center items-center" asp-controller="Home" asp-action="Index">
+                                <img src="~/image_design/Home1.png" class="img-icon" /> <span class="font-bold  ms-2 text-header">Home</span>
+                            </a>
+                        </div>
+                        <ul id="dropdownMenu" class="absolute dropdown-home hidden w-52 p-4 bg-white rounded-lg shadow-lg">
+                            <li class="item-dropdown"><a href="#" class="text-dropdown text-decoration-none text-black">My Account</a></li>
+                            <li class="item-dropdown"><a href="#" class="text-dropdown text-decoration-none text-black">About Us</a></li>
+                            <li class="item-dropdown"><a href="#" class="text-dropdown text-decoration-none text-black">Contact Us</a></li>
+                            <li class="item-dropdown"><a href="#" class="text-dropdown text-decoration-none text-black">FAQs</a></li>
+                        </ul>
+                    </div>
+
+
+
+                </div>
+                <div class="flex justify-center items-end">
+                    <div class="relative group">
+                        <div class=" justify-center items-end" id="dropdownButton1">
+                            <a class="flex justify-center items-center" asp-controller="ECard" asp-action="Index">
+                                <img src="~/image_design/Letter1.png" class="img-icon" />
+                                <span class="font-bold  ms-2 text-header">E-Cards</span>
+                            </a>
+                        </div>
+
+                        <!-- Dropdown Menu -->
+                        <div id="ecards-dropdown-menu" class="dropdown-ecard hidden px-5 py-2 rounded-lg bg-white shadow-lg">
+                            <div class="w-full flex-col justify-start items-start px-3">
+                                <!-- Dropdown content -->
+                                <div class="w-full flex justify-between items-start">
+                                    <div class="px-3 py-2 text-sm flex items-start">
+                                        <div class="flex flex-col justify-start items-start">
+                                            <div class=" w-full flex flex-col justify-content-center items-center">
+                                            <img src="~/image_design/surprise.png" class="img-cate me-2" />
+                                            <a href="#" class="block text-center item-dropdown py-1 px-3 text-decoration-none text-black">
+                                                    <span class="text-dropdown-title">Birthday</span>
+                                                </a></div>
+                                            <div class="color-line"></div>
+                                            <div class="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-5">
+
+                                                @if (Context.Items["Categories"] != null)
+                                                {
+                                                    var categories = (List<Category>)Context.Items["Categories"];
+
+                                                    foreach (var category in categories)
+                                                    {
+                                                        if (category.GroupCate.Equals("BD"))
+                                                        {
+                                                            <a href="#" class="block item-dropdown text-dropdown py-1 px-3 text-decoration-none text-black">
+                                                                @category.CategoryName
+                                                            </a>
+                                                        }
+                                                    }
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="px-3 py-2 text-sm flex items-start">
+                                        <div class="flex flex-col justify-start items-start">
+                                            <div class=" w-full flex flex-col justify-content-center items-center">
+                                            <img src="~/image_design/happy-new-year.png" class="img-cate me-2" />
+                                            <a href="#" class="block text-center item-dropdown  py-1 px-3 text-decoration-none text-black">
+                                                    <span class="text-dropdown-title">New Year</span>
+                                            </a></div>
+                                            <div class="color-line"></div>
+                                            <div class="mt-3 flex-col items-start">
+
+                                                @if (Context.Items["Categories"] != null)
+                                                {
+                                                    var categories = (List<Category>)Context.Items["Categories"];
+
+                                                    foreach (var category in categories)
+                                                    {
+                                                        if (category.GroupCate.Equals("NY"))  // Đóng dấu ngoặc đúng cách
+                                                        {
+                                                            <a href="#" class="block mt-2 item-dropdown text-dropdown py-1 px-3 text-decoration-none text-black">
+                                                                @category.CategoryName
+                                                            </a>
+                                                        }
+                                                    }
+                                                }
+                                            </div>
+                                        </div>
+
+
+
+
+
+                                    </div>
+                                    <div class="px-3 py-2 text-sm flex items-start">
+                                        <div class="flex flex-col justify-start items-start">
+                                            <div class=" w-full flex flex-col justify-content-center items-center">
+                                            <img src="~/image_design/Festival1.png" class="img-cate me-2" />
+                                            <a href="#" class="block text-center item-dropdown  py-1 px-3 text-decoration-none text-black">
+                                                    <span class="text-dropdown-title">Festivals</span>
+                                                </a></div>
+                                            <div class="color-line"></div>
+
+                                            <!-- Chỉnh sửa phần này để chia các mục thành các cột -->
+                                            <div class="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-5">
+
+                                                @if (Context.Items["Categories"] != null)
+                                                {
+                                                    var categories = (List<Category>)Context.Items["Categories"];
+
+                                                    foreach (var category in categories)
+                                                    {
+                                                        if (category.GroupCate.Equals("FE"))
+                                                        {
+                                                            <a href="#" class="block item-dropdown text-dropdown py-1 px-3 text-decoration-none text-black">
+                                                                @category.CategoryName
+                                                            </a>
+                                                        }
+                                                    }
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="w-full flex justify-between items-start">
+                                    <div class="px-3 py-2 text-sm flex items-start">
+                                        <div class="flex flex-col justify-start items-start">
+                                            <div class=" w-full flex flex-col justify-content-center items-center">
+
+                                            <img src="~/image_design/rings.png" class="img-cate me-2" />
+                                            <a href="#" class="block text-center item-dropdown  py-1 px-3 text-decoration-none text-black">
+                                                    <span class="text-dropdown-title">Wedding</span>
+                                                </a>
+                                            </div>
+                                            <div class="color-line"></div>
+
+                                            <!-- Chỉnh sửa phần này để chia các mục thành các cột -->
+                                            <div class="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-5">
+
+                                                @if (Context.Items["Categories"] != null)
+                                                {
+                                                    var categories = (List<Category>)Context.Items["Categories"];
+
+                                                    foreach (var category in categories)
+                                                    {
+                                                        if (category.GroupCate.Equals("WD"))  // Đảm bảo chỉ hiển thị những mục có group là "WD"
+                                                        {
+                                                            <a href="#" class="block item-dropdown text-dropdown py-1 px-3 text-decoration-none text-black">
+                                                                @category.CategoryName
+                                                            </a>
+                                                        }
+                                                    }
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="px-3 py-2 text-sm flex items-start">
+                                        <div class="flex flex-col justify-start items-start">
+                                            <div class=" w-full flex flex-col justify-content-center items-center">
+                                            <img src="~/image_design/heart-balloon.png" class="img-cate me-2" />
+                                            <a href="#" class="block text-center item-dropdown  py-1 px-3 text-decoration-none text-black">
+                                                    <span class="text-dropdown-title">Love</span>
+                                                </a>
+                                            </div>
+                                            <div class="color-line"></div>
+
+                                            <!-- Chỉnh sửa phần này để chia các mục thành các cột -->
+                                            <div class="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-5">
+
+                                                @if (Context.Items["Categories"] != null)
+                                                {
+                                                    var categories = (List<Category>)Context.Items["Categories"];
+
+                                                    foreach (var category in categories)
+                                                    {
+                                                        if (category.GroupCate.Equals("LV"))  // Đảm bảo chỉ hiển thị các mục với groupCate là "LV"
+                                                        {
+                                                            <a href="#" class="block item-dropdown text-dropdown py-1 px-3 text-decoration-none text-black">
+                                                                @category.CategoryName
+                                                            </a>
+                                                        }
+                                                    }
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="px-3 py-2 text-sm flex items-start">
+                                        <div class="flex flex-col justify-start items-start">
+                                            <div class=" w-full flex flex-col justify-content-center items-center">
+                                            <img src="~/image_design/application.png" class="img-cate me-2" />
+                                            <a href="#" class="block text-center item-dropdown  py-1 px-3 text-decoration-none text-black">
+                                                    <span class="text-dropdown-title">Others</span>
+                                                </a>
+                                            </div>
+                                            <div class="color-line"></div>
+
+                                            <!-- Chỉnh sửa phần này để chia các mục thành các cột -->
+                                            <div class="mt-3 grid grid-cols-1 gap-2 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-5">
+
+                                                @if (Context.Items["Categories"] != null)
+                                                {
+                                                    var categories = (List<Category>)Context.Items["Categories"];
+
+                                                    foreach (var category in categories)
+                                                    {
+                                                        if (category.GroupCate.Equals("OT"))  // Đảm bảo chỉ hiển thị các mục có groupCate là "OT"
+                                                        {
+                                                            <a href="#" class="block item-dropdown text-dropdown py-1 px-3 text-decoration-none text-black">
+                                                                @category.CategoryName
+                                                            </a>
+                                                        }
+                                                    }
+                                                }
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other Links -->
+                <div class="flex justify-center items-end">
+                    <a class="flex justify-center items-center" asp-controller="Subs" asp-action="Index">
+                        <img src="~/image_design/VIP1.png" class="img-icon" />
+                        <span class="font-bold ms-2 text-header">Subscribes</span>
+                    </a>
+                </div>
+
+                <div class="flex justify-center items-end">
+                    <a class="flex justify-center items-center" asp-controller="" asp-action="Index">
+                        <img src="~/image_design/Parcel1.png" class="img-icon" />
+                        <span class="font-bold ms-2 text-header">Orders</span>
+                    </a>
+                </div>
+
+                <div class="flex justify-center items-end">
+                    <a class="flex justify-center items-center" asp-controller="Special" asp-action="Index">
+                        <img src="~/image_design/Hot Price1.png" class="img-icon" />
+                        <span class="font-bold ms-2 text-header">Specials</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-2 flex justify-content-start align-items-end"><partial name="_LoginPartial.cshtml" /></div>
+        </div>
+
+
+    </nav>
+</header>
+<script>
+    const homeMenuButton = document.getElementById('home-menu-button');
+    const homeDropdownMenu = document.getElementById('home-dropdown-menu');
+
+    homeMenuButton.addEventListener('click', (event) => {
+        event.stopPropagation();
+        homeDropdownMenu.classList.toggle('hidden');
+    });
+
+
+    const ecardsMenuButton = document.getElementById('ecards-menu-button');
+    const ecardsDropdownMenu = document.getElementById('ecards-dropdown-menu');
+
+    ecardsMenuButton.addEventListener('click', (event) => {
+        event.stopPropagation();
+        ecardsDropdownMenu.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!homeMenuButton.contains(event.target) && !homeDropdownMenu.contains(event.target)) {
+            homeDropdownMenu.classList.add('hidden');
+        }
+        if (!ecardsMenuButton.contains(event.target) && !ecardsDropdownMenu.contains(event.target)) {
+            ecardsDropdownMenu.classList.add('hidden');
+        }
+    });
+</script>
+
+
+
+
+<script>
+        const dropdownButton = document.getElementById('dropdownButton');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+
+    // Hiển thị dropdown khi hover vào button
+    dropdownButton.addEventListener('mouseenter', () => {
+      dropdownMenu.classList.remove('hidden');
+      dropdownMenu.classList.add('opacity-100');
+    });
+
+    // Ẩn dropdown khi chuột rời khỏi button hoặc menu
+    dropdownButton.addEventListener('mouseleave', () => {
+      // Kiểm tra nếu chuột đã ra khỏi button và dropdown, mới ẩn
+      if (!dropdownMenu.matches(':hover')) {
+        dropdownMenu.classList.remove('opacity-100');
+        dropdownMenu.classList.add('hidden');
+      }
+    });
+
+    // Thêm sự kiện để ẩn dropdown khi chuột rời khỏi menu
+    dropdownMenu.addEventListener('mouseleave', () => {
+      dropdownMenu.classList.remove('opacity-100');
+      dropdownMenu.classList.add('hidden');
+    });
+
+    // Đóng dropdown khi click ra ngoài
+    document.addEventListener('click', (event) => {
+      if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+        dropdownMenu.classList.add('hidden');
+        dropdownMenu.classList.remove('opacity-100');
+      }
+    });
+
+
+
+</script>
+<script>
+             document.addEventListener('DOMContentLoaded', () => {
+        const dropdownButton = document.getElementById('dropdownButton1');
+        const dropdownMenu = document.getElementById('ecards-dropdown-menu');
+        let timeout;
+
+        // Hiển thị dropdown khi hover vào button
+        dropdownButton.addEventListener('mouseenter', () => {
+            clearTimeout(timeout); // Hủy bỏ timeout nếu chuột quay lại button trước khi ẩn
+            dropdownMenu.classList.remove('hidden');
+            dropdownMenu.classList.add('opacity-100');
+        });
+
+        // Ẩn dropdown sau 1 giây nếu chuột rời khỏi button
+        dropdownButton.addEventListener('mouseleave', () => {
+            timeout = setTimeout(() => {
+                if (!dropdownMenu.matches(':hover')) {
+                    dropdownMenu.classList.remove('opacity-100');
+                    dropdownMenu.classList.add('hidden');
+                }
+            }, 1000); // 1000 ms = 1 giây
+        });
+
+        // Thêm sự kiện để ẩn dropdown khi chuột rời khỏi menu
+        dropdownMenu.addEventListener('mouseleave', () => {
+            timeout = setTimeout(() => {
+                dropdownMenu.classList.remove('opacity-100');
+                dropdownMenu.classList.add('hidden');
+            }, 1000); // 1000 ms = 1 giây
+        });
+
+        // Đảm bảo dropdown ẩn khi click ra ngoài
+        document.addEventListener('click', (event) => {
+            if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.add('hidden');
+                dropdownMenu.classList.remove('opacity-100');
+            }
+        });
+    });
+
+
+
+
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+        const navbar = document.getElementById('navbar_default');
+        const headerNav = document.getElementById('header-nav'); // Giả định bạn có phần tử này
+        const closeSidebarButton = document.getElementById('close-sidebar');
+
+        // Hàm kiểm tra kích thước cửa sổ
+        const checkWindowWidth = () => {
+            if (window.innerWidth <= 1300) {
+                sidebarToggle.classList.remove('hidden'); // Hiện nút toggle
+                headerNav.classList.add('hidden'); // Ẩn header-nav
+            } else {
+                sidebarToggle.classList.add('hidden'); // Ẩn nút toggle
+                headerNav.classList.remove('hidden'); // Hiện header-nav
+                navbar.classList.add('hidden'); // Đảm bảo sidebar ẩn khi ở màn hình lớn
+                navbar.classList.add('translate-x-full'); // Đưa sidebar ra ngoài
+            }
+        };
+
+        // Gọi checkWindowWidth khi trang tải và khi thay đổi kích thước cửa sổ
+        checkWindowWidth();
+        window.addEventListener('resize', checkWindowWidth);
+
+        // Toggle sidebar menu khi click vào nút sidebar
+        sidebarToggle.addEventListener('click', () => {
+            navbar.classList.toggle('hidden');
+            navbar.classList.toggle('translate-x-full'); // Thay đổi trạng thái chuyển động
+        });
+
+        // Đóng sidebar khi click vào nút "X"
+        closeSidebarButton.addEventListener('click', () => {
+            navbar.classList.add('hidden');
+            navbar.classList.add('translate-x-full'); // Đảm bảo sidebar không hiện
+        });
+    });
+</script>

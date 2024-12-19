@@ -1,0 +1,41 @@
+@model EGreetings_Project.Models.Slider
+
+@{
+  Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@section HeadScripts {
+}
+
+<h1 class="libre-franklin--title primary-color">Slider Detail</h1>
+
+<hr />
+
+<div class="mt-3">
+  <dl class="row">
+    <dt class="col-sm-2">
+      Slider Title
+    </dt>
+    <dd class="col-sm-10">
+      @Html.DisplayFor(model => model.SliderTitle)
+    </dd>
+
+    <dt class="col-sm-2">
+      Slider Content
+    </dt>
+    <dd class="col-sm-10">
+      @Html.DisplayFor(model => model.SliderContent)
+    </dd>
+
+    <dt class="col-sm-2">
+      Svg Image
+    </dt>
+    <dd class="col-sm-10">
+      <img src="@Url.Content(Model.SliderImage)" alt="slider" style="width: 400px; height: 283px;">
+    </dd>    
+  </dl>
+</div>
+
+@section Scripts {
+}
+

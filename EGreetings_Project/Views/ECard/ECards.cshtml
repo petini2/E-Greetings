@@ -1,0 +1,321 @@
+﻿@{
+    ViewData["Title"] = "ECards";
+}
+
+
+<div class="w-full w-all-ecard flex">
+
+    <div class="w-sidecard flex flex-col">
+        <div class="w-full flex flex-col px-5 pt-5 pb-3">
+            <div class="py-3 text-tilte-filter">
+                Filter By Price
+            </div>
+            <form method="post" action="@Url.Action("FilterByPrice", "YourController")" id="filterForm" class="p3">
+                <div class="p-2">
+                    <label class="flex justify-content-start align-items-center">
+                        <input type="radio" name="priceFilter" value="lowestToHighest" onchange="this.form.submit()" /><span class="categoryFiltertext"> Lowest To Highest</span>
+                    </label>
+                </div>
+                <div class="p-2">
+                    <label class="flex justify-content-start align-items-center">
+                        <input type="radio" name="priceFilter" value="highestToLowest" onchange="this.form.submit()" /><span class="categoryFiltertext">Highest To Lowest</span>
+                    </label>
+                </div>
+            </form>
+        </div>
+        <div class="w-full flex flex-col px-5 ">
+            <div class="py-3 text-tilte-filter">
+                Select Categories
+            </div>
+            <div class="px-2 py-3">
+                <label class="flex items-center">
+                    <input type="checkbox" class="categoryFilter" /> <span class="categoryFilterbig">Birthday</span>
+                </label>
+            </div>
+            <div class=" flex flex-wrap w-100">
+                @foreach (var category in Model)
+                {
+                    if (category.GroupCate == "BD")
+                    {
+                        <div class="w-1/2 p-2">
+                            <!-- Thêm một div bao quanh mỗi checkbox để phân chia cột -->
+                            <label class="flex justify-content-start align-items-center">
+                                <input type="checkbox" class="categoryFilter" value="@category.CategoryId" onchange="applyFilters()" /><span class="categoryFiltertext">@category.CategoryName</span>
+                            </label>
+                        </div>
+                    }
+                }
+            </div>
+            <div class="px-2 py-4">
+                <label class="flex items-center">
+                    <input type="checkbox" class="categoryFilter" /> <span class="categoryFilterbig">New year</span>
+                </label>
+            </div>
+            <div class=" flex flex-col w-100">
+                @foreach (var category in Model)
+                {
+                    if (category.GroupCate == "NY")
+                    {
+                        <div class="w-100 p-2">
+                            <!-- Thêm một div bao quanh mỗi checkbox để phân chia cột -->
+                            <label class="flex justify-content-start align-items-center">
+                                <input type="checkbox" class="categoryFilter" value="@category.CategoryId" onchange="applyFilters()" /><span class="categoryFiltertext">@category.CategoryName</span>
+                            </label>
+                        </div>
+                    }
+                }
+            </div>
+
+            <div class="px-2 py-4">
+                <label class="flex items-center">
+                    <input type="checkbox" class="categoryFilter" /> <span class="categoryFilterbig">Wedding</span>
+                </label>
+            </div>
+            <div class=" flex flex-wrap w-100">
+                @foreach (var category in Model)
+                {
+                    if (category.GroupCate == "WD")
+                    {
+                        <div class="w-1/2 p-2">
+                            <!-- Thêm một div bao quanh mỗi checkbox để phân chia cột -->
+                            <label class="flex justify-content-start align-items-center">
+                                <input type="checkbox" class="categoryFilter" value="@category.CategoryId" onchange="applyFilters()" /><span class="categoryFiltertext">@category.CategoryName</span>
+                            </label>
+                        </div>
+                    }
+                }
+            </div>
+            <div class="px-2 py-4">
+                <label class="flex items-center">
+                    <input type="checkbox" class="categoryFilter" /> <span class="categoryFilterbig">Love</span>
+                </label>
+            </div>
+            <div class=" flex flex-wrap w-100">
+                @foreach (var category in Model)
+                {
+                    if (category.GroupCate == "LV")
+                    {
+                        <div class="w-1/2 p-2">
+                            <!-- Thêm một div bao quanh mỗi checkbox để phân chia cột -->
+                            <label class="flex justify-content-start align-items-center">
+                                <input type="checkbox" class="categoryFilter" value="@category.CategoryId" onchange="applyFilters()" /><span class="categoryFiltertext">@category.CategoryName</span>
+                            </label>
+                        </div>
+                    }
+                }
+            </div>
+            <div class="px-2 py-4">
+                <label class="flex items-center">
+                    <input type="checkbox" class="categoryFilter" /> <span class="categoryFilterbig">Festival</span>
+                </label>
+            </div>
+            <div class=" flex flex-wrap w-100">
+                @foreach (var category in Model)
+                {
+                    if (category.GroupCate == "FE")
+                    {
+                        <div class="w-1/2 p-2">
+                            <!-- Thêm một div bao quanh mỗi checkbox để phân chia cột -->
+                            <label class="flex justify-content-start align-items-center">
+                                <input type="checkbox" class="categoryFilter" value="@category.CategoryId" onchange="applyFilters()" /><span class="categoryFiltertext">@category.CategoryName</span>
+                            </label>
+                        </div>
+                    }
+                }
+            </div>
+            <div class="px-2 py-4">
+                <label class="flex items-center">
+                    <input type="checkbox" class="categoryFilter" /> <span class="categoryFilterbig">Others</span>
+                </label>
+            </div>
+            <div class=" flex flex-wrap w-100">
+                @foreach (var category in Model)
+                {
+                    if (category.GroupCate == "OT")
+                    {
+                        <div class="w-1/2 p-2">
+                            <!-- Thêm một div bao quanh mỗi checkbox để phân chia cột -->
+                            <label class="flex justify-content-start align-items-center">
+                                <input type="checkbox" class="categoryFilter" value="@category.CategoryId" onchange="applyFilters()" /><span class="categoryFiltertext">@category.CategoryName</span>
+                            </label>
+                        </div>
+                    }
+                }
+            </div>
+        </div>
+
+
+
+    </div>
+    <div class="w-maincard">
+        <div class="title-ecardd">
+            Our Templates
+        </div>
+        <div class="btn-search-card">
+            <input type="text"  class="btn-inputsearch"/>
+            <div class="img-search"><img src="~/image_design/Search.png"/></div>
+        </div>
+        <div class="e-cards">
+
+            <div class="item-a1">
+                <div class="mt-5 me-3">
+                    <div class="flex flex-col justify-center items-center item-product">
+                        <img src="~/image_design/Christmasimg.jpg" alt="sp1" class="img-card" />
+                        <div class="w-content-card flex flex-col ">
+                            <div class="text-center px-3 py-4">Template Name</div>
+                            <div class="flex justify-content-between align-items-center p-2"><s>$3.00</s><span class="exactly-price">$2.99</span></div>
+                        </div>
+                        <div class="overplay1">
+                            <!-- Nút liên kết -->
+                            <a href="javascript:void(0)" id="useCardBtn" class="btn-buy">Use this card</a>
+
+                            <!-- Dialog với lựa chọn template (ban đầu rỗng) -->
+                            <div id="confirmationDialog" style="display:none;">
+                                <div class="dialog-content">
+                                    <p>Select a template:</p>
+                                    <div id="templateOptions">
+                                        <!-- Các template sẽ được thêm vào đây bằng JavaScript -->
+                                    </div><br>
+                                    <button id="confirmBtn">Submit</button>
+                                    <button id="cancelBtn">Cancel</button>
+                                </div>
+                            </div>
+
+                            <!-- Form (ẩn đi cho đến khi submit) -->
+                            <form id="yourForm" asp-action="ECardDesign" asp-controller="ECard" method="post" style="display:none;">
+                                <!-- Có thể thêm các trường khác nếu cần -->
+                                <input type="hidden" id="selectedTemplate" name="selectedTemplate" value="">
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-a1">
+                <div class="mt-5 me-3">
+                    <div class="flex flex-col justify-center items-center item-product">
+                        <img src="~/image_design/Christmasimg.jpg" alt="sp1" class="img-card" />
+                        <div class="w-content-card flex flex-col ">
+                            <div class="text-center px-3 py-4">Template Name</div>
+                            <div class="flex justify-content-between align-items-center p-2"><s>$3.00</s><span class="exactly-price">$2.99</span></div>
+                        </div>
+                        <div class="overplay1">
+                            <a href="#" class="btn-buy">Use this card</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-a1">
+                <div class="mt-5 me-3">
+                    <div class="flex flex-col justify-center items-center item-product">
+                        <img src="~/image_design/Christmasimg.jpg" alt="sp1" class="img-card" />
+                        <div class="w-content-card flex flex-col ">
+                            <div class="text-center px-3 py-4">Template Name</div>
+                            <div class="flex justify-content-between align-items-center p-2"><s>$3.00</s><span class="exactly-price">$2.99</span></div>
+                        </div>
+                        <div class="overplay1">
+                            <a href="#" class="btn-buy">Use this card</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-a1">
+                <div class="mt-5 me-3">
+                    <div class="flex flex-col justify-center items-center item-product">
+                        <img src="~/image_design/Christmasimg.jpg" alt="sp1" class="img-card" />
+                        <div class="w-content-card flex flex-col ">
+                            <div class="text-center px-3 py-4">Template Name</div>
+                            <div class="flex justify-content-between align-items-center p-2"><s>$3.00</s><span class="exactly-price">$2.99</span></div>
+                        </div>
+                        <div class="overplay1">
+                            <a href="#" class="btn-buy">Use this card</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-a1">
+                <div class="mt-5 me-3">
+                    <div class="flex flex-col justify-center items-center item-product">
+                        <img src="~/image_design/Christmasimg.jpg" alt="sp1" class="img-card" />
+                        <div class="w-content-card flex flex-col ">
+                            <div class="text-center px-3 py-4">Template Name</div>
+                            <div class="flex justify-content-between align-items-center p-2"><s>$3.00</s><span class="exactly-price">$2.99</span></div>
+                        </div>
+                        <div class="overplay1">
+                            <a href="#" class="btn-buy">Use this card</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="item-a1">
+                <div class="mt-5 me-3">
+                    <div class="flex flex-col justify-center items-center item-product">
+                        <img src="~/image_design/Christmasimg.jpg" alt="sp1" class="img-card" />
+                        <div class="w-content-card flex flex-col ">
+                            <div class="text-center px-3 py-4">Template Name</div>
+                            <div class="flex justify-content-between align-items-center p-2"><s>$3.00</s><span class="exactly-price">$2.99</span></div>
+                        </div>
+                        <div class="overplay1">
+                            <a href="#" class="btn-buy">Use this card</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+        document.querySelectorAll('.btn-buy').forEach(button => {
+        button.addEventListener('click', function() {
+            
+            fetch('/ECard/ECardDesign')
+                .then(response => response.json())
+                .then(templates => {
+                   
+                    const templateOptionsContainer = document.getElementById('templateOptions');
+                    templateOptionsContainer.innerHTML = '';
+
+                   
+                    templates.forEach(template => {
+                        const label = document.createElement('label');
+                        const input = document.createElement('input');
+                        input.type = 'radio';
+                        input.name = 'template';
+                        input.value = template.id;  // Giả sử mỗi template có trường "id"
+                        label.appendChild(input);
+                        label.appendChild(document.createTextNode(template.name));  // Giả sử có trường "name"
+                        templateOptionsContainer.appendChild(label);
+                        templateOptionsContainer.appendChild(document.createElement('br'));  // Thêm line break
+                    });
+
+                  
+                    document.getElementById('confirmationDialog').style.display = 'block';
+                })
+                .catch(error => console.error('Error fetching templates:', error));
+        });
+    });
+
+    document.getElementById('confirmBtn').addEventListener('click', function() {
+       
+        const selectedOption = document.querySelector('input[name="template"]:checked');
+
+        if (selectedOption) {
+            
+            document.getElementById('selectedTemplate').value = selectedOption.value;
+
+            
+            document.getElementById('yourForm').submit();
+        } else {
+            alert("Please select a template before submitting.");
+        }
+    });
+
+  
+    document.getElementById('cancelBtn').addEventListener('click', function() {
+       
+        document.getElementById('confirmationDialog').style.display = 'none';
+    });
+
+</script>

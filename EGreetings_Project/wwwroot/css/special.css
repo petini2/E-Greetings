@@ -1,0 +1,42 @@
+﻿body {
+}
+.spe-title{
+    font-size: 34px;
+    font-weight: 600;
+    color: #696969;
+    margin-top: 20px;
+}
+
+.filter-spe {
+    width: 350px;
+    height: 40px;
+/*    background-color: #102E70;*/
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    
+}
+
+.btn-spe {
+    width: 50%;
+    color: black;
+    padding: 5px;
+    border: 1px solid #102E70;
+    text-align: center;
+    cursor: pointer;
+    font-weight: 500;
+
+}
+    .btn-spe.selected {
+      
+        background-color: #102E70;
+        color: white;
+    }
+/*    .btn-spe:active {
+        background-color: #102E70;
+        color: white;
+    }
+        .btn-spe:clicked{
+        background-color: #102E70;
+        color: white;
+    }*/

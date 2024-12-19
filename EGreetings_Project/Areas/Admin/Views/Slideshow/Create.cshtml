@@ -1,0 +1,54 @@
+@model EGreetings_Project.Models.Slider
+
+@{
+  Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@section HeadScripts {
+}
+
+<h1 class="libre-franklin--title primary-color">Create Slider</h1>
+
+<hr />
+
+<div class="row mt-3">
+  <div class="col-md-4">
+    <form asp-action="Create" enctype="multipart/form-data" method="post">
+      <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+      <div class="form-group">
+        <label asp-for="SliderTitle" class="control-label">Slider Title</label>
+        <input asp-for="SliderTitle" class="form-control" />
+        <span asp-validation-for="SliderTitle" class="text-danger"></span>
+      </div>
+
+      <div class="form-group">
+        <label asp-for="SliderContent" class="control-label">Slider Content</label>
+        <textarea asp-for="SliderContent" class="form-control" rows="4"></textarea>
+        <span asp-validation-for="SliderContent" class="text-danger"></span>
+      </div> 
+
+      <div class="form-group">
+        <label class="control-label">Svg Image</label>
+        <input type="file" name="svgImage" class="form-control" />
+        @if (ViewData.ModelState.ContainsKey("svgImage"))
+        {
+          <span class="text-danger">@ViewData.ModelState["svgImage"].Errors.FirstOrDefault()?.ErrorMessage</span>
+        }        
+      </div>
+
+      <div class="form-group">
+        <label asp-for="IsActive" class="control-label">Allow display?</label>
+        <input asp-for="IsActive" type="checkbox" class="form-check-input ml-3" />
+        <span asp-validation-for="IsActive" class="text-danger"></span>
+      </div>
+
+      <div class="form-group">
+        <input type="submit" value="Create" class="btn btn-primary" />
+      </div>
+    </form>
+  </div>
+</div>
+
+@section Scripts {
+}
+

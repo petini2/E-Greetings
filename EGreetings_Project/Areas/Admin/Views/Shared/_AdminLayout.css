@@ -1,0 +1,56 @@
+/* Title font */
+.libre-franklin--title {
+  font-family: "Libre Franklin", serif;
+}
+/* Content font */
+.raleway--content {
+  font-family: "Raleway", sans-serif;
+}
+
+
+.primary-color {
+  color: #00094b;  
+}
+
+
+.admin-layout--background-color {
+  background-color: #eee;
+}
+.admin-layout--padding {
+  padding: 8px;
+}
+aside.main-sidebar.admin-layout__sidebar--position {
+  top: 8px;
+}
+
+.admin-layout__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: solid 3px #007bff;
+}
+.admin-layout__logo > img {
+  width: 100px;
+  height: 100px;
+}
+/* Resize logo when collapse */
+body.sidebar-collapse .admin-layout__logo > img {
+  width: 60px;
+  height: 60px;
+}
+/* Resize logo when hover sidebar */
+body.sidebar-collapse .main-sidebar:hover .admin-layout__logo > img {
+  width: 100px;
+  height: 100px;
+}
+
+
+/* Keep white text when active link */
+.nav-sidebar .nav-item .nav-link.active .libre-franklin--title {
+  font-weight: bold;
+  color: white;
+}
+/* Keep white icon when active link */
+.nav-sidebar .nav-item .nav-link.active .nav-icon {
+  color: white;
+}

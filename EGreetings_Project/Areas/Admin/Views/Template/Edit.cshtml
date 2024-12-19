@@ -1,0 +1,57 @@
+@model EGreetings_Project.Models.Template
+
+@{
+  Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@section HeadScripts {
+}
+
+
+<div class="d-flex justify-content-between align-items-center mb-3">
+  <h1 class="libre-franklin--title primary-color">Edit Template</h1>
+  <a asp-area="Admin" asp-controller="Template" asp-action="Index" asp-route-id="@ViewData["CategoryId"]">Back to @ViewData["CategoryName"]</a>  
+</div>
+
+<hr />
+
+<div class="row mt-3">
+  <div class="col-md-4">
+    <form asp-area="Admin" asp-controller="Template" asp-action="Edit" asp-route-id="@Model.TemplateId" enctype="multipart/form-data" method="post">
+      <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+      <input type="hidden" asp-for="TemplateId" />
+      <input type="hidden" asp-for="CategoryId" />
+
+      <div class="form-group">
+        <label asp-for="TemplateName" class="control-label">Template Name</label>
+        <input asp-for="TemplateName" class="form-control" />
+        <span asp-validation-for="TemplateName" class="text-danger"></span>
+      </div>
+
+      <div class="form-group">
+        <label asp-for="Price" class="control-label">Price</label>
+        <input asp-for="Price" type="number" step="0.01" class="form-control" />
+        <span asp-validation-for="Price" class="text-danger"></span>
+      </div>
+
+      <div class="form-group">
+        <label asp-for="Discounts" class="control-label">Discounts</label>
+        <input asp-for="Discounts" type="number" step="0.01" class="form-control" />
+        <span asp-validation-for="Discounts" class="text-danger"></span>
+      </div>
+
+      <div class="form-group">
+        <label asp-for="Description" class="control-label">Description</label>
+        <textarea asp-for="Description" class="form-control" rows="4"></textarea>
+        <span asp-validation-for="Description" class="text-danger"></span>
+      </div>
+
+      <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+      </div>
+    </form>
+  </div>
+</div>
+
+@section Scripts {
+}

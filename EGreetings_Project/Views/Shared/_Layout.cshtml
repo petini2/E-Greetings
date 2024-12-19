@@ -1,0 +1,184 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - EGreetings_Project</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/homepage.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/sliders.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/sliders.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/ecards.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/subs.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/special.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/EGreetings_Project.styles.css" asp-append-version="true" />
+    <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Inria+Serif:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Lexend:wght@100..900&display=swap" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body class="w-full flex flex-col">
+    @await Html.PartialAsync("_Header")
+
+    <main role="main" class="pb-3 main-content position-relative h-auto">
+        @RenderBody()
+    </main>
+
+    @await Html.PartialAsync("_Footer")
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
+
+
+<script>
+    const homeMenuButton = document.getElementById('home-menu-button');
+    const homeDropdownMenu = document.getElementById('home-dropdown-menu');
+
+    homeMenuButton.addEventListener('click', (event) => {
+        event.stopPropagation();
+        homeDropdownMenu.classList.toggle('hidden');
+    });
+
+
+    const ecardsMenuButton = document.getElementById('ecards-menu-button');
+    const ecardsDropdownMenu = document.getElementById('ecards-dropdown-menu');
+
+    ecardsMenuButton.addEventListener('click', (event) => {
+        event.stopPropagation();
+        ecardsDropdownMenu.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!homeMenuButton.contains(event.target) && !homeDropdownMenu.contains(event.target)) {
+            homeDropdownMenu.classList.add('hidden');
+        }
+        if (!ecardsMenuButton.contains(event.target) && !ecardsDropdownMenu.contains(event.target)) {
+            ecardsDropdownMenu.classList.add('hidden');
+        }
+    });
+</script>
+
+
+
+
+<script>
+        const dropdownButton = document.getElementById('dropdownButton');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+
+    // Hiển thị dropdown khi hover vào button
+    dropdownButton.addEventListener('mouseenter', () => {
+      dropdownMenu.classList.remove('hidden');
+      dropdownMenu.classList.add('opacity-100');
+    });
+
+    // Ẩn dropdown khi chuột rời khỏi button hoặc menu
+    dropdownButton.addEventListener('mouseleave', () => {
+      // Kiểm tra nếu chuột đã ra khỏi button và dropdown, mới ẩn
+      if (!dropdownMenu.matches(':hover')) {
+        dropdownMenu.classList.remove('opacity-100');
+        dropdownMenu.classList.add('hidden');
+      }
+    });
+
+    // Thêm sự kiện để ẩn dropdown khi chuột rời khỏi menu
+    dropdownMenu.addEventListener('mouseleave', () => {
+      dropdownMenu.classList.remove('opacity-100');
+      dropdownMenu.classList.add('hidden');
+    });
+
+    // Đóng dropdown khi click ra ngoài
+    document.addEventListener('click', (event) => {
+      if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+        dropdownMenu.classList.add('hidden');
+        dropdownMenu.classList.remove('opacity-100');
+      }
+    });
+
+
+
+</script>
+<script>
+          document.addEventListener('DOMContentLoaded', () => {
+        const dropdownButton = document.getElementById('dropdownButton1');
+        const dropdownMenu = document.getElementById('ecards-dropdown-menu');
+
+        // Hiển thị dropdown khi hover vào button
+        dropdownButton.addEventListener('mouseenter', () => {
+            dropdownMenu.classList.remove('hidden');
+            dropdownMenu.classList.add('opacity-100');
+        });
+
+        // Ẩn dropdown khi chuột rời khỏi button
+        dropdownButton.addEventListener('mouseleave', () => {
+            // Kiểm tra nếu chuột đã ra khỏi button và dropdown, mới ẩn
+            if (!dropdownMenu.matches(':hover')) {
+                dropdownMenu.classList.remove('opacity-100');
+                dropdownMenu.classList.add('hidden');
+            }
+        });
+
+        // Thêm sự kiện để ẩn dropdown khi chuột rời khỏi menu
+        dropdownMenu.addEventListener('mouseleave', () => {
+            dropdownMenu.classList.remove('opacity-100');
+            dropdownMenu.classList.add('hidden');
+        });
+
+        // Đảm bảo dropdown ẩn khi click ra ngoài
+        document.addEventListener('click', (event) => {
+            if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.add('hidden');
+                dropdownMenu.classList.remove('opacity-100');
+            }
+        });
+    });
+
+
+
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+        const navbar = document.getElementById('navbar_default');
+        const headerNav = document.getElementById('header-nav'); // Giả định bạn có phần tử này
+        const closeSidebarButton = document.getElementById('close-sidebar');
+
+        // Hàm kiểm tra kích thước cửa sổ
+        const checkWindowWidth = () => {
+            if (window.innerWidth <= 1300) {
+                sidebarToggle.classList.remove('hidden'); // Hiện nút toggle
+                headerNav.classList.add('hidden'); // Ẩn header-nav
+            } else {
+                sidebarToggle.classList.add('hidden'); // Ẩn nút toggle
+                headerNav.classList.remove('hidden'); // Hiện header-nav
+                navbar.classList.add('hidden'); // Đảm bảo sidebar ẩn khi ở màn hình lớn
+                navbar.classList.add('translate-x-full'); // Đưa sidebar ra ngoài
+            }
+        };
+
+        // Gọi checkWindowWidth khi trang tải và khi thay đổi kích thước cửa sổ
+        checkWindowWidth();
+        window.addEventListener('resize', checkWindowWidth);
+
+        // Toggle sidebar menu khi click vào nút sidebar
+        sidebarToggle.addEventListener('click', () => {
+            navbar.classList.toggle('hidden');
+            navbar.classList.toggle('translate-x-full'); // Thay đổi trạng thái chuyển động
+        });
+
+        // Đóng sidebar khi click vào nút "X"
+        closeSidebarButton.addEventListener('click', () => {
+            navbar.classList.add('hidden');
+            navbar.classList.add('translate-x-full'); // Đảm bảo sidebar không hiện
+        });
+    });
+</script>
