@@ -1,6 +1,6 @@
 
 
-<img src=""/>
+
 <h1 align="center">Hi 👋, We are **LIVE WITHOUT THINKING**</h1>
 <h3 align="center">This is our project about **E-Cards**</h3>
 
