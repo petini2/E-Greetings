@@ -1,0 +1,79 @@
+﻿/* CSS Code */
+.swiper-wrapper {
+    width: 100%;
+    height: max-content !important;
+    padding-bottom: 64px !important;
+    -webkit-transition-timing-function: linear !important;
+    transition-timing-function: linear !important;
+    position: relative;
+}
+
+.swiper-pagination-bullet {
+    background: #4f46e5;
+}
+.height-slider {
+    max-height: 400px;
+    overflow: hidden; /* Đảm bảo rằng phần tử không tràn khi kích thước giảm */
+    transition: max-height 0.3s ease; /* Thêm hiệu ứng chuyển động mượt mà */
+    position: relative;
+}
+
+/* Media query cho các màn hình có chiều rộng tối đa 768px (ví dụ: tablet hoặc điện thoại) */
+@media (max-width: 768px) {
+    .height-slider {
+        max-height: 250px; /* Điều chỉnh max-height cho màn hình nhỏ hơn */
+        
+    }
+}
+
+/* Media query cho các màn hình nhỏ hơn 480px (ví dụ: điện thoại di động) */
+@media (max-width: 480px) {
+    .height-slider {
+        max-height: 200px; /* Điều chỉnh max-height cho màn hình rất nhỏ */
+    }
+}
+
+.slide-height {
+    height: 380px;
+}
+.img-slider {
+    height: 380px;
+    width: 100%;
+}
+.title-slider {
+    font-family: 'Inria Serif';
+    font-size: 80px;
+    color: white;
+}
+.slider-content {
+    font-family: 'Inria Serif';
+    font-size: 18px;
+    color:white;
+    width: 50%;
+    padding: 10px 30px;
+    font-weight: 300;
+}
+
+.font {
+    font-family: 'Inria Serif';
+}
+
+
+    #slider-button-left:hover, #slider-button-right:hover {
+        color: #fff7ad; /* Add hover effect with reverse gradient */
+    }
+        #slider-button-left:hover svg path,
+        #slider-button-right:hover svg path {
+            stroke: white; /* Optional: set the stroke color on hover */
+        }
+
+.swiper-container {
+    height: 500px; /* or any desired height */
+    position: relative;
+}
+.swiper-container {
+    z-index: 1; /* Ensure it doesn't overlap other content */
+}
+.w-slider{
+    width: 90%;
+}

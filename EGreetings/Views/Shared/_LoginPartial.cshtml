@@ -1,0 +1,47 @@
+﻿
+@using Microsoft.AspNetCore.Identity
+@inject UserManager<User> UserManager
+@inject SignInManager<User> signInManager
+@using Microsoft.AspNetCore.Authentication
+@using System.Security.Claims
+@using Microsoft.AspNetCore.Authentication.Cookies
+
+@{
+    // Lấy giá trị từ cookie
+    var avatarUrl = Context.Request.Cookies["UserAvatar"] ?? "/images/default-avatar.png"; // Avatar mặc định nếu không có cookie
+    var userName = Context.Request.Cookies["UserName"] ?? "Guest"; // Tên người dùng mặc định nếu không có cookie
+    var isAdmin = User.IsInRole("Admin");
+    var isUser = !isAdmin;
+}
+
+<div class="navbar-nav flex justify-end">
+    @if (User.Identity.IsAuthenticated)
+    {
+        <div class="w-full flex justify-end">
+            <div class="user-info d-flex justify-end align-items-center">
+                <!-- Avatar Image -->
+                <a href="@((isAdmin) ? Url.Action("Index", "Dashboard", new { area = "Admin" }) :
+                           (isUser ? Url.Action("Index", "Home") : "#"))" class="text-decoration-none flex items-center ">
+                
+                    <img src="@Url.Content(avatarUrl)" alt="User Avatar" class="avatar me-2" style="width: 30px; height: 30px; border-radius: 50%;" />
+                    <span class="ms-2 text-header">@userName</span>
+                </a>
+               
+            </div>
+            <div class="nav-item ms-3">
+                <a class="nav-link text-header" asp-controller="Account" asp-action="Logout">Logout</a>
+            </div>
+        </div>
+    }
+    else
+    {
+        <div class="flex justify-content-end align-items-end">
+            <div class="nav-item">
+                <a class="nav-link font-bold text-header" asp-controller="Account" asp-action="Login">Login</a>
+            </div>
+            <div class="nav-item">
+                <a class="nav-link font-bold ms-4 text-header" asp-controller="Account" asp-action="Register">Join Now</a>
+            </div>
+        </div>
+    }
+</div>

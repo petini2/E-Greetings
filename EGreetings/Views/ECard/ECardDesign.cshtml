@@ -1,0 +1,1025 @@
+﻿@{
+    ViewData["Title"] = "E-Card Design";
+}
+@model EGreetings.Models.ViewModelAccount.ECardViewModel
+<body>
+    <div class="w-full flex flex-col mt-4 ">
+        <div class="flex w-full justify-between">
+            <div class="w-leftcarddesign relative flex flex-col justify-content-center align-items-center">
+                <div class="top1-tool flex justify-center items-center w-full">
+                    @* <button type="submit" id="addShapeButton" onclick="addShape()" class="w-full flex justify-center align-items-center "> *@
+                    @*     <img src="~/image_design/Shape.png" class="imgtool" id="shape-tool" /> *@
+                    @* </button> *@
+                    @* <div class="divider"></div> *@
+                    @* <div class="w-full flex justify-center align-items-center"><img src="~/image_design/Circle.png" class="imgtool" id="shape-tool" /></div> *@
+                    <div class="divider"></div>
+                    <div class="w-full flex justify-center align-items-center"><button type="submit" onclick="addShape()"><img src="~/image_design/Unchecked Checkbox.png" class="imgtool" id="shape-tool" /></button></div>
+                    <div class="divider"></div>
+                    <div class="w-full flex justify-center align-items-center"><button type="submit" onclick="makeTransparent()"><img src="~/image_design/transparency.png" class="imgtool" id="shape-tool" /></button></div>
+                    <div class="divider"></div>
+                    <div class=" flex justify-center align-items-center" id="opacityControl">
+                        <img src="~/image_design/opacity.svg" class="imgtool" id="shape-tool" />
+                        <input type="range" id="opacityRange" min="0" max="100" value="100" oninput="changeOpacity(this.value)" class="input-styleborder1" />
+                        <input type="number" id="opacityInput" min="0" max="100" value="100" oninput="changeOpacity(this.value)" class="input-styleborder2" />
+                    </div>
+
+                </div>
+                <div class="top1-tool flex  justify-between items-center w-full mt-3">
+                    <button type="submit" onclick="addImage()" id="addImageButton" class="w-50 flex justify-center items-center">
+                        <img src="~/image_design/photo.png" class="imgtool " id="plus-tool" />
+                    </button>
+                    <div class="divider"></div>
+                    @* <div class="w-50 flex justify-center align-items-center"><img src="~/image_design/crop.png" class="imgtool" id="shape-tool" /></div> *@
+                    <div class="color-picker  flex justify-content-center items-center">
+                        <input type="color" id="colorPicker" value="#000000" oninput="changeColor(this.value)" />
+                        <button onclick="applyBorderToSelected()"><img src="~/image_design/border-style.png" class="imgtool" id="italic-tool" /></button>
+                        <select id="borderStyleSelect" class="input-styleborder">
+                            <option value="solid">Solid</option>
+                            <option value="dashed">Dashed</option>
+                            <option value="dotted">Dotted</option>
+                            <option value="double">Double</option>
+                            <option value="groove">Groove</option>
+                        </select>
+                    </div>
+
+                    <!-- Dropdown cho loại viền -->
+
+                    <div class="divider"></div>
+                    <!-- Input cho độ dày viền -->
+                    <div class="w-full flex justify-center items-center"><input type="number" id="borderWidthInput" value="2" min="1" class="input-styleborder1" /></div>
+
+                    <!-- Input cho màu viền -->
+                    <div class="color-picker">
+                        <input type="color" id="borderColorPicker" value="#000000" />
+                    </div>
+                    @* <div class="divider"></div> *@
+                </div>
+
+
+                <div class="top1-tool flex justify-center items-center w-full mt-3">
+                    <div class="flex w-50 justify-center items-center">
+
+                        <button type="submit" id="addTextButton" onclick="addText()" class="w-full me-2 flex justify-center items-center">
+                            <img src="~/image_design/Plus.png" class="imgtool" id="plus-tool" />
+                        </button>
+                    </div>
+                    <div class="divider"></div>
+
+
+                    <div class="w-full flex justify-center align-items-center">
+                        <input type="file" id="fontFileInput" accept=".ttf, .otf" class="input-styleborder" />
+
+                        <select id="fontSelector" onchange="changeFont(this.value)" class="input-styleborder">
+                            <option value="" disabled selected>Chọn font</option>
+                            <option value="Arial">Arial</option>
+                            <option value="Arial Black">Arial Black</option>
+                            <option value="Arial Narrow">Arial Narrow</option>
+                            <option value="Arial Rounded MT Bold">Arial Rounded MT Bold</option>
+                            <option value="Comic Sans MS">Comic Sans MS</option>
+                            <option value="Courier New">Courier New</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Impact">Impact</option>
+                            <option value="Lucida Console">Lucida Console</option>
+                            <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+                            <option value="Microsoft Sans Serif">Microsoft Sans Serif</option>
+                            <option value="Segoe UI">Segoe UI</option>
+                            <option value="Times New Roman">Times New Roman</option>
+                            <option value="Trebuchet MS">Trebuchet MS</option>
+                            <option value="Verdana">Verdana</option>
+                            <option value="Tahoma">Tahoma</option>
+                            <option value="Palatino Linotype">Palatino Linotype</option>
+                            <option value="Garamond">Garamond</option>
+                            <option value="Book Antiqua">Book Antiqua</option>
+                            <option value="Frank Ruhl Libre">Frank Ruhl Libre</option>
+                            <option value="Century Gothic">Century Gothic</option>
+                            <option value="Baskerville">Baskerville</option>
+                            <option value="Futura">Futura</option>
+                            <option value="Gill Sans">Gill Sans</option>
+                            <option value="Rockwell">Rockwell</option>
+                            <option value="Copperplate Gothic">Copperplate Gothic</option>
+                            <option value="Myriad Pro">Myriad Pro</option>
+                            <option value="Arial Unicode MS">Arial Unicode MS</option>
+                            <option value="Helvetica">Helvetica</option>
+                            <option value="Helvetica Neue">Helvetica Neue</option>
+                            <option value="Noto Sans">Noto Sans</option>
+                            <option value="Noto Serif">Noto Serif</option>
+                            <option value="DejaVu Sans">DejaVu Sans</option>
+                            <option value="DejaVu Serif">DejaVu Serif</option>
+                            <option value="Avenir">Avenir</option>
+                            <option value="Droid Sans">Droid Sans</option>
+                            <option value="Droid Serif">Droid Serif</option>
+                            <option value="Open Sans">Open Sans</option>
+                            <option value="Lato">Lato</option>
+                            <option value="Raleway">Raleway</option>
+                            <option value="Montserrat">Montserrat</option>
+                            <option value="PT Sans">PT Sans</option>
+                            <option value="PT Serif">PT Serif</option>
+                            <option value="Oswald">Oswald</option>
+                            <option value="Source Sans Pro">Source Sans Pro</option>
+                            <option value="Roboto">Roboto</option>
+                            <option value="Merriweather">Merriweather</option>
+                            <option value="Playfair Display">Playfair Display</option>
+                            <option value="Ubuntu">Ubuntu</option>
+                            <option value="Zilla Slab">Zilla Slab</option>
+                        </select>
+                    </div>
+                    <div class="divider"></div>
+
+                    <div class="w-full flex justify-center align-items-center">
+                        @* <button id="decrease-font-size" class="font-size-button">-</button> *@
+                        <input id="font-size-value" class="font-size-value" value=""/>
+                        @* <button id="increase-font-size" class="font-size-button">+</button> *@
+                    </div>
+                </div>
+
+                @* <button onclick="saveSvg()" class="btn-submit mt-4 mb-2">Save SVG</button> *@
+                <div class="bottom-img mt-3 relative">
+
+                    @if (!string.IsNullOrEmpty(Model.SVGVer))
+                    {
+                        <!-- Hiển thị SVG cho vertical image -->
+                        <img src="https://egreetings.blob.core.windows.net/templateimg/@Model.ImgVer" alt="Vertical IMG" class="imgcard-default" />
+                    }
+                    else if (!string.IsNullOrEmpty(Model.SVGHoz))
+                    {
+                        <!-- Hiển thị SVG cho horizontal image -->
+                        <img src="https://egreetings.blob.core.windows.net/templateimg/@Model.ImgHoz" alt="Horizontal IMG" class="imgcard-default" />
+                    }
+
+                </div>
+
+                <input type="hidden" id="template-id" name="TemplateID" value="@Model.TemplateID" />
+
+                <div class="bottom-content flex flex-col justify-content-center items-center">
+                    <div class="price-temp"> 25</div>
+
+                    <form asp-action="SendToBooking" asp-route-templateId="@Model.TemplateID" method="post">
+                        <input type="hidden" id="price-template" name="PriceTemplate" value="@ViewBag.Price" />
+                        <input type="hidden" id="discount" name="Discount" value="@ViewBag.Discount" />
+                        <input type="hidden" id="userid" name="UserID" value="@ViewBag.UserID" />
+                        <input type="hidden" id="url" name="TemplateHistorySvgUrl" />
+                        <button type="submit" class="btn-savedesign text-center" onclick="saveSvg()">Save</button>
+
+                    </form>
+
+                    <!-- Old Button Save
+                    <a asp-action="Index" asp-controller="Booking"><div class="btn-savedesign text-center">Save</div></a>
+                    -->
+
+                </div>
+
+            </div>
+            <div class="w-conlai relative flex justify-center items-center">
+                <div class="w-rightcarddesign w-full flex justify-content-center align-items-center ms-3" id="svgContainer">
+                    <!-- Render SVG based on the model -->
+                    @if (!string.IsNullOrEmpty(Model.SVGVer))
+                    {
+                        <svg id="svgElement" class="svg-element"></svg> <!-- Empty SVG tag for vertical -->
+                    }
+                    else if (!string.IsNullOrEmpty(Model.SVGHoz))
+                    {
+                        <svg id="svgElement" class="svg-element"></svg> <!-- Empty SVG tag for horizontal -->
+                    }
+                    else
+                    {
+                        <p>No valid SVG or image URL provided.</p> <!-- Optional fallback if neither URL is available -->
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="~/lib/fabric/fabric.1.7.15.min.js"></script>
+    <script>
+
+                // Declare let to allow reassignment of svgUrl
+                let svgUrl = '';
+
+                // Assign URL based on Razor model values
+                if ('@Model.SVGVer' !== '') {
+                    svgUrl = 'https://egreetings.blob.core.windows.net/templatesvg/@Model.SVGVer';
+                } else if ('@Model.SVGHoz' !== '') {
+                    svgUrl = 'https://egreetings.blob.core.windows.net/templatesvg/@Model.SVGHoz';
+                }
+                let svgElement;
+                let selectedElementID = null;
+                let currentColor = "#000000"; // Màu mặc định là đen
+                let isToolbarOpen = false;
+                let borderButton;
+                let selectedRect;
+                let firstElementId = null;
+
+
+            // Load SVG
+            fetch(svgUrl)
+                .then(response => response.text())
+                .then(svgContent => {
+                    const parser = new DOMParser();
+                    const svgDoc = parser.parseFromString(svgContent, "image/svg+xml");
+                    svgElement = svgDoc.documentElement;
+                        let originalWidth = svgElement.getAttribute('width');
+                        let originalHeight = svgElement.getAttribute('height');
+                        const aspectRatio = originalWidth / originalHeight;
+
+                        // Đặt chiều rộng tối đa cho SVG
+                        const maxWidth = 600;
+                        const height = maxWidth / aspectRatio;
+                        svgElement.setAttribute('width', maxWidth);
+                        svgElement.setAttribute('height', height); // Để tự động điều chỉnh chiều cao
+
+                        // Căn giữa SVG
+                        svgElement.style.display = 'block';
+                        svgElement.style.margin = '0 auto';
+                    document.getElementById('svgElement').appendChild(svgElement);
+                })
+                .catch(error => console.error('Error loading SVG:', error));
+
+            function addShape() {
+                const rect = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+
+                // Lấy kích thước của SVG
+                const svgElement = document.getElementById('svgElement');
+                const svgRect = svgElement.getBoundingClientRect();
+                rect.setAttribute('id', generateId('rect'));
+
+                // Kích thước hình chữ nhật
+                const rectWidth = 200;
+                const rectHeight = 100;
+
+                // Tính toán vị trí x và y để đặt hình chữ nhật ở giữa
+                const x = (svgRect.width - rectWidth) / 2; // Vị trí x giữa
+                const y = (svgRect.height - rectHeight) / 2; // Vị trí y giữa
+
+                rect.setAttribute('x', x);
+                rect.setAttribute('y', y);
+                rect.setAttribute('width', rectWidth);
+                rect.setAttribute('height', rectHeight);
+                rect.setAttribute('fill', 'lightblue');
+                rect.setAttribute('stroke', 'blue');
+                rect.setAttribute('class', 'draggable');
+
+                selectedElementID = rect.id;
+                // event click
+                rect.addEventListener('click', (e) => {
+                    selectedElementID = rect.id;
+                    selectElement(); // Gọi hàm chọn hình dạng
+                    //applyBorderToElement();
+                    createResizeHandles(rect);
+
+                });
+
+                // Gắn sự kiện nhấp chuột phải
+                rect.addEventListener('contextmenu', (e) => {
+                    e.preventDefault(); // Ngăn ngừa menu ngữ cảnh mặc định
+                    showContextMenu(e.pageX, e.pageY, rect.id); // Hiển thị menu ngữ cảnh tùy chỉnh
+                    //console.log('ID phần tử:', rect.id);
+                });
+
+                // Xóa hình dạng khi nhấn Delete hoặc Backspace
+                document.addEventListener('keydown', (e) => {
+                    if (e.key === 'Delete' || e.key === 'Backspace') {
+                        if (selectedElement && selectedElement === rect) { // Kiểm tra nếu selectedElement là rect
+                            removeResizeHandles(selectedElement);
+                            document.getElementById('svgElement').removeChild(rect); // Xóa hình dạng
+                            selectedElement = null; // Đặt selectedElement về null
+                            console.log('Shape removed');
+                        }
+                    }
+                });
+
+                // Kiểm tra và lưu ID nếu chưa có
+                if (!firstElementId) {
+                    firstElementId = rect.id;
+                }
+
+
+                // Ẩn menu ngữ cảnh khi nhấp chuột ở nơi khác
+                document.addEventListener('click', hideContextMenu);
+
+                // Thêm vào svgElement
+                    document.getElementById('svgElement').appendChild(rect);
+
+                makeElementDraggable(rect, 'shape');
+                selectElement();
+            }
+
+            function addText() {
+                const textGroup = document.createElementNS('http://www.w3.org/2000/svg', 'g');
+                const text = document.createElementNS('http://www.w3.org/2000/svg', 'text');
+
+                textGroup.setAttribute('id', generateId('textgroup'));
+                selectedElementID = textGroup.id;
+
+                // Lấy kích thước của SVG
+                const svgElement = document.getElementById('svgElement');
+                const svgRect = svgElement.getBoundingClientRect();
+                const svgWidth = svgRect.width;
+                const svgHeight = svgRect.height;
+
+                // Tính toán vị trí x và y để đặt văn bản ở giữa
+                const x = svgWidth / 2; // Vị trí x giữa
+                const y = svgHeight / 2; // Vị trí y giữa
+
+                text.setAttribute('x', x);
+                text.setAttribute('y', y);
+                text.setAttribute('font-size', '30'); // Cỡ chữ px
+                text.setAttribute('text-anchor', 'middle');
+                text.setAttribute('dominant-baseline', 'middle');
+                text.setAttribute('fill', 'black');
+                text.textContent = 'Live Without Waiting';
+
+                textGroup.appendChild(text); // Thêm text vào textGroup
+                document.getElementById('svgElement').appendChild(textGroup); // Thêm textGroup vào SVG
+
+                // Phần còn lại của mã giữ nguyên như trước
+                const foreignObject = document.createElementNS('http://www.w3.org/2000/svg', 'foreignObject');
+
+                const input = document.createElement('input');
+                input.type = 'text';
+                input.value = text.textContent;
+                input.style.width = '100px';
+        @* input.style.fontSize = '100px'; *@
+                input.style.fontSize = '30px';
+                input.style.border = 'none';
+                input.style.outline = 'none';
+                input.style.textAlign = 'center';
+
+                // Hàm cập nhật chiều rộng của foreignObject
+                const updateForeignObject = () => {
+                    const bbox = text.getBBox();
+                    const textWidth = bbox.width; // Lấy chiều dài văn bản
+                    const textHeight = bbox.height;
+                    const textX = bbox.x;
+                    const textY = bbox.y;
+                    foreignObject.setAttribute('width', textWidth);
+                    foreignObject.setAttribute('height', textHeight);
+                    input.style.width = `${textWidth}px`;
+                    input.style.height = `${textHeight}px`;
+                    foreignObject.setAttribute('x', textX);
+                    foreignObject.setAttribute('y', textY);
+                };
+
+                // Hiện input khi nhấp đúp vào text
+                text.addEventListener('dblclick', () => {
+                    foreignObject.appendChild(input);
+                    textGroup.appendChild(foreignObject); // Thêm foreignObject vào textGroup
+                    document.getElementById('svgElement').appendChild(foreignObject); // Đảm bảo foreignObject có trong SVG
+                    input.focus(); // Đặt con trỏ vào input
+                    foreignObject.setAttribute('display', 'inline'); // Hiện input
+                    updateForeignObject();
+                });
+
+                // Cập nhật văn bản và ẩn input khi mất focus
+                input.addEventListener('blur', () => {
+                    text.textContent = input.value; // Cập nhật văn bản
+                    foreignObject.setAttribute('display', 'none'); // Ẩn input
+                    document.getElementById('svgElement').removeChild(foreignObject); // Xóa foreignObject khỏi SVG
+                });
+
+                // Kết thúc chỉnh sửa khi nhấp chuột ra ngoài input
+                document.addEventListener('mousedown', (e) => {
+                    if (!foreignObject.contains(e.target) && !textGroup.contains(e.target)) {
+                        foreignObject.setAttribute('display', 'none'); // Ẩn input
+                        text.textContent = input.value; // Cập nhật văn bản
+                        document.getElementById('svgElement').removeChild(foreignObject); // Xóa foreignObject khỏi SVG
+                    }
+                });
+
+                // Ngăn chặn sự kiện nhấp chuột từ việc ảnh hưởng đến document
+                input.addEventListener('mousedown', (e) => {
+                    e.stopPropagation();
+                });
+
+                input.addEventListener('keydown', (e) => {
+                    if (e.key === 'Enter') {
+                        e.preventDefault();
+                        input.blur();
+                    } else {
+                        text.textContent = input.value;
+                        updateForeignObject();
+                    }
+                });
+
+                textGroup.addEventListener('keydown', (e) => {
+                    if (e.key === 'Delete' || e.key === 'Backspace') {
+                        // Xóa nhóm văn bản khi nó có focus và phím Delete/Backspace được nhấn
+                        if (!foreignObject.contains(document.activeElement)) {
+                            document.getElementById('svgElement').removeChild(textGroup);
+                            console.log('Text group removed');
+                        }
+                    }
+                });
+
+                // Cho phép kéo thả textGroup
+                let isDragging = false;
+                let offsetX, offsetY;
+
+                textGroup.addEventListener('mousedown', (e) => {
+                    isDragging = true;
+                    offsetX = e.clientX - parseFloat(text.getAttribute('x'));
+                    offsetY = e.clientY - parseFloat(text.getAttribute('y'));
+                    e.preventDefault();
+                });
+
+                document.addEventListener('mousemove', (e) => {
+                    if (isDragging) {
+                        const newX = e.clientX - offsetX;
+                        const newY = e.clientY - offsetY;
+                        text.setAttribute('x', newX);
+                        text.setAttribute('y', newY);
+                    }
+                });
+
+                document.addEventListener('mouseup', () => {
+                    isDragging = false;
+                });
+
+                // Đảm bảo nhóm có thể nhận sự kiện keydown
+                textGroup.setAttribute('tabindex', '0'); // Để nhóm có thể nhận focus
+                textGroup.addEventListener('mousedown', () => {
+                    textGroup.focus(); // Đặt focus cho nhóm khi nhấp chuột
+                });
+
+                // Gắn sự kiện nhấp chuột phải
+                textGroup.addEventListener('contextmenu', (e) => {
+                    e.preventDefault(); // Ngăn ngừa menu ngữ cảnh mặc định
+                    showContextMenu(e.pageX, e.pageY, textGroup.id); // Hiển thị menu ngữ cảnh tùy chỉnh
+                    console.log('ID phần tử:', textGroup.id);
+                });
+
+                // Ẩn menu ngữ cảnh khi nhấp chuột ở nơi khác
+                document.addEventListener('click', hideContextMenu);
+
+                textGroup.addEventListener('click', () => {
+                     selectedElementID = textGroup.id;
+                });
+
+                text.addEventListener('click', () => {
+                    selectedElementID = textGroup.id;
+                    //initializeColorPicker(text);
+                    //applyBorderToElement();
+                    fontSelector.value = text.getAttribute('font-family'); // Cập nhật giá trị dropdown
+                    // Cập nhật font chữ khi chọn từ dropdown
+                    fontSelector.addEventListener('change', (event) => {
+                        const selectedFont = event.target.value;
+                        text.setAttribute('font-family', selectedFont); // Cập nhật font chữ
+                    });
+
+                });
+            }
+
+            function addImage() {
+                const input = document.createElement('input');
+                input.type = 'file';
+                input.accept = 'image/*'; // Chỉ cho phép chọn ảnh
+
+                input.onchange = (event) => {
+                    const file = event.target.files[0];
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = (e) => {
+                            const img = document.createElementNS('http://www.w3.org/2000/svg', 'image');
+                            img.setAttributeNS(null, 'href', e.target.result);
+                            img.setAttribute('id', generateId('img'));
+                            // Kiểm tra và lưu ID nếu chưa có
+                            selectedElementID = img.id;
+                            if (!firstElementId) {
+                                firstElementId = img.id;
+                            }
+                            // Tạo một hình ảnh tạm thời để lấy kích thước
+                            const tempImg = new Image();
+                            tempImg.src = e.target.result;
+                            tempImg.onload = () => {
+                                const aspectRatio = tempImg.height / tempImg.width; // Tỷ lệ khung hình
+                                const imgWidth = 200; // Chiều rộng cố định
+                                const imgHeight = imgWidth * aspectRatio; // Tính chiều cao
+
+                                img.setAttributeNS(null, 'width', imgWidth); // Chiều rộng
+                                img.setAttributeNS(null, 'height', imgHeight); // Chiều cao
+
+                                // Căn giữa hình ảnh trong SVG
+                                const svgElement = document.getElementById('svgElement');
+                                const svgWidth = svgElement.clientWidth;
+                                const svgHeight = svgElement.clientHeight;
+
+                                const imgX = (svgWidth - imgWidth) / 2; // Căn giữa theo x
+                                const imgY = (svgHeight - imgHeight) / 2; // Căn giữa theo y
+
+                                img.setAttributeNS(null, 'x', imgX);
+                                img.setAttributeNS(null, 'y', imgY);
+
+                                // Thêm hình ảnh vào SVG
+                                document.getElementById('svgElement').appendChild(img);
+                                makeElementDraggable(img, 'image'); // Thêm chức năng kéo thả cho ảnh
+                                createResizeHandles(img); // Thêm các điểm điều chỉnh cho ảnh
+
+                                // Sự kiện xóa hình ảnh khi nhấn phím Delete hoặc Backspace
+                                document.addEventListener('keydown', (e) => {
+                                    if (e.key === 'Delete' || e.key === 'Backspace') {
+                                        if (selectedElement && selectedElement === img) {
+                                            removeResizeHandles(selectedElement);
+                                            document.getElementById('svgElement').removeChild(img); // Xóa hình ảnh
+                                            selectedElement = null; // Đặt selectedElement về null
+                                            console.log('Image removed');
+                                        }
+                                    }
+                                });
+
+                                // Thêm sự kiện nhấp chuột để chọn và áp dụng viền
+                                img.addEventListener('click', () => {
+                                    selectedElementID = img.id;
+                                    selectElement(); // Chọn hình ảnh
+                                    //applyBorderToElement(); // Áp dụng viền
+                                });
+
+                                // Gắn sự kiện nhấp chuột phải
+                                img.addEventListener('contextmenu', (e) => {
+                                    e.preventDefault(); // Ngăn ngừa menu ngữ cảnh mặc định
+                                    showContextMenu(e.pageX, e.pageY, img.id); // Hiển thị menu ngữ cảnh tùy chỉnh
+                                    console.log('ID phần tử:', img.id);
+                                });
+
+                                // Ẩn menu ngữ cảnh khi nhấp chuột ở nơi khác
+                                document.addEventListener('click', hideContextMenu);
+                            };
+                        };
+                        reader.onerror = () => {
+                            console.error('Error reading file');
+                        };
+                        reader.readAsDataURL(file);
+                    } else {
+                        console.log('No file selected'); // Không có file nào được chọn
+                    }
+                };
+
+                input.click(); // Tự động mở hộp thoại chọn file
+            }
+
+                function applyBorderToSelected() {
+                    selectedElement = document.getElementById(selectedElementID);
+
+                    const borderColorPicker = document.getElementById('borderColorPicker');
+                    const borderWidthInput = document.getElementById('borderWidthInput');
+                    const borderStyleSelect = document.getElementById('borderStyleSelect');
+
+                    // Hàm để lấy giá trị stroke-dasharray dựa trên kiểu viền
+                    function getDashArray(style, borderWidth) {
+                        switch (style) {
+                            case 'dashed':
+                                return '5,5'; // Đường gạch
+                            case 'dotted':
+                                return '1,3'; // Đường chấm
+                            case 'double':
+                                return `${borderWidth * 2}, ${borderWidth}, ${borderWidth}, ${borderWidth}`; // Đường đôi
+                            case 'groove':
+                                return '10,5,2,5'; // Đường rãnh
+                            case 'solid':
+                            default:
+                                return 'none'; // Đường liền
+                        }
+                    }
+
+                    if (selectedElement) {
+                        const borderColor = borderColorPicker.value; // Lấy màu viền
+                        const borderWidth = parseInt(borderWidthInput.value); // Lấy độ dày viền
+                        const borderStyle = borderStyleSelect.value; // Lấy kiểu viền
+
+                        // Thiết lập viền cho phần tử
+                        selectedElement.setAttribute('stroke', borderColor);
+                        selectedElement.setAttribute('stroke-width', borderWidth);
+                        selectedElement.setAttribute('stroke-dasharray', getDashArray(borderStyle, borderWidth));
+
+                        console.log("Border added to:", selectedElement);
+                    } else {
+                        console.log("No element selected to apply border.");
+                    }
+                }
+
+                function changeColor(color) {
+                selectedElement = document.getElementById(selectedElementID);
+                console.log('SelectedElement:', selectedElement);
+                if (selectedElement) {
+                        if (selectedElement.tagName === 'g') {
+                            textSelect = selectedElement.querySelector('text');
+                            textSelect.setAttribute('fill', color); // Đổi màu chữ
+                            console.log("Text color changed:", color);
+                        } else {
+                            selectedElement.setAttribute('fill', color); // Đổi màu nền
+                            console.log("Shape color changed:", color);
+                        }
+                }
+            }
+
+                function selectElement() {
+                    console.log(selectedElementID);
+                    selectedElement = document.getElementById(selectedElementID);
+                    // Log giá trị hiện tại của selectedElement
+                    console.log('Current selectedElement:', selectedElement);
+
+                    if (selectedElement && !(selectedElement.tagName === 'BUTTON' || selectedElement.tagName === 'INPUT')) {
+                        selectedElement.classList.remove('selected');
+                        removeResizeHandles(selectedElement); // Xóa các điểm kéo cũ
+                        console.log('Removed selection from:', selectedElement);
+                    }
+
+                    //selectedElement = element;
+                    console.log('New selectedElement:', selectedElement); // Log giá trị mới của selectedElement
+
+                    if (selectedElement) {
+                        selectedElement.classList.add('selected');
+                        console.log('Added selection to:', selectedElement);
+                    }
+
+                    //initializeColorPicker(selectedElement);
+                    //applyBorderToElement(selectedElement);
+                    createResizeHandles(selectedElement);
+                }
+
+                // Hàm để làm cho phần tử có thể kéo
+                function makeElementDraggable(element, type) {
+                    let offset = { x: 0, y: 0 };
+                    const svgElement = document.getElementById('svgElement'); // Lấy phần tử SVG
+                    const svgRect = svgElement.getBoundingClientRect(); // Lấy kích thước và vị trí của SVG
+                    let isDragging = false;
+
+                    element.addEventListener('mousedown', (e) => {
+                        isDragging = true;
+                        const rect = element.getBoundingClientRect();
+                        offset.x = e.clientX - rect.left;
+                        offset.y = e.clientY - rect.top;
+
+                        // Xóa điểm kéo cũ khi bắt đầu kéo
+                        removeResizeHandles(selectedElement);
+                        selectElement(element); // Đánh dấu phần tử hiện tại
+
+                        const onMouseMove = (e) => {
+                            if (isDragging) {
+
+                                const newX = e.clientX - offset.x - svgRect.left; // Cập nhật newX dựa trên SVG
+                                const newY = e.clientY - offset.y - svgRect.top; // Cập nhật newY dựa trên SVG
+
+                                if (type === 'shape' || type === 'image') {
+                                    element.setAttribute('x', newX);
+                                    element.setAttribute('y', newY);
+                                    updateResizeHandles(element); // Cập nhật điểm kéo khi di chuyển
+                                } else if (type === 'text') {
+                                    const textGroup = element.querySelector('g');
+                                    textGroup.setAttribute('transform', `translate(${newX }, ${newY })`);
+
+                                }
+                            }
+                        };
+
+                        document.addEventListener('mousemove', onMouseMove);
+                        document.addEventListener('mouseup', () => {
+                            isDragging = false;
+                            element.blur(); // Mất focus sau khi nhả chuột
+                            document.removeEventListener('mousemove', onMouseMove);
+                        }, { once: true });
+
+                        e.preventDefault();
+                    });
+                }
+
+                function createResizeHandles(element) {
+                    const resizeHandleSize = 7; // Kích thước điểm kéo
+
+                    const createHandle = (x, y, position) => {
+                        const handle = document.createElementNS('http://www.w3.org/2000/svg', 'rect');
+                        handle.setAttribute('x', x - resizeHandleSize / 2);
+                        handle.setAttribute('y', y - resizeHandleSize / 2);
+                        handle.setAttribute('width', resizeHandleSize);
+                        handle.setAttribute('height', resizeHandleSize);
+                        handle.setAttribute('class', 'resize-handle');
+
+                        handle.addEventListener('mousedown', (e) => {
+                            e.stopPropagation();
+                            const startX = e.clientX;
+                            const startY = e.clientY;
+                            const initialWidth = parseFloat(element.getAttribute('width')) || 0;
+                            const initialHeight = parseFloat(element.getAttribute('height')) || 0;
+                            const initialX = parseFloat(element.getAttribute('x')) || 0;
+                            const initialY = parseFloat(element.getAttribute('y')) || 0;
+
+                            const onMouseMove = (e) => {
+                                let newWidth = initialWidth;
+                                let newHeight = initialHeight;
+                                let newX = initialX;
+                                let newY = initialY;
+
+                                switch (position) {
+                                    case 'top-left':
+                                        newWidth = initialWidth - (e.clientX - startX);
+                                        newHeight = initialHeight - (e.clientY - startY);
+                                        newX = initialX + (e.clientX - startX);
+                                        newY = initialY + (e.clientY - startY);
+                                        break;
+                                    case 'top-right':
+                                        newWidth = initialWidth + (e.clientX - startX);
+                                        newHeight = initialHeight - (e.clientY - startY);
+                                        newY = initialY + (e.clientY - startY);
+                                        break;
+                                    case 'bottom-left':
+                                        newWidth = initialWidth - (e.clientX - startX);
+                                        newHeight = initialHeight + (e.clientY - startY);
+                                        newX = initialX + (e.clientX - startX);
+                                        break;
+                                    case 'bottom-right':
+                                        newWidth = initialWidth + (e.clientX - startX);
+                                        newHeight = initialHeight + (e.clientY - startY);
+                                        break;
+                                }
+
+                                // Cập nhật kích thước và vị trí
+                                element.setAttribute('width', Math.max(20, newWidth));
+                                element.setAttribute('height', Math.max(20, newHeight));
+                                element.setAttribute('x', newX);
+                                element.setAttribute('y', newY);
+                                updateResizeHandles(element); // Cập nhật vị trí điểm điều chỉnh
+                            };
+
+                            document.addEventListener('mousemove', onMouseMove);
+                            document.addEventListener('mouseup', () => {
+                                document.removeEventListener('mousemove', onMouseMove);
+                            }, { once: true });
+                        });
+
+                        return handle;
+                    };
+
+                    const svgElement = document.getElementById('svgElement');
+                    const x = parseFloat(element.getAttribute('x'));
+                    const y = parseFloat(element.getAttribute('y'));
+                    const width = parseFloat(element.getAttribute('width'));
+                    const height = parseFloat(element.getAttribute('height'));
+
+                    // Tạo bốn điểm kéo ở bốn góc với các vị trí tương ứng
+                    const handles = [
+                        createHandle(x, y, 'top-left'), // Top left
+                        createHandle(x + width, y, 'top-right'), // Top right
+                        createHandle(x, y + height, 'bottom-left'), // Bottom left
+                        createHandle(x + width, y + height, 'bottom-right') // Bottom right
+                    ];
+
+                    handles.forEach(handle => svgElement.appendChild(handle));
+                    updateResizeHandles(element);
+
+                    // Ẩn điểm kéo khi nhấp ra ngoài
+                    document.addEventListener('mousedown', (e) => {
+                        if (selectedElement && !selectedElement.contains(e.target)) {
+                            removeResizeHandles(selectedElement);
+                            selectedElement.classList.remove('selected');
+                            selectedElement = null;
+                        }
+                    });
+                }
+
+                function updateResizeHandles(element) {
+                    const svgElement = document.getElementById('svgElement');
+                    const handles = svgElement.querySelectorAll('.resize-handle');
+                    const width = parseFloat(element.getAttribute('width')) || 0;
+                    const height = parseFloat(element.getAttribute('height')) || 0;
+                    const x = parseFloat(element.getAttribute('x')) || 0;
+                    const y = parseFloat(element.getAttribute('y')) || 0;
+
+                    // Cập nhật vị trí của từng điểm kéo
+                    handles[0].setAttribute('x', x - 3.5); // Top left
+                    handles[0].setAttribute('y', y - 3.5);
+
+                    handles[1].setAttribute('x', x + width - 3.5); // Top right
+                    handles[1].setAttribute('y', y - 3.5);
+
+                    handles[2].setAttribute('x', x - 3.5); // Bottom left
+                    handles[2].setAttribute('y', y + height - 3.5);
+
+                    handles[3].setAttribute('x', x + width - 3.5); // Bottom right
+                    handles[3].setAttribute('y', y + height - 3.5);
+                }
+
+                function removeResizeHandles(element) {
+                    const svgElement = document.getElementById('svgElement');
+                    const handles = svgElement.querySelectorAll('.resize-handle');
+                    handles.forEach(handle => {
+                        svgElement.removeChild(handle);
+                    });
+                }
+
+
+
+                function generateId(type) {
+                    const timestamp = Date.now(); // Lấy thời gian hiện tại
+                    const prefix = type === 'rect' ? 'R' : type === 'img' ? 'I' : type === 'textgroup' ? 'TG' : type === 'text' ? 'T' : '';
+                    return `${prefix}_${timestamp}`; // Tạo ID với tiền tố và thời gian
+                }
+
+                // Tạo phần tử menu ngữ cảnh
+                const contextMenu = document.createElement('div');
+                contextMenu.style.position = 'absolute';
+                contextMenu.style.display = 'none';
+                contextMenu.style.backgroundColor = 'white';
+                contextMenu.style.border = '1px solid black';
+                contextMenu.style.zIndex = '9999';
+                document.body.appendChild(contextMenu);
+
+                // Hàm hiển thị menu ngữ cảnh
+                function showContextMenu(x, y, elementId) {
+                    if (!isToolbarOpen){
+                        contextMenu.style.left = `${x}px`;
+                        contextMenu.style.top = `${y}px`;
+                        contextMenu.style.display = 'block';
+                        addContextMenuOptions(elementId);
+                        console.log('Menu ngữ cảnh hiển thị cho phần tử:', elementId);
+                        isToolbarOpen = true;
+                    }
+
+                }
+
+                // Hàm ẩn menu ngữ cảnh
+                function hideContextMenu() {
+                    contextMenu.style.display = 'none';
+                    isToolbarOpen = false;
+                    contextMenu.innerHTML = ''; // Xóa nội dung menu để tái sử dụng
+                }
+
+                // Thêm các tùy chọn vào menu ngữ cảnh
+                function addContextMenuOptions(elementId) {
+                    const options = [
+                        { label: 'Đưa lên trên cùng', action: () => bringToFront(elementId) },
+                        { label: 'Đưa lên một lớp', action: () => bringForward(elementId) },
+                        { label: 'Đưa xuống một lớp', action: () => sendBackward(elementId) },
+                        { label: 'Đưa xuống dưới cùng', action: () => sendToBack(elementId) },
+                    ];
+
+                    options.forEach(option => {
+                        const menuItem = document.createElement('div');
+                        menuItem.innerText = option.label;
+                        menuItem.onclick = option.action;
+                        contextMenu.appendChild(menuItem);
+                        console.log('choose label', menuItem.innerText);
+                    });
+                }
+
+                // Hàm đưa phần tử đã chọn lên trên cùng
+                function bringToFront(elementId) {
+                    const element = document.getElementById(elementId);
+                    const svgElement = document.getElementById('svgElement');
+                    console.log('Đưa phần tử lên trên cùng:', element);
+                    if (element) {
+                        firstElementId = element.nextSibling.id;
+                        console.log('cập nhật lại id của phần tử cuối cùng', firstElementId);
+                        svgElement.appendChild(element); // Di chuyển phần tử lên trên cùng
+                        hideContextMenu();
+                    } else {
+                        console.error('Không tìm thấy phần tử với ID:', elementId);
+                    }
+                }
+
+                // Hàm đưa phần tử đã chọn lên một lớp
+                function bringForward(elementId) {
+                    const element = document.getElementById(elementId);
+                    const svgElement = document.getElementById('svgElement');
+                    console.log('Đưa phần tử lên một lớp:', element);
+                    if (element) {
+                        // Kiểm tra xem phần tử có phải là phần tử cuối cùng không
+                        if (element.nextSibling) {
+                            // Di chuyển phần tử lên một lớp
+                            svgElement.insertBefore(element, element.nextSibling.nextSibling);
+                        } else {
+                            console.log('Phần tử đã ở trên cùng, không thể đưa lên nữa.');
+                        }
+                        hideContextMenu();
+                    } else {
+                        console.error('Không thể đưa phần tử lên một lớp:', elementId);
+                    }
+                    /*
+                    if (element && element.nextSibling) {
+                        svgElement.insertBefore(element, element.nextSibling);
+                        hideContextMenu();
+                    } else {
+                        console.error('Không thể đưa phần tử lên một lớp:', elementId);
+                    }
+                    */
+                }
+
+                // Hàm đưa phần tử đã chọn xuống một lớp
+                function sendBackward(elementId) {
+                    const element = document.getElementById(elementId);
+                    const svgElement = document.getElementById('svgElement');
+                    console.log('Đưa phần tử xuống một lớp:', element);
+                    if (element && element.previousSibling) {
+                        svgElement.insertBefore(element, element.previousSibling);
+                        hideContextMenu();
+                    } else {
+                        console.error('Không thể đưa phần tử xuống một lớp:', elementId);
+                    }
+                }
+
+                // Hàm đưa phần tử đã chọn xuống dưới cùng
+                function sendToBack(elementId) {
+                    const element = document.getElementById(elementId);
+                    const bottommostElement = document.getElementById(firstElementId);
+                    const svgElement = document.getElementById('svgElement');
+                    console.log('phần tử đang chọn', element);
+                    console.log('Phần tử cuối:', bottommostElement);
+                    if (element) {
+                        svgElement.insertBefore(element, bottommostElement);
+                        firstElementId = elementId;
+                        hideContextMenu();
+                        console.log('cập nhật lại phần tử dưới cùng', firstElementId);
+                    } else {
+                        console.error('Không tìm thấy phần tử với ID:', elementId);
+                    }
+                }
+
+
+
+            async function saveSvg() {
+                const svgData = svgElement.outerHTML;
+                const svgPayload = { EditedSvg: svgData };
+
+                try {
+                    const response = await fetch('/api/svg/save', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify(svgPayload)
+                    });
+                    if (response.ok) {
+                        const result = await response.json();
+                        TemplateHistorySvgUrl = result.editedUrl;
+                        document.getElementById('url').value = TemplateHistorySvgUrl;
+                    } else {
+                        alert(`Error saving SVG: ${response.statusText}`);
+                    }
+                } catch (error) {
+                    alert(`Error: ${error.message}`);
+                }
+            }
+
+            //Transaparent
+        function makeTransparent() {
+            const selectedRect = document.getElementById(selectedElementID);
+            if (selectedRect) {
+                selectedRect.setAttribute('fill', 'transparent'); // Đặt màu nền thành trong suốt
+            }
+        }
+
+        //Opacity
+            function changeOpacity(opacity) {
+                const selectedRect = document.getElementById(selectedElementID);
+                if (selectedRect) {
+                    selectedRect.setAttribute('fill-opacity', opacity / 100);
+                    selectedRect.setAttribute('stroke-opacity', opacity / 100);
+                }
+                // Cập nhật giá trị cho cả hai input
+                document.getElementById('opacityRange').value = opacity;
+                document.getElementById('opacityInput').value = opacity;
+            }
+
+            //Font family
+                 const fontSelector = document.getElementById('fontSelector');
+            const fontFileInput = document.getElementById('fontFileInput');
+            const fontNameInput = document.getElementById('fontName');
+
+            function changeFont(font) {
+                const sampleText = document.getElementById(selectedElementID);
+                if (font !== 'default') {
+                    sampleText.style.fontFamily = font; // Áp dụng font được chọn
+                } else {
+                    sampleText.style.fontFamily = ''; // Đặt về font mặc định
+                }
+            }
+
+            fontFileInput.addEventListener('change', function () {
+                if (fontFileInput.files.length > 0) {
+                    const fontFile = fontFileInput.files[0];
+                    const fontName = fontFile.name.replace(/\.(ttf|otf)$/, '');
+
+                    if (fontName) {
+                        const reader = new FileReader();
+
+                        reader.onload = function (event) {
+                            const fontFace = new FontFace(fontName, event.target.result);
+                            fontFace.load().then(function (loadedFont) {
+                                document.fonts.add(loadedFont);
+                                // Thêm font vào dropdown
+                                const newOption = document.createElement('option');
+                                newOption.value = fontName;
+                                newOption.textContent = fontName;
+                                fontSelector.insertBefore(newOption, fontSelector.firstChild);
+                                // Xóa giá trị trong input
+                                fontNameInput.value = '';
+                                fontFileInput.value = ''; // Xóa file đã chọn
+                            }).catch(function (error) {
+                                console.error('Font không thể tải:', error);
+                            });
+                        };
+
+                        reader.readAsArrayBuffer(fontFile);
+                    } else {
+                        alert('Vui lòng nhập tên font.');
+                    }
+                }
+            });
+    </script>
+
+</body>

@@ -1,0 +1,98 @@
+@model EGreetings.Models.ViewModelAccount.EditProfileModel
+@{
+    ViewData["Title"] = "Profile";
+}
+<nav class="menu">
+    <div>
+        <ul class="menubar">
+            <li class="active">
+                <a asp-controller="User" asp-action="Index" class="active">
+                    <span><i class="fa-solid fa-user"></i></span>
+                    Profile
+                </a>
+            </li>
+            <li>
+                <a asp-controller="Transaction" asp-action="Index">
+                    <span><i class="fa-sharp-duotone fa-solid fa-credit-card"></i></span>
+                    Payment
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="head">
+    MY ACCOUNT
+</div>
+<div class="row w-100 flex flex-col justify-content-md-start align-items-center mt-5">
+    <div class="flex userprofile">
+        <div style="width:300px">
+            <div class="inline-flex mt-2">
+                <div class="ml-5">
+                    <img class="h-80 w-364" src="/@Model.imgAvatar" alt="avatar" />
+                </div>
+            </div>
+            <div class="flex flex-col mt=-3">
+                @if(Model.useBasic){
+                    <div id="basic">BASIC PLAN</div>
+                }
+                @if(Model.useStandard){
+                    <div id="standard">STANDARD PLAN</div>
+                }
+                @if(Model.usePremium){
+                    <div id="premium">PREMIUM PLAN</div>
+                }
+            </div>
+        </div>
+
+        <div style="width:430px; margin-left:20px;">
+            <table style="width:100%;">
+                <tr class="hidden" style="line-height:60px">
+                    <td asp-for="Id" style="width:35%;" class="font-semibold align-text-top">UserID</td>
+                    <td>
+                        @Model.Id
+                    </td>
+                </tr>
+                <tr style="line-height:60px">
+                    <td class="font-semibold align-text-top">Username</td>
+                    <td>
+                        @Model.UserName
+                    </td>
+                </tr>
+                <tr style="line-height:60px">
+                    <td class="font-semibold align-text-top">Email</td>
+                    <td>
+                        @Model.Email
+                    </td>
+                </tr>
+                <tr style="line-height:60px">
+                    <td class="font-semibold align-text-top" asp-for="Dob">Phone</td>
+                    <td>
+                        @Model.Phone
+                    </td>
+                </tr>
+                <tr style="line-height:60px">
+                    <td class="font-semibold align-text-top" asp-for="Dob">Date of birth</td>
+                    <td>@Model.Dob.Value.ToString("yyyy-MM-dd")</td>
+                </tr>
+                <tr style="line-height:60px">
+                    <td class="font-semibold align-text-top" asp-for="SendTimes">Sends</td>
+                    <td>@Model.sendTimes</td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="btn btn-submit text-white" style="width: 90px; font-size: 18px; padding: 5px; height: 40px;"
+                                onclick="window.location.href='@Url.Action("Edit", "User", new {id = Model.Id })'">
+                            Edit
+                        </button>
+                    </td>
+                    <td>
+                        <button class="btn btn-warning text-white"
+                                onclick="window.location.href='@Url.Action("ChangePassword", "Account", new {email = Model.Email, token = Model.TokenResetPasswordCreatedDate })'">
+                            Change Password
+                        </button>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

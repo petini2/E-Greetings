@@ -1,0 +1,224 @@
+﻿@model List<Template>
+@{
+    ViewData["Title"] = "Special";
+    }
+<div class="w-full py-5 flex flex-col justify-content-center items-center">
+    <div class="spe-title">Today’s Best Offers And Coupons</div>
+    <div class="py-4 mt-3 flex justify-center items-center w-full">
+        <div class="filter-spe">
+
+            <div class="btn-spe @(Context.Request.Query["type"] == "discounts" || string.IsNullOrEmpty(Context.Request.Query["type"]) ? "selected" : "")" onclick="selectButton('discounts', this)">Discounts</div>
+                <!-- Nút New Arrival -->
+                <div class="btn-spe @(Context.Request.Query["type"] == "newarrival" ? "selected" : "")" onclick="selectButton('newarrival', this)">New arrival</div>
+
+        </div>
+    </div>
+    <div class="w-full px-14 mb-5 mt-3">
+        <div class="w-full flex flex-col justify-start items-start">
+            <div class=" w-full flex justify-center items-center flex-wrap">
+                <!-- Wrapper for the slider -->
+                <div class="w-[80%] flex flex-wrap justify-center items-center px-3">
+                    <ul id="slider-items" class="flex w-full flex-wrap justify-center items-center ">
+                        @foreach (var template in Model)
+                        {
+                            <!-- 1st Row of Products -->
+                            <li class="item-a" data-template-id="@template.TemplatesID">
+                                <div class="mt-5 me-3">
+                                    <div class="flex flex-col justify-center items-center item-product">
+                                        <img src="@Url.Content("~/images/templates/img/" + (template.ImgVer ?? "default-image.jpg"))" alt="@template.TemplateName" class="img-template" />
+
+                                        <div class="w-content-card flex flex-col ">
+                                            <div class="text-center px-3 py-4 name-template">@template.TemplateName</div>
+                                            @if (template.Discount > 0)
+                                            {
+                                                <div class="w-full  flex justify-content-between align-items-center">
+                                                <s>$@template.Price</s>
+                                                <span class="exactly-price text-center">$@((template.Price - (template.Discount ?? 0f)))</span>
+                                                </div>
+                                            }
+                                            else
+                                            {
+                                                <span class="exactly-price">$@template.Price</span>
+                                            }
+                                        </div>
+                                        <div class="overplay">
+                                            <a href="#" class="btn-buy">Use this card</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        }
+                     
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="templateOptionsDialog" class="hidden flex flex-col justify-content-center items-center">
+    <h3 class="text-xl font-semibold mb-4 text-center mt-5" id="templateName">Select the image orientation:</h3>
+
+    <div class="mb-4 mt-4">
+        <div id="imageVer" class="mb-4 flex justify-between items-center m-3 px-3">
+            <img id="templateImageVer" src="" alt="Vertical Image" class="h-auto mb-4 shadow-md px-2" />
+            <img id="templateImageHoz" src="" alt="Horizontal Image" class="h-auto mb-4 shadow-md ms-3 px-2" />
+        </div>
+    </div>
+
+    <div class="mb-4 flex justify-content-center items-center mx-3 mt-2 space-x-8">
+        <label class="inline-flex items-center px-2">
+            <input type="radio" name="imageOrientation" value="Ver" class="form-radio text-blue-500" />
+            <span>Vertical (Ver)</span>
+        </label>
+
+        <label class="inline-flex items-center px-2">
+            <input type="radio" name="imageOrientation" value="Hoz" class="form-radio text-blue-500" />
+            <span>Horizontal (Hoz)</span>
+        </label>
+    </div>
+
+    <div class="flex justify-center space-x-2 mt-3">
+        <button id="confirmOrientationBtn" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 focus:outline-none">Confirm</button>
+        <button id="cancelOrientationBtn" class="bg-red-700 text-white py-2 px-4 rounded hover:bg-gray-400 focus:outline-none">Cancel</button>
+    </div>
+</div>
+<script>
+    function selectButton(type, button) {
+     
+        window.location.href = '@Url.Action("SpecialOffers", "Special")?type=' + type;
+
+    
+         var buttons = document.querySelectorAll('.btn-spe');
+        buttons.forEach(function(btn) {
+            btn.classList.remove('selected');
+        });
+
+        // Thêm lớp 'selected' vào button đã được nhấn
+        button.classList.add('selected');
+    }
+</script>
+<script>
+               document.addEventListener('DOMContentLoaded', function() {
+        // Handle click event on the 'Use this card' buttons
+        document.querySelectorAll('.btn-buy').forEach(button => {
+            button.addEventListener('click', function(event) {
+                try {
+                    // Get templateId from the closest parent element with data-template-id
+                    const templateId = button.closest('.item-a').dataset.templateId;
+
+                    // Fetch template details from the server
+                    fetch(`/ECard/GetTemplateDetails/${templateId}`)
+                        .then(response => response.json())
+                        .then(template => {
+                            // Store the selected template in the window object
+                            window.selectedTemplate = template;
+
+                            // Update the modal with the fetched template data
+                            updateModalContent(template);
+
+                            // Show the modal with a fade-in effect
+                            showModal();
+                        })
+                        .catch(error => {
+                            console.error('Error fetching template details:', error);
+                        });
+                } catch (error) {
+                    console.error('Error processing button click:', error);
+                }
+            });
+        });
+
+        // Handle "Confirm" button click in the modal
+        document.getElementById('confirmOrientationBtn').addEventListener('click', function() {
+            try {
+                const selectedOrientation = document.querySelector('input[name="imageOrientation"]:checked');
+
+                if (selectedOrientation) {
+                    // Redirect to the design page with the selected template and orientation
+                    redirectToDesignPage(selectedOrientation.value);
+                } else {
+                    alert('Please select an image orientation before proceeding.');
+                }
+            } catch (error) {
+                console.error('Error processing "Confirm" button click:', error);
+            }
+        });
+
+        // Handle "Cancel" button click in the modal
+        document.getElementById('cancelOrientationBtn').addEventListener('click', function() {
+            try {
+                // Close the modal when clicking "Cancel"
+                hideModal();
+            } catch (error) {
+                console.error('Error processing "Cancel" button click:', error);
+            }
+        });
+
+        // Function to update modal content with fetched template data
+        function updateModalContent(template) {
+            try {
+                const imageVer = document.getElementById('templateImageVer');
+                const imageHoz = document.getElementById('templateImageHoz');
+                const templateNameElem = document.getElementById('templateName');
+
+                if (imageVer && imageHoz) {
+                    imageVer.src = `/images/templates/img/${template.imgVer}`;
+                    imageHoz.src = `/images/templates/img/${template.imgHoz}`;
+                }
+
+                if (templateNameElem) {
+                    templateNameElem.textContent = template.name;
+                }
+            } catch (error) {
+                console.error('Error updating modal content:', error);
+            }
+        }
+
+        // Function to show the modal with a fade-in effect
+        function showModal() {
+            try {
+                const modal = document.getElementById('templateOptionsDialog');
+                if (modal) {
+                    modal.classList.remove('hidden');
+                    modal.style.opacity = 1; // Fade in effect (ensure modal has transition)
+                }
+            } catch (error) {
+                console.error('Error showing modal:', error);
+            }
+        }
+
+        // Function to hide the modal with fade-out effect
+        function hideModal() {
+            try {
+                const modal = document.getElementById('templateOptionsDialog');
+                if (modal) {
+                    modal.classList.add('hidden');
+                    modal.style.opacity = 0; // Reset opacity to 0 for fade-out
+                }
+            } catch (error) {
+                console.error('Error hiding modal:', error);
+            }
+        }
+
+        // Function to redirect to the design page with the selected template and orientation
+        function redirectToDesignPage(orientation) {
+            try {
+                const selectedTemplate = window.selectedTemplate;
+
+                if (selectedTemplate) {
+                    const templateId = selectedTemplate.id;
+                    const imgVer = selectedTemplate.imgVer;
+                    const imgHoz = selectedTemplate.imgHoz;
+
+                    // Redirect to the design page
+                    window.location.href = `/ECard/ECardDesign?templateId=${templateId}&imgVer=${imgVer}&imgHoz=${imgHoz}&orientation=${orientation}`;
+                } else {
+                    console.error('Selected template is not available for redirection.');
+                }
+            } catch (error) {
+                console.error('Error redirecting to design page:', error);
+            }
+        }
+    });
+
+</script>

@@ -1,0 +1,124 @@
+@model IEnumerable<EGreetings.Areas.Admin.Models.UsersDetailViewModel>
+
+@{
+  Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h1>@ViewData["SubCate"]</h1>
+
+<div class="row mt-3">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-body table-responsive p-0">
+          <table class="table table-hover text-nowrap">
+            <thead>
+              <tr>
+                <th>Username</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+                <th>Remaining</th>
+                <th>Action</th>
+              </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model) {
+              var remainingDays = item.EndDate.HasValue && item.StartDate.HasValue 
+                                  ? (item.EndDate.Value - DateTime.Now).Days 
+                                  : 0;
+              <tr>
+                <td>@item.UserName</td>
+                <td>@(item.StartDate?.ToString() ?? "N/A")</td>
+                <td>@(item.EndDate?.ToString() ?? "N/A")</td>
+                <td>@item.Quantity</td>
+                <td>
+                  <form asp-area="Admin" asp-asp-controller="Subscription" asp-action="UpdateUserStatus" method="post">
+                    <div class="custom-control custom-switch" data-user-id="@item.UserId" data-remaining-days="@remainingDays">
+                      <input type="hidden" name="userId" value="@item.UserId" />
+                      <input type="hidden" name="subCate" value="@ViewData["SubCate"]" />
+                      <input type="hidden" name="status" value="false" />
+                      <input type="checkbox" class="custom-control-input" name="status" @(item.IsActive == true ? "checked" : "") />
+                      <label class="custom-control-label">
+                        <span class="switch-label">@((item.IsActive == true ? "Active" : "Deactive"))</span>
+                      </label>
+                    </div>
+                  </form> 
+                </td>                  
+              </tr>
+            }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+@section Scripts {
+  <script>
+  /*document.querySelectorAll('.custom-control').forEach(function (control) {
+    var userId = control.getAttribute('data-user-id');
+    var checkbox = control.querySelector('.custom-control-input');
+    var label = control.querySelector('.custom-control-label');
+    var span = label.querySelector('span');
+
+    checkbox.id = 'customSwitch' + userId;
+    label.setAttribute('for', 'customSwitch' + userId);
+    span.id = 'switchLabel' + userId;
+
+    checkbox.addEventListener('change', function () {
+      var status = checkbox.checked;
+      span.textContent = status ? 'Active' : 'Deactive';
+
+      var hiddenInput = control.querySelector('input[type="hidden"][name="status"]');
+      if (hiddenInput) {
+        hiddenInput.value = status;
+      }
+
+      var form = control.closest('form');
+      if (form) {
+        form.submit();
+      }
+    });
+  });*/
+
+  document.querySelectorAll('.custom-control').forEach(function (control) {
+    var userId = control.getAttribute('data-user-id');
+    var remainingDays = control.getAttribute('data-remaining-days');
+    var checkbox = control.querySelector('.custom-control-input');
+    var label = control.querySelector('.custom-control-label');
+    var span = label.querySelector('span');
+
+    checkbox.id = 'customSwitch' + userId;
+    label.setAttribute('for', 'customSwitch' + userId);
+    span.id = 'switchLabel' + userId;
+
+    checkbox.addEventListener('change', function (event) {
+      var status = checkbox.checked;
+      var form = control.closest('form');
+      var hiddenInput = control.querySelector('input[type="hidden"][name="status"]');
+      
+      if (status) {
+        // User is being activated
+        span.textContent = 'Active';
+        hiddenInput.value = true;
+        form.submit();
+      } else {
+        // User is being deactivated
+        span.textContent = 'Deactive';
+
+        // Show confirmation popup
+        if (confirm(`The user still has ${remainingDays} remaining day(s). Are you sure you want to deactivate?`)) {
+          hiddenInput.value = false;
+          form.submit();
+        } else {
+          // Abort the deactivation
+          checkbox.checked = true; // Re-check the toggle
+          span.textContent = 'Active';
+        }
+      }
+    });
+  });
+  </script>
+}
+

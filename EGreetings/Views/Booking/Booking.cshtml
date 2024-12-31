@@ -1,0 +1,237 @@
+﻿@model EGreetings.Controllers.priceInfo
+@{
+    ViewData["Title"] = "Booking";
+}
+
+
+
+<div class="w-full flex flex-col justify-start items-center">
+    <!-- Header -->
+    <div class="title-checkout text-center mb-6 mt-5">
+        Booking Setting
+    </div>
+
+    <!-- Recipient Info Section -->
+    <div class="flex flex-col justify-start items-center w-3/4 mb-6">
+        <div class="text-lg font-semibold mb-2 text-left w-full">1. Who is the card for?</div> <!-- Align text to the left -->
+        <div id="recipient-container" class="w-full mb-4">
+            <!-- Các người nhận sẽ được thêm vào đây -->
+            <div class="recipient-item mb-4">
+                <label for="recipient-name-1" class="block text-sm font-medium">Recipient Name</label>
+                <input type="text" id="recipient-name-1" class="form-control w-full px-4 py-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+                <label for="recipient-email-1" class="block text-sm font-medium">Recipient Email</label>
+                <input type="email" id="recipient-email-1" class="form-control w-full px-4 py-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            </div>
+        </div>
+        <button id="add-recipient" class="bg-blue-500 text-white py-2 px-4 my-3 rounded-md hover:bg-blue-600 focus:outline-none">
+            Add Another Recipient
+        </button>
+    </div>
+
+
+    <!-- Sender Info Section -->
+    <div class="flex flex-col justify-start items-center w-3/4 mb-6">
+        <div class="text-lg font-semibold mb-2 text-left  w-full">2. Who is the card from?</div> <!-- Align text to the left -->
+        <div class="w-full my-4">
+            <label for="sender-name" class="block text-sm font-medium">Sender Name</label>
+            <input type="text" id="sender-name" class="form-control w-full px-4 py-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+    </div>
+
+    <!-- Insert Video -->
+    <div class="flex flex-col justify-start items-center w-3/4 mb-6">
+        <div class="text-lg font-semibold mb-2 text-left  w-full">3. Would you like to send a video with your E-card? </div>
+        <div class="w-full flex justify-between items-center mb-4">
+            <div class="w-1/3 pr-2 my-4">
+                <input type="file" accept="video/*" id="videoUpload" class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                <button onclick="uploadVideo()" class="bg-blue-500 text-white py-2 px-4 my-3 rounded-md hover:bg-blue-600 focus:outline-none">Upload Video</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scheduling Info Section -->
+    <div class="flex flex-col justify-start items-center w-3/4 mb-6">
+        <div class="text-lg font-semibold mb-2 text-left  w-full">4. When would you like us to email the card to the Recipient?</div> <!-- Align text to the left -->
+        <div class="w-full flex justify-between items-center mb-4">
+            <!-- Date Input -->
+            <div class="w-1/3 pr-2 my-4">
+                <label for="date" class="block text-sm font-medium">Date</label>
+                <input type="date" id="date" class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            </div>
+
+            <!-- Time Input -->
+            <div class="w-1/3 px-2 my-4">
+                <label for="time" class="block text-sm font-medium">Time</label>
+                <input type="time" id="time" class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            </div>
+
+            <!-- Time Zone Input -->
+            <div class="w-1/3 pl-2 my-4">
+                <label for="time-zone" class="block text-sm font-medium">Time Zone</label>
+                <select id="time-zone" class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="UTC-12:00">UTC-12:00</option>
+                    <option value="UTC-11:00">UTC-11:00</option>
+                    <option value="UTC-10:00">UTC-10:00</option>
+                    <option value="UTC-09:00">UTC-09:00</option>
+                    <option value="UTC-08:00">UTC-08:00</option>
+                    <option value="UTC-07:00">UTC-07:00</option>
+                    <option value="UTC-06:00">UTC-06:00</option>
+                    <option value="UTC-05:00">UTC-05:00</option>
+                    <option value="UTC-04:00">UTC-04:00</option>
+                    <option value="UTC-03:00">UTC-03:00</option>
+                    <option value="UTC-02:00">UTC-02:00</option>
+                    <option value="UTC-01:00">UTC-01:00</option>
+                    <option value="UTC+00:00">UTC+00:00</option>
+                    <option value="UTC+01:00">UTC+01:00</option>
+                    <option value="UTC+02:00">UTC+02:00</option>
+                    <option value="UTC+03:00">UTC+03:00</option>
+                    <option value="UTC+04:00">UTC+04:00</option>
+                    <option value="UTC+05:00">UTC+05:00</option>
+                    <option value="UTC+06:00">UTC+06:00</option>
+                    <option value="UTC+07:00">UTC+07:00</option>
+                    <option value="UTC+08:00">UTC+08:00</option>
+                    <option value="UTC+09:00">UTC+09:00</option>
+                    <option value="UTC+10:00">UTC+10:00</option>
+                    <option value="UTC+11:00">UTC+11:00</option>
+                    <option value="UTC+12:00">UTC+12:00</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" id="Quan10" value="@ViewBag.Quantity10" />
+    <input type="hidden" id="Quan15" value="@ViewBag.Quantity15" />
+    <input type="hidden" id="Quan20" value="@ViewBag.Quantity20" />
+</div>
+<script>
+    async function uploadVideo() {
+        const videoInput = document.getElementById('videoUpload');
+        const file = videoInput.files[0];
+
+        if (!file) {
+            alert("Please choose a video.");
+            return;
+        }
+
+        const formData = new FormData();
+        formData.append('video', file);
+
+        try {
+            const response = await fetch('/api/svg/save-video', {
+                method: 'POST',
+                body: formData
+            });
+
+            const result = await response.json();
+            if (response.ok) {
+                document.getElementById('videoUrl').value = result.editedUrl;
+            } else {
+                alert(`Lỗi: ${result}`);
+            }
+        } catch (error) {
+            console.error("Lỗi tải lên:", error);
+        }
+    }
+</script>
+<script>
+    const EachSend = 2;
+    let Quan10 = document.getElementById('Quan10').value;
+    let Quan15 = document.getElementById('Quan15').value;
+    let Quan20 = document.getElementById('Quan20').value;
+    let emailQuantity = 1;
+         document.addEventListener('DOMContentLoaded', function() {
+        document.getElementById('add-recipient').addEventListener('click', function() {
+            // Tìm container để thêm các người nhận mới vào
+            const recipientContainer = document.getElementById('recipient-container');
+
+            // Tạo một div mới cho người nhận
+            const newRecipientItem = document.createElement('div');
+            newRecipientItem.classList.add('recipient-item', 'mb-4');
+
+            // Tạo các trường input mới cho người nhận và email
+            const recipientCount = recipientContainer.getElementsByClassName('recipient-item').length + 1;
+
+            newRecipientItem.innerHTML = `
+                <label for="recipient-name-${recipientCount}" class="block text-sm font-medium">Recipient Name</label>
+                <input type="text" id="recipient-name-${recipientCount}" class="form-control w-full px-4 py-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+                <label for="recipient-email-${recipientCount}" class="block text-sm font-medium">Recipient Email</label>
+                <input type="email" id="recipient-email-${recipientCount}" class="form-control w-full px-4 py-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            `;
+
+            // Thêm người nhận mới vào container
+            recipientContainer.appendChild(newRecipientItem);
+            emailQuantity++;
+            if (Quan10 <= 0 && Quan15 <= 0 && Quan20 <= 0) {
+                document.getElementById('sending-fee').value = emailQuantity * EachSend;
+            } else {
+                if (Quan10 < emailQuantity) {
+                    Quan10 = 0;
+                    emailQuantity = emailQuantity - Quan10;
+                    if (Quan15 < emailQuantity) {
+                        Quan15 = 0;
+                        emailQuantity = emailQuantity - Quan15;
+                        if (Quan20 < emailQuantity) {
+                            Quan20 = 0;
+                            emailQuantity = emailQuantity - Quan20;
+
+                        } else {
+                            emailQuantity = 0;
+                            Quan20 = Quan20 - emailQuantity;
+                        };
+                    } else {
+                        emailQuantity = 0;
+                        Quan15 = Quan15 - emailQuantity;
+                    };
+                } else {
+                    emailQuantity = 0;
+                    Quan10 = Quan10 - emailQuantity;
+                };
+            }
+            document.getElementById('sending-fee').value = emailQuantity * EachSend;
+
+        });
+
+    });
+    const UserID = document.getElementById('UserID').value
+    fetch('/BookingController/UpdateQuantities', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ UserID, quan10, quan15, quan20 })
+    })
+        .then(response => {
+            if (response.ok) {
+                // Xử lý thành công
+                console.log('Cập nhật thành công!');
+            } else {
+                // Xử lý lỗi
+                console.error('Cập nhật thất bại!');
+            }
+        });
+
+</script>
+<form asp-action="Send" asp-route-templateId="@Model.TemplateId"  method="post">
+    <input type="hidden" id="price-template" name="PriceTemplate" value="@Model.PriceTemplate" />
+    <input type="hidden" id="sending-fee" name="SendingFee" />
+    <input type="hidden" id="sub-free" name="SubFree" value="@Model.SubFree" />
+    <input type="hidden" id="discount" name="Discount" value="@Model.Discount" />
+    <input type="hidden" id="tempUrl" name="TemplateHistorySvgUrl" value="@Model.TemplateHistorySvgUrl" />
+    <input type="hidden" id="videoUrl" name="VideoUrl" />
+    <input type="hidden" id="UserID" name="UserID" value="@Model.UserID" />
+
+    <!-- Continue Button -->
+    <div class="mt-6">
+        <button type="submit" class="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition">
+            Continue
+
+        </button>
+
+        <!--
+        <button type="submit">
+        <a asp-action="Index" asp-controller="Payment" class="bg-blue-500 text-white px-6 py-2 rounded-md hover:bg-blue-600 transition">Continue</a>
+        </button>-->
+    </div>
+
+</form>

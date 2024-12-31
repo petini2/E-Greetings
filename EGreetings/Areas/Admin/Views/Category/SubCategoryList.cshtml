@@ -1,0 +1,166 @@
+@model IEnumerable<EGreetings.Models.Category>
+
+@{
+  Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@section HeadScripts {
+  <style>
+  </style>
+}
+
+
+<div class="container mt-3">
+<div class="row">
+  <div class="col-12">
+    <a class="font-weight-bold" asp-area="Admin" asp-controller="Category" asp-action="CreateSubCategory" asp-route-groupCategory="@ViewData["GroupCategoryKey"]">New SubCategory</a>
+    <div class="card mt-2">
+      <div class="card-header">
+        <div class="card-body table-responsive p-0">
+          <table class="table table-hover text-nowrap">
+            <thead>
+              <tr>
+                <th class="h5 libre-franklin--title primary-color font-weight-bold">Category Name</th>
+                <th class="h5 libre-franklin--title primary-color font-weight-bold">Created Date</th>
+                <th class="h5 libre-franklin--title primary-color font-weight-bold">Total</th>
+                <th class="h5 libre-franklin--title primary-color font-weight-bold text-right">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              @foreach (var item in Model)
+              {
+                <tr>
+                  <td>
+                    <form data-category-id="@item.CategoryID" asp-area="Admin" asp-controller="Category" asp-action="UpdateCategoryName" method="post" class="edit-form" style="display: none;">
+                      <input type="hidden" name="categoryId" value="@item.CategoryID" />
+                        <input type="text" name="categoryName" class="form-control w-50" value="@item.CategoryName" />
+                        <button type="submit" class="btn btn-outline-success btn-xs ml-2">Save</button> 
+                    </form>
+                    <p data-category-id="@item.CategoryID" style="display: none;">Error here</p>
+
+                    <div data-category-id="@item.CategoryID" class="category-container">
+                      <span class="category-name raleway--content">@item.CategoryName</span>
+                      <button type="button" class="btn btn-outline-secondary btn-xs edit-btn ml-2" onclick="editCategory(@item.CategoryID)">
+                        <i class="fas fa-pencil-alt"></i> Edit
+                      </button>
+                    </div>
+                  </td>
+                  <td class="raleway--content">@item.CreatedDate</td>
+                  <td class="raleway--content">15 templates</td>
+                  <td>
+                    <div class="d-flex justify-content-end align-items-center">
+                      <button type="button" class="btn btn-block btn-outline-secondary btn-flat btn-xs mr-2"
+                              onclick="window.location.href='@Url.Action("Index", "Template", new { area = "Admin", id = item.CategoryID })'">
+                        View all
+                      </button>
+                      <button type="button" class="btn btn-block btn-outline-primary btn-flat btn-xs mt-0 mr-2"
+                              onclick="window.location.href='@Url.Action("Create", "Template", new { area = "Admin", id = item.CategoryID })'">
+                        New template
+                      </button> 
+                      <form asp-area="Admin" asp-asp-controller="Category" asp-action="UpdateStatus" method="post">
+                        <input type="hidden" name="groupCategory" value="@ViewData["GroupCategoryKey"]" />
+                        <div class="custom-control custom-switch" data-category-id="@item.CategoryID">
+                          <input type="hidden" name="categoryId" value="@item.CategoryID" />
+                          <input type="hidden" name="status" value="false" />
+                          <input type="checkbox" class="custom-control-input" name="status" @(item.Status ? "checked" : "") />
+                          <label class="custom-control-label">
+                            <span class="switch-label raleway--content">@((item.Status ? "Active" : "Deactive"))</span>
+                          </label>
+                        </div>
+                      </form>
+                    </div>
+                  </td>
+                </tr>
+              }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+
+@section Scripts {
+  <script>
+  function editCategory(categoryId) {
+    document.querySelectorAll('.edit-form').forEach(form => form.style.display = 'none');
+    document.querySelectorAll('.category-container').forEach(container => container.style.display = 'flex');
+    document.querySelectorAll('p[data-category-id]').forEach(p => p.style.display = 'none');
+
+    const form = document.querySelector(`.edit-form[data-category-id='${categoryId}']`);
+    const categoryContainer = document.querySelector(`.category-container[data-category-id='${categoryId}']`);
+    const errorParagraph = document.querySelector(`p[data-category-id='${categoryId}']`);
+
+    if (form) form.style.display = 'flex';
+    if (categoryContainer) categoryContainer.style.display = 'none';
+
+    const categoryNameInput = form.querySelector('input[name="categoryName"]');
+    let oldCategoryName = categoryNameInput.value.trim();
+
+    if (!oldCategoryName) {
+      const categoryNameFromDiv = categoryContainer.querySelector('.category-name').textContent.trim();
+      categoryNameInput.value = categoryNameFromDiv;
+      oldCategoryName = categoryNameInput.value;
+    }
+
+    form.onsubmit = function (event) {
+      const categoryName = categoryNameInput.value.trim();
+
+      let errorMessage = '';
+      if (categoryName === '') {
+        errorMessage = 'It cannot be empty.';
+      }
+      else if (categoryName.length < 3 || categoryName.length > 50) {
+        errorMessage = 'Must be 3 to 50 characters.';
+      }
+
+      if (errorMessage) {
+        event.preventDefault();
+
+        if (errorParagraph) {
+          errorParagraph.textContent = errorMessage;
+          errorParagraph.classList.add('text-danger');
+          errorParagraph.classList.add('mb-0');
+          errorParagraph.style.display = 'block';
+        }
+
+        categoryNameInput.value = oldCategoryName;
+        categoryNameInput.focus();
+      }
+      else {
+        if (errorParagraph) errorParagraph.style.display = 'none';
+      }
+    };
+  }
+
+
+
+
+  document.querySelectorAll('.custom-control').forEach(function (control) {
+    var categoryId = control.getAttribute('data-category-id');
+    var checkbox = control.querySelector('.custom-control-input');
+    var label = control.querySelector('.custom-control-label');
+    var span = label.querySelector('span');
+
+    checkbox.id = 'customSwitch' + categoryId;
+    label.setAttribute('for', 'customSwitch' + categoryId);
+    span.id = 'switchLabel' + categoryId;
+
+    checkbox.addEventListener('change', function () {
+      var status = checkbox.checked;
+      span.textContent = status ? 'Active' : 'Deactive';
+
+      var hiddenInput = control.querySelector('input[type="hidden"][name="status"]');
+      if (hiddenInput) {
+        hiddenInput.value = status;
+      }
+
+      var form = control.closest('form');
+      if (form) {
+        form.submit();
+      }
+    });
+  });
+  </script>  
+}

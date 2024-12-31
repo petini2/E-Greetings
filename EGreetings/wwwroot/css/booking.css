@@ -1,0 +1,102 @@
+﻿.icon_pay1 {
+    width: 40px !important;
+    height: 40px !important;
+    object-fit: inherit;
+}
+.icon_paymomo {
+    width: 40px !important;
+    height: 40px !important;
+    object-fit:inherit;
+}
+.title-checkout {
+    font-size: 32px;
+    font-family: "Lexend";
+    text-align: start;
+    width: 80%;
+    padding-left: 20px;
+    font-weight: 600;
+    border-bottom: 1px solid #808080; 
+    padding: 10px 0;
+}
+.tilte-paymed {
+    font-size: 24px;
+    font-family: "Lexend";
+    text-align: start;
+    padding-left: 10px 20px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
+.btn-payment {
+    width: 100%;
+    color: white;
+    background-color: #102d6e;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+    font-family: "Lexend";
+    padding: 5px 10px;
+}
+.w-allpay {
+    width: 90%;
+    font-family: "Lexend";
+}
+
+.left-pay{
+    width: 50%
+}
+.right-pay{
+    width: 40%;
+    padding-left: 30px;
+    font-size: 16px;
+}
+/*.div-divider {
+    width: auto;
+    height: 2px;
+    color: #808080;
+}*/
+.box-pay {
+    width: 35%;
+    height: 50px;
+    padding: 7px 15px;
+    border: 1px solid #808080;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 400;
+    font-size: 18px;
+}
+    .box-pay.selected {
+        color: #129fdd; /* Màu chữ khi chọn */
+        border-color: #129fdd; /* Màu viền khi chọn */
+    }
+
+    /* Thêm các hiệu ứng hover nếu cần */
+    .box-pay:hover {
+        border-color: #129fdd;
+    }
+
+    .box-pay:active {
+        color: #129fdd;
+        border-color: #129fdd;
+    }
+
+.svg_pay {
+    width: 200px;
+    height: auto;
+    
+}
+
+.border-pay {
+   border-bottom: 1px solid #808080;
+   width: 100%;
+   padding: 20px 0px;
+}
+
+.side-border{
+    border-right: 1px solid #808080;
+    height: auto;
+    padding: 0px 20px;
+}

@@ -1,0 +1,62 @@
+﻿@model List<EGreetings.Models.Subscription>
+@{
+    ViewData["Title"] = "Subs";
+}
+
+<div class="w-full relative">
+    <div class="w-full flex  flex-col justify-content-center items-center">
+        <div class="tsubs">Our Subscriptions</div>
+
+        <div class="btn-catesubs">
+            Main Subs
+        </div>
+
+        <div class="subcate1">
+            @* 10-15-20 mails  with any 3 templates*@
+            @foreach (var subscription in Model)  // Duyệt qua danh sách subscriptions
+            {
+                if (subscription.SubCate.Equals("Monthly"))
+                {
+                    <div class="cate1">
+                        <div class="cate-content">
+                            <div class="titlesub">@subscription.SubName</div>
+                            <div><span class="pricesub">$@subscription.Price</span>/month</div>
+                            <div class="font-medium mt-3">What's includes:</div>
+                            <div class="flex justify-content-start items-center px-1 py-2"> <img src="~/image_design/Star.png" class="img-pri" /> Can send @subscription.Quantity mails</div>
+                            <div class="flex justify-content-start items-center px-1 py-2"> <img src="~/image_design/Star.png" class="img-pri" />Any 3 templates</div>
+                            <div class="flex justify-content-start items-center px-1 py-2"> <img src="~/image_design/Star.png" class="img-pri" />Personalized Designs</div>
+                            <a class="btn-pays" href='@Url.Action("SubMonth", "Subs", new {Id = subscription.SubscriptionID})'>Pay Now <img src="~/image_design/Right Arrow.png" class="img-pays" /></a>
+                        </div>
+                    </div>
+                }
+            }
+
+        </div>
+
+        @*Combo 10 15 20 sends *@
+        <div class="btn-catesubs">
+            Send Subs
+        </div>
+
+        <div class="subcate1">
+            @foreach (var subscription in Model)  // Duyệt qua danh sách subscriptions
+            {
+                if (subscription.SubCate.Equals("Sends"))
+                {
+                    <div class="cate1">
+                        <div class="cate-content">
+                            <div class="titlesub">@subscription.SubName</div>
+                            <div><span class="pricesub">$@subscription.Price</span></div>
+                            <div class="font-medium mt-3">What's includes:</div>
+                            <div class="flex justify-content-start items-center px-1 py-2"> <img src="~/image_design/Star.png" class="img-pri" /> Can have @subscription.Quantity sends</div>
+                            <div class="flex justify-content-start items-center px-1 py-2"> <img src="~/image_design/Star.png" class="img-pri" />Free Design</div>
+                            <div class="flex justify-content-start items-center px-1 py-2"> <img src="~/image_design/Star.png" class="img-pri" />Personalized Designs</div>
+                            <a class="btn-pays" href='@Url.Action("SendTime", "Subs", new {Id = subscription.SubscriptionID})'>Pay Now <img src="~/image_design/Right Arrow.png" class="img-pays" /></a>
+                        </div>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</div>
+

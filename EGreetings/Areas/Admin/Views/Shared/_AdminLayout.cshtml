@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="~/lib/fontawesome-free/css/all.min.css" />
+  <link rel="stylesheet" href="~/lib/overlayScrollbars/css/OverlayScrollbars.min.css">  
+  <link rel="stylesheet" href="~/css/adminlte.min.css" asp-append-version="true" />
+  <link href="@Url.Action("AdminCss", "Css")" rel="stylesheet" type="text/css" asp-append-version="true" />
+
+  <title>AdminLTE 3</title>
+  @await RenderSectionAsync("HeadScripts", required: false)
+</head>
+
+<body class="hold-transition sidebar-mini layout-fixed admin-layout--background-color admin-layout--padding">
+<div class="wrapper">
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <ul class="navbar-nav container-fluid d-flex justify-content-between align-items-center p-0">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-flex justify-content-between align-items-center">
+        <div><img class="rounded-circle" src="@Url.Content("~/images/useravarta/default-admin.jpg")" alt="avatar" style="width: 40px; height: 40px;"></div>
+        <a class="nav-link libre-franklin--title" asp-controller="Account" asp-action="Logout">Logout</a>
+      </li>
+    </ul>
+  </nav>
+
+  <aside class="main-sidebar sidebar-light-primary admin-layout__sidebar--position"> 
+    <div class="brand-link admin-layout__logo">
+      <img src="~/image_design/Logo E-G Full HD-NoBG.png" alt="logo" style="width: 100px; height: 100px;">
+    </div>    
+
+    <div class="sidebar">
+      <nav class="mt-2">
+        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false"> 
+          <li class="nav-item">
+            <a class="nav-link @(ViewData["IsDashboard"] as bool? == true ? "active" : "")" asp-area="Admin" asp-controller="Dashboard" asp-action="Index">
+              <i class="nav-icon fas fa-th-large sidebar-icon primary-color"></i>
+              <p class="libre-franklin--title primary-color">Dashboard</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link @(ViewData["IsCategory"] as bool? == true ? "active" : "")" asp-area="Admin" asp-controller="Category" asp-action="Index">
+              <i class="nav-icon fas fa-list sidebar-icon primary-color"></i>
+              <p class="libre-franklin--title primary-color">Categories</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link @(ViewData["IsSubscription"] as bool? == true ? "active" : "")" asp-area="Admin" asp-controller="Subscription" asp-action="Index">
+              <i class="nav-icon fas fa-dollar-sign sidebar-icon primary-color"></i>
+              <p class="libre-franklin--title primary-color">Subscriptions</p>
+            </a>
+          </li>
+          @*<li class="nav-item">
+            <a class="nav-link" asp-area="Admin" asp-controller="Slideshow" asp-action="Index">
+              <i class="nav-icon fas fa-object-group sidebar-icon primary-color"></i>
+              <p class="libre-franklin--title primary-color">Slideshows</p>
+            </a>
+          </li>*@
+          <li class="nav-item">
+            <a class="nav-link" asp-area="Admin" asp-controller="User" asp-action="OrderList">
+              <i class="nav-icon fas fa-exchange-alt sidebar-icon"></i>
+              <p>Orders</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" asp-area="Admin" asp-controller="User" asp-action="FeedbackList">
+              <i class="nav-icon far fa-comment sidebar-icon"></i>
+              <p>Feedbacks</p>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" asp-area="Admin" asp-controller="User" asp-action="Index">
+              <i class="nav-icon fas fa-user sidebar-icon primary-color"></i>
+              <p class="libre-franklin--title primary-color">Users</p>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </aside>
+
+  <div class="content-wrapper bg-white" style="margin-top: 5px;">
+    <section class="content">
+      <div class="container-fluid pt-2">
+        <nav class="d-flex justify-content-between align-items-center mt-2" aria-label="breadcrumb">
+          @if (ViewData["IsCategory"] as bool? == true) {
+          <ol class="breadcrumb bg-transparent m-0 p-0">
+            <li class="breadcrumb-item">
+              <a class="libre-franklin--title" asp-area="Admin" asp-controller="Category" asp-action="Index">Category List</a>
+            </li>
+            @if (ViewData["HasCreateSubCategory"] as bool? == true) {
+            <li class="breadcrumb-item">
+              <a asp-area="Admin" asp-controller="Category" asp-action="CreateSubCategory" asp-route-groupCategory="@ViewData["GroupCategoryKey"]">Create</a>
+            </li>
+            }
+            @if (ViewData["IsSubCategoryList"] as bool? == true) {
+            <li class="breadcrumb-item">
+              <a asp-area="Admin" asp-controller="Category" asp-action="SubCategoryList" asp-route-groupCategory="@ViewData["GroupCategoryKey"]">@ViewData["GroupCategoryValue"]</a>
+            </li>
+            }
+            @if (ViewData["IsTemplateList"] as bool? == true) {
+            <li class="breadcrumb-item">
+              <a asp-area="Admin" asp-controller="Category" asp-action="SubCategoryList" asp-route-groupCategory="@ViewData["GroupCategory"]">@ViewData["GroupCategoryValue"]</a>
+            </li>
+            <li class="breadcrumb-item">
+              <a asp-area="Admin" asp-controller="Template" asp-action="Index" asp-route-id="@ViewData["CategoryID"]">@ViewData["CategoryName"]</a>
+            </li>
+            }
+          </ol>
+          }
+
+          @if (ViewData["IsSubscriptionList"] as bool? == true) {
+          <ol class="breadcrumb bg-transparent m-0 p-0">
+            <li class="breadcrumb-item">
+              <a class="libre-franklin--title" asp-area="Admin" asp-controller="" asp-action="">Subscription List</a>
+            </li>
+          </ol>
+          }
+
+          @if (ViewData["HasCreateSubCategory"] as bool? == true || ViewData["IsSubCategoryList"] as bool? == true) {
+          <a class="libre-franklin--title" asp-area="Admin" asp-controller="Category" asp-action="Index">Go back</a>
+          }
+          @if (ViewData["IsTemplateList"] as bool? == true) {
+          <a class="libre-franklin--title" asp-area="" asp-controller="" asp-action="">Go back</a>
+          }
+        </nav>
+        <hr />
+
+        @RenderBody()
+      </div>
+    </section>      
+  </div>
+</div>
+</div>
+
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap4/js/bootstrap.bundle.min.js"></script>
+<script src="~/lib/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>  
+<script src="~/js/adminlte.js" asp-append-version="true"></script>
+<script src="~/js/demo.js" asp-append-version="true"></script>
+
+@await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,42 @@
+@model IEnumerable<EGreetings.Areas.Admin.Models.UserTransactionListViewModel>
+
+@{
+  Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="libre-franklin--title primary-color">@ViewData["UserName"]: Transaction List</h2>
+
+<hr />
+
+<div class="row mt-3">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-body table-responsive p-0">
+          <table class="table table-hover text-nowrap">
+            <thead>
+              <tr>
+                <th>Amount</th>
+                <th>Transaction Date</th>
+                <th>Transaction Methods</th>
+                <th>Transaction Status</th>
+              </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model) {  
+              <tr>
+                <td>@item.Amount</td>
+                <td>@item.TransactionDate</td>
+                <td>@item.TransactionMethod</td>
+                <td>@item.TransactionStatus</td>
+              </tr>
+            }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

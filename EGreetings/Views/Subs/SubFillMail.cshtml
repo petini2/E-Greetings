@@ -1,0 +1,164 @@
+﻿@{
+    ViewData["Title"] = "Fill Mails";
+}
+
+<div class="w-full flex flex-col justify-start items-center">
+    <!-- Header -->
+    <div class="title-checkout text-center mb-6 mt-5">
+        Setting Informations
+    </div>
+
+    <!-- Recipient Info Section -->
+    <div class="flex flex-col justify-start items-center w-3/4 mb-6">
+        <div class="text-lg font-semibold mb-2 text-left w-full">1. Who is the card for?</div> <!-- Align text to the left -->
+        <div id="recipient-container" class="w-full mb-4">
+            <!-- Các người nhận sẽ được thêm vào đây -->
+            <div class="recipient-item mb-4">
+                <label for="recipient-name-1" class="block text-sm font-medium">Recipient Name</label>
+                <input type="text" id="recipient-name-1" class="form-control w-full px-4 py-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+                <label for="recipient-email-1" class="block text-sm font-medium">Recipient Email</label>
+                <input type="email" id="recipient-email-1" class="form-control w-full px-4 py-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+                <!-- Close Button to Remove Recipient -->
+                @* <button class="remove-recipient text-red-500 mt-2"><i class="fa-regular fa-circle-xmark"></i></button> *@
+            </div>
+        </div>
+        <button id="add-recipient" class="bg-blue-500 text-white py-2 px-4 my-3 rounded-md hover:bg-blue-600 focus:outline-none">
+            <i class="fa-regular fa-square-plus"></i> Add Another Recipient
+        </button>
+    </div>
+
+
+    <!-- Sender Info Section -->
+    <div class="flex flex-col justify-start items-center w-3/4 mb-6">
+        <div class="text-lg font-semibold mb-2 text-left  w-full">2. Who is the card from?</div> <!-- Align text to the left -->
+        <div class="w-full my-4">
+            <label for="sender-name" class="block text-sm font-medium">Sender Name</label>
+            <input type="text" id="sender-name" class="form-control w-full px-4 py-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+        </div>
+    </div>
+
+    <!-- Scheduling Info Section -->
+    <div class="flex flex-col justify-start items-center w-3/4 mb-6">
+        <div class="text-lg font-semibold mb-2 text-left  w-full">3. When would you like us to email the card to the Recipient?</div> <!-- Align text to the left -->
+        <div class="w-full flex justify-between items-center mb-4">
+            <!-- Date Input -->
+            <div class="w-1/3 pr-2 my-4">
+                <label for="date" class="block text-sm font-medium">Date</label>
+                <input type="date" id="date" class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            </div>
+
+            <!-- Time Input -->
+            <div class="w-1/3 px-2 my-4">
+                <label for="time" class="block text-sm font-medium">Time</label>
+                <input type="time" id="time" class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            </div>
+
+            <!-- Time Zone Input -->
+            <div class="w-1/3 pl-2 my-4">
+                <label for="time-zone" class="block text-sm font-medium">Time Zone</label>
+                <select id="time-zone" class="w-full px-4 py-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <option value="UTC-12:00">UTC-12:00</option>
+                    <option value="UTC-11:00">UTC-11:00</option>
+                    <option value="UTC-10:00">UTC-10:00</option>
+                    <option value="UTC-09:00">UTC-09:00</option>
+                    <option value="UTC-08:00">UTC-08:00</option>
+                    <option value="UTC-07:00">UTC-07:00</option>
+                    <option value="UTC-06:00">UTC-06:00</option>
+                    <option value="UTC-05:00">UTC-05:00</option>
+                    <option value="UTC-04:00">UTC-04:00</option>
+                    <option value="UTC-03:00">UTC-03:00</option>
+                    <option value="UTC-02:00">UTC-02:00</option>
+                    <option value="UTC-01:00">UTC-01:00</option>
+                    <option value="UTC+00:00">UTC+00:00</option>
+                    <option value="UTC+01:00">UTC+01:00</option>
+                    <option value="UTC+02:00">UTC+02:00</option>
+                    <option value="UTC+03:00">UTC+03:00</option>
+                    <option value="UTC+04:00">UTC+04:00</option>
+                    <option value="UTC+05:00">UTC+05:00</option>
+                    <option value="UTC+06:00">UTC+06:00</option>
+                    <option value="UTC+07:00">UTC+07:00</option>
+                    <option value="UTC+08:00">UTC+08:00</option>
+                    <option value="UTC+09:00">UTC+09:00</option>
+                    <option value="UTC+10:00">UTC+10:00</option>
+                    <option value="UTC+11:00">UTC+11:00</option>
+                    <option value="UTC+12:00">UTC+12:00</option>
+                </select>
+            </div>
+        </div>
+    </div>
+
+    <div class="w-full flex justify-content-center items-center">
+        <div class="flex w-75 justify-between items-center">
+            <div class="flex flex-col justify-center items-center">
+                <img src="~/images/templates/img/Fes_MidAut_PD1.png" class="template-imagesub" />
+                <div class="name-template my-2"> Fes Mid Autumn 1</div>
+               
+            </div>
+            <div class="flex flex-col justify-center items-center">
+                <img src="~/images/templates/img/Fes_MidAut_PD10.png" class="template-imagesub" />
+                <div class="name-template my-2"> Fes Mid Autumn 1</div>
+               
+            </div>
+            <div class="flex flex-col justify-center items-center">
+                <img src="~/images/templates/img/Fes_MidAut_PD12.png" class="template-imagesub" />
+                <div class="name-template my-2"> Fes Mid Autumn 1</div>
+               
+            </div>
+        </div>
+    </div>
+    <!-- Continue Button -->
+    <div class="mt-6">
+        <a asp-action="Index" asp-controller="Payment" class="btn-continue text-white px-6 py-2 rounded-md hover:bg-blue-600 transition">Continue</a>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Xử lý sự kiện thêm người nhận
+        document.getElementById('add-recipient').addEventListener('click', function() {
+            const recipientContainer = document.getElementById('recipient-container');
+
+            // Tạo một div mới cho người nhận
+            const newRecipientItem = document.createElement('div');
+            newRecipientItem.classList.add('recipient-item', 'mb-4');
+
+            // Tính số lượng người nhận hiện tại và tạo ID cho chúng
+            const recipientCount = recipientContainer.getElementsByClassName('recipient-item').length + 1;
+
+            newRecipientItem.innerHTML = `
+                <label for="recipient-name-${recipientCount}" class="block text-sm font-medium">Recipient Name</label>
+                <input type="text" id="recipient-name-${recipientCount}" class="form-control w-full px-4 py-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+                <label for="recipient-email-${recipientCount}" class="block text-sm font-medium">Recipient Email</label>
+                <input type="email" id="recipient-email-${recipientCount}" class="form-control w-full px-4 py-2 mt-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+
+                <!-- Nút đóng để xóa người nhận -->
+                <button class="remove-recipient text-red-500 mt-2"><i class="fa-regular fa-circle-xmark"></i></button>
+            `;
+
+            // Thêm người nhận mới vào container
+            recipientContainer.appendChild(newRecipientItem);
+
+            // Cập nhật sự kiện xóa cho nút đóng vừa thêm
+            updateRemoveButtons();
+        });
+
+        // Cập nhật sự kiện cho các nút xóa
+        function updateRemoveButtons() {
+            const removeButtons = document.querySelectorAll('.remove-recipient');
+
+            removeButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const recipientItem = this.closest('.recipient-item');
+                    recipientItem.remove();  // Xóa người nhận mà không cần kiểm tra số lượng
+                });
+            });
+        }
+
+        // Cập nhật sự kiện cho các nút xóa ban đầu
+        updateRemoveButtons();
+    });
+</script>
+

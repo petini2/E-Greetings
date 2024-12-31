@@ -1,0 +1,33 @@
+  <div class="container mt-5 d-flex justify-content-center align-items-center" style="height: 350px;">
+    <div class="container">
+    <h1 class="text-center mb-4" style="font-size: 32px;">Payment Failed</h1>
+
+    <div class="d-flex justify-content-center align-items-center mb-3">
+      <img src="~/image_design/warning.png" alt="failed">
+    </div>
+
+    <div class="card mx-auto">
+      <div class="card-body">
+        <p class="text-center">We're sorry, but your payment couldn't be processed due to insufficient funds in your
+          selected payment method.</p>
+
+        <div class="text-center mb-3">
+          <p><strong>Balance Required: $50.00</strong></p>
+          <p>Your current balance is insufficient to cover this amount.</p>
+        </div>
+
+        <!-- Retry Payment Option -->
+        <div class="text-center mb-3">
+          <button class="btn btn-warning" onclick="window.location.href='@Url.Action("Index", "Payment")'">
+            Try Another Payment Method
+          </button>
+        </div>
+
+        <!-- Support Option -->
+        <div class="text-center mt-3">
+          <p>If you need help, <a class="text-primary text-decoration-underline" href="#">contact support</a>.</p>
+        </div>
+      </div>
+    </div>
+    </div>
+  </div>

@@ -1,0 +1,168 @@
+﻿@model EGreetings.Models.ViewModelAccount.BookingFeedback
+<div class="text-xl m-4">
+    <div class="text-right mb-3">
+        <a asp-controller="Home" asp-action="Index">Home</a>
+        <span>></span>
+        <a asp-controller="Order" asp-action="Index">Order</a>
+        <span>></span>
+        <a class="font-semibold">Detail</a>
+    </div>
+    <div class="head">
+        ORDER DETAIL
+    </div>
+    <div class="row w-100 flex flex-col justify-content-md-start align-items-center mt-5">
+        @if (Model.Comment != null)
+        {
+            @*Check if already have feedback for this comment*@
+            <div class="userprofile flex flex-wrap" style="width:65% !important;">
+                <div style="width:600px;">
+                    <table style="width:100%;">
+                        <tr style="line-height:40px">
+                            <td style="width:40%;" class="font-semibold align-text-top">Booking ID</td>
+                            <td>@Model.BookingID</td>
+                        </tr>
+                        <tr style="line-height:40px">
+                            <td class="font-semibold align-text-top">Status</td>
+                            <td>@Model.Status</td>
+                        </tr>
+                        <tr style="line-height:40px">
+                            <td class="font-semibold align-text-top">Booking Date</td>
+                            <td>@Model.CreatedDate.Value.ToString("yyyy-MM-dd")</td>
+                        </tr>
+                        <tr style="line-height:40px">
+                            <td class="font-semibold align-text-top">Sent Date</td>
+                            <td>@Model.BookingDate.Value.ToString("yyyy-MM-dd")</td>
+                        </tr>
+                        <tr style="line-height:40px">
+                            <td class="font-semibold align-text-top">Total</td>
+                            <td>@Model.Total</td>
+                        </tr>
+                    </table>
+                    @*Show related templates*@
+                    <div style="height:250px">
+                        <div class="leading-9 font-semibold">Template</div>
+                        <div class="inline-flex mt-2">
+                            @foreach (var temp in Model.Templates)
+                            {
+                                <div class="h-64 w-32 ml-5">
+                                    <img src="@temp." />
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+                @*Show feedback*@
+                <div class="mt-14">
+                    <div class="text-center text-black font-bold title mb-3">Feedback</div>
+                    <div class=" flex justify-center items-center">
+                        <div class="form-group mb-3">
+                            <textarea readonly rows="10" cols="50" style="border-radius: 10px;" asp-for="Comment"></textarea>
+                        </div>
+                    </div>
+                    <div class="float-right">
+                        <a href="@Url.Action("Detail", "Order", new { id = Model.BookingID })" class="btn btn-warning text-white">Back</a>
+                    </div>
+                </div>
+            </div>
+        }
+        else @if (Model.Status == "Complete" && Model.BookingDate.Value.Date.AddDays(3) >= DateTime.Now.Date && Model.Comment == null)
+        {
+            @*Check if this booking is complete and user can only create feedback in 3 days after complete*@
+            <div class="userprofile flex flex-wrap" style="width:30% !important;">
+                <div style="width:600px;">
+                    @*Show booking detail*@
+                    <table style="width:100%;">
+                        <tr style="line-height:40px">
+                            <td style="width:40%;" class="font-semibold align-text-top">Booking ID</td>
+                            <td>@Model.BookingID</td>
+                        </tr>
+                        <tr style="line-height:40px">
+                            <td class="font-semibold align-text-top">Status</td>
+                            <td>@Model.Status</td>
+                        </tr>
+                        <tr style="line-height:40px">
+                            <td class="font-semibold align-text-top">Booking Date</td>
+                            <td>@Model.CreatedDate.Value.ToString("yyyy-MM-dd")</td>
+                        </tr>
+                        <tr style="line-height:40px">
+                            <td class="font-semibold align-text-top">Sent Date</td>
+                            <td>@Model.BookingDate.Value.ToString("yyyy-MM-dd")</td>
+                        </tr>
+                        <tr style="line-height:40px">
+                            <td class="font-semibold align-text-top">Total</td>
+                            <td>@Model.Total</td>
+                        </tr>
+                    </table>
+                    @*Show templates that this booking was book foe*@
+                    <div style="height:250px">
+                        <div class="leading-9 font-semibold">Template</div>
+                        <div class="inline-flex mt-2">
+                            @foreach (var temp in Model.Templates)
+                            {
+                                <div class="h-64 w-32 ml-5">
+                                    <img src="@temp." width="128px" height="181px" />
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+                @*Button: Create feedback + back to Index page*@
+                <div style="display:contents;">
+                    <a href="@Url.Action("Update", "Order", new { id = Model.BookingID })" class="btn btn-submit text-white"
+                       style="width: 20%; height:40px; padding:7px;">
+                        Feedback
+                    </a>
+                    <a href="@Url.Action("Index","Order")" class="btn btn-warning text-white ml-1">Back</a>
+                </div>
+            </div>
+        }
+        else @if (Model.Comment == null)
+        {
+            @*Other status when comment is null*@
+            <div class="userprofile flex flex-wrap" style="width:30% !important;">
+                <div style="width:600px;">
+                    <table style="width:100%;">
+                        <tr style="line-height:40px">
+                            <td style="width:40%;" class="font-semibold align-text-top">Booking ID</td>
+                            <td>@Model.BookingID</td>
+                        </tr>
+                        <tr style="line-height:40px">
+                            <td class="font-semibold align-text-top">Status</td>
+                            <td>@Model.Status</td>
+                        </tr>
+                        <tr style="line-height:40px">
+                            <td class="font-semibold align-text-top">Booking Date</td>
+                            <td>@Model.CreatedDate.Value.ToString("yyyy-MM-dd")</td>
+                        </tr>
+                        <tr style="line-height:40px">
+                            <td class="font-semibold align-text-top">Sent Date</td>
+                            <td>@Model.BookingDate.Value.ToString("yyyy-MM-dd")</td>
+                        </tr>
+                        <tr style="line-height:40px">
+                            <td class="font-semibold align-text-top">Total</td>
+                            <td>@Model.Total</td>
+                        </tr>
+                    </table>
+                    @*Show related templates*@
+                    @if (Model.Templates.Count > 0)
+                    {
+                        <div style="height:250px">
+                            <div class="leading-9 font-semibold">Template</div>
+                            <div class="inline-flex mt-2">
+                                @foreach (var temp in Model.Templates)
+                                {
+                                    <div class="h-64 w-32 ml-5">
+                                        <img src="@temp." />
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                    }
+                    <div class="float-right">
+                        <a href="@Url.Action("Index","Order")" class="btn btn-warning text-white ml-1">Back</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>

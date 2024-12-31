@@ -1,0 +1,207 @@
+﻿
+@{
+    ViewData["Title"] = "Payment Details";
+}
+
+
+
+<div class="w-full mt-3">
+    <div class="w-full flex flex-col justify-center items-center">
+        <div class="title-checkout mt-3 flex justify-center items-center">Checkout</div>
+
+        <div class="w-allpay flex justify-content-center items-start mt-4">
+            @* Left side *@
+            <div class="left-pay flex flex-col side-border">
+                <div class="tilte-paymed">
+                    Payment Method
+                </div>
+
+                @* <!-- Payment Method Options --> *@
+                @* <div class="w-full flex  justify-start items-center mt-3"> *@
+                @*     <div class="box-pay flex justify-between items-center"> *@
+                @*         <img src="~/image_design/PayPal.png" class="icon_pay1" /> *@
+                @*         <div>Paypal</div> *@
+                @*         <div> *@
+                @*             <i class="fa-regular fa-square-check" width="25" height="25"></i> *@
+                @*         </div> *@
+                @*     </div> *@
+                @*     <div class="box-pay flex justify-between items-center ms-5"> *@
+                @*         <img src="~/image_design/Momo-removebg-preview.png" class="icon_paymomo" /> *@
+                @*         <div>Momo</div> *@
+                @*         <div> *@
+                @*             <i class="fa-regular fa-square-check" width="25" height="25"></i> *@
+                @*         </div> *@
+                @*     </div> *@
+                @* </div> *@
+
+                @* <!-- PayPal Payment Form (Hidden or Shown based on Selection) --> *@
+                @* <div id="paypal-form" class="mt-4 w-75" style="display:none;"> *@
+                @*     <form asp-controller="Payment" asp-action="Verification"> *@
+                @*         <div class="mb-3"> *@
+                @*             <label for="email" class="form-label">PayPal Email</label> *@
+                @*             <input type="email" id="email" class="form-control" placeholder="user@example.com" required> *@
+                @*         </div> *@
+                @*         <div class="mb-3"> *@
+                @*             <label for="password" class="form-label">Password</label> *@
+                @*             <input type="password" id="password" class="form-control" placeholder="Enter Password" required> *@
+                @*         </div> *@
+                @*         <div class="w-full flex justify-start items-center mt-3"> *@
+                @*             <a class="btn-payment" asp-controller="Payment" asp-action="Verification">Pay</a> *@
+                @*         </div> *@
+                @*     </form> *@
+                @* </div> *@
+
+                @* <!-- MoMo Payment Form (Hidden or Shown based on Selection) --> *@
+                @* <div id="momo-form" class="mt-4 w-75" style="display:none;"> *@
+                @*     <div id="qrcode-container" class="text-center"> *@
+                @*         <p><strong>Scan the QR Code to complete your payment via MoMo</strong></p> *@
+                @*         <div id="qrcode"></div> *@
+                @*     </div> *@
+                @*     <div class="d-flex justify-content-center"> *@
+                @*         <img src="~/image_design/QRCode.png" alt="qrcode" style="width: 200px; height: 200px;"> *@
+                @*     </div> *@
+                @* </div> *@
+                <div id="paypal-form" class="mt-4 border rounded p-2">
+                    <div class="mb-5">
+                        <div class="d-flex justify-content-center align-items-center"><img src="~/image_design/PayPal.png" class="icon_pay1" /></div>
+                        <p class="text-center mt-2">Click the button below to proceed with your payment</p>
+                    </div>
+                    <input type="hidden" id="amount" value="@Model.BillTotal" step="0.01" />
+                    <div id="paypal-button-container"></div>
+                    <div id="notification-container"></div>
+                </div>
+               
+            </div>
+            <div class="div-divider"></div>
+            @* Right side *@
+            <div class="right-pay flex flex-col">
+                <div class="w-full flex flex-col border-pay">
+                    <div class=" flex justify-between items-center"><span>Shipping from</span> <span>Tram Tran</span></div>
+                    <div class="flex justify-between items-center"><span>Recipient Name</span> <span>Nguyen Van A</span></div>
+                    <div class="flex justify-between items-center"><span>Recipient Email </span><span>vana@gmail.com</span></div>
+                    <div class="flex justify-between items-center"><span>Date time </span><span>23:59 28/12/2024</span></div>
+                </div>
+
+                <div class="w-full flex flex-col border-pay">
+                    <div class="flex justify-between items-center"><span>Price Template</span><span>$@Model.PriceTemplate</span></div>
+                    <div class="flex justify-between items-center"><span>Sending Fee </span><span>$@Model.SendingFee</span></div>
+                    <div class="flex justify-between items-center"><span>Sub Free</span><span>$@Model.SubFree</span></div>
+                    <div class="flex justify-between items-center"><span>Discount</span><span>$@Model.Discount</span></div>
+                </div>
+
+                <div class="w-full flex flex justify-between items-center pt-4">
+                    <div class="text-xl" >Bill Total</div>
+                    <div class="text-xl text-danger">$@Model.BillTotal</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+     document.addEventListener('DOMContentLoaded', function () {
+        
+        document.getElementById('paypal-form').style.display = 'block';
+        document.getElementById('momo-form').style.display = 'none';
+
+   
+        document.querySelectorAll('.box-pay')[0].classList.add('selected'); // PayPal
+
+        // Show PayPal form
+        document.querySelectorAll('.box-pay')[0].addEventListener('click', function() {
+            document.getElementById('paypal-form').style.display = 'block';
+            document.getElementById('momo-form').style.display = 'none';
+
+            //selected
+            paymentOptions.forEach(o => o.classList.remove('selected'));
+            this.classList.add('selected');
+        });
+
+        // Show MoMo form
+        document.querySelectorAll('.box-pay')[1].addEventListener('click', function() {
+            document.getElementById('momo-form').style.display = 'block';
+            document.getElementById('paypal-form').style.display = 'none';
+
+            // selected
+            paymentOptions.forEach(o => o.classList.remove('selected'));
+            this.classList.add('selected');
+        });
+
+        // Toggle selected state for payment options
+        let paymentOptions = document.querySelectorAll('.box-pay');
+    });
+
+
+</script>
+<script src="https://www.paypal.com/sdk/js?client-id=@ViewBag.ClientId&currency=USD&disable-funding=credit,card"></script>
+<script>
+    const priceInfo = @Html.Raw(Json.Serialize(Model));
+
+    paypal.Buttons({
+      createOrder: async () => {
+        const response = await fetch('@Url.Action("CreateOrder", "Paypal")', {
+          method: "post",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            amount: document.getElementById("amount").value, // corrected syntax here
+            priceInfo: priceInfo
+          }),
+        });
+
+        const order = await response.json();
+        // console.log("order: " + JSON.stringify(order, null, 2));
+        return order.id;
+      },
+      onApprove: async (data, actions) => {
+        const response = await fetch('@Url.Action("CaptureOrder", "Paypal")', {
+          method: "post",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            orderID: data.orderID
+          })
+        });
+
+        const details = await response.json();
+        if (details == "success") {
+          document.getElementById("notification-container").innerHTML = `
+            <div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+              <strong>Thank you!</strong>
+              <button type="button" class="btn btn-close ml-3 d-flex justify-content-center align-items-center" data-bs-dismiss="alert" aria-label="Close" style="width: 60px;">
+                <p>Close</p>
+              </button>
+            </div>
+          `;
+
+          setTimeout(() => {
+            window.location.href = '@Url.Action("Index", "Order")';
+          }, 2000);
+        }
+      },
+
+      onCancel: (data) => {
+        document.getElementById("notification-container").innerHTML = `
+          <div class="alert alert-warning alert-dismissible fade show mt-3" role="alert">
+            <strong>Order cancelled!</strong>
+            <button type="button" class="btn btn-close ml-3 d-flex justify-content-center align-items-center" data-bs-dismiss="alert" aria-label="Close" style="width: 60px;">
+              <p>Close</p>
+            </button>
+          </div>
+        `;
+      },
+
+      onError: (err) => {
+        document.getElementById("notification-container").innerHTML = `
+          <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+            <strong>An error occurred!!</strong>
+            <button type="button" class="btn btn-close ml-3 d-flex justify-content-center align-items-center" data-bs-dismiss="alert" aria-label="Close" style="width: 60px;">
+              <p>Close</p>
+            </button>
+          </div>
+        `;
+      },
+    }).render('#paypal-button-container');
+</script>

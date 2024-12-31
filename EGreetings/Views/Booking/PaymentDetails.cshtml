@@ -1,0 +1,70 @@
+﻿ 
+@{
+    ViewData["Title"] = "Payment Details";
+}
+
+<div class="w-full mt-3">
+    <div class="w-full flex flex-col justify-center items-center">
+        <div class="title-checkout mt-3 flex justify-center items-center">Checkout</div>
+   
+        <div class="w-allpay flex justify-content-center items-start mt-4">
+            @* Left side *@
+           <div class="left-pay flex flex-col side-border">
+                <div class="tilte-paymed">
+                   Payment Method
+               </div>
+              
+               <div class="w-full flex justify-start items-center">
+                    <div class="box-pay flex justify-between items-center">
+                       <img src="~/image_design/PayPal.png" class="icon_pay1"/>
+                       <div >Paypal</div>
+                        <div>
+                            <i class="fa-regular fa-square-check" width="25" height="25"></i>
+                       </div>
+                   </div>
+                    <div class="box-pay flex justify-between items-center ms-5">
+                        <img src="~/image_design/Momo-removebg-preview.png" class="icon_paymomo" />
+                        <div>Momo</div>
+                        <div>
+                            <i class="fa-regular fa-square-check" width="25" height="25"></i>
+                        </div>
+                    </div>
+                   
+               </div>
+                <div class="w-full flex flex-col justify-content-center items-center mt-3">
+                    <img src="@Url.Content("~/images/templates/svg/Fes_MidAut_SD15.svg")" alt="Vertical SVG" class="svg_pay" />
+                </div>
+                <div class="w-full flex justify-start items-center mt-3">
+                    <div class="btn-payment">Pay</div>
+                </div>
+           </div>
+           <div class="div-divider"></div>
+            @* Right side *@
+            <div class="right-pay flex flex-col  ">
+                <div class="w-full flex flex-col border-pay">
+                    <div>Shipping to</div>
+                    <div>Recipient Name</div>
+                    <div>Recipient Email</div>
+                    <div>Date time</div>
+                </div>
+                
+                
+              
+                <div class="w-full flex flex-col border-pay">
+                    <div>Price Template</div>
+                     <div>Delivery Free</div>
+                    <div>Sub Fee</div>
+                    <div>Discount</div>
+                  
+                </div>
+               
+                <div class="w-full flex flex-col">
+                    <div>Bill Total</div>
+                    <div>$129.99</div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

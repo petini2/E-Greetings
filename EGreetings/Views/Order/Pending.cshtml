@@ -1,0 +1,79 @@
+﻿@* @model List<EGreetings_Project.Models.Booking> *@
+@{
+    ViewData["Title"] = "Order";
+}
+<nav class="menu">
+    <div>
+        <ul class="menubar">
+            <li>
+                <a asp-controller="Order" asp-action="Index">
+                    <span><i class="fa-solid fa-layer-group"></i></span>
+                    All
+                </a>
+            </li>
+            <li>
+                <a asp-controller="Order" asp-action="OnGoing">
+                    <span><i class="fa-sharp-duotone fa-solid fa-spinner"></i></span>
+                    On-going
+                </a>
+            </li>
+            <li>
+                <a asp-controller="Order" asp-action="Complete">
+                    <span><i class="fa-solid fa-circle-check"></i></span>
+                    Complete
+                </a>
+            </li>
+            <li class="active">
+                <a asp-controller="Order" asp-action="Pending" class="active">
+                    <span><i class="fa-solid fa-hourglass-start"></i></span>
+                    Pending
+                </a>
+            </li>
+            <li>
+                <a asp-controller="Order" asp-action="Fail">
+                    <span><i class="fa-solid fa-circle-exclamation"></i></span>
+                    Fail
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="main-table">
+    <div class="head">
+        MY ORDER
+    </div>
+    <div class="float-right mt-1 mr-20 mb-3">
+        <a href="@Url.Action("Index", "Order")" class="btn btn-warning text-white">Back</a>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th width="15%" style="text-align:center;">ID</th>
+                <th width="10%" style="text-align: center">Status</th>
+                <th width="20%" style="text-align:center;">Subject</th>
+                <th width="20%" style="text-align:center;">Booking Date</th>
+                <th width="15%" style="text-align:center;">Total</th>
+                <th width="15%" style="text-align:center;">Sent Date</th>
+                <th width="5%" style="text-align:center;"><i class="fa-solid fa-up-right-and-down-left-from-center"></i></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr style="line-height: 40px">
+                    <th style="text-align:center;">@item.BookingID</th>
+                    <th>@item.Status</th>
+                    <th>@item.Subject</th>
+                    <th style="text-align:center;">@item.CreatedDate.ToString("yyyy-MM-dd")</th>
+                    <th style="text-align:center;">@item.Total</th>
+                    <th style="text-align:center;">@item.BookingDate.ToString("yyyy-MM-dd")</th>
+                    <th style="text-align:center;">
+                        <a href="@Url.Action("Detail", "Order", new { id = item.BookingID })">
+                            <i class="fa-solid fa-up-right-and-down-left-from-center" style="color:#333"></i>
+                        </a>
+                    </th>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

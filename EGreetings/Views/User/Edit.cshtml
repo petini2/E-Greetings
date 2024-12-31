@@ -1,0 +1,89 @@
+﻿@model EGreetings.Models.ViewModelAccount.EditProfileModel
+@{
+    ViewData["Title"] = "Profile";
+}
+<nav class="menu">
+    <div>
+        <ul class="menubar">
+            <li class="active">
+                <a asp-controller="User" asp-action="Index" class="active">
+                    <span><i class="fa-solid fa-user"></i></span>
+                    Profile
+                </a>
+            </li>
+            <li>
+                <a asp-controller="Transaction" asp-action="Index">
+                    <span><i class="fa-sharp-duotone fa-solid fa-credit-card"></i></span>
+                    Payment
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+<div class="head">
+    UPDATE ACCOUNT
+</div>
+<div class="row w-100 flex flex-col justify-content-md-start align-items-center mt-5">
+    <div class="flex userprofile">
+        <form asp-controller="User" asp-action="Edit" asp-route-id="@Model." enctype="multipart/form-data" method="post" class="flex">
+        <div style="width:300px">
+            <div class="mt-2">
+                <div class="ml-5">
+                    <img class="h-80 w-364" src="/@Model.imgAvatar" alt="avatar"/>
+                </div>
+                <div>
+                    <input asp-for="@Model.newAvatar" type="file" accept="image/jpeg, image/png, image/jpg" />
+                </div>
+            </div>
+        </div>
+        <div style="width:430px; margin-left:20px;">
+                <table style="width:100%;margin-top: 15px;">
+                    <tr class="hidden" style="line-height:60px">
+                        <td asp-for="Id" style="width:35%;" class="font-semibold align-text-top">UserID</td>
+                        <td>
+                            <input asp-for="Id" placeholder="@Model.Id" />
+                        </td>
+                    </tr>
+                    <tr style="line-height:60px">
+                        <td class="font-semibold align-text-top">Username</td>
+                        <td>
+                            <input asp-for="UserName" placeholder="@Model.UserName" /><br />
+                            <span asp-validation-for="UserName" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr style="line-height:60px">
+                        <td class="font-semibold align-text-top">Email</td>
+                        <td>
+                            <input type="email" asp-for="Email" placeholder="@Model.Email" />
+                        </td>
+                    </tr>
+                    <tr style="line-height:60px">
+                        <td class="font-semibold align-text-top" asp-for="PhoneNumber">
+                            Phone
+                        </td>
+                        <td>
+                            <input asp-for="Phone" placeholder="@Model.Phone" /><br />
+                            <span asp-validation-for="Phone" class="text-danger"></span>
+                        </td>
+                    </tr>
+                    <tr style="line-height:60px">
+                        <td class="font-semibold align-text-top" asp-for="Dob">Date of birth</td>
+                        <td><input type="date" value="@Model.Dob.Value.ToString("yyyy-MM-dd")" asp-for="Dob" /></td>
+                    </tr>
+                    <tr>
+
+                        <td class="form-group">
+                            <input type="submit" value="Submit" class="btn btn-submit text-white" 
+                            style="width: 90px; font-size: 18px; padding: 5px; height: 40px;" />
+                        </td>
+                        <td>
+                            <a class="btn btn-warning text-white" asp-action="Index" asp-controller="User">
+                            Cancel  </a>
+                        </td>
+                    </tr>
+                </table>
+        </div>
+
+        </form>
+    </div>
+</div>

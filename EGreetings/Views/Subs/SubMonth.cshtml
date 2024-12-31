@@ -1,0 +1,205 @@
+﻿@model EGreetings.Models.ViewModelAccount.ECardViewModel
+@{
+    ViewData["Title"] = "SubMonth";
+}
+
+<div class="w-full flex justify-content-start align-items-start">
+    <div class="mainsubmonth flex flex-col justify-content-center align-items-center">
+        <div class="title-ecardd">
+            Our Templates
+        </div>
+        <div class="btn-search-card">
+            <form method="get" action="@Url.Action("SubMonth", "Subs")" class="form-searchtemp">
+                <input type="text" class="btn-inputsearch" name="searchQuery" value="@Model.SearchQuery" />
+                <div class="img-search">
+                    <img src="~/image_design/Search.png" alt="Search" onclick="submitSearchForm()" />
+                </div>
+            </form>
+        </div>
+        <div class="e-cards">
+
+            @foreach (var template in Model.Templates)
+            {
+                <div class="item-a1" data-template-id="@template.TemplatesID">
+                    <div class="mt-5 me-3">
+                        <div class="flex flex-col justify-center items-center item-product">
+                            <img src="@Url.Content("~/images/templates/img/" + (template.ImgVer ?? "default-image.jpg"))"
+                                 alt="@template.TemplateName" class="img-template" />
+                            <div class="w-content-card flex flex-col">
+                                <div class="text-center px-3 py-4">@template.TemplateName</div>
+                                @if (template.Discount > 0)
+                                {
+                                    <div class="w-full flex justify-content-between align-items-center">
+                                        <s>$@template.Price</s>
+                                        <span class="exactly-price text-center">$@((template.Price - (template.Discount ?? 0f)))</span>
+                                    </div>
+                                }
+                                else
+                                {
+                                    <div class="w-full flex justify-content-between align-items-center">
+                                        <s></s>
+                                        <span class="exactly-price">$@template.Price</span>
+                                    </div>
+                                }
+                            </div>
+                            <div class="overplay1">
+                                <!-- Changed the select template button to use data-* attributes -->
+                                <a href="#" class="btn-buy"
+                                   data-template-id="@template.TemplatesID"
+                                   data-template-name="@template.TemplateName"
+                                   data-template-img-url="@Url.Content("~/images/templates/img/" + (template.ImgVer ?? "default-image.jpg"))"
+                                   onclick="selectTemplate(event)">Select this card</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+
+        <div class="pagination">
+            @if (Model.CurrentPage > 1)
+            {
+                <a href="@Url.Action("SubMonth", "Subs", new { page = Model.CurrentPage - 1, searchQuery = Model.SearchQuery })" class="btn btn-light p-2 m-2">Previous</a>
+            }
+
+            @for (int i = 1; i <= Model.TotalPages; i++)
+            {
+                <a href="@Url.Action("SubMonth", "Subs", new { page = i, searchQuery = Model.SearchQuery })" class="@(i == Model.CurrentPage ? "selected" : "") btn btn-light p-2 m-2">@i</a>
+            }
+
+            @if (Model.CurrentPage < Model.TotalPages)
+            {
+                <a href="@Url.Action("SubMonth", "Subs", new { page = Model.CurrentPage + 1, searchQuery = Model.SearchQuery })" class="btn btn-light p-2 m-2">Next</a>
+            }
+        </div>
+    </div>
+   
+        <div class="sidesubmonth flex flex-col justify-start items-start">
+            <div id="selected-count" class="text-center w-full top-sub">Selected 0/3</div>
+            <div id="selected-templates" class="w-full center-sub flex flex-col justify-start items-center">
+                <!-- Selected templates will be displayed here -->
+            </div>
+            <form id="selected-templates-form" method="post" action="@Url.Action("NextPage", "Subs")" class="bottom-sub">
+                <input type="hidden" name="selectedTemplates" id="selected-templates-input" />
+                <div><a class="btn-submonth" href="#" onclick="submitSelectedTemplates()">Next</a></div>
+            </form>
+       
+
+      
+    </div>
+    
+</div>
+
+<script>
+      let selectedTemplates = [];
+
+    function selectTemplate(event) {
+        event.preventDefault(); // Ngừng hành động mặc định của button
+
+        const button = event.target; // Button "Select this card"
+        const templateId = button.getAttribute('data-template-id');
+        const templateName = button.getAttribute('data-template-name');
+        const templateImgVer = button.getAttribute('data-template-img-url');
+
+        // Nếu đã chọn 3 template thì không cho phép chọn thêm
+        if (selectedTemplates.length >= 3) {
+            alert("You can only select up to 3 templates.");
+            return;
+        }
+
+        // Kiểm tra xem template đã được chọn chưa
+        const alreadySelected = selectedTemplates.some(template => template.id === templateId);
+        if (alreadySelected) {
+            alert("This template has already been selected.");
+            return;
+        }
+
+        // Thêm template vào danh sách đã chọn
+        selectedTemplates.push({
+            id: templateId,
+            TemplateName: templateName,
+            ImgVer: templateImgVer
+        });
+
+        // Cập nhật danh sách các template đã chọn
+        updateSelectedTemplates();
+
+        // Vô hiệu hóa button để tránh chọn lại
+        button.disabled = true;
+
+        // Cập nhật số lượng template đã chọn
+        updateSelectedCount();
+    }
+
+    // Cập nhật các template đã chọn trong giao diện
+    function updateSelectedTemplates() {
+        const selectedTemplatesContainer = document.getElementById("selected-templates");
+        selectedTemplatesContainer.innerHTML = ""; // Xóa hết danh sách trước đó
+
+        selectedTemplates.forEach(template => {
+            const templateDiv = document.createElement("div");
+            templateDiv.classList.add("selected-template");
+            templateDiv.innerHTML = `
+                <div class="w-full flex flex-col justify-center items-center mt-5" data-template-id="${template.id}">
+                    <img src="${template.ImgVer}" alt="${template.TemplateName}" class="imgsubmonth" />
+                    <div class="nametempsub">${template.TemplateName}</div>
+                    <button class="remove-template-btn"><i class="fa-solid fa-circle-xmark"></i></button>
+                </div>
+            `;
+
+            // Lắng nghe sự kiện click vào button xóa
+            const removeButton = templateDiv.querySelector('.remove-template-btn');
+            removeButton.addEventListener('click', () => removeTemplate(template.id, templateDiv));
+
+            selectedTemplatesContainer.appendChild(templateDiv);
+        });
+    }
+
+    // Xóa template khỏi danh sách đã chọn
+    function removeTemplate(templateId, templateDiv) {
+        // Loại bỏ template khỏi danh sách
+        selectedTemplates = selectedTemplates.filter(template => template.id !== templateId);
+
+        // Xóa template khỏi DOM
+        templateDiv.remove();
+
+        // Kích hoạt lại button "Select this card"
+        const button = document.querySelector(`[data-template-id="${templateId}"]`);
+        if (button) {
+            button.disabled = false;
+        }
+
+        // Cập nhật số lượng template đã chọn
+        updateSelectedCount();
+    }
+
+    // Cập nhật số lượng các template đã chọn
+    function updateSelectedCount() {
+        const selectedCount = document.getElementById("selected-count");
+        selectedCount.innerText = `Selected ${selectedTemplates.length}/3`;
+    }
+
+    // Gửi danh sách các template đã chọn
+    function submitSelectedTemplates() {
+        if (selectedTemplates.length === 0) {
+            alert("Please select at least one template before proceeding.");
+            return;
+        }
+
+        // Chuyển danh sách các template đã chọn thành JSON và gán vào input hidden
+        const selectedTemplatesInput = document.getElementById('selected-templates-input');
+        selectedTemplatesInput.value = JSON.stringify(selectedTemplates);
+
+        // Gửi form tới server
+        document.getElementById('selected-templates-form').submit();
+    }
+
+    // Hàm gửi form tìm kiếm (search)
+    function submitSearchForm() {
+        document.querySelector('.form-searchtemp').submit();
+    }
+
+</script>
+
+
+

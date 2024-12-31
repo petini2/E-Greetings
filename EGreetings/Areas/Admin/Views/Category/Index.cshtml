@@ -1,0 +1,56 @@
+@model Tuple<Dictionary<string, string>, List<int>>
+
+@{
+  Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+@section HeadScripts {
+}
+
+<div class="container mt-3">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <div class="card-body table-responsive p-0">
+            <table class="table table-hover text-nowrap">
+              <thead>
+                <tr>
+                  <th class="h5 libre-franklin--title primary-color font-weight-bold">Category Name</th>
+                  <th class="h5 libre-franklin--title primary-color font-weight-bold">Total</th>
+                  <th class="h5 libre-franklin--title primary-color font-weight-bold text-right">Action</th>
+                </tr>
+              </thead>
+              <tbody>
+              @for (int i = 0; i < Model.Item1.Count; i++) {
+                var category = Model.Item1.ElementAt(i);
+                var count = Model.Item2[i];
+                <tr>
+                  <td class="raleway--content">@category.Value</td>
+                  <td class="raleway--content">@count SubCategories</td>
+                  <td>
+                    <div class="d-flex justify-content-end align-items-center">
+                      <button type="button" class="btn btn-secondary btn-sm mr-2"
+                            onclick="window.location.href='@Url.Action("SubCategoryList", "Category", new { area = "Admin", groupCategory = category.Key })'">
+                        View all
+                      </button>
+                      <button type="button"  class="btn btn-primary btn-sm"
+                            onclick="window.location.href='@Url.Action("CreateSubCategory", "Category", new { area = "Admin", groupCategory = category.Key })'">
+                        New subcategory
+                      </button>
+                    </div>
+                  </td>                  
+                </tr>
+              } 
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+</div>
+
+@section Scripts {
+ 
+}

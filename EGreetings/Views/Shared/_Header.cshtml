@@ -1,0 +1,1082 @@
+﻿@using Microsoft.AspNetCore.Identity
+@inject UserManager<User> UserManager
+@inject SignInManager<User> signInManager
+@using Microsoft.AspNetCore.Authentication
+@using System.Security.Claims
+@using Microsoft.AspNetCore.Authentication.Cookies
+
+@{
+    // Lấy giá trị từ cookie
+    var avatarUrl = Context.Request.Cookies["UserAvatar"] ?? "/images/default-avatar.png"; // Avatar mặc định nếu không có cookie
+    var userName = Context.Request.Cookies["UserName"] ?? "Guest"; // Tên người dùng mặc định nếu không có cookie
+    var isAdmin = User.IsInRole("Admin");
+    var isUser = !isAdmin;
+}
+
+<header>
+    @* <a class="nav-link text-dark nav-link-header" asp-area="" asp-controller="Home" asp-action="Index"><img src="~/image_design/IconSpecial.png" class="img-icon" />Specials</a> *@
+    <nav class="header-home">
+        <div class="all-content desktop-menu flex justify-content-between align-items-end row ">
+            <div class="col-2 flex justify-content-end align-items-center">
+                <a class=" flex justify-content-end align-items-center" asp-area="" asp-controller="Home" asp-action="Index">
+                    <img src="~/image_design/Logo E-G Full HD-NoBG - Cut.png" class="ps-5 img-logo" />
+                </a>
+            </div>
+            <div class="col-6 h-100 flex justify-content-between align-content-end pb-1">
+                <div class="flex justify-content-center align-items-end">
+
+                    <!-- Dropdown Home -->
+                    <div class="relative group">
+                        <div class=" justify-content-center align-items-end" id="dropdownButton">
+                            <a class=" flex justify-center items-center" asp-controller="Home" asp-action="Index">
+                                <img src="~/image_design/Home1.png" class="img-icon" /> <span class="font-bold  ms-2 text-header">Home</span>
+                            </a>
+                        </div>
+                        <ul id="dropdownMenu" class="absolute dropdown-home hidden w-52 p-4 bg-white rounded-lg shadow-lg">
+                            <li class="item-dropdown"><a asp-controller="User" asp-action="Index" class="text-dropdown text-decoration-none text-black">My Account</a></li>
+                            <li class="item-dropdown"><a asp-controller="Account" asp-action="AboutUs" class="text-dropdown text-decoration-none text-black">About Us</a></li>
+                            <li class="item-dropdown"><a asp-controller="Account" asp-action="ContactUs" class="text-dropdown text-decoration-none text-black">Contact Us</a></li>
+                            <li class="item-dropdown"><a asp-controller="Account" asp-action="FAQ" class="text-dropdown text-decoration-none text-black">FAQs</a></li>
+                        </ul>
+                    </div>
+
+
+
+                </div>
+                <div class="flex justify-center items-end">
+                    <div class="relative group">
+                        <div class=" justify-center items-end" id="dropdownButton1">
+                            <a class="flex justify-center items-center" asp-controller="ECard" asp-action="Index">
+                                <img src="~/image_design/Letter1.png" class="img-icon" />
+                                <span class="font-bold  ms-2 text-header">E-Cards</span>
+                            </a>
+                        </div>
+
+                        <!-- Dropdown Menu -->
+                        <div id="ecards-dropdown-menu" class="dropdown-ecard hidden px-5 py-2 rounded-lg bg-white shadow-lg">
+                            <div class="w-full flex-col justify-start items-center px-3">
+                                <!-- Dropdown content -->
+                                <div class="w-full flex flex-col justify-start items-center">
+                                    <div class="pe-3 py-2 text-sm flex items-start">
+                                        <div class="flex flex-col justify-start items-start">
+                                            <!-- Phần tử nhóm chứa liên kết "Birthday" -->
+                                            <div class="w-full flex justify-start items-center relative category-item group">
+                                                <!-- Hình ảnh và liên kết "Birthday" -->
+                                                <img src="~/image_design/surprise.png" class="img-cate me-2" />
+                                                <a href="@Url.Action("Index", "ECard", new {
+        selectedGroupCategories = "BD",
+        searchQuery = ViewData["SearchQuery"] ?? "",
+        priceFilter = ViewData["PriceFilter"] ?? "",
+        selectedCategories = ViewData["SelectedCategories"],
+      
+    })"
+                                                   class="block text-center item-dropdown py-1 px-3 text-decoration-none text-black">
+                                                    <span class="text-dropdown-title">Birthday</span>
+                                                </a>
+
+
+                                                <!-- Dropdown hiện ra khi hover -->
+                                                <div class="category-dropdown absolute hidden group-hover:block bg-white shadow-lg w-56 rounded-lg p-2 mt-2 z-20">
+                                                    <div class="flex flex-col space-y-2">
+                                                        @if (Context.Items["Categories"] != null)
+                                                        {
+                                                            var categories = (List<Category>)Context.Items["Categories"];
+
+                                                            foreach (var category in categories)
+                                                            {
+                                                                if (category.GroupCate.Equals("BD"))
+                                                                {
+                                                                    <a href="@Url.Action("Index", "ECard", new {
+        selectedCategories = category.CategoryID,
+        searchQuery = ViewData["SearchQuery"] ?? "",
+        priceFilter = ViewData["PriceFilter"] ?? "",
+
+    })"
+                                                                       class="block item-dropdown text-dropdown py-1 px-3 text-decoration-none text-black">
+                                                                        @category.CategoryName
+                                                                    </a>
+                                                                }
+                                                            }
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="pe-3 py-2 text-sm flex items-start">
+                                        <div class="flex flex-col justify-start items-start">
+                                            <!-- Phần tử nhóm chứa liên kết "Birthday" -->
+                                            <div class="w-full flex justify-start items-center relative category-item group">
+                                                <!-- Hình ảnh và liên kết "Birthday" -->
+                                                <img src="~/image_design/happy-new-year.png" class="img-cate me-2" />
+                                                <a href="@Url.Action("Index", "ECard", new {
+        selectedGroupCategories = "NY",
+        searchQuery = ViewData["SearchQuery"] ?? "",
+        priceFilter = ViewData["PriceFilter"] ?? "",
+        selectedCategories = ViewData["SelectedCategories"],
+
+    })"
+                                                   class="block text-center item-dropdown py-1 px-3 text-decoration-none text-black">
+                                                    <span class="text-dropdown-title">New Year</span>
+                                                </a>
+
+                                                <!-- Dropdown hiện ra khi hover -->
+                                                <div class="category-dropdown absolute hidden group-hover:block bg-white shadow-lg w-56 rounded-lg p-2 mt-2 z-20">
+                                                    <div class="flex flex-col space-y-2">
+                                                        @if (Context.Items["Categories"] != null)
+                                                        {
+                                                            var categories = (List<Category>)Context.Items["Categories"];
+
+                                                            foreach (var category in categories)
+                                                            {
+                                                                if (category.GroupCate.Equals("NY"))
+                                                                {
+                                                                    <a href="@Url.Action("Index", "ECard", new {
+        selectedCategories = category.CategoryID,
+        searchQuery = ViewData["SearchQuery"] ?? "",
+        priceFilter = ViewData["PriceFilter"] ?? "",
+
+    })"
+                                                                       class="block item-dropdown text-dropdown py-1 px-3 text-decoration-none text-black">
+                                                                        @category.CategoryName
+                                                                    </a>
+                                                                }
+                                                            }
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="pe-3 py-2 text-sm flex items-start">
+                                        <div class="flex flex-col justify-start items-start">
+                                            <!-- Phần tử nhóm chứa liên kết "Birthday" -->
+                                            <div class="w-full flex justify-start items-center relative category-item group">
+                                                <!-- Hình ảnh và liên kết "Birthday" -->
+                                                <img src="~/image_design/Festival1.png" class="img-cate me-2" />
+                                                <a href="@Url.Action("Index", "ECard", new {
+        selectedGroupCategories = "FE",
+        searchQuery = ViewData["SearchQuery"] ?? "",
+        priceFilter = ViewData["PriceFilter"] ?? "",
+        selectedCategories = ViewData["SelectedCategories"],
+
+    })"
+                                                   class="block text-center item-dropdown py-1 px-3 text-decoration-none text-black">
+                                                    <span class="text-dropdown-title">Festivals</span>
+                                                </a>
+
+                                                <!-- Dropdown hiện ra khi hover -->
+                                                <div class="category-dropdown absolute hidden group-hover:block bg-white shadow-lg w-56 rounded-lg p-2 mt-2 z-20">
+                                                    <div class="flex flex-col space-y-2">
+                                                        @if (Context.Items["Categories"] != null)
+                                                        {
+                                                            var categories = (List<Category>)Context.Items["Categories"];
+
+                                                            foreach (var category in categories)
+                                                            {
+                                                                if (category.GroupCate.Equals("FE"))
+                                                                {
+                                                                    <a href="@Url.Action("Index", "ECard", new {
+        selectedCategories = category.CategoryID,
+        searchQuery = ViewData["SearchQuery"] ?? "",
+        priceFilter = ViewData["PriceFilter"] ?? "",
+
+    })"
+                                                                       class="block item-dropdown text-dropdown py-1 px-3 text-decoration-none text-black">
+                                                                        @category.CategoryName
+                                                                    </a>
+                                                                }
+                                                            }
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="w-full flex flex-col justify-start items-center">
+                                    <div class="pe-3 py-2 text-sm flex items-start">
+                                        <div class="flex flex-col justify-start items-start">
+                                            <!-- Phần tử nhóm chứa liên kết "Birthday" -->
+                                            <div class="w-full flex justify-start items-center relative category-item group">
+                                                <!-- Hình ảnh và liên kết "Birthday" -->
+                                                <img src="~/image_design/rings.png" class="img-cate me-2" />
+                                                <a href="@Url.Action("Index", "ECard", new {
+        selectedGroupCategories = "WD",
+        searchQuery = ViewData["SearchQuery"] ?? "",
+        priceFilter = ViewData["PriceFilter"] ?? "",
+        selectedCategories = ViewData["SelectedCategories"],
+
+    })"
+                                                   class="block text-center item-dropdown py-1 px-3 text-decoration-none text-black">
+                                                    <span class="text-dropdown-title">Wedding</span>
+                                                </a>
+
+                                                <!-- Dropdown hiện ra khi hover -->
+                                                <div class="category-dropdown absolute hidden group-hover:block bg-white shadow-lg w-56 rounded-lg p-2 mt-2 z-20">
+                                                    <div class="flex flex-col space-y-2">
+                                                        @if (Context.Items["Categories"] != null)
+                                                        {
+                                                            var categories = (List<Category>)Context.Items["Categories"];
+
+                                                            foreach (var category in categories)
+                                                            {
+                                                                if (category.GroupCate.Equals("WD"))
+                                                                {
+                                                                    <a href="@Url.Action("Index", "ECard", new {
+        selectedCategories = category.CategoryID,
+        searchQuery = ViewData["SearchQuery"] ?? "",
+        priceFilter = ViewData["PriceFilter"] ?? "",
+
+    })"
+                                                                       class="block item-dropdown text-dropdown py-1 px-3 text-decoration-none text-black">
+                                                                        @category.CategoryName
+                                                                    </a>
+                                                                }
+                                                            }
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="pe-3 py-2 text-sm flex items-start">
+                                        <div class="flex flex-col justify-start items-start">
+                                            <!-- Phần tử nhóm chứa liên kết "Birthday" -->
+                                            <div class="w-full flex justify-start items-center relative category-item group">
+                                                <!-- Hình ảnh và liên kết "Birthday" -->
+                                                <img src="~/image_design/heart-balloon.png" class="img-cate me-2" />
+                                                <a href="@Url.Action("Index", "ECard", new {
+        selectedGroupCategories = "LV",
+        searchQuery = ViewData["SearchQuery"] ?? "",
+        priceFilter = ViewData["PriceFilter"] ?? "",
+        selectedCategories = ViewData["SelectedCategories"],
+
+    })"
+                                                   class="block text-center item-dropdown py-1 px-3 text-decoration-none text-black">
+                                                    <span class="text-dropdown-title">Love</span>
+                                                </a>
+
+                                                <!-- Dropdown hiện ra khi hover -->
+                                                <div class="category-dropdown absolute hidden group-hover:block bg-white shadow-lg w-56 rounded-lg p-2 mt-2 z-20">
+                                                    <div class="flex flex-col space-y-2">
+                                                        @if (Context.Items["Categories"] != null)
+                                                        {
+                                                            var categories = (List<Category>)Context.Items["Categories"];
+
+                                                            foreach (var category in categories)
+                                                            {
+                                                                if (category.GroupCate.Equals("LV"))
+                                                                {
+                                                                    <a href="@Url.Action("Index", "ECard", new {
+        selectedCategories = category.CategoryID,
+        searchQuery = ViewData["SearchQuery"] ?? "",
+        priceFilter = ViewData["PriceFilter"] ?? "",
+
+    })"
+                                                                       class="block item-dropdown text-dropdown py-1 px-3 text-decoration-none text-black">
+                                                                        @category.CategoryName
+                                                                    </a>
+                                                                }
+                                                            }
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="pe-3 py-2 text-sm flex items-start">
+                                        <div class="flex flex-col justify-start items-start">
+                                            <!-- Phần tử nhóm chứa liên kết "Birthday" -->
+                                            <div class="w-full flex justify-start items-center relative category-item group">
+                                                <!-- Hình ảnh và liên kết "Birthday" -->
+                                                <img src="~/image_design/application.png" class="img-cate me-2" />
+                                                <a href="@Url.Action("Index", "ECard", new {
+        selectedGroupCategories = "OT",
+        searchQuery = ViewData["SearchQuery"] ?? "",
+        priceFilter = ViewData["PriceFilter"] ?? "",
+        selectedCategories = ViewData["SelectedCategories"],
+
+    })"
+                                                   class="block text-center item-dropdown py-1 px-3 text-decoration-none text-black">
+                                                    <span class="text-dropdown-title">Others</span>
+                                                </a>
+
+                                                <!-- Dropdown hiện ra khi hover -->
+                                                <div class="category-dropdown absolute hidden group-hover:block bg-white shadow-lg w-56 rounded-lg p-2 mt-2 z-20">
+                                                    <div class="flex flex-col space-y-2">
+                                                        @if (Context.Items["Categories"] != null)
+                                                        {
+                                                            var categories = (List<Category>)Context.Items["Categories"];
+
+                                                            foreach (var category in categories)
+                                                            {
+                                                                if (category.GroupCate.Equals("OT"))
+                                                                {
+                                                                    <a href="@Url.Action("Index", "ECard", new {
+        selectedCategories = category.CategoryID,
+        searchQuery = ViewData["SearchQuery"] ?? "",
+        priceFilter = ViewData["PriceFilter"] ?? "",
+     
+    })"
+                                                                       class="block item-dropdown text-dropdown py-1 px-3 text-decoration-none text-black">
+                                                                        @category.CategoryName
+                                                                    </a>
+
+                                                                }
+                                                            }
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Other Links -->
+                <div class="flex justify-center items-end">
+                    <a class="flex justify-center items-center" asp-controller="Subs" asp-action="Index">
+                        <img src="~/image_design/VIP1.png" class="img-icon" />
+                        <span class="font-bold ms-2 text-header">Subscribes</span>
+                    </a>
+                </div>
+
+                <div class="flex justify-center items-end">
+                    <a class="flex justify-center items-center" asp-controller="Order" asp-action="Index">
+                        <img src="~/image_design/Parcel1.png" class="img-icon" />
+                        <span class="font-bold ms-2 text-header">Orders</span>
+                    </a>
+                </div>
+
+                <div class="flex justify-center items-end">
+                    <a class="flex justify-center items-center" asp-controller="Special" asp-action="Index">
+                        <img src="~/image_design/Hot Price1.png" class="img-icon" />
+                        <span class="font-bold ms-2 text-header">Specials</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-2 h-100 flex justify-content-between align-items-end"><partial name="_LoginPartial.cshtml" /></div>
+        </div>
+
+
+        @* Mobile Menu *@
+        <div class="w-full mobile-menu hidden flex flex-wrap items-center justify-between mx-auto p-4">
+            <div class="w-full flex justify-between items-center">
+                <a asp-action="Index" asp-controller="Home" class="flex items-center space-x-3 rtl:space-x-reverse">
+                    <img src="~/image_design/Logo E-G Full HD-NoBG - Cut.png" class="img_smalllogo" alt="EGreetings Logo" />
+                </a>
+                <div id="navbar-default" onclick="toggleSidebar()" class="p-2 w-10 h-10 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
+                    <svg class="w-7 h-7" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15" />
+                    </svg>
+                </div>
+            </div>
+            <!-- Sidebar -->
+            <div id="sidebar" class="sidebar hidden w-80 fixed top-0 right-0 h-full bg-white shadow-lg transform translate-x-full">
+                <div class="w-full flex flex-col justify-start items-center mt-3 mb-3">
+                <div class=" w-full close-btn text-2xl p-2 text-right my-2" onclick="toggleSidebar()">×</div>
+                <!-- Home -->
+
+                    <div class="relative group mt-3">
+                        <div class="justify-content-center align-items-end" id="dropdownButtonhome">
+                            <a class="flex justify-center items-center" asp-controller="Home" asp-action="Index">
+                                <img src="~/image_design/Home1.png" class="img-icon" />
+                                <span class="font-bold ms-2 text-header">Home</span>
+                            </a>
+                        </div>
+                        <!-- Dropdown menu -->
+                        <ul id="dropdownMenuhome" class="relative z-40 dropdown-home hidden w-52 p-4 bg-white rounded-lg shadow-lg">
+                            <li class="item-dropdown"><a href="#" class="text-dropdown text-decoration-none text-black">My Account</a></li>
+                            <li class="item-dropdown"><a href="#" class="text-dropdown text-decoration-none text-black">About Us</a></li>
+                            <li class="item-dropdown"><a href="#" class="text-dropdown text-decoration-none text-black">Contact Us</a></li>
+                            <li class="item-dropdown"><a href="#" class="text-dropdown text-decoration-none text-black">FAQs</a></li>
+                        </ul>
+                    </div>
+
+                    @* ECard *@
+                    <div class="relative group mt-3">
+                        <div class="justify-center items-end" id="dropdownButtonEcards">
+                            <a class="flex justify-center items-center" asp-controller="ECard" asp-action="Index">
+                                <img src="~/image_design/Letter1.png" class="img-icon" />
+                                <span class="font-bold ms-2 text-header">E-Cards</span>
+                            </a>
+                        </div>
+
+                        <!-- Dropdown Menu -->
+                        <div id="ecardsDropdownMenu" class="dropdown-ecard hidden px-5 py-2 rounded-lg bg-white shadow-lg">
+                            <div class="w-full flex-col justify-start items-center px-3">
+                                <!-- Dropdown content -->
+                                <div class="w-full flex flex-col justify-start items-center">
+                                    <div class="pe-3 py-2 text-sm flex items-start">
+                                        <div class="flex flex-col justify-start items-start">
+                                            <!-- Phần tử nhóm chứa liên kết "Birthday" -->
+                                            <div class="w-full flex justify-start items-center relative category-item group">
+                                                <!-- Hình ảnh và liên kết "Birthday" -->
+                                                <img src="~/image_design/surprise.png" class="img-cate me-2" />
+                                                <a href="@Url.Action("Index", "ECard", new {
+        selectedGroupCategories = "BD",
+        searchQuery = ViewData["SearchQuery"] ?? "",
+        priceFilter = ViewData["PriceFilter"] ?? "",
+        selectedCategories = ViewData["SelectedCategories"],
+
+    })"
+                                                   class="block text-center item-dropdown py-1 px-3 text-decoration-none text-black">
+                                                    <span class="text-dropdown-title">Birthday</span>
+                                                </a>
+
+
+                                                <!-- Dropdown hiện ra khi hover -->
+                                                <div class="category-dropdown1 absolute hidden group-hover:block bg-white shadow-lg w-56 rounded-lg p-2 mt-2 z-20">
+                                                    <div class="flex flex-col space-y-2">
+                                                        @if (Context.Items["Categories"] != null)
+                                                        {
+                                                            var categories = (List<Category>)Context.Items["Categories"];
+
+                                                            foreach (var category in categories)
+                                                            {
+                                                                if (category.GroupCate.Equals("BD"))
+                                                                {
+                                                                    <a href="@Url.Action("Index", "ECard", new {
+        selectedCategories = category.CategoryID,
+        searchQuery = ViewData["SearchQuery"] ?? "",
+        priceFilter = ViewData["PriceFilter"] ?? "",
+
+    })"
+                                                                       class="block item-dropdown text-dropdown py-1 px-3 text-decoration-none text-black">
+                                                                        @category.CategoryName
+                                                                    </a>
+                                                                }
+                                                            }
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="pe-3 py-2 text-sm flex items-start">
+                                        <div class="flex flex-col justify-start items-start">
+                                            <!-- Phần tử nhóm chứa liên kết "Birthday" -->
+                                            <div class="w-full flex justify-start items-center relative category-item group">
+                                                <!-- Hình ảnh và liên kết "Birthday" -->
+                                                <img src="~/image_design/happy-new-year.png" class="img-cate me-2" />
+                                                <a href="@Url.Action("Index", "ECard", new {
+        selectedGroupCategories = "NY",
+        searchQuery = ViewData["SearchQuery"] ?? "",
+        priceFilter = ViewData["PriceFilter"] ?? "",
+        selectedCategories = ViewData["SelectedCategories"],
+
+    })"
+                                                   class="block text-center item-dropdown py-1 px-3 text-decoration-none text-black">
+                                                    <span class="text-dropdown-title">New Year</span>
+                                                </a>
+
+                                                <!-- Dropdown hiện ra khi hover -->
+                                                <div class="category-dropdown1 absolute hidden group-hover:block bg-white shadow-lg w-56 rounded-lg p-2 mt-2 z-20">
+                                                    <div class="flex flex-col space-y-2">
+                                                        @if (Context.Items["Categories"] != null)
+                                                        {
+                                                            var categories = (List<Category>)Context.Items["Categories"];
+
+                                                            foreach (var category in categories)
+                                                            {
+                                                                if (category.GroupCate.Equals("NY"))
+                                                                {
+                                                                    <a href="@Url.Action("Index", "ECard", new {
+        selectedCategories = category.CategoryID,
+        searchQuery = ViewData["SearchQuery"] ?? "",
+        priceFilter = ViewData["PriceFilter"] ?? "",
+
+    })"
+                                                                       class="block item-dropdown text-dropdown py-1 px-3 text-decoration-none text-black">
+                                                                        @category.CategoryName
+                                                                    </a>
+                                                                }
+                                                            }
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="pe-3 py-2 text-sm flex items-start">
+                                        <div class="flex flex-col justify-start items-start">
+                                            <!-- Phần tử nhóm chứa liên kết "Birthday" -->
+                                            <div class="w-full flex justify-start items-center relative category-item group">
+                                                <!-- Hình ảnh và liên kết "Birthday" -->
+                                                <img src="~/image_design/Festival1.png" class="img-cate me-2" />
+                                                <a href="@Url.Action("Index", "ECard", new {
+        selectedGroupCategories = "FE",
+        searchQuery = ViewData["SearchQuery"] ?? "",
+        priceFilter = ViewData["PriceFilter"] ?? "",
+        selectedCategories = ViewData["SelectedCategories"],
+
+    })"
+                                                   class="block text-center item-dropdown py-1 px-3 text-decoration-none text-black">
+                                                    <span class="text-dropdown-title">Festivals</span>
+                                                </a>
+
+                                                <!-- Dropdown hiện ra khi hover -->
+                                                <div class="category-dropdown1 absolute hidden group-hover:block bg-white shadow-lg w-56 rounded-lg p-2 mt-2 z-20">
+                                                    <div class="flex flex-col space-y-2">
+                                                        @if (Context.Items["Categories"] != null)
+                                                        {
+                                                            var categories = (List<Category>)Context.Items["Categories"];
+
+                                                            foreach (var category in categories)
+                                                            {
+                                                                if (category.GroupCate.Equals("FE"))
+                                                                {
+                                                                    <a href="@Url.Action("Index", "ECard", new {
+        selectedCategories = category.CategoryID,
+        searchQuery = ViewData["SearchQuery"] ?? "",
+        priceFilter = ViewData["PriceFilter"] ?? "",
+
+    })"
+                                                                       class="block item-dropdown text-dropdown py-1 px-3 text-decoration-none text-black">
+                                                                        @category.CategoryName
+                                                                    </a>
+                                                                }
+                                                            }
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                                <div class="w-full flex flex-col justify-start items-center">
+                                    <div class="pe-3 py-2 text-sm flex items-start">
+                                        <div class="flex flex-col justify-start items-start">
+                                            <!-- Phần tử nhóm chứa liên kết "Birthday" -->
+                                            <div class="w-full flex justify-start items-center relative category-item group">
+                                                <!-- Hình ảnh và liên kết "Birthday" -->
+                                                <img src="~/image_design/rings.png" class="img-cate me-2" />
+                                                <a href="@Url.Action("Index", "ECard", new {
+        selectedGroupCategories = "WD",
+        searchQuery = ViewData["SearchQuery"] ?? "",
+        priceFilter = ViewData["PriceFilter"] ?? "",
+        selectedCategories = ViewData["SelectedCategories"],
+
+    })"
+                                                   class="block text-center item-dropdown py-1 px-3 text-decoration-none text-black">
+                                                    <span class="text-dropdown-title">Wedding</span>
+                                                </a>
+
+                                                <!-- Dropdown hiện ra khi hover -->
+                                                <div class="category-dropdown1 absolute hidden group-hover:block bg-white shadow-lg w-56 rounded-lg p-2 mt-2 z-20">
+                                                    <div class="flex flex-col space-y-2">
+                                                        @if (Context.Items["Categories"] != null)
+                                                        {
+                                                            var categories = (List<Category>)Context.Items["Categories"];
+
+                                                            foreach (var category in categories)
+                                                            {
+                                                                if (category.GroupCate.Equals("WD"))
+                                                                {
+                                                                    <a href="@Url.Action("Index", "ECard", new {
+        selectedCategories = category.CategoryID,
+        searchQuery = ViewData["SearchQuery"] ?? "",
+        priceFilter = ViewData["PriceFilter"] ?? "",
+
+    })"
+                                                                       class="block item-dropdown text-dropdown py-1 px-3 text-decoration-none text-black">
+                                                                        @category.CategoryName
+                                                                    </a>
+                                                                }
+                                                            }
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="pe-3 py-2 text-sm flex items-start">
+                                        <div class="flex flex-col justify-start items-start">
+                                            <!-- Phần tử nhóm chứa liên kết "Birthday" -->
+                                            <div class="w-full flex justify-start items-center relative category-item group">
+                                                <!-- Hình ảnh và liên kết "Birthday" -->
+                                                <img src="~/image_design/heart-balloon.png" class="img-cate me-2" />
+                                                <a href="@Url.Action("Index", "ECard", new {
+        selectedGroupCategories = "LV",
+        searchQuery = ViewData["SearchQuery"] ?? "",
+        priceFilter = ViewData["PriceFilter"] ?? "",
+        selectedCategories = ViewData["SelectedCategories"],
+
+    })"
+                                                   class="block text-center item-dropdown py-1 px-3 text-decoration-none text-black">
+                                                    <span class="text-dropdown-title">Love</span>
+                                                </a>
+
+                                                <!-- Dropdown hiện ra khi hover -->
+                                                <div class="category-dropdown1 absolute hidden group-hover:block bg-white shadow-lg w-56 rounded-lg p-2 mt-2 z-20">
+                                                    <div class="flex flex-col space-y-2">
+                                                        @if (Context.Items["Categories"] != null)
+                                                        {
+                                                            var categories = (List<Category>)Context.Items["Categories"];
+
+                                                            foreach (var category in categories)
+                                                            {
+                                                                if (category.GroupCate.Equals("LV"))
+                                                                {
+                                                                    <a href="@Url.Action("Index", "ECard", new {
+        selectedCategories = category.CategoryID,
+        searchQuery = ViewData["SearchQuery"] ?? "",
+        priceFilter = ViewData["PriceFilter"] ?? "",
+
+    })"
+                                                                       class="block item-dropdown text-dropdown py-1 px-3 text-decoration-none text-black">
+                                                                        @category.CategoryName
+                                                                    </a>
+                                                                }
+                                                            }
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="pe-3 py-2 text-sm flex items-start">
+                                        <div class="flex flex-col justify-start items-start">
+                                            <!-- Phần tử nhóm chứa liên kết "Birthday" -->
+                                            <div class="w-full flex justify-start items-center relative category-item group">
+                                                <!-- Hình ảnh và liên kết "Birthday" -->
+                                                <img src="~/image_design/application.png" class="img-cate me-2" />
+                                                <a href="@Url.Action("Index", "ECard", new {
+        selectedGroupCategories = "OT",
+        searchQuery = ViewData["SearchQuery"] ?? "",
+        priceFilter = ViewData["PriceFilter"] ?? "",
+        selectedCategories = ViewData["SelectedCategories"],
+
+    })"
+                                                   class="block text-center item-dropdown py-1 px-3 text-decoration-none text-black">
+                                                    <span class="text-dropdown-title">Others</span>
+                                                </a>
+
+                                                <!-- Dropdown hiện ra khi hover -->
+                                                <div class="category-dropdown1 absolute hidden group-hover:block bg-white shadow-lg w-56 rounded-lg p-2 mt-2 z-20">
+                                                    <div class="flex flex-col space-y-2">
+                                                        @if (Context.Items["Categories"] != null)
+                                                        {
+                                                            var categories = (List<Category>)Context.Items["Categories"];
+
+                                                            foreach (var category in categories)
+                                                            {
+                                                                if (category.GroupCate.Equals("OT"))
+                                                                {
+                                                                    <a href="@Url.Action("Index", "ECard", new {
+        selectedCategories = category.CategoryID,
+        searchQuery = ViewData["SearchQuery"] ?? "",
+        priceFilter = ViewData["PriceFilter"] ?? "",
+
+    })"
+                                                                       class="block item-dropdown text-dropdown py-1 px-3 text-decoration-none text-black">
+                                                                        @category.CategoryName
+                                                                    </a>
+
+                                                                }
+                                                            }
+                                                        }
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-start items-center mt-3">
+                        <a class="flex justify-center items-center" asp-controller="Subs" asp-action="Index">
+                            <img src="~/image_design/VIP1.png" class="img-icon" />
+                            <span class="font-bold ms-2 text-header">Subscribes</span>
+                        </a>
+                    </div>
+
+                    <div class="flex justify-start items-center mt-3">
+                        <a class="flex justify-center items-center" asp-controller="Order" asp-action="Index">
+                            <img src="~/image_design/Parcel1.png" class="img-icon" />
+                            <span class="font-bold ms-2 text-header">Orders</span>
+                        </a>
+                    </div>
+
+                    <div class="flex justify-start items-center mt-3">
+                        <a class="flex justify-center items-center" asp-controller="Special" asp-action="Index">
+                            <img src="~/image_design/Hot Price1.png" class="img-icon" />
+                            <span class="font-bold ms-2 text-header">Specials</span>
+                        </a>
+                    </div>
+                    <div class="col-2 h-100 w-full flex flex-col justify-center align-items-center">
+                        <div class="navbar-nav w-full flex justify-center">
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <div class="w-full flex flex-col justify-center item-center">
+                                    <div class="user-info d-flex justify-between align-items-center">
+                                        <!-- Avatar Image -->
+                                        <a href="@((isAdmin) ? Url.Action("Index", "Dashboard", new { area = "Admin" }) :
+                           (isUser ? Url.Action("Index", "Home") : "#"))" class="text-decoration-none flex items-center ">
+
+                                            <img src="@Url.Content(avatarUrl)" alt="User Avatar" class="avatar me-2" style="width: 30px; height: 30px; border-radius: 50%;" />
+                                            <span class="ms-2 text-header">@userName</span>
+                                        </a>
+
+                                    </div>
+                                    <div class="nav-item  mt-3">
+                                        <a class="nav-link text-header" asp-controller="Account" asp-action="Logout">Logout</a>
+                                    </div>
+                                </div>
+                            }
+                            else
+                            {
+                                <div class="flex  w-full  justify-content-between align-items-center px-2 mt-2">
+                                    <div class="nav-item mt-3 w-full">
+                                        <a class="nav-link font-bold text-header w-full text-center" asp-controller="Account" asp-action="Login">Login</a>
+                                    </div>
+                                    <div class="nav-item w-full mt-3">
+                                        <a class="nav-link font-bold w-full text-header text-center" asp-controller="Account" asp-action="Register">Join Now</a>
+                                    </div>
+                                </div>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </nav>
+
+        
+    
+</header>
+
+<script>
+           function toggleSidebar() {
+        var sidebar = document.getElementById('sidebar');
+
+        // Check if the sidebar is currently hidden
+        if (sidebar.classList.contains('hidden')) {
+            // Remove the hidden class and add the open class
+            sidebar.classList.remove('hidden');
+            sidebar.classList.add('open');
+        } else {
+            // If the sidebar is visible, hide it again
+            sidebar.classList.add('hidden');
+            sidebar.classList.remove('open');
+        }
+    }
+
+        </script>
+<script>
+          $(document).ready(function() {
+        function toggleNavClass() {
+            if ($(window).width() > 1300) {
+                // Hiển thị menu desktop, ẩn menu mobile khi chiều rộng màn hình lớn hơn 1300px
+                    $('.desktop-menu').removeClass('hidden');
+                $('.mobile-menu').addClass('hidden');
+            } else {
+                // Hiển thị menu mobile, ẩn menu desktop khi chiều rộng màn hình nhỏ hơn hoặc bằng 1300px
+                $('.mobile-menu').removeClass('hidden');
+                    $('.desktop-menu').addClass('hidden');
+            }
+        }
+
+        toggleNavClass();
+        $(window).resize(function() {
+            toggleNavClass();
+        });
+    });
+        
+
+// <script>
+    const homeMenuButton = document.getElementById('home-menu-button');
+    const homeDropdownMenu = document.getElementById('home-dropdown-menu');
+
+    homeMenuButton.addEventListener('click', (event) => {
+        event.stopPropagation();
+        homeDropdownMenu.classList.toggle('hidden');
+    });
+
+
+    const ecardsMenuButton = document.getElementById('ecards-menu-button');
+    const ecardsDropdownMenu = document.getElementById('ecards-dropdown-menu');
+
+    ecardsMenuButton.addEventListener('click', (event) => {
+        event.stopPropagation();
+        ecardsDropdownMenu.classList.toggle('hidden');
+    });
+
+    document.addEventListener('click', (event) => {
+        if (!homeMenuButton.contains(event.target) && !homeDropdownMenu.contains(event.target)) {
+            homeDropdownMenu.classList.add('hidden');
+        }
+        if (!ecardsMenuButton.contains(event.target) && !ecardsDropdownMenu.contains(event.target)) {
+            ecardsDropdownMenu.classList.add('hidden');
+        }
+    });
+</script>
+
+
+
+
+<script>
+        const dropdownButton = document.getElementById('dropdownButton');
+    const dropdownMenu = document.getElementById('dropdownMenu');
+
+    // Hiển thị dropdown khi hover vào button
+    dropdownButton.addEventListener('mouseenter', () => {
+      dropdownMenu.classList.remove('hidden');
+      dropdownMenu.classList.add('opacity-100');
+    });
+
+    // Ẩn dropdown khi chuột rời khỏi button hoặc menu
+    dropdownButton.addEventListener('mouseleave', () => {
+      // Kiểm tra nếu chuột đã ra khỏi button và dropdown, mới ẩn
+      if (!dropdownMenu.matches(':hover')) {
+        dropdownMenu.classList.remove('opacity-100');
+        dropdownMenu.classList.add('hidden');
+      }
+    });
+
+    // Thêm sự kiện để ẩn dropdown khi chuột rời khỏi menu
+    dropdownMenu.addEventListener('mouseleave', () => {
+      dropdownMenu.classList.remove('opacity-100');
+      dropdownMenu.classList.add('hidden');
+    });
+
+    // Đóng dropdown khi click ra ngoài
+    document.addEventListener('click', (event) => {
+      if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+        dropdownMenu.classList.add('hidden');
+        dropdownMenu.classList.remove('opacity-100');
+      }
+    });
+
+
+
+</script>
+<script>
+             document.addEventListener('DOMContentLoaded', () => {
+        const dropdownButton = document.getElementById('dropdownButton1');
+        const dropdownMenu = document.getElementById('ecards-dropdown-menu');
+        let timeout;
+
+        // Hiển thị dropdown khi hover vào button
+        dropdownButton.addEventListener('mouseenter', () => {
+            clearTimeout(timeout); // Hủy bỏ timeout nếu chuột quay lại button trước khi ẩn
+            dropdownMenu.classList.remove('hidden');
+            dropdownMenu.classList.add('opacity-100');
+        });
+
+        // Ẩn dropdown sau 1 giây nếu chuột rời khỏi button
+        dropdownButton.addEventListener('mouseleave', () => {
+            timeout = setTimeout(() => {
+                if (!dropdownMenu.matches(':hover')) {
+                    dropdownMenu.classList.remove('opacity-100');
+                    dropdownMenu.classList.add('hidden');
+                }
+            }, 1000); // 1000 ms = 1 giây
+        });
+
+        // Thêm sự kiện để ẩn dropdown khi chuột rời khỏi menu
+        dropdownMenu.addEventListener('mouseleave', () => {
+            timeout = setTimeout(() => {
+                dropdownMenu.classList.remove('opacity-100');
+                dropdownMenu.classList.add('hidden');
+            }, 1000); // 1000 ms = 1 giây
+        });
+
+        // Đảm bảo dropdown ẩn khi click ra ngoài
+        document.addEventListener('click', (event) => {
+            if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+                dropdownMenu.classList.add('hidden');
+                dropdownMenu.classList.remove('opacity-100');
+            }
+        });
+    });
+
+
+
+
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+        const navbar = document.getElementById('navbar_default');
+        const headerNav = document.getElementById('header-nav'); // Giả định bạn có phần tử này
+        const closeSidebarButton = document.getElementById('close-sidebar');
+
+        // Hàm kiểm tra kích thước cửa sổ
+        const checkWindowWidth = () => {
+            if (window.innerWidth <= 1300) {
+                sidebarToggle.classList.remove('hidden'); // Hiện nút toggle
+                headerNav.classList.add('hidden'); // Ẩn header-nav
+            } else {
+                sidebarToggle.classList.add('hidden'); // Ẩn nút toggle
+                headerNav.classList.remove('hidden'); // Hiện header-nav
+                navbar.classList.add('hidden'); // Đảm bảo sidebar ẩn khi ở màn hình lớn
+                navbar.classList.add('translate-x-full'); // Đưa sidebar ra ngoài
+            }
+        };
+
+        // Gọi checkWindowWidth khi trang tải và khi thay đổi kích thước cửa sổ
+        checkWindowWidth();
+        window.addEventListener('resize', checkWindowWidth);
+
+        // Toggle sidebar menu khi click vào nút sidebar
+        sidebarToggle.addEventListener('click', () => {
+            navbar.classList.toggle('hidden');
+            navbar.classList.toggle('translate-x-full'); // Thay đổi trạng thái chuyển động
+        });
+
+        // Đóng sidebar khi click vào nút "X"
+        closeSidebarButton.addEventListener('click', () => {
+            navbar.classList.add('hidden');
+            navbar.classList.add('translate-x-full'); // Đảm bảo sidebar không hiện
+        });
+    });
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Lấy tất cả phần tử có class .category-item
+        const categoryItems = document.querySelectorAll('.category-item');
+
+        categoryItems.forEach(item => {
+            // Lấy dropdown của mỗi category
+            const dropdown = item.querySelector('.category-dropdown');
+
+            // Thêm sự kiện hover vào phần tử cha
+            item.addEventListener('mouseenter', function () {
+                // Hiển thị dropdown khi hover vào
+                dropdown.classList.remove('hidden');
+            });
+
+            // Thêm sự kiện khi chuột rời khỏi phần tử
+            item.addEventListener('mouseleave', function () {
+                // Ẩn dropdown khi chuột rời khỏi
+                dropdown.classList.add('hidden');
+            });
+        });
+    });
+</script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        // Lấy tất cả phần tử có class .category-item
+        const categoryItems = document.querySelectorAll('.category-item');
+
+        categoryItems.forEach(item => {
+            // Lấy dropdown của mỗi category
+            const dropdown = item.querySelector('.category-dropdown1');
+
+            // Thêm sự kiện hover vào phần tử cha
+            item.addEventListener('mouseenter', function () {
+                // Hiển thị dropdown khi hover vào
+                dropdown.classList.remove('hidden');
+            });
+
+            // Thêm sự kiện khi chuột rời khỏi phần tử
+            item.addEventListener('mouseleave', function () {
+                // Ẩn dropdown khi chuột rời khỏi
+                dropdown.classList.add('hidden');
+            });
+        });
+    });
+</script>
+<script>
+     document.addEventListener("DOMContentLoaded", function () {
+    const dropdownButton = document.getElementById('dropdownButtonhome');
+    const dropdownMenu = document.getElementById('dropdownMenuhome');
+
+    // Show dropdown on hover over the button
+    dropdownButton.addEventListener('mouseenter', () => {
+        dropdownMenu.classList.remove('hidden');
+        dropdownMenu.classList.add('opacity-100');
+    });
+
+    // Show dropdown on hover over the menu itself
+    dropdownMenu.addEventListener('mouseenter', () => {
+        dropdownMenu.classList.remove('hidden');
+        dropdownMenu.classList.add('opacity-100');
+    });
+
+    // Hide dropdown when the mouse leaves both the button and the menu
+    dropdownButton.addEventListener('mouseleave', () => {
+        if (!dropdownMenu.matches(':hover')) {
+            dropdownMenu.classList.remove('opacity-100');
+            dropdownMenu.classList.add('hidden');
+        }
+    });
+
+    dropdownMenu.addEventListener('mouseleave', () => {
+        dropdownMenu.classList.remove('opacity-100');
+        dropdownMenu.classList.add('hidden');
+    });
+
+    // Close the dropdown if the click is outside of the button and the menu
+    document.addEventListener('click', (event) => {
+        if (!dropdownButton.contains(event.target) && !dropdownMenu.contains(event.target)) {
+            dropdownMenu.classList.add('hidden');
+            dropdownMenu.classList.remove('opacity-100');
+        }
+    });
+    });
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const dropdownButtonEcards = document.getElementById('dropdownButtonEcards'); // Updated ID
+        const ecardsDropdownMenu = document.getElementById('ecardsDropdownMenu'); // Updated ID
+        let timeout;
+
+        // Show dropdown on hover over the button
+        dropdownButtonEcards.addEventListener('mouseenter', () => {
+            clearTimeout(timeout); // Cancel timeout if the mouse returns to the button before hiding
+            ecardsDropdownMenu.classList.remove('hidden');
+            ecardsDropdownMenu.classList.add('opacity-100');
+        });
+
+        // Hide dropdown after 1 second if the mouse leaves the button
+        dropdownButtonEcards.addEventListener('mouseleave', () => {
+            timeout = setTimeout(() => {
+                if (!ecardsDropdownMenu.matches(':hover')) {
+                    ecardsDropdownMenu.classList.remove('opacity-100');
+                    ecardsDropdownMenu.classList.add('hidden');
+                }
+            }, 1000); // 1000 ms = 1 second
+        });
+
+        // Hide dropdown if the mouse leaves the menu
+        ecardsDropdownMenu.addEventListener('mouseleave', () => {
+            timeout = setTimeout(() => {
+                ecardsDropdownMenu.classList.remove('opacity-100');
+                ecardsDropdownMenu.classList.add('hidden');
+            }, 1000); // 1000 ms = 1 second
+        });
+
+        // Ensure the dropdown hides if clicked outside of the dropdown or button
+        document.addEventListener('click', (event) => {
+            if (!dropdownButtonEcards.contains(event.target) && !ecardsDropdownMenu.contains(event.target)) {
+                ecardsDropdownMenu.classList.add('hidden');
+                ecardsDropdownMenu.classList.remove('opacity-100');
+            }
+        });
+    });
+</script>

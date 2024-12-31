@@ -1,0 +1,43 @@
+@model IEnumerable<EGreetings.Areas.Admin.Models.OrderListViewModel>
+
+@{
+  Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="libre-franklin--title primary-color">Order List</h2>
+
+<hr />
+
+<div class="row mt-3">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-body table-responsive p-0">
+          <table class="table table-hover text-nowrap">
+            <thead>
+              <tr>
+                <th>Username</th>
+                <th>Booking Date</th>
+                <th>Total</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model) {  
+              <tr>
+                <td>@item.UserName</td>
+                <td>@item.CreatedDate</td>
+                <td>@item.Total</td>
+                <td>@item.Status</td>
+              </tr>
+            }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+

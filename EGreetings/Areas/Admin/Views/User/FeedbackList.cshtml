@@ -1,0 +1,72 @@
+@model IEnumerable<EGreetings.Areas.Admin.Models.FeedbackListViewModel>
+
+@{
+  Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="libre-franklin--title primary-color">Order List</h2>
+
+<hr />
+
+<div class="row mt-3">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-body table-responsive p-0">
+          <table class="table table-hover text-nowrap">
+            <thead>
+              <tr>
+                <th>Username</th>
+                <th>Date</th>
+                <th>Template Name</th>
+                <th>Comment</th>
+              </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model) {  
+              <tr class="clickable-row" data-comment="@item.Comment">
+                <td>@item.UserName</td>
+                <td>@item.CreatedDate</td>
+                <td>@item.TemplateName</td>
+                <td>@item.Comment.Substring(0, Math.Min(item.Comment.Length, 20)). . .</td>
+              </tr>
+            }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="commentModal" tabindex="-1" role="dialog" aria-labelledby="commentModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="commentModalLabel">Comment</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p id="commentText"></p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+@section Scripts {
+<script>
+  $(document).ready(function() {
+    $('.clickable-row').on('click', function() {
+      var comment = $(this).data('comment');  // Get the comment
+      $('#commentText').text(comment);  // Set the comment in modal
+      $('#commentModal').modal('show');  // Show the modal
+    });
+  });
+</script>
+}

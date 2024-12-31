@@ -1,0 +1,676 @@
+﻿@model EGreetings.Models.ViewModelAccount.HomeViewModel
+@{ 
+    ViewData["Title"] = "Home Page";
+
+}
+
+<div class="w-full flex flex-col justify-content-center align-items-center">
+
+    @* Slideshow *@
+    <div id="default-carousel" class="relative index-cau w-full" data-carousel="slide">
+        <!-- Carousel wrapper -->
+        <div class="relative height-slider  rounded-lg md:h-96">
+            <!-- Item 1 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+
+                <div class="absolute flex justify-content-center align-items-center block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                    <div class="flex relative  w-full justify-content-between align-items-center">
+                        <img src="~/image_design/bg_christ1.png" alt="..." class="img-slider">
+                        <div class="w-full flex absolute flex-col justify-content-center align-items-center">
+                            <p class="text-center title-slider pb-2">It's Time</p>
+                            <p class="slider-content">Christmas Time is Here! Celebrate the Season with Our Exclusive E-Card Collection</p>
+                            <div class="btn btn-outline-light text-center px-5 py-2 mt-3">View More</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Item 2 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+
+                <div class="absolute flex justify-content-center align-items-center block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                    <div class="flex  w-slider justify-content-between align-items-center">
+                        <img src="~/image_design/Christmasimg.jpg" alt="..." class="img-slider">
+                        <div class="flex flex-col justify-content-center align-items-center">
+                            <p class="text-center title-slider pb-2">It's Time</p>
+                            <p></p>
+                            <div class="btn btn-outline-dark text-center px-5 py-2">View More</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Item 3 -->
+            <div class="hidden duration-700 ease-in-out" data-carousel-item>
+
+                <div class="absolute flex justify-content-center align-items-center block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2">
+                    <div class="flex  w-slider justify-content-between align-items-center">
+                        <img src="~/image_design/Christmasimg.jpg" alt="..." class="img-slider">
+                        <div class="flex flex-col justify-content-center align-items-center">
+                            <p class="text-center title-slider pb-2">It's Time</p>
+                            <p></p>
+                            <div class="btn btn-outline-dark text-center  px-5 py-2">View More</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Slider indicators -->
+        <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+            <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+
+        </div>
+
+        <!-- Slider controls -->
+        <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 1 1 5l4 4" />
+                </svg>
+                <span class="sr-only">Previous</span>
+            </span>
+        </button>
+        <button type="button" class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-next>
+            <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+                <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 9 4-4-4-4" />
+                </svg>
+                <span class="sr-only">Next</span>
+            </span>
+        </button>
+    </div>
+    @* Main Freatures *@
+    <div class="w-full flex justify-center items-center mt-2">
+        <div class="w-mainf flex justify-content-between align-items-center">
+            <div class="flex justify-content-center align-items-center">
+                <img src="~/image_design/CharityBox.png" class="img_mainf"/>
+                <div class="w-75 flex flex-col px-3">
+                    <p class="title-mainf">Convenient Solution</p>
+                    <p>Making it easy to connect with loved ones</p>
+                </div>
+            </div>
+            <div class="flex justify-content-center align-items-center">
+                <img src="~/image_design/Design.png" class="img_mainf" />
+                <div class="w-75 flex flex-col px-3">
+                    <p class="title-mainf">Personalized Designs</p>
+                    <p>The ability to personalize the electronic cards</p>
+                </div>
+            </div>
+            <div class="flex justify-content-center align-items-center">
+                <img src="~/image_design/Eco Driving Indicator.png" class="img_mainf" />
+                <div class="w-75 flex flex-col px-3">
+                    <p class="title-mainf">Eco-Friendly</p>
+                    <p>Reducing Paper Waste with Personalized Card</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @* Flash Sale *@
+    <div class="w-full px-14 mb-5 mt-3">
+        <div class="flex-col justify-center items-center">
+            <div class="title-sales flex justify-center items-center">FLASH SALES <img src="~/image_design/Campfire.png" class="img_flashs"/></div>
+            <div class="flex justify-content-end align-content-center pe-4">View all <img src="~/image_design/Right.png" class="img-right"/></div>
+            <div class="flex justify-center items-center flex-wrap">
+                <!-- Wrapper for the slider -->
+                <div class="slider-wrapper">
+                    <ul id="autoplay" class="cs-hidden">
+                        @foreach (var template in Model.DiscountedTemplates)
+                        {
+                            <li class="item-a" data-template-id="@template.TemplatesID">
+                                <div class="mt-5 me-3">
+                                    <div class="flex flex-col justify-center items-center item-product1">
+                                        <img src="@Url.Content("~/images/templates/img/" + (template.ImgVer ?? "default-image.jpg"))" alt="@template.TemplateName" class="img-template" />
+
+                                        <div class="w-content-card flex flex-col">
+                                            <div class="text-center px-3 py-4 name-template">@template.TemplateName</div>
+                                            <div class="flex w-full justify-content-between align-items-center p-2">
+                                                <s>$@template.Price</s>
+                                                <span class="exactly-price text-center">$@((template.Price - template.Discount).Value.ToString("F2"))</span>
+                                            </div>
+                                        </div>
+                                        <!-- Overlay with button -->
+                                        <div class="overplay3">
+                                            <a href="#" class="btn-buy1">Use this card</a> 
+                                           
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        }
+
+
+                    </ul>
+
+                    <div class="slider-navigation">
+                        <button id="prevBtn" class="slider-btn">
+                            <i class="fa-solid fa-chevron-left"></i>
+                        </button>
+                        <button id="nextBtn" class="slider-btn">
+                            <i class="fa-solid fa-chevron-right"></i>
+                        </button>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+    @* Featured Teamplates Filter By Cate *@
+
+    <div class="w-full flex flex-col  mt-5 mb-3">
+        <div class="ttitle text-center">Our Featured Templates</div>
+        <div class="w-full flex flex-col justify-content-between align-items-center">
+            <hr class="text-black-50 w-25 mt-4 mb-3 text-center"/>
+            <div class="filter_cate_home flex justify-content-between align-items-center text-center">
+
+              
+                    <a href="@Url.Action("Index", "Home", new { groupCate = "all" })" class="filter_item" id="allCategory">All Categories</a>
+                    <a href="@Url.Action("Index", "Home", new { groupCate = "BD" })" class="filter_item" id="BDCategory">Birthday</a>
+                    <a href="@Url.Action("Index", "Home", new { groupCate = "NY" })" class="filter_item" id="NYCategory">New Year</a>
+                    <a href="@Url.Action("Index", "Home", new { groupCate = "WD" })" class="filter_item" id="WDCategory">Wedding</a>
+                    <a href="@Url.Action("Index", "Home", new { groupCate = "LV" })" class="filter_item" id="LVCategory">Love</a>
+
+            </div>
+        </div>
+        <div class="flex w-[95%] justify-content-end align-content-center pe-4">View all <img src="~/image_design/Right.png" class="img-right" /></div>
+        <div class="w-full px-14 mb-5 mt-3">
+            <div class="w-full flex flex-col justify-start items-start">
+                <div class=" w-full flex justify-center items-center flex-wrap">
+                    <!-- Wrapper for the slider -->
+                    <div class="w-[80%] flex flex-wrap justify-center items-center px-3">
+                        <ul id="slider-items" class="flex w-full flex-wrap justify-center items-center ">
+                            <!-- 1st Row of Products -->
+                            @foreach (var template in Model.NewArrivals)
+                            {
+
+
+                                <li class="item-a" data-template-id="@template.TemplatesID">
+                                    <div class="mt-5 me-3">
+                                        <div class="flex flex-col justify-center items-center item-product">
+                                            <img src="@Url.Content("~/images/templates/img/" + (template.ImgVer ?? "default-image.jpg"))" alt="@template.TemplateName" class="img-template" />
+                                            <div class="w-content-card flex flex-col ">
+                                                <div class="text-center px-3 py-4 name-template">@template.TemplateName</div>
+                                                @if (template.Discount > 0)
+                                                {
+                                                    <div class="w-full  flex justify-content-between align-items-center">
+                                                        <s>$@template.Price</s>
+                                                        <span class="exactly-price text-center">$@((template.Price - (template.Discount ?? 0f)))</span>
+                                                    </div>
+                                                }
+                                                else
+                                                {
+                                                    <div class="w-full  flex justify-content-between align-items-center">
+                                                        <s></s>
+                                                        <span class="exactly-price">$@template.Price</span>
+                                                    </div>
+                                                   
+                                                }
+                                               
+                                            </div>
+                                            <div class="overplay">
+                                                 <a href="#" class="btn-buy">Use this card</a> 
+                                              
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="templateOptionsDialog" class="hidden flex flex-col justify-content-center items-center">
+    <h3 class="text-xl font-semibold mb-4 text-center mt-5" id="templateName">Select the image orientation:</h3>
+
+    <div class="mb-4 mt-4">
+        <div id="imageVer" class="mb-4 flex justify-between items-center m-3 px-3">
+            <img id="templateImageVer" src="" alt="Vertical Image" class="h-auto mb-4 shadow-md px-2" />
+            <img id="templateImageHoz" src="" alt="Horizontal Image" class="h-auto mb-4 shadow-md ms-3 px-2" />
+        </div>
+    </div>
+
+    <div class="mb-4 flex justify-content-center items-center mx-3 mt-2 space-x-8">
+        <label class="inline-flex items-center px-2">
+            <input type="radio" name="imageOrientation" value="Ver" class="form-radio text-blue-500" />
+            <span>Vertical (Ver)</span>
+        </label>
+
+        <label class="inline-flex items-center px-2">
+            <input type="radio" name="imageOrientation" value="Hoz" class="form-radio text-blue-500" />
+            <span>Horizontal (Hoz)</span>
+        </label>
+    </div>
+
+    <div class="flex justify-center space-x-2 mt-3">
+        <button id="confirmOrientationBtn" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 focus:outline-none">Confirm</button>
+        <button id="cancelOrientationBtn" class="bg-red-700 text-white py-2 px-4 rounded hover:bg-gray-400 focus:outline-none">Cancel</button>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const carouselItems = document.querySelectorAll('[data-carousel-item]');
+            const indicators = document.querySelectorAll('[data-carousel-slide-to]');
+            const prevButton = document.querySelector('[data-carousel-prev]');
+            const nextButton = document.querySelector('[data-carousel-next]');
+
+            let currentIndex = 0;
+            const totalSlides = carouselItems.length;
+
+            // Function to show the current slide
+            function showSlide(index) {
+                carouselItems.forEach((item, i) => {
+                    item.classList.add('hidden');
+                    if (i === index) {
+                        item.classList.remove('hidden');
+                    }
+                });
+
+                indicators.forEach((indicator, i) => {
+                    indicator.setAttribute('aria-current', i === index ? 'true' : 'false');
+                });
+            }
+
+            // Function to move to the next slide
+            function moveToNext() {
+                currentIndex = (currentIndex + 1) % totalSlides;
+                showSlide(currentIndex);
+            }
+
+            // Function to move to the previous slide
+            function moveToPrev() {
+                currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
+                showSlide(currentIndex);
+            }
+
+            // Initialize autoplay with 7 seconds delay between slides
+            let autoplayInterval = setInterval(moveToNext, 7000); // 7000ms = 7 seconds
+
+            // Event listeners for the next and previous buttons
+            nextButton.addEventListener('click', () => {
+                moveToNext();
+                resetAutoplay(); // Reset autoplay on manual navigation
+            });
+
+            prevButton.addEventListener('click', () => {
+                moveToPrev();
+                resetAutoplay(); // Reset autoplay on manual navigation
+            });
+
+            // Event listeners for the indicators
+            indicators.forEach((indicator, index) => {
+                indicator.addEventListener('click', () => {
+                    currentIndex = index;
+                    showSlide(currentIndex);
+                    resetAutoplay(); // Reset autoplay on manual navigation
+                });
+            });
+
+            // Function to reset autoplay after user interaction
+            function resetAutoplay() {
+                clearInterval(autoplayInterval); // Clear existing autoplay interval
+                autoplayInterval = setInterval(moveToNext, 7000);  // Start a new autoplay interval with 7 seconds duration
+            }
+
+            // Initialize the carousel by showing the first slide
+            showSlide(currentIndex);
+        });
+    </script>
+
+    <script>
+               document.addEventListener("DOMContentLoaded", function () {
+            let currentIndex = 0; // Chỉ mục của item hiện tại
+            const items = document.querySelectorAll("#autoplay .item-a");
+            const itemsPerRow = 4;  // Mỗi hàng có 4 item
+            const totalItems = items.length;  // Tổng số items
+            const totalRows = Math.ceil(totalItems / itemsPerRow); // Tổng số hàng
+            const delay = 5000; // Thời gian trễ mỗi slide (5 giây)
+
+            // Cập nhật chỉ số để di chuyển slider
+            function updateSlider() {
+                const offset = -(currentIndex * 100 / itemsPerRow); // Chuyển mỗi item 1/4 chiều rộng của slider
+                document.querySelector("#autoplay").style.transform = `translateX(${offset}%)`;
+            }
+
+            // Di chuyển đến item tiếp theo
+            function nextItem() {
+                currentIndex++;
+                if (currentIndex >= totalRows) {
+                    currentIndex = 0; // Quay lại đầu danh sách
+                }
+                updateSlider();
+            }
+
+            // Di chuyển đến item trước
+            function prevItem() {
+                currentIndex--;
+                if (currentIndex < 0) {
+                    currentIndex = totalRows - 1; // Quay về hàng cuối cùng
+                }
+                updateSlider();
+            }
+
+            // Tự động chuyển slide sau mỗi khoảng thời gian (5 giây)
+            const autoplayInterval = setInterval(nextItem, delay);
+
+            // Lắng nghe sự kiện click của nút "Next"
+            document.getElementById("nextBtn").addEventListener("click", nextItem);
+
+            // Lắng nghe sự kiện click của nút "Prev"
+            document.getElementById("prevBtn").addEventListener("click", prevItem);
+
+            // Gọi cập nhật slider lần đầu
+            updateSlider();
+        });
+
+    </script>
+    <script>
+              document.addEventListener('DOMContentLoaded', function() {
+            // Lấy giá trị groupCate từ URL
+            var urlParams = new URLSearchParams(window.location.search);
+            var currentCategory = urlParams.get('groupCate'); // Lấy giá trị groupCate từ URL
+
+            // Nếu không có hoặc là 'all', chọn mục 'All Categories'
+            if (!currentCategory || currentCategory === "all") {
+                document.getElementById('allCategory').classList.add('selected');
+            } else {
+                // Nếu có giá trị groupCate, tìm và thêm lớp 'selected' vào mục tương ứng
+                var selectedCategoryElement = document.getElementById(currentCategory + 'Category');
+                if (selectedCategoryElement) {
+                    selectedCategoryElement.classList.add('selected');
+                }
+            }
+
+            // Lấy tất cả các mục filter_item
+            var filterItems = document.querySelectorAll('.filter_item');
+            filterItems.forEach(function(item) {
+                // Thêm sự kiện click vào mỗi mục
+                item.addEventListener('click', function(event) {
+                    event.preventDefault(); // Ngừng hành động mặc định của liên kết
+
+                    // Xóa lớp 'selected' của tất cả các mục
+                    filterItems.forEach(function(i) {
+                        i.classList.remove('selected');
+                    });
+
+                    // Thêm lớp 'selected' vào mục vừa nhấp
+                    this.classList.add('selected');
+
+                    console.log('Selected Category:', this.id); // Gỡ lỗi
+
+                    // Lấy URL từ thuộc tính href và điều hướng
+                    var categoryUrl = this.getAttribute('href');
+                    window.location.href = categoryUrl; // Điều hướng đến trang của danh mục đã chọn
+                });
+            });
+
+            // Nếu trang đã tải lại và có tham số 'groupCate', cuộn đến phần filter_cate_home
+            if (currentCategory) {
+                var filterCategorySection = document.querySelector('.filter_cate_home');
+                if (filterCategorySection) {
+                    filterCategorySection.scrollIntoView({
+                        behavior: 'smooth',  // Cuộn mượt
+                        block: 'start'       // Cuộn đến phần trên cùng của phần tử
+                    });
+                }
+            }
+        });
+
+
+    </script>
+    <script>
+        // Hàm lấy giá trị của cookie theo tên
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i].trim();
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null; // Nếu không tìm thấy cookie, trả về null
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            try {
+                document.querySelectorAll('.btn-buy1').forEach(button => {
+                    button.addEventListener('click', function() {
+                        try {
+                            // Lấy UserID từ cookie
+                            const userIdCookie = getCookie("UserID");
+
+                            if (!userIdCookie) {
+                                // Nếu không có UserID trong cookie, chuyển hướng người dùng đến trang đăng nhập
+                                console.log("UserID không có trong cookie, chuyển hướng đến Login...");
+                                window.location.href = '/Account/Login'; // Chuyển hướng đến trang đăng nhập
+                                return; // Dừng lại, không tiếp tục thực hiện các bước sau
+                            }
+
+                            const templateId = button.closest('.item-a1').dataset.templateId;
+
+                            fetch(`/ECard/GetTemplateDetails/${templateId}`)
+                                .then(response => response.json())
+                                .then(template => {
+                                    try {
+                                        // Lưu thông tin template vào window.selectedTemplate
+                                        window.selectedTemplate = template;
+
+                                        // Cập nhật hình ảnh và tên template vào modal
+                                        const imageVer = document.getElementById('templateImageVer');
+                                        const imageHoz = document.getElementById('templateImageHoz');
+                                        const templateNameElem = document.getElementById('templateName');
+
+                                        if (imageVer && imageHoz) {
+                                            imageVer.src = `/images/templates/img/${template.imgVer}`;
+                                            imageHoz.src = `/images/templates/img/${template.imgHoz}`;
+                                        }
+
+                                        if (templateNameElem) {
+                                            templateNameElem.textContent = template.name;
+                                        }
+
+                                        // Kiểm tra và hiển thị modal
+                                        const modal = document.getElementById('templateOptionsDialog');
+                                        if (modal) {
+                                            modal.classList.remove('hidden'); // Bỏ class 'hidden'
+                                            modal.style.opacity = 1; // Thêm hiệu ứng mờ khi hiển thị
+                                        } else {
+                                            console.error('Modal không tồn tại!');
+                                        }
+                                    } catch (innerError) {
+                                        console.error('Lỗi khi cập nhật modal:', innerError);
+                                    }
+                                })
+                                .catch(error => {
+                                    console.error('Lỗi khi lấy thông tin template:', error);
+                                });
+                        } catch (error) {
+                            console.error('Lỗi trong sự kiện click của btn-buy1:', error);
+                        }
+                    });
+                });
+
+                // Xử lý sự kiện "Confirm Orientation"
+                document.getElementById('confirmOrientationBtn').addEventListener('click', function() {
+                    try {
+                        const selectedOrientation = document.querySelector('input[name="imageOrientation"]:checked');
+                        if (selectedOrientation) {
+                            const templateId = window.selectedTemplate.id;
+                            const imgVer = window.selectedTemplate.imgVer;
+                            const imgHoz = window.selectedTemplate.imgHoz;
+                            const orientation = selectedOrientation.value;
+
+                            // Lấy UserID từ cookie
+                            const userIdCookie = getCookie("UserID");
+
+                            // Chuyển hướng tới trang thiết kế với UserID
+                            window.location.href = `/ECard/ECardDesign?templateId=${templateId}&imgVer=${imgVer}&imgHoz=${imgHoz}&orientation=${orientation}&userId=${userIdCookie}`;
+                        } else {
+                            alert("Vui lòng chọn hướng ảnh (Dọc hoặc Ngang) trước khi tiếp tục.");
+                        }
+                    } catch (error) {
+                        console.error('Lỗi trong sự kiện click của confirmOrientationBtn:', error);
+                    }
+                });
+
+                // Xử lý sự kiện "Cancel Orientation"
+                document.getElementById('cancelOrientationBtn').addEventListener('click', function() {
+                    try {
+                        // Ẩn modal khi bấm nút Hủy
+                        const modal = document.getElementById('templateOptionsDialog');
+                        if (modal) {
+                            modal.classList.add('hidden'); // Thêm lại class 'hidden'
+                            modal.style.opacity = 0; // Đảm bảo opacity về 0 khi ẩn
+                        } else {
+                            console.error('Modal không tồn tại khi hủy!');
+                        }
+                    } catch (error) {
+                        console.error('Lỗi trong sự kiện click của cancelOrientationBtn:', error);
+                    }
+                });
+
+            } catch (error) {
+                console.error('Lỗi trong sự kiện DOMContentLoaded:', error);
+            }
+        });
+    </script>
+
+    <script>
+        // Hàm lấy giá trị của cookie theo tên
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i].trim();
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null; // Nếu không tìm thấy cookie, trả về null
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            try {
+                // Lắng nghe sự kiện click trên tất cả nút "Use this card"
+                document.querySelectorAll('.btn-buy').forEach(button => {
+                    button.addEventListener('click', function() {
+                        try {
+                            // Lấy UserID từ cookie
+                            const userIdCookie = getCookie("UserID");
+
+                            if (!userIdCookie) {
+                                // Nếu không có UserID trong cookie, chuyển hướng người dùng đến trang đăng nhập
+                                console.log("UserID không có trong cookie, chuyển hướng đến Login...");
+                                window.location.href = '/Account/Login'; // Chuyển hướng đến trang đăng nhập
+                                return; // Dừng lại, không tiếp tục thực hiện các bước sau
+                            }
+
+                            // Lấy templateId từ phần tử li gần nhất có class 'item-a'
+                            const templateId = button.closest('.item-a').dataset.templateId;
+
+                            // Gọi API để lấy thông tin template
+                            fetch(`/ECard/GetTemplateDetails/${templateId}`)
+                                .then(response => response.json())
+                                .then(template => {
+                                    try {
+                                        // Lưu thông tin template vào window.selectedTemplate
+                                        window.selectedTemplate = template;
+
+                                        // Cập nhật hình ảnh và tên template vào modal
+                                        const imageVer = document.getElementById('templateImageVer');
+                                        const imageHoz = document.getElementById('templateImageHoz');
+                                        const templateNameElem = document.getElementById('templateName');
+
+                                        if (imageVer && imageHoz) {
+                                            imageVer.src = `/images/templates/img/${template.imgVer}`;
+                                            imageHoz.src = `/images/templates/img/${template.imgHoz}`;
+                                        }
+
+                                        if (templateNameElem) {
+                                            templateNameElem.textContent = template.name;
+                                        }
+
+                                        // Kiểm tra và hiển thị modal
+                                        const modal = document.getElementById('templateOptionsDialog');
+                                        if (modal) {
+                                            modal.classList.remove('hidden'); // Bỏ class 'hidden'
+                                            modal.style.opacity = 1; // Thêm hiệu ứng mờ khi hiển thị
+                                        } else {
+                                            console.error('Modal không tồn tại!');
+                                        }
+                                    } catch (innerError) {
+                                        console.error('Lỗi khi cập nhật modal:', innerError);
+                                    }
+                                })
+                                .catch(error => {
+                                    console.error('Lỗi khi lấy thông tin template:', error);
+                                });
+                        } catch (error) {
+                            console.error('Lỗi trong sự kiện click của btn-buy:', error);
+                        }
+                    });
+                });
+
+                // Xử lý sự kiện "Confirm Orientation"
+                document.getElementById('confirmOrientationBtn').addEventListener('click', function() {
+                    try {
+                        const selectedOrientation = document.querySelector('input[name="imageOrientation"]:checked');
+                        if (selectedOrientation) {
+                            // Lấy thông tin từ template đã chọn
+                            const templateId = window.selectedTemplate.id;
+                            const imgVer = window.selectedTemplate.imgVer;
+                            const imgHoz = window.selectedTemplate.imgHoz;
+                            const orientation = selectedOrientation.value;
+
+                            // Lấy UserID từ cookie
+                            const userIdCookie = getCookie("UserID");
+                            if (!userIdCookie) {
+                                console.log("UserID không có trong cookie, chuyển hướng đến Login...");
+                                window.location.href = '/Account/Login'; // Chuyển hướng đến trang đăng nhập
+                                return; // Dừng lại, không tiếp tục thực hiện các bước sau
+                            }
+
+                            // Chuyển hướng tới trang thiết kế
+                            window.location.href = `/ECard/ECardDesign?templateId=${templateId}&imgVer=${imgVer}&imgHoz=${imgHoz}&orientation=${orientation}&userId=${userIdCookie}`;
+                        } else {
+                            alert("Vui lòng chọn hướng ảnh (Dọc hoặc Ngang) trước khi tiếp tục.");
+                        }
+                    } catch (error) {
+                        console.error('Lỗi trong sự kiện click của confirmOrientationBtn:', error);
+                    }
+                });
+
+                // Xử lý sự kiện "Cancel Orientation"
+                document.getElementById('cancelOrientationBtn').addEventListener('click', function() {
+                    try {
+                        // Ẩn modal khi bấm nút Hủy
+                        const modal = document.getElementById('templateOptionsDialog');
+                        if (modal) {
+                            modal.classList.add('hidden'); // Thêm lại class 'hidden'
+                            modal.style.opacity = 0; // Đảm bảo opacity về 0 khi ẩn
+                        } else {
+                            console.error('Modal không tồn tại khi hủy!');
+                        }
+                    } catch (error) {
+                        console.error('Lỗi trong sự kiện click của cancelOrientationBtn:', error);
+                    }
+                });
+
+            } catch (error) {
+                console.error('Lỗi trong sự kiện DOMContentLoaded:', error);
+            }
+        });
+    </script>
+
+
+}

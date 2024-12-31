@@ -1,0 +1,112 @@
+  <div class="container mt-5" style="height: 450px;">
+    <h1 class="text-center mb-4" style="font-size: 32px;">Review & Confirm Payment</h1>
+    <div class="row d-flex align-items-start">
+      <!-- Left Column: Payment Options -->
+      <div class="col-md-7">
+        <div class="card">
+          <div class="card-header bg-primary text-white" style="font-size: 20px;">
+            <h4>Select Payment Method</h4>
+          </div>
+          <div class="card-body">
+            <p><strong>Choose a Payment Method:</strong></p>
+            <div class="d-flex justify-content-between align-items-center mt-2">
+              <div>
+                <input type="radio" name="paymentMethod" id="paypalBalance" onclick="showPaymentOptions('paypalBalance')">
+                <label for="paypalBalance">PayPal Balance</label>
+              </div>
+              <div id="paypal-balance" style="display:none; align-items: center;">
+                <p><strong>Available Balance:</strong> $<span id="paypalBalanceAmount">Loading...</span></p>
+              </div>
+            </div>
+            <div class="mt-2">
+              <input type="radio" name="paymentMethod" id="linkedCard" onclick="showPaymentOptions('linkedCard')">
+              <label for="linkedCard">Linked Card (e.g., Visa, MasterCard)</label>
+              <div id="linked-card-options" style="display:none; margin-top: 10px;">
+                <!-- Example: multiple linked cards -->
+                <select class="form-select">
+                  <option value="card1">Visa ending in 1234</option>
+                  <option value="card2">MasterCard ending in 5678</option>
+                  <option value="card3">Amex ending in 9876</option>
+                </select>
+              </div>
+            </div>
+            <div class="mt-2">
+              <input type="radio" name="paymentMethod" id="linkedBank" onclick="showPaymentOptions('linkedBank')">
+              <label for="linkedBank">Linked Bank Account</label>
+              <div id="linked-bank-options" style="display:none; margin-top: 10px;">
+                <!-- Example: multiple linked bank accounts -->
+                <select class="form-select">
+                  <option value="bank1">Bank A - Ending in 1234</option>
+                  <option value="bank2">Bank B - Ending in 5678</option>
+                  <option value="bank3">Bank C - Ending in 9876</option>
+                </select>
+              </div>
+            </div>
+            <div id="paypal-button-container" class="mt-4">
+              <a class="btn btn-primary" asp-controller="Payment" asp-action="Confirmation">Confirm</a>
+            </div>
+            <div id="paypal-button-container" class="mt-4">
+              <a class="btn btn-danger" asp-controller="Payment" asp-action="Failed">Failed Confirm</a>
+            </div>            
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Order Summary -->
+      <div class="col-md-5">
+        <div class="card">
+          <div class="card-header bg-info text-white" style="font-size: 20px;">
+            <h4>Order Summary</h4>
+          </div>
+          <div class="card-body" style="font-size: 18px;">
+            <div class="d-flex justify-content-between mt-2">
+              <strong>Item:</strong>
+              <span>Example Product</span>
+            </div>
+            <div class="d-flex justify-content-between mt-2">
+              <strong>Price:</strong>
+              <span>$50.00</span>
+            </div>
+            <hr class="mt-2" />
+            <div class="d-flex justify-content-between mt-2">
+              <strong>Total:</strong>
+              <span>$50.00</span>
+            </div> 
+          </div>
+        </div>
+      </div> 
+    </div>
+  </div>
+
+
+@section Scripts {
+  <script>
+    function showPaymentOptions(paymentMethod) {
+      // Hide all payment method options first
+      document.getElementById('paypal-balance').style.display = 'none';
+      document.getElementById('linked-card-options').style.display = 'none';
+      document.getElementById('linked-bank-options').style.display = 'none';
+
+      // Show relevant payment method options based on selected radio button
+      if (paymentMethod === 'paypalBalance') {
+        document.getElementById('paypal-balance').style.display = 'flex';
+        fetchPaypalBalance(); // Function to fetch PayPal balance
+      } else if (paymentMethod === 'linkedCard') {
+        document.getElementById('linked-card-options').style.display = 'block';
+      } else if (paymentMethod === 'linkedBank') {
+        document.getElementById('linked-bank-options').style.display = 'block';
+      }
+    }
+
+    function fetchPaypalBalance() {
+      // Here, you would call the PayPal API to retrieve the balance
+      // This is just a mock-up, replace with actual API call
+
+      // Simulating PayPal balance
+      const paypalBalance = 100.50; // Example value
+
+      // Display the PayPal balance
+      document.getElementById('paypalBalanceAmount').textContent = paypalBalance.toFixed(2);
+    }
+  </script>
+}

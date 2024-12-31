@@ -1,0 +1,76 @@
+﻿@model EGreetings.Models.ViewModelAccount.BookingFeedback
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.12/jquery.validate.unobtrusive.min.js"></script>
+}
+
+<div class="text-xl m-4 w-full h-full relative">
+    <div class="text-right mb-3">
+        <a asp-controller="Home" asp-action="Index">Home</a>
+        <span>></span>
+        <a asp-controller="Order" asp-action="Index">Order</a>
+        <span>></span>
+        <a class="font-semibold">Detail</a>
+    </div>
+    <div class="head">
+        ORDER DETAIL
+    </div>
+    <div class="row w-100 flex flex-col justify-content-md-start align-items-center mt-5 relative"> 
+        <div class="userprofile flex justify-between items-center" style="width:65% !important;">
+            <div style="width:600px;">
+                <table style="width:100%;">
+                    <tr style="line-height:40px">
+                        <td style="width:40%;" class="font-semibold align-text-top">Booking ID</td>
+                        <td>@Model.BookingID</td>
+                    </tr>
+                    <tr style="line-height:40px">
+                        <td class="font-semibold align-text-top">Status</td>
+                        <td>@Model.Status</td>
+                    </tr>
+                    <tr style="line-height:40px">
+                        <td class="font-semibold align-text-top">Booking Date</td>
+                        <td>@Model.CreatedDate.Value.ToString("yyyy-MM-dd")</td>
+                    </tr>
+                    <tr style="line-height:40px">
+                        <td class="font-semibold align-text-top">Sent Date</td>
+                        <td>@Model.BookingDate.Value.ToString("yyyy-MM-dd")</td>
+                    </tr>
+                    <tr style="line-height:40px">
+                        <td class="font-semibold align-text-top">Total</td>
+                        <td>@Model.Total</td>
+                    </tr>
+                </table>
+                <div style="height:250px">
+                    <div class="leading-9 font-semibold">Template</div>
+                    <div class="inline-flex mt-2">
+                        @foreach (var temp in Model.Templates)
+                        {
+                            <div class="h-64 w-32 ml-5">
+                                <img src="@temp." />
+                            </div>
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="mt-6" style="width: 500px">
+                <div class="text-center text-black font-bold title mb-3">Feedback</div>
+                <div class=" flex justify-center items-center">
+                    <form asp-action="Update" asp-controller="Order">
+                        <div class="form-group mb-3">
+                            <textarea asp-for="Comment" class="form-control" rows="10" cols="50" style="border-radius: 10px;"></textarea>
+                            <span asp-validation-for="Comment" class="text-danger"></span>
+                        </div>
+                        <input asp-for="BookingID" hidden />
+                        <div class="form-group">
+                            <input type="submit" value="Send" class="btn btn-submit text-white p-0" style="width:20%;height:40px" />
+                            <a href="@Url.Action("Detail", "Order", new { id = Model.BookingID })" class="btn btn-warning text-white ml-1">Back</a>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

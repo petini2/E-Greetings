@@ -1,0 +1,53 @@
+@model List<EGreetings.Models.Transaction>
+@{
+    ViewData["Title"] = "Order";
+}
+<nav class="menu">
+    <div>
+        <ul class="menubar">
+            <li>
+                <a asp-controller="User" asp-action="Index">
+                    <span><i class="fa-solid fa-user"></i></span>
+                    Profile
+                </a>
+            </li>
+            <li class="active">
+                <a asp-controller="Transaction" asp-action="Index" class="active">
+                    <span><i class="fa-sharp-duotone fa-solid fa-credit-card"></i></span>
+                    Payment
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<div class="main-table">
+    <div class="head">
+        MY PAYMENT
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th width="15%" style="text-align:center;">ID</th>
+                <th width="10%" style="text-align: center">Booking ID</th>
+                <th width="20%" style="text-align:center;">Amount</th>
+                <th width="15%" style="text-align:center;">Method</th>
+                <th width="15%" style="text-align:center;">Status</th>
+                <th width="20%" style="text-align:center;">Transaction Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr style="line-height: 40px">
+                    <th style="text-align:center;">@item.TransactionID</th>
+                    <th style="text-align:center;">@item.BookingID</th>
+                    <th style="text-align:center;">@item.Amount</th>
+                    <th style="text-align:center;">@item.TransactionMethods</th>
+                    <th style="text-align:center;">@item.TransactionStatus</th>
+                    <th style="text-align:center;">@item.TransactionDate.ToString("yyyy-MM-dd")</th>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>

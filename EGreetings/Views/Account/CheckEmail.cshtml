@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewData["Title"] = "Check Email";
+}
+
+
+
+<div class="w-100 flex flex-col justify-content-center align-items-center mt-5">
+    <div class="w-form flex flex-col justify-center items-center">
+        <div class="col-md-8 ">
+            <h2 class="text-center font-bold text-xl">@ViewData["Title"]</h2>
+            <div class="alert rounded-lg shadow-sm mt-3 p-3">
+                <p class="text-center px-2">A link to reset password has been sent to your email.</p>
+                <p class="text-center px-2">Please check your email and click the confirmation link to change the password your account.</p>
+            </div>
+
+
+            <p class="text-center mt-3">
+                <a class="btn btn-outline-dark" href="@Url.Action("Login", "Account")">Go to Login</a>
+            </p>
+        </div>
+    </div>
+</div>
+

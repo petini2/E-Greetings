@@ -1,0 +1,61 @@
+﻿.item-product1 {
+    position: relative;
+}
+
+.overplay3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 125px; /* Adjust as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5); /* Overlay background */
+    visibility: hidden; /* Initially hidden */
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Smooth fade-in */
+}
+
+.item-product1:hover .overplay3 {
+    visibility: visible;
+    opacity: 1; /* Show overlay when hovering over item */
+}
+
+.btn-buy1 {
+    padding: 8px 35px;
+    background-color: #0F2F76;
+    color: white;
+    text-align: center;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 500;
+    opacity: 0; /* Hidden by default */
+    visibility: hidden; /* Hidden by default */
+    transition: opacity 0.3s ease; /* Smooth fade-in */
+}
+
+/* Show button when hovering over .item-product1 or .overplay3 */
+.item-product1:hover .btn-buy1,
+.item-product1:hover .overplay3:hover .btn-buy1 {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Make sure button and overlay remain visible when hovering over the overlay itself */
+.item-product1:hover .overplay3,
+.item-product1:hover .overplay3:hover {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Ensure that when you leave the .item-product1 or .overplay3, everything hides */
+.item-product1:not(:hover) .btn-buy1,
+.item-product1:not(:hover) .overplay3 {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.head{
+    font-family: 'Lexend';
+}

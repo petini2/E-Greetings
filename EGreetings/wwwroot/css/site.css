@@ -1,0 +1,306 @@
+﻿html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    width: 100%;
+}
+.title-no{
+    font-size: 22px;
+    padding: 20px;
+    font-family: "Lexend";
+   
+}
+svg {
+    width: 100%;
+    height: 100%;
+}
+.category-dropdown {
+    top: 30%; /* Đảm bảo dropdown xuất hiện ngay dưới phần tử cha */
+    left: 100%;
+    margin-top: 0.5rem; /* Khoảng cách giữa "Birthday" và dropdown */
+}
+.category-dropdown1 {
+    top: 20%; /* Đảm bảo dropdown xuất hiện ngay dưới phần tử cha */
+    left: 0%;
+    margin-top: 0.5rem; /* Khoảng cách giữa "Birthday" và dropdown */
+}
+
+.title-noq {
+    font-size: 22px;
+    padding: 20px;
+    font-family: "Lexend";
+    margin-top: 50px;
+    font-style: italic;
+}
+body {
+    /*    font-family: 'Inria-Serial';*/
+/*    font-family: 'Lexend';*/
+    margin-bottom: 60px;
+    /*    background-color: #FFFEF8;*/
+    min-height: 100%;
+    margin: 0;
+}
+.container-footer {
+    height: 370px;
+    width: 100%;
+    background-color: #eaf1f1;
+    font-family: 'Lexend';
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    margin-bottom: 0;
+}
+
+.main-content {
+    min-height: 100vh;
+   
+}
+.title {
+    font-size: 35px;
+    
+    
+}
+.btn-back {
+    border: 1px solid #123277;
+    color: #123277;
+    width: 100%;
+    padding: 6px;
+    margin-top: 15px;
+    border-radius:5px;
+
+}
+
+.text-back {
+    color: #123277;
+}
+.dropdown-home {
+    z-index: 10;
+}
+/* Đảm bảo form có viền và căn giữa */
+.form {
+    border: 1px solid #123277; /* Viền màu hồng nhạt */
+    padding: 30px 50px !important; /* Khoảng cách bên trong form */
+    border-radius: 20px; /* Bo góc */
+    width: 60% !important; /* Chiều rộng 80% */
+    margin: 0 auto !important; /* Căn giữa form */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1) !important; /* Đổ bóng nhẹ */
+    background-color: white;
+}
+
+/* Cải thiện kiểu cho các input */
+.input-form {
+    border: 1px solid #123277 !important; /* Viền hồng nhạt với !important để tăng độ ưu tiên */
+    padding-left: 10px; /* Thêm padding vào bên trái */
+    border-radius: 8px !important; /* Bo góc */
+    width: 100%; /* Đảm bảo chiều rộng của input là 100% */
+    height: 40px; /* Thiết lập chiều cao cho các input */
+    box-sizing: border-box; /* Đảm bảo padding và border không ảnh hưởng đến chiều rộng */
+}
+.w-form{
+    width: 60%
+}
+/* Căn giữa các phần tử của trang */
+.row {
+    display: flex;
+    justify-content: center; /* Căn giữa theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    height: 100vh; /* Đảm bảo chiều cao của trang đầy đủ */
+}
+.item-dropdown {
+    padding: 8px 20px;
+    
+   
+    /*    color: #8F0000;*/
+    width: 100%;
+}
+.text-header {
+    font-family: "Lexend";
+    color: #0F2F76;
+    font-size: 20px;
+}
+
+
+.text-dropdown-title {
+    /*    font-family: "Inria-Serif";*/
+    font-family: "Lexend";
+    font-size: 15px !important;
+    font-weight: 500 !important;
+}
+.text-dropdown {
+    font-family: "Lexend";
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    text-align: center;
+    padding: 5px;
+    margin-right: 10px;
+}
+.color-line {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(0, 0, 0, 0.4); /* Màu xám nhẹ */
+    border: none; /* Xóa viền border */
+    margin: 0;
+}
+.img-cate {
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+    object-fit: fill;
+}
+.item-dropdown:hover {
+    background-color: #e6e6e6;
+    border-radius: 10px;
+}
+/* Căn giữa các nút và liên kết */
+.text-center {
+    text-align: center;
+}
+
+/* Nút submit */
+.btn-submit {
+    background-color: #123277 !important;
+    border-color: white;
+    color: white !important;
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+    .btn-submit:hover {
+        background-color: #FF89A1;
+        border-color: #FF89A1;
+    }
+
+/* Các liên kết không có gạch dưới */
+.text-decoration-none {
+    text-decoration: none;
+}
+
+/* Các lỗi validation sẽ có màu đỏ */
+.text-danger {
+    color: red;
+}
+
+/* Khoảng cách dưới các phần tử trong form */
+.form-group {
+    margin-bottom: 15px;
+}
+
+
+.ttitle{
+    font-family:'Inria-Serial';
+    font-size: 45px;
+    font-weight:600;
+}
+
+.filter_cate_home a {
+    font-family: 'Lexend';
+    font-size:20px;
+    font-weight: 400;
+}
+
+
+/* Dropdown positioning */
+#dropdownMenuhome {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 9999; /* Ensure it is above other content */
+    display: block;
+}
+
+/* Optional: If you want smooth transition, you can use opacity and transition (optional) */
+#dropdownMenuhome {
+    transition: opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none; /* Prevent interaction when hidden */
+    z-index: 1000;
+}
+
+    #dropdownMenuhome:not(.hidden) {
+        opacity: 1;
+        pointer-events: all; /* Allow interaction when visible */
+    }
+
+/* Ẩn dropdown mặc định */
+.hidden {
+    display: none;
+}
+
+/* Thêm hiệu ứng khi dropdown menu hiển thị */
+.opacity-100 {
+    opacity: 1;
+    transition: opacity 0.2s ease-in-out;
+}
+
+.opacity-0 {
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+.dropdown-ecard {
+    width: 300px;
+    z-index: 10; 
+    position: absolute; 
+    top: 55%;
+    left: 20%;
+    transform: translate(-25%, 2%);   
+}
+.sidebar {
+    width: 300px; /* Width of the sidebar */
+    transition: transform 0.3s ease;
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: white;
+    transform: translateX(100%); /* Initially off-screen to the right */
+    z-index: 30;
+}
+
+    /* Open the sidebar when it's visible */
+    .sidebar.open {
+        transform: translateX(0); /* Move to the screen */
+    }
+
+/* Close button style */
+.close-btn {
+    background: transparent;
+    border: none;
+    font-size: 24px;
+    color: #333;
+    position: relative;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+}
+.img_smalllogo{
+    height:auto;
+    width: 100px;
+}
+.dropdown-ecard:hover {
+}
+
+@media (max-width: 1300px) {
+    .header-home .mobile-menu {
+        display: block; /* Hoặc thay đổi class nếu cần */
+    }
+    /* Ẩn header lớn ở dưới 1300px */
+    .header-home .desktop-menu {
+        display: none;
+    }
+}

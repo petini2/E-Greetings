@@ -1,0 +1,33 @@
+﻿@model EGreetings.Models.ViewModelAccount.SubTemplateViewModel
+
+
+
+<div class="templates-container w-full flex flex-col justify-center items-center mt-5">
+    @if (Model.Templates != null && Model.Templates.Any())
+    {
+        <div class="template-list">
+            @foreach (var template in Model.Templates)
+            {
+                <div class="template-item">
+                    <div class="w-full flex flex-col justify-center items-center">
+                    
+                    <img src="@Url.Content("~/images/templates/img/" + (template.ImgVer ?? "default-image.jpg"))" alt="@template.TemplateName" />
+                        <div class="name-template">@template.TemplateName</div>
+                    </div>
+                </div>
+            }
+           
+        </div>
+
+    }
+    else
+    {
+        <p>No templates found for this category.</p>
+    }
+    <!-- Continue Button -->
+    <div class="mt-6">
+        <a asp-action="Index" asp-controller="Payment" class="btn-continue text-white px-6 py-2 rounded-md hover:bg-blue-600 transition">Continue</a>
+    </div>
+</div>
+
+

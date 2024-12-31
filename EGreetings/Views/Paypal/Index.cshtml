@@ -1,0 +1,115 @@
+@{
+
+}
+
+ <div class="mx-auto p-4 rounded border shadow" style="width: 420px;">
+    <h2>Create Order</h2>
+    <div>
+      <label for="">Amount</label>
+      <input type="number" id="amount" value="" step="0.01" />
+    </div>
+
+    <div id="notification-container"></div>
+   <div id="paypal-button-container"></div> 
+  </div>
+
+
+@section Scripts {
+<script src="https://www.paypal.com/sdk/js?client-id=@ViewBag.ClientId&currency=USD&disable-funding=credit,card"></script>
+<script>
+ paypal.Buttons({
+  createOrder: async () => {
+    const response = await fetch('@Url.Action("CreateOrder", "Paypal")', {
+        method: "post",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          amount: document.getElementById("amount").value, // corrected syntax here
+        }),
+      });
+
+      const order = await response.json();
+      // console.log("order: " + JSON.stringify(order, null, 2));
+      return order.id;
+    }, 
+    onApprove: async (data, actions) => {
+      const response = await fetch('@Url.Action("CaptureOrder", "Paypal")', {
+        method: "post",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          orderID: data.orderID
+        })
+      });
+
+      const details = await response.json();
+      if (details == "success") {
+        document.getElementById("notification-container").innerHTML = `
+          <p>Success</p>
+        `; 
+      }
+    },
+
+    onCancel: (data) => {
+        document.getElementById("notification-container").innerHTML = `
+          <p>Cancel</p>
+        `;
+      },
+
+      onError: (err) => {
+        document.getElementById("notification-container").innerHTML = `
+          <p>Error</p>
+        `;
+      }, 
+  }).render('#paypal-button-container');
+</script>
+}
+
+@*
+<div>
+ <div class="text-center">
+    <div id="paypal-button-container"></div>
+</div>
+ 
+</div>
+*@
+@*section Scripts {
+    <script src="https://www.paypal.com/sdk/js?client-id=@ViewBag.ClientId&currency=USD"></script>
+
+        <script>
+            paypal.Buttons({
+                style: {
+                    layout: 'vertical',
+                    color: 'silver',
+                    tagline: 'false'
+                },
+                
+                createOrder: (data, actions) => {
+
+                    return fetch("@Url.Action("Order")", {
+                        method: "post",
+                    }).then((response) => {
+                        if (!response.ok) {
+                            return response.json().then(error => { throw error; });
+                        }
+
+                        return response.json();
+                    }).then((order) => order.id)
+                    .catch(error => alert(error.message));
+                },
+                onApprove: (data, actions) => {
+                    return fetch(`@Url.Action("Capture")?orderId=${data.orderID}`, {
+                        method: "post",
+                    }).then((response) => {
+                        if (!response.ok) {
+                            return response.json().then(error => { throw error; });
+                        }
+
+                        window.location.href = "@Url.Action("Success")";
+                    }).catch(error => alert(error.message));
+                }
+            }).render('#paypal-button-container');
+        </script>
+}*@

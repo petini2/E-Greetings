@@ -1,0 +1,39 @@
+@model IEnumerable<EGreetings.Areas.Admin.Models.UserSubscriptionListViewModel>
+
+@{
+  Layout = "~/Areas/Admin/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2 class="libre-franklin--title primary-color">@ViewData["UserName"]: Subscription List</h2>
+
+<hr />
+
+<div class="row mt-3">
+  <div class="col-12">
+    <div class="card">
+      <div class="card-header">
+        <div class="card-body table-responsive p-0">
+          <table class="table table-hover text-nowrap">
+            <thead>
+              <tr>
+                <th>Subscription Name</th>
+                <th>Start Date</th>
+                <th>End Date</th>
+              </tr>
+            </thead>
+            <tbody>
+            @foreach (var item in Model) {  
+              <tr>
+                <td>@item.SubName</td>
+                <td>@item.StartDate</td>
+                <td>@item.EndDate</td>
+              </tr>
+            }
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
